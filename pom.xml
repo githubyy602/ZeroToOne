@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    
+    <modelVersion>4.0.0</modelVersion>
+    
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.2.13.RELEASE</version>
+    </parent>
+    
+    <groupId>com.yangy</groupId>
+    <artifactId>HaHaShow</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    
+    <!--子模块-->
+    <modules>
+        <module>HaHa-Common</module>
+        <module>HaHa-Registry-10000</module>
+        <module>HaHa-User</module>
+        <module>HaHa-Web</module>
+    </modules>
+    
+    <!--此文件引入公共部分-->
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+        <spring.cloud.version>Hoxton.SR4</spring.cloud.version>
+        <spring.boot.version>2.2.13.RELEASE</spring.boot.version>
+        <mybatisplus.starter.version>1.0.4</mybatisplus.starter.version>
+        <mybatisplus.version>2.0.7</mybatisplus.version>
+        <mysql.connector.version>8.0.18</mysql.connector.version>
+        <logback.core.version>1.2.3</logback.core.version>
+    </properties>
+    
+    <!--
+    如果dependencies里的dependency自己没有声明version元素，那么maven就
+    会到dependencyManagement里面去找有没有对该artifactId和groupId进行过版本声明，如果有，就继承它，如果
+    没有就会报错，告诉你必须为dependency声明一个version
+    ###子模块不会引入此处的依赖###
+    -->
+    <dependencyManagement>
+        <dependencies>
+            
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring.boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>  
+            
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring.cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+                <exclusions>
+                    <exclusion>
+                        <groupId>com.google.code.gson</groupId>
+                        <artifactId>gson</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+    
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>       
+        
+        <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web -->
+        <!--没有此以来客户端服务启动会立即退出-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        
+        <!-- SpringCloud 整合 Feign -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
+        
+        <!--修改后立即生效，热部署-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>springloaded</artifactId>
+            <version>1.2.8.RELEASE</version>
+        </dependency>
+        
+        <!--数据库连接jdbc依赖-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jdbc</artifactId>
+        </dependency>
+
+        <!--mysql链接依赖-->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql.connector.version}</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.baomidou/mybatis-plus-boot-starter -->
+        <!--mybatis-plus依赖-->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatisplus-spring-boot-starter</artifactId>
+            <version>${mybatisplus.starter.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus</artifactId>
+            <version>${mybatisplus.version}</version>
+        </dependency>
+
+        <!--阿里druid数据库链接依赖-->
+        <!-- https://mvnrepository.com/artifact/com.alibaba/druid -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+            <version>1.2.3</version>
+        </dependency>
+        
+        <!-- 热部署 -->
+        <!-- devtools可以实现页面热部署（即页面修改后会立即生效，
+            这个可以直接在application.properties文件中配置spring.thymeleaf.cache=false来实现） -->
+        <!-- 实现类文件热部署（类文件修改后不会立即生效），实现对属性文件的热部署。 -->
+        <!-- 即devtools会监听classpath下的文件变动，并且会立即重启应用（发生在保存时机），
+            注意：因为其采用的虚拟机机制，该项重启是很快的 -->
+        <!-- （1）base classloader （Base类加载器）：加载不改变的Class，例如：第三方提供的jar包。 -->
+        <!-- （2）restart classloader（Restart类加载器）：加载正在开发的Class。 -->
+        <!-- 为什么重启很快，因为重启的时候只是加载了在开发的Class，没有重新加载第三方的jar包。 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <!-- optional=true, 依赖不会传递, 该项目依赖devtools;
+                之后依赖boot项目的项目如果想要使用devtools, 需要重新引入 -->
+            <!--<optional>true</optional>-->
+        </dependency>
+
+        <!--lombok依赖-->
+        <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.20</version>
+            <!--<optional>true</optional>-->
+        </dependency>
+        
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-core</artifactId>
+            <version>${logback.core.version}</version>
+        </dependency>
+        
+        <!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.75</version>
+        </dependency>
+
+    </dependencies>
+    
+</project>
