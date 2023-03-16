@@ -1,6 +1,6 @@
 package com.yangy.hahauser.service;
 
-import com.yangy.hahauser.bean.User;
+import com.yangy.hahauser.bean.PO.User;
 
 /**
  * @Author: Yangy

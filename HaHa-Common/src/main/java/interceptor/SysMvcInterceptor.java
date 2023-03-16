@@ -1,4 +1,4 @@
-package com.yangy.hahauser.interceptor;
+package interceptor;
 
 import com.alibaba.fastjson.JSON;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +15,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
  * @Description
  */
 @Configuration
-public class UserMvcInterceptor implements WebMvcConfigurer {
+public class SysMvcInterceptor implements WebMvcConfigurer {
 	
 	@Autowired
 	private MyInterceptor myInterceptor;

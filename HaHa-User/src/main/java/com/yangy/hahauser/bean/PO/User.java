@@ -1,10 +1,12 @@
-package com.yangy.hahauser.bean;
+package com.yangy.hahauser.bean.PO;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.Date;
 
 @Data
+@NoArgsConstructor
 public class User {
     private Integer id;
 
@@ -25,5 +27,9 @@ public class User {
     private Date createTime;
 
     private Date updateTime;
-   
+
+    public User(String loginName, String loginPassword) {
+        this.loginName = loginName;
+        this.loginPassword = loginPassword;
+    }
 }

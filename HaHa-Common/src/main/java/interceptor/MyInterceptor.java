@@ -1,7 +1,5 @@
-package com.yangy.hahauser.interceptor;
+package interceptor;
 
-import interceptor.CommonInterceptor;
-import interceptor.HttpRequestWrapper;
 import org.springframework.stereotype.Component;
 
 import javax.servlet.http.HttpServletResponse;

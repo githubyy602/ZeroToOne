@@ -1,6 +1,6 @@
 package com.yangy.hahauser.service.impl;
 
-import com.yangy.hahauser.bean.User;
+import com.yangy.hahauser.bean.PO.User;
 import com.yangy.hahauser.mapper.UserMapper;
 import com.yangy.hahauser.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;

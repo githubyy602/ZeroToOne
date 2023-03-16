@@ -1,6 +1,6 @@
 package com.yangy.hahauser.mapper;
 
-import com.yangy.hahauser.bean.User;
+import com.yangy.hahauser.bean.PO.User;
 import org.apache.ibatis.annotations.Mapper;
 
 @Mapper

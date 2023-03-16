@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.yangy.hahauser.mapper.UserMapper" >
-  <resultMap id="BaseResultMap" type="com.yangy.hahauser.bean.User" >
+  <resultMap id="BaseResultMap" type="com.yangy.hahauser.bean.PO.User" >
     <id column="id" property="id" jdbcType="INTEGER" />
     <result column="user_name" property="userName" jdbcType="VARCHAR" />
     <result column="sex" property="sex" jdbcType="CHAR" />
@@ -27,7 +27,7 @@
     delete from tb_user
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.yangy.hahauser.bean.User" >
+  <insert id="insert" parameterType="com.yangy.hahauser.bean.PO.User" >
     insert into tb_user (id, user_name, sex, 
       email, phone, login_name, 
       login_password, salt, create_time, 
@@ -37,7 +37,7 @@
       #{loginPassword,jdbcType=VARCHAR}, #{salt,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, 
       #{updateTime,jdbcType=TIMESTAMP})
   </insert>
-  <insert id="insertSelective" parameterType="com.yangy.hahauser.bean.User" >
+  <insert id="insertSelective" parameterType="com.yangy.hahauser.bean.PO.User" >
     insert into tb_user
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -104,7 +104,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.yangy.hahauser.bean.User" >
+  <update id="updateByPrimaryKeySelective" parameterType="com.yangy.hahauser.bean.PO.User" >
     update tb_user
     <set >
       <if test="userName != null" >
@@ -137,7 +137,7 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.yangy.hahauser.bean.User" >
+  <update id="updateByPrimaryKey" parameterType="com.yangy.hahauser.bean.PO.User" >
     update tb_user
     set user_name = #{userName,jdbcType=VARCHAR},
       sex = #{sex,jdbcType=CHAR},
@@ -151,11 +151,13 @@
     where id = #{id,jdbcType=INTEGER}
   </update>
   
-  <select id="selectUserByLoginInfo" parameterType="com.yangy.hahauser.bean.User" resultMap="BaseResultMap">
+  <select id="selectUserByLoginInfo" parameterType="com.yangy.hahauser.bean.PO.User" 
+          resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List"/>
     from 
-    tb_user where login_name = #{loginName} and login_password = #{loginPassword} limit 1
+    tb_user where login_name = #{loginName} and login_password = #{loginPassword} 
+    limit 1
   </select>
   
 </mapper>
