@@ -1,4 +1,4 @@
-package constant;
+package com.yangy.common.constant;
 
 /**
  * @Author: Yangy

@@ -1,6 +1,6 @@
-package exception;
+package com.yangy.common.exception;
 
-import enums.ResponseCodeEnum;
+import com.yangy.common.enums.ResponseCodeEnum;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 

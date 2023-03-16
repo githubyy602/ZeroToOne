@@ -1,10 +1,11 @@
-package interceptor;
+package com.yangy.common.interceptor;
 
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 
 /**
  * @Author: Yangy
@@ -30,5 +31,5 @@ public abstract class CommonInterceptor implements HandlerInterceptor {
 
 	}
 
-	public abstract boolean check(HttpRequestWrapper httpRequestWrapper, HttpServletResponse res, Object handler);
+	public abstract boolean check(HttpRequestWrapper httpRequestWrapper, HttpServletResponse res, Object handler) throws IOException;
 }

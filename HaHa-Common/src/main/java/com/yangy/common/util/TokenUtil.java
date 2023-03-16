@@ -1,18 +1,18 @@
-package util;
+package com.yangy.common.util;
 
-import bean.Token;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import constant.CharacterConstant;
-import constant.CommonConstant;
-import enums.ResponseCodeEnum;
-import exception.CustomException;
+import com.yangy.common.bean.Token;
+import com.yangy.common.constant.CharacterConstant;
+import com.yangy.common.constant.CommonConstant;
+import com.yangy.common.enums.ResponseCodeEnum;
+import com.yangy.common.exception.CustomException;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.util.Assert;
 import org.springframework.util.Base64Utils;
+import org.springframework.util.StringUtils;
 
-import java.io.UnsupportedEncodingException;
+import java.nio.charset.Charset;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.ZoneOffset;
@@ -55,12 +55,14 @@ public class TokenUtil {
 	
 	public static boolean checkToken(String token) throws CustomException {
 
-		Assert.isNull(token, "Token is empty!!!");
+		if(StringUtils.isEmpty(token)){
+			return false;
+		}
 
 		String deStr;
 		try {
-			deStr = Base64Utils.encodeToString(token.getBytes(CommonConstant.CHARSET_UTF8));
-		} catch (UnsupportedEncodingException e) {
+			deStr = new String(Base64Utils.decodeFromString(token),Charset.forName(CommonConstant.CHARSET_UTF8));
+		} catch (Exception e) {
 			log.error("Token decrypt error ! {}",e.getMessage(),e);
 			return false;
 		}

@@ -1,4 +1,4 @@
-package util;
+package com.yangy.common.util;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -45,7 +45,7 @@ public class HmacMd5Util {
             mac.init(secretKey);
             return mac.doFinal(data.getBytes(StandardCharsets.UTF_8));
         } catch (Exception e) {
-            log.error("HmacMd5Util.encryptHMAC occurs an exception ! \n {}",e);
+            log.error("HmacMd5Util.encryptHMAC occurs an com.yangy.exception ! \n {}",e);
             return null;
         }
     }

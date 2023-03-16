@@ -1,17 +1,17 @@
 package com.yangy.hahauser.controller;
 
-import bean.ResultBean;
+import com.yangy.common.bean.ResultBean;
 import com.yangy.hahauser.bean.DTO.LoginInfoReqDto;
 import com.yangy.hahauser.bean.DTO.LoginInfoRespDto;
 import com.yangy.hahauser.bean.PO.User;
 import com.yangy.hahauser.mapper.UserMapper;
-import enums.ResponseCodeEnum;
+import com.yangy.common.enums.ResponseCodeEnum;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import util.TokenUtil;
+import com.yangy.common.util.TokenUtil;
 
 import javax.annotation.Resource;
 import javax.validation.Valid;

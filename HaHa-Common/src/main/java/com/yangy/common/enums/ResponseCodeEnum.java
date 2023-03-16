@@ -1,4 +1,4 @@
-package enums;
+package com.yangy.common.enums;
 
 /**
  * @Author: Yangy
@@ -28,6 +28,16 @@ public enum ResponseCodeEnum {
 
 	public String getDesc() {
 		return desc;
+	}
+	
+	public static ResponseCodeEnum getResp(int code){
+		for (ResponseCodeEnum item:ResponseCodeEnum.values()){
+			if(item.code == code){
+				return item;
+			}
+		}
+		
+		return null;
 	}
 	
 	public static String getVal(int code){

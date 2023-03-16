@@ -22,7 +22,7 @@
         <!-- nacos 依赖 -->
         <dependency>
             <groupId>com.alibaba.boot</groupId>
-            <artifactId>nacos-config-spring-boot-starter</artifactId>
+            <artifactId>nacos-com.yangy.config-spring-boot-starter</artifactId>
             <version>${nacos.version}</version>
         </dependency>
         

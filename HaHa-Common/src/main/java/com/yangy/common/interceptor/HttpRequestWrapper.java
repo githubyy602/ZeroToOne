@@ -1,4 +1,4 @@
-package interceptor;
+package com.yangy.common.interceptor;
 
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.io.IOUtils;
@@ -35,7 +35,7 @@ public class HttpRequestWrapper extends HttpServletRequestWrapper {
 				try {
 					inputStream.close();
 				} catch (IOException e) {
-					log.error("catch an exception:", e);
+					log.error("catch an com.yangy.exception:", e);
 				}
 			}
 		}

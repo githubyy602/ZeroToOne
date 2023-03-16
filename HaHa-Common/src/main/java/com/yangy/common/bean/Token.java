@@ -1,4 +1,4 @@
-package bean;
+package com.yangy.common.bean;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

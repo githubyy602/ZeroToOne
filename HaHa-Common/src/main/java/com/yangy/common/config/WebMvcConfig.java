@@ -1,7 +1,7 @@
-package interceptor;
+package com.yangy.common.config;
 
 import com.alibaba.fastjson.JSON;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.yangy.common.interceptor.MyInterceptor;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -11,19 +11,19 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 /**
  * @Author: Yangy
- * @Date: 2021/5/13 17:03
+ * @Date: 2023/3/16 15:42
  * @Description
  */
 @Configuration
-public class SysMvcInterceptor implements WebMvcConfigurer {
-	
-	@Autowired
-	private MyInterceptor myInterceptor;
+public class WebMvcConfig implements WebMvcConfigurer {
 	
 	@Override
 	public void addInterceptors(InterceptorRegistry registry) {
-			registry.addInterceptor(myInterceptor)
-					.addPathPatterns("/**");
+		registry.addInterceptor(new MyInterceptor())
+				.addPathPatterns("/**")
+				.excludePathPatterns("/login/online","/css/**", "/images/**", "/js/**", "/fonts/**");
+		//下面这句必须有才生效
+		WebMvcConfigurer.super.addInterceptors(registry);
 	}
 	
 	@Bean

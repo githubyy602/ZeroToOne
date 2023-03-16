@@ -1,8 +1,8 @@
-package bean;
+package com.yangy.common.bean;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import enums.ResponseCodeEnum;
+import com.yangy.common.enums.ResponseCodeEnum;
 import lombok.NoArgsConstructor;
 
 /**
