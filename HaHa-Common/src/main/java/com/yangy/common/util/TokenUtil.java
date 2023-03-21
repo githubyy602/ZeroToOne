@@ -27,8 +27,6 @@ import java.util.Objects;
 @Slf4j
 public class TokenUtil {
 	
-	public static final String SALT = "84B2J2hvk2jdnvk4#@#";
-	
 	/**
 	* @Author Yangy
 	* @Description toke生成：用户id加时间戳，转json；
@@ -46,7 +44,7 @@ public class TokenUtil {
 		Token token = Token.builder().userId(userId).time(nowTime).build();
 		String paramJson = JSON.toJSONString(token);
 		//签名
-		String sign = HmacMd5Util.encrypt(paramJson,SALT);
+		String sign = SignUtil.getSign(paramJson);
 		
 		String tokenStr = String.join(CharacterConstant.SEMICOLON,paramJson,sign);
 		
@@ -74,7 +72,7 @@ public class TokenUtil {
 			throw CustomException.custom(ResponseCodeEnum.SIGN_ERROR.getCode());
 		}
 		
-		if(!sign.equals(HmacMd5Util.encrypt(param,SALT))){
+		if(!SignUtil.checkSign(param,sign)){
 			throw CustomException.custom(ResponseCodeEnum.SIGN_ERROR.getCode());
 		}
 		
