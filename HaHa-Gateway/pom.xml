@@ -9,22 +9,16 @@
     </parent>
     
     <groupId>com.yangy</groupId>
-    <artifactId>HaHa-Registry-10000</artifactId>
+    <artifactId>HaHa-Gateway</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>HaHa-Registry-10000</name>
-    <description>registration center</description>
+    <name>HaHa-Gateway</name>
+    <description>api gateway</description>
     <properties>
         <java.version>1.8</java.version>
         <nacos.version>0.2.1</nacos.version>
     </properties>
     
     <dependencies>
-        <!-- nacos 依赖 -->
-        <dependency>
-            <groupId>com.alibaba.boot</groupId>
-            <artifactId>nacos-com.yangy.config-spring-boot-starter</artifactId>
-            <version>${nacos.version}</version>
-        </dependency>
         
     </dependencies>
 

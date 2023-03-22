@@ -19,9 +19,10 @@
     <!--子模块-->
     <modules>
         <module>HaHa-Common</module>
-        <module>HaHa-Registry-10000</module>
+        <module>HaHa-Gateway</module>
         <module>HaHa-User</module>
         <module>HaHa-Web</module>
+        <module>HaHa-Send</module>
     </modules>
     
     <!--此文件引入公共部分-->
@@ -95,42 +96,6 @@
             <artifactId>springloaded</artifactId>
             <version>1.2.8.RELEASE</version>
         </dependency>
-        
-        <!--数据库连接jdbc依赖-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-jdbc</artifactId>
-        </dependency>
-
-        <!--mysql链接依赖-->
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>${mysql.connector.version}</version>
-        </dependency>
-
-        <!-- https://mvnrepository.com/artifact/com.baomidou/mybatis-plus-boot-starter -->
-        <!--mybatis-plus依赖-->
-        <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatisplus-spring-boot-starter</artifactId>
-            <version>${mybatisplus.starter.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus</artifactId>
-            <version>${mybatisplus.version}</version>
-        </dependency>
-
-        <!--阿里druid数据库链接依赖-->
-        <!-- https://mvnrepository.com/artifact/com.alibaba/druid -->
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>druid</artifactId>
-            <version>1.2.3</version>
-        </dependency>
-        
         <!-- 热部署 -->
         <!-- devtools可以实现页面热部署（即页面修改后会立即生效，
             这个可以直接在application.properties文件中配置spring.thymeleaf.cache=false来实现） -->

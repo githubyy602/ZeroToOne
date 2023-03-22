@@ -26,4 +26,12 @@ public class ResultBean {
 	public static ResultBean returnResult(ResponseCodeEnum responseCodeEnum,Object data){
 		return new ResultBean(responseCodeEnum.getCode(),responseCodeEnum.getDesc(),data);
 	}
+	
+	public static boolean successResp(ResultBean resultBean){
+		if(ResponseCodeEnum.SUCCESS.equals(ResponseCodeEnum.getResp(resultBean.code))){
+			return true;
+		}
+		
+		return false;
+	}
 }

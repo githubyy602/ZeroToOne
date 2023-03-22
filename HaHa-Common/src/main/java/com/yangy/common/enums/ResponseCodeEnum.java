@@ -12,7 +12,7 @@ public enum ResponseCodeEnum {
 	TOKEN_ERROR(2002,"Token错误"),
 	TOKEN_EXPIRE(2003,"Token失效"),
 	SIGN_ERROR(2004,"签名错误"),
-	PARAM_ERROR(2005,"签名错误"),;
+	PARAM_ERROR(2005,"参数错误"),;
 
 	private int code;
 	private String desc;

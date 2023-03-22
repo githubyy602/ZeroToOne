@@ -1,17 +1,18 @@
 package com.yangy.hahauser.controller;
 
 import com.yangy.common.bean.ResultBean;
+import com.yangy.common.feign.SendFeignClient;
+import com.yangy.common.enums.ResponseCodeEnum;
+import com.yangy.common.util.TokenUtil;
 import com.yangy.hahauser.bean.DTO.LoginInfoReqDto;
 import com.yangy.hahauser.bean.DTO.LoginInfoRespDto;
 import com.yangy.hahauser.bean.PO.User;
 import com.yangy.hahauser.mapper.UserMapper;
-import com.yangy.common.enums.ResponseCodeEnum;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import com.yangy.common.util.TokenUtil;
 
 import javax.annotation.Resource;
 import javax.validation.Valid;
@@ -30,10 +31,19 @@ public class LoginController {
 	@Resource
 	private UserMapper userMapper;
 	
+	@Resource
+	private SendFeignClient sendFeignClient;
+	
 	@PostMapping(value = "/online")
 	public ResultBean online(@RequestBody @Valid LoginInfoReqDto loginInfoReqDto){
 		User loginUser = userMapper.selectUserByLoginInfo(new User(loginInfoReqDto.getLoginName(),loginInfoReqDto.getPassword()));
 		if(Objects.nonNull(loginUser)){
+			//todo 目前假设这里有账户+验证码的登录形式，需要通过feign获取验证码
+			ResultBean resultBean = sendFeignClient.sendSMS();
+			if(!ResultBean.successResp(resultBean) || Objects.isNull(resultBean.getData())){
+				return ResultBean.returnResult(ResponseCodeEnum.PARAM_ERROR);
+			}
+			
 			LoginInfoRespDto infoDto = new LoginInfoRespDto();
 			infoDto.setUserId(loginUser.getId());
 			

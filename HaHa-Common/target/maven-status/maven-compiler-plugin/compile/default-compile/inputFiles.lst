@@ -5,6 +5,7 @@ D:\Java\ZeroToOne\code\HaHaShow\HaHa-Common\src\main\java\com\yangy\common\const
 D:\Java\ZeroToOne\code\HaHaShow\HaHa-Common\src\main\java\com\yangy\common\bean\Token.java
 D:\Java\ZeroToOne\code\HaHaShow\HaHa-Common\src\main\java\com\yangy\common\config\WebMvcConfig.java
 D:\Java\ZeroToOne\code\HaHaShow\HaHa-Common\src\main\java\com\yangy\common\enums\ResponseCodeEnum.java
+D:\Java\ZeroToOne\code\HaHaShow\HaHa-Common\src\main\java\com\yangy\common\bean\SendFeignClient.java
 D:\Java\ZeroToOne\code\HaHaShow\HaHa-Common\src\main\java\com\yangy\common\constant\CharacterConstant.java
 D:\Java\ZeroToOne\code\HaHaShow\HaHa-Common\src\main\java\com\yangy\common\bean\ResultBean.java
 D:\Java\ZeroToOne\code\HaHaShow\HaHa-Common\src\main\java\com\yangy\common\util\HmacMd5Util.java

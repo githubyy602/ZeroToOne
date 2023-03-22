@@ -9,6 +9,8 @@ public class CommonConstant {
 	
 	public static final String BASE_PACKAGE = "com.yangy";
 	
+	public static final String FEIGN_PACKAGE = BASE_PACKAGE + ".common.feign";
+	
 	//常用header
 	public static final String HEADER_ACCESS_TOKEN = "accessToken";
 	

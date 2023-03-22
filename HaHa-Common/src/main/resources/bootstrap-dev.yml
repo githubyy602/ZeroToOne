@@ -1,0 +1,7 @@
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 172.27.192.92:8848
+        namespace: a663dc6b-98ff-4518-9a06-ffb3e3c4b697
+        group: hahashow-dev

@@ -31,7 +31,7 @@ public class WebMvcConfig implements WebMvcConfigurer {
 		ServletRegistrationBean servletRegistrationBean = new ServletRegistrationBean(dispatcherServlet);
 		//配置请求url后缀匹配。必须结合
 		//springboot2.x必须结合 spring.mvc.pathmatch.use-suffix-pattern=true 配置
-		servletRegistrationBean.addUrlMappings("*.do");
+//		servletRegistrationBean.addUrlMappings("*.do");
 		System.out.println(JSON.toJSONString(servletRegistrationBean.getUrlMappings()));
 		return servletRegistrationBean;
 	}

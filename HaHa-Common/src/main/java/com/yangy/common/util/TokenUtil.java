@@ -54,7 +54,7 @@ public class TokenUtil {
 	public static boolean checkToken(String token) throws CustomException {
 
 		if(StringUtils.isEmpty(token)){
-			return false;
+			throw CustomException.custom(ResponseCodeEnum.TOKEN_ERROR.getCode());
 		}
 
 		String deStr;

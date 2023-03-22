@@ -9,10 +9,14 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="HaHa-Common" />
-        <module name="HaHa-Registry-10000" />
+        <module name="HaHa-Gateway" />
+        <module name="HaHa-Send" />
         <module name="HaHa-User" />
         <module name="HaHa-Web" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="send" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
