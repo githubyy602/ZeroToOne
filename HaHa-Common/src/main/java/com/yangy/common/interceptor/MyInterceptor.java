@@ -1,10 +1,10 @@
 package com.yangy.common.interceptor;
 
-import com.alibaba.fastjson.JSON;
 import com.yangy.common.bean.ResultBean;
 import com.yangy.common.constant.CommonConstant;
 import com.yangy.common.enums.ResponseCodeEnum;
 import com.yangy.common.exception.CustomException;
+import com.yangy.common.util.ResponseUtil;
 import com.yangy.common.util.TokenUtil;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
@@ -32,9 +32,7 @@ public class MyInterceptor implements HandlerInterceptor {
 			String token = request.getHeader(CommonConstant.HEADER_ACCESS_TOKEN);
 			return TokenUtil.checkToken(token);
 		} catch (CustomException e) {
-			response.getOutputStream().write(JSON.toJSONString(ResultBean.returnResult(ResponseCodeEnum.getResp(e.getCode())))
-					.getBytes(CommonConstant.CHARSET_UTF8)
-			);
+			ResponseUtil.responseOutWithJson(response,ResultBean.returnResult(ResponseCodeEnum.getResp(e.getCode())));
 			return false;
 		}
 	}

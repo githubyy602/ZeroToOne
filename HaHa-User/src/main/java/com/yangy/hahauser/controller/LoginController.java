@@ -39,10 +39,10 @@ public class LoginController {
 		User loginUser = userMapper.selectUserByLoginInfo(new User(loginInfoReqDto.getLoginName(),loginInfoReqDto.getPassword()));
 		if(Objects.nonNull(loginUser)){
 			//todo 目前假设这里有账户+验证码的登录形式，需要通过feign获取验证码
-			ResultBean resultBean = sendFeignClient.sendSMS();
-			if(!ResultBean.successResp(resultBean) || Objects.isNull(resultBean.getData())){
-				return ResultBean.returnResult(ResponseCodeEnum.PARAM_ERROR);
-			}
+//			ResultBean resultBean = sendFeignClient.sendSMS();
+//			if(!ResultBean.successResp(resultBean) || Objects.isNull(resultBean.getData())){
+//				return ResultBean.returnResult(ResponseCodeEnum.PARAM_ERROR);
+//			}
 			
 			LoginInfoRespDto infoDto = new LoginInfoRespDto();
 			infoDto.setUserId(loginUser.getId());

@@ -5,8 +5,11 @@ spring:
         server-addr: 172.27.192.92:8848
         namespace: a663dc6b-98ff-4518-9a06-ffb3e3c4b697
         group: hahashow-dev
-      config:
+      config: #config配置必须放在bootstrap配置内，才能读取到nacos配置，否则报错
         server-addr: 172.27.192.92:8848
         namespace: a663dc6b-98ff-4518-9a06-ffb3e3c4b697
         group: hahashow-dev
+        prefix: gateway
+        file-extension: yml
         refresh-enabled: true
+        
