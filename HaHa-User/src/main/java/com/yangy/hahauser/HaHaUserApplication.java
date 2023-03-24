@@ -11,6 +11,7 @@ import org.springframework.context.annotation.ComponentScan;
 @EnableFeignClients(basePackages = {CommonConstant.FEIGN_PACKAGE})
 @ComponentScan(basePackages = {CommonConstant.BASE_PACKAGE})
 @SpringBootApplication
+//@EnableHystrix
 public class HaHaUserApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(HaHaUserApplication.class, args);
