@@ -15,6 +15,8 @@ PO（Persistent Object）永久对象： 这些对象对应着数据库的每一
 DTO(Data Transfer Object)数据传输对象：我们sql查询的时候是通过Id查询的，但是查询是可以查询出很多条信息的，但是我们给前端的数据只要某一部分
 4、HaHa-Gateway业务网关主要处理路由、加密处理、限流等
 5、HaHa-Send发送服务，主要集成短信发送、邮件发送、消息推送等
+6、common模块中以bootstrap.yml为主;其他子模块则统一用properties文件作为配置
+
 
 #实现计划
 【架构实现】
@@ -32,4 +34,3 @@ DTO(Data Transfer Object)数据传输对象：我们sql查询的时候是通过I
 【功能实现】
 1、登录接口（token校验/实现实时单点）
 2、简易聊天（socketio实现）
-3、

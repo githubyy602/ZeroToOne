@@ -12,7 +12,6 @@ import org.springframework.context.annotation.ComponentScan;
 @ComponentScan(basePackages = {CommonConstant.BASE_PACKAGE})
 @SpringBootApplication
 public class HaHaUserApplication {
-
 	public static void main(String[] args) {
 		SpringApplication.run(HaHaUserApplication.class, args);
 	}

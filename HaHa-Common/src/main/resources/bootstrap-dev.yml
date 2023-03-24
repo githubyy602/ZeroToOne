@@ -10,3 +10,8 @@ spring:
         namespace: a663dc6b-98ff-4518-9a06-ffb3e3c4b697
         group: hahashow-dev
         refresh-enabled: true
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/hahashow?characterEncoding=utf-8&serverTimezone=Asia/Shanghai&allowMultiQueries=true
+    username: root
+    password: 123456
