@@ -5,3 +5,50 @@ server:
 spring:
   application:
     name: haha-gateway
+  codec:
+    max-in-memory-size: 16MB
+  cloud:
+    gateway:
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedHeaders: "*"
+            allowedCredentials: true
+            allowedOrigins: "*"
+            allowedMethods:
+              - GET
+              - OPTIONS
+              - POST
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+      routes: 
+        - id: haha-send
+          uri: lb://haha-send
+          order: 100
+          filters: []
+          predicates:
+            - args:
+                pattern: /send/**
+              name: Path
+        - id: send-limiter
+          uri: lb://haha-send
+          order: -1   #值越小，优先级越高
+          predicates:
+            - Path= /send/**
+          filters:
+            - name: GatewayRequestRateLimiter
+              args:
+                key-resolver: "#{@remoteAddrKeyResolver}"
+                redis-rate-limiter.replenishRate: 20 # 令牌桶填充的速率 秒为单位
+                redis-rate-limiter.burstCapacity: 20 # 令牌桶总容量
+                redis-rate-limiter.requestedTokens: 1 # 每次请求获取的令牌数
+        - id: haha-user
+          uri: lb://haha-user
+          order: 100
+          filters: []
+          predicates:
+            - args:
+                pattern: /user/**
+              name: Path         

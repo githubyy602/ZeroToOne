@@ -1,14 +1,15 @@
 package com.yangy.hahauser.controller;
 
 import com.yangy.common.bean.ResultBean;
-import com.yangy.common.feign.SendFeignClient;
 import com.yangy.common.enums.ResponseCodeEnum;
+import com.yangy.common.feign.SendFeignClient;
 import com.yangy.common.util.TokenUtil;
 import com.yangy.hahauser.bean.DTO.LoginInfoReqDto;
 import com.yangy.hahauser.bean.DTO.LoginInfoRespDto;
 import com.yangy.hahauser.bean.PO.User;
 import com.yangy.hahauser.mapper.UserMapper;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
 import javax.validation.Valid;
+import java.util.List;
 import java.util.Objects;
 
 /**
@@ -33,6 +35,12 @@ public class LoginController {
 	
 	@Resource
 	private SendFeignClient sendFeignClient;
+	
+	@Value("${testContent}")
+	private String testContent;
+	
+	@Value("${token.except.url}")
+	private List<String> urlList;
 	
 	@PostMapping(value = "/online")
 	public ResultBean online(@RequestBody @Valid LoginInfoReqDto loginInfoReqDto){

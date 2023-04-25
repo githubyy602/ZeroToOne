@@ -2,14 +2,16 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: 172.27.192.92:8848
-        namespace: a663dc6b-98ff-4518-9a06-ffb3e3c4b697
+        server-addr: 172.28.220.57:8848
+        namespace: a9a3fda3-f7db-4ea0-b986-c6d4db53cfef
         group: hahashow-dev
       config:
-        server-addr: 172.27.192.92:8848
-        namespace: a663dc6b-98ff-4518-9a06-ffb3e3c4b697
+        server-addr: 172.28.220.57:8848
+        namespace: a9a3fda3-f7db-4ea0-b986-c6d4db53cfef
         group: hahashow-dev
         refresh-enabled: true
+        prefix: common
+        file-extension: yaml
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/hahashow?characterEncoding=utf-8&serverTimezone=Asia/Shanghai&allowMultiQueries=true

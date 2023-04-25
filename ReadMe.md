@@ -26,11 +26,17 @@ DTO(Data Transfer Object)数据传输对象：我们sql查询的时候是通过I
 4、微服务间调用与通讯（feign）
 5、微服务网关搭建（gateway）
 6、微服务熔断器搭建（hystrix）
-7、组件接入：MQ、websocket、xxljob等（集合具体功能引入）
+7、组件接入：redis、MQ、websocket、xxljob、ES、flink等（结合具体功能引入）
+8、HA架构优化
 
-【部署实现】
-1、下载window docker，用于系统运行容器
 
 【功能实现】
 1、登录接口（token校验/实现实时单点）
 2、简易聊天（socketio实现）
+
+
+【部署实现】
+1、下载window docker，用于系统运行容器
+2、docker运行mysql、nacos
+3、CICD （Jenkins）
+

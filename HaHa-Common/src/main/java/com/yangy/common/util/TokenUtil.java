@@ -3,16 +3,12 @@ package com.yangy.common.util;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.yangy.common.bean.Token;
-import com.yangy.common.constant.CharacterConstant;
-import com.yangy.common.constant.CommonConstant;
 import com.yangy.common.enums.ResponseCodeEnum;
 import com.yangy.common.exception.CustomException;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.util.Base64Utils;
 import org.springframework.util.StringUtils;
 
-import java.nio.charset.Charset;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.ZoneOffset;
@@ -22,6 +18,9 @@ import java.util.Objects;
  * @Author: Yangy
  * @Date: 2023/3/13 12:20
  * @Description 
+ * 常见的对称加密算法：DES、3DES、AES、HS256
+ * 常见的非对称加密算法：RSA、DSA
+ * 散列算法：SHA-1、MD5
  */
 @Data
 @Slf4j
@@ -43,12 +42,8 @@ public class TokenUtil {
 		//token明文信息
 		Token token = Token.builder().userId(userId).time(nowTime).build();
 		String paramJson = JSON.toJSONString(token);
-		//签名
-		String sign = SignUtil.getSign(paramJson);
 		
-		String tokenStr = String.join(CharacterConstant.SEMICOLON,paramJson,sign);
-		
-		return Base64Utils.encodeToString(tokenStr.getBytes(CommonConstant.CHARSET_UTF8));
+		return DESUtils.encrypt(paramJson);
 	}
 	
 	public static boolean checkToken(String token) throws CustomException {
@@ -59,24 +54,13 @@ public class TokenUtil {
 
 		String deStr;
 		try {
-			deStr = new String(Base64Utils.decodeFromString(token),Charset.forName(CommonConstant.CHARSET_UTF8));
+			deStr = DESUtils.decrypt(token);
 		} catch (Exception e) {
 			log.error("Token decrypt error ! {}",e.getMessage(),e);
-			return false;
+			throw CustomException.custom(ResponseCodeEnum.TOKEN_ERROR.getCode());
 		}
 
-		String param = deStr.split(CharacterConstant.SEMICOLON)[0];
-		String sign = deStr.split(CharacterConstant.SEMICOLON).length > 1 ? deStr.split(CharacterConstant.SEMICOLON)[1] : null;
-		
-		if(Objects.isNull(sign)){
-			throw CustomException.custom(ResponseCodeEnum.SIGN_ERROR.getCode());
-		}
-		
-		if(!SignUtil.checkSign(param,sign)){
-			throw CustomException.custom(ResponseCodeEnum.SIGN_ERROR.getCode());
-		}
-		
-		Token tokenInfo = JSONObject.parseObject(param,Token.class);
+		Token tokenInfo = JSONObject.parseObject(deStr,Token.class);
 		if(Objects.isNull(tokenInfo)){
 			throw CustomException.custom(ResponseCodeEnum.PARAM_ERROR.getCode());
 		}

@@ -3,6 +3,7 @@ package com.yangy.hahauser.controller;
 import com.yangy.common.bean.ResultBean;
 import com.yangy.common.enums.ResponseCodeEnum;
 import com.yangy.common.feign.SendFeignClient;
+import com.yangy.common.util.SignUtil;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -30,5 +31,10 @@ public class UserController {
 	@PostMapping(value = "/getMessage")
 	public ResultBean getMessage(){
 		return sendFeignClient.sendSMS();
+	}
+	
+	@PostMapping(value = "/testSign")
+	public ResultBean testSign(){
+		return ResultBean.success(SignUtil.getSign("{\"loginName\":\"123\",\"password\":\"123456\"}"));
 	}
 }
