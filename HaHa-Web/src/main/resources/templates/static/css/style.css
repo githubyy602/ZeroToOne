@@ -854,7 +854,7 @@ button[type="submit"] i {
   content: "";
   width: 100%;
   height: 100%;
-  background: url("../images/bg-noise.gif");
+  background: url("../images/bg-noise.bak.gif");
   background-size: 200px auto;
   position: absolute;
   left: 0;
@@ -1087,7 +1087,7 @@ button[type="submit"] i {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  background: url("../images/page-header-bg.jpg") center no-repeat;
+  background: url("../images/page-header-bg.bak.jpg") center no-repeat;
   background-size: cover !important;
   position: fixed;
   left: 0;

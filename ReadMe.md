@@ -20,14 +20,15 @@ DTO(Data Transfer Object)数据传输对象：我们sql查询的时候是通过I
 
 #实现计划
 【架构实现】
-1、微服务项目结构搭建（父子层级）
-2、微服务注册中心搭建（nacos）  
-3、微服务注册到nacos
-4、微服务间调用与通讯（feign）
-5、微服务网关搭建（gateway）
-6、微服务熔断器搭建（hystrix）
+1、微服务项目结构搭建（父子层级）                                            -【已完成】
+2、微服务注册中心搭建（nacos）                                              -【已完成】  
+3、微服务注册到nacos                                                      -【已完成】     
+4、微服务间调用与通讯（feign）                                              -【已完成】
+5、微服务网关搭建（gateway）                                               -【已完成】   
+6、微服务熔断器搭建（hystrix）                                              -【已完成】   
 7、组件接入：redis、MQ、websocket、xxljob、ES、flink等（结合具体功能引入）
-8、HA架构优化
+8、权限框架接入
+.、HA架构优化
 
 
 【功能实现】
@@ -37,7 +38,7 @@ DTO(Data Transfer Object)数据传输对象：我们sql查询的时候是通过I
 
 
 【部署实现】
-1、下载window docker，用于系统运行容器
-2、docker运行mysql、nacos
+1、下载window docker，用于系统运行容器  -【已完成】
+2、docker运行mysql、nacos            -【已完成】
 3、CICD （Jenkins）
 

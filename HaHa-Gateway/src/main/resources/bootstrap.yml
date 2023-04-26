@@ -10,7 +10,8 @@ spring:
   cloud:
     inetutils:
       ignored-interfaces: 'VMware Virtual Ethernet Adapter for VMnet1,VMware Virtual Ethernet Adapter for VMnet8'
-  
+
+# 限流器还缺少redis的引入  
 #  cloud:
 #    gateway:
 #      globalcors:
