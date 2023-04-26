@@ -33,7 +33,7 @@ public class UserController {
 		return sendFeignClient.sendSMS();
 	}
 	
-	@PostMapping(value = "/testSign")
+	@PostMapping(value = "/getSign")
 	public ResultBean testSign(){
 		return ResultBean.success(SignUtil.getSign("{\"loginName\":\"123\",\"password\":\"123456\"}"));
 	}

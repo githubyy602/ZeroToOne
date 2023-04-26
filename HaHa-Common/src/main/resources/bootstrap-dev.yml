@@ -2,12 +2,12 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: 172.28.220.57:8848
-        namespace: a9a3fda3-f7db-4ea0-b986-c6d4db53cfef
+        server-addr: 127.0.0.1:8848
+        namespace: a663dc6b-98ff-4518-9a06-ffb3e3c4b697
         group: hahashow-dev
       config:
-        server-addr: 172.28.220.57:8848
-        namespace: a9a3fda3-f7db-4ea0-b986-c6d4db53cfef
+        server-addr: 127.0.0.1:8848
+        namespace: a663dc6b-98ff-4518-9a06-ffb3e3c4b697
         group: hahashow-dev
         refresh-enabled: true
         prefix: common

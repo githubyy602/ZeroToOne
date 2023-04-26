@@ -4,7 +4,6 @@ import com.yangy.common.bean.ResultBean;
 import com.yangy.common.constant.CommonConstant;
 import com.yangy.common.exception.CustomException;
 import com.yangy.common.util.ResponseUtil;
-import com.yangy.common.util.SignUtil;
 import com.yangy.common.util.TokenUtil;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -28,9 +27,12 @@ import java.util.List;
 public class MyInterceptor implements HandlerInterceptor {
 	
 	private List<String> urlList;
+	
+	private List<String> signExceptUrlList;
 
-	public MyInterceptor(List<String> urlList) {
+	public MyInterceptor(List<String> urlList,List<String> signList) {
 		this.urlList = urlList;
+		this.signExceptUrlList=signList;
 	}
 
 	@Override
@@ -53,7 +55,9 @@ public class MyInterceptor implements HandlerInterceptor {
 			}
 
 			//校验签名
-			SignUtil.checkSign(request);
+//			if(CollectionUtils.isEmpty(signExceptUrlList) || !signExceptUrlList.stream().filter(u->url.endsWith(u)).findAny().isPresent()){
+//				SignUtil.checkSign(request);
+//			}
 
 			return true;
 		} catch (CustomException e) {

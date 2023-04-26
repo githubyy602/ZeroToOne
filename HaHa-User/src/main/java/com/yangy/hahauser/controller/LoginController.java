@@ -17,7 +17,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
 import javax.validation.Valid;
-import java.util.List;
 import java.util.Objects;
 
 /**
@@ -36,18 +35,16 @@ public class LoginController {
 	@Resource
 	private SendFeignClient sendFeignClient;
 	
-	@Value("${testContent}")
+	@Value("${testContent:}")
 	private String testContent;
-	
-	@Value("${token.except.url}")
-	private List<String> urlList;
 	
 	@PostMapping(value = "/online")
 	public ResultBean online(@RequestBody @Valid LoginInfoReqDto loginInfoReqDto){
 		User loginUser = userMapper.selectUserByLoginInfo(new User(loginInfoReqDto.getLoginName(),loginInfoReqDto.getPassword()));
 		if(Objects.nonNull(loginUser)){
 			//todo 目前假设这里有账户+验证码的登录形式，需要通过feign获取验证码
-//			ResultBean resultBean = sendFeignClient.sendSMS();
+			ResultBean resultBean = sendFeignClient.sendSMS();
+			log.info("获取到的验证码是：{}",resultBean.getData());
 //			if(!ResultBean.successResp(resultBean) || Objects.isNull(resultBean.getData())){
 //				return ResultBean.returnResult(ResponseCodeEnum.PARAM_ERROR);
 //			}

@@ -19,9 +19,12 @@ public class WebMvcConfig implements WebMvcConfigurer {
 	@Value("${token.except.url:}")
 	private List<String> urlList;
 	
+	@Value("${sign.except.url:}")
+	private List<String> signExceptUrlList;
+	
 	@Override
 	public void addInterceptors(InterceptorRegistry registry) {
-		registry.addInterceptor(new MyInterceptor(urlList))
+		registry.addInterceptor(new MyInterceptor(urlList,signExceptUrlList))
 				.addPathPatterns("/**")
 				.excludePathPatterns("/css/**", "/images/**", "/js/**", "/fonts/**");
 		//下面这句必须有才生效
