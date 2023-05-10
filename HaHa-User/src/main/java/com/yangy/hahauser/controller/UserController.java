@@ -1,5 +1,6 @@
 package com.yangy.hahauser.controller;
 
+import com.alibaba.fastjson.JSON;
 import com.yangy.common.bean.ResultBean;
 import com.yangy.common.enums.ResponseCodeEnum;
 import com.yangy.common.feign.SendFeignClient;
@@ -9,6 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
+import java.util.Map;
+import java.util.TreeMap;
 
 /**
  * @Author: Yangy
@@ -35,6 +38,9 @@ public class UserController {
 	
 	@PostMapping(value = "/getSign")
 	public ResultBean testSign(){
-		return ResultBean.success(SignUtil.getSign("{\"loginName\":\"123\",\"password\":\"123456\"}"));
+		Map<String,Object> param = new TreeMap<>();
+		param.put("loginName","admin");
+		param.put("password","123456");
+		return ResultBean.success(SignUtil.getSign(JSON.toJSONString(param)));
 	}
 }

@@ -17,7 +17,16 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class SMSController {
 	
+	
 	@PostMapping(value = "/sendMessage")
+	@HystrixCommand(fallbackMethod = "failResult",commandProperties = {
+            @HystrixProperty(name = "circuitBreaker.enabled",value = "true"),  //是否开启断路器，默认true
+            @HystrixProperty(name = "circuitBreaker.requestVolumeThreshold",value = "100"),   //时间窗口时间内最大并发请求次数，默认20次
+            @HystrixProperty(name = "metrics.rollingStats.timeInMilliseconds",value = "2000"),   //时间窗口时长,默认10s
+            @HystrixProperty(name = "circuitBreaker.sleepWindowInMilliseconds",value = "5000"),  //熔断后恢复间隔时间范围，默认5s
+            @HystrixProperty(name = "circuitBreaker.errorThresholdPercentage",value = "0"),//失败率达到多少后跳闸，默认50
+            @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "3000")//响应超时时间，默认1000毫秒
+    })
 	public ResultBean sendSMS(){
 		//todo 实现短信发送功能
 		return ResultBean.returnResult(ResponseCodeEnum.SUCCESS,"123456");

@@ -2,7 +2,7 @@
 <html lang="zxx">
 
 <head>
-	<title>Home</title>
+	<title>Login Page</title>
 	<!-- Meta tag Keywords -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="UTF-8" />
@@ -22,6 +22,10 @@
 	<link rel="stylesheet" href="static/css/style-login.css" type="text/css" media="all" />
 	<!-- Style-CSS -->
 	<link rel="stylesheet" href="static/css/fontawesome-all.css">
+	<!-- 引入样式 -->
+	<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+	<!-- 引入组件库 -->
+	<script src="https://unpkg.com/element-ui/lib/index.js"></script>
 	<!-- Font-Awesome-Icons-CSS -->
 	<!-- //css files -->
 	<!-- web-fonts -->
@@ -43,7 +47,7 @@
 	<!-- //title -->
 	<!-- content -->
 	<div class="sub-main-w3">
-		<form action="#" method="post">
+		<form action="#" method="post" name="loginForm">
 			<h2>Login Now
 				<i class="fas fa-level-down-alt"></i>
 			</h2>
@@ -76,7 +80,7 @@
 				</ul>
 			</div>
 			<!-- //checkbox -->
-			<input type="submit" value="登录">
+			<input type="submit" value="登录" onclick="validateForm()">
 		</form>
 	</div>
 	<!-- //content -->
@@ -96,5 +100,41 @@
 	<!-- //effect js -->
 
 </body>
+
+<script>
+	
+	function validateForm() {
+		var name = document.forms["loginForm"]["Name"].value;
+		if (name == null || name == "") {
+			alert("请输入登录名");
+			return false;
+		}
+		
+		var pwd = document.forms["loginForm"]["Password"].value;
+		if (pwd == null || pwd == "") {
+			alert("请输入密码");
+			return false;
+		}
+	
+	
+	const xhr = new XMLHttpRequest(); //创建新的XHR对象
+    const url = '10001/user/login/online'; //目标URL
+    const params = { loginName: 'admin', password: '123456',sign:'aeec18be0fc1ae9e5788a958e9af751e' }; //具体的参数对象
+    xhr.open('POST', url); //设置请求方法为POST，并指定URL为目标URL
+    xhr.setRequestHeader('Content-Type', 'application/json'); //设置请求头的Content-Type为JSON类型
+    xhr.onload = () => {
+      if (xhr.status >= 200 && xhr.status < 300) { //如果请求成功
+        alert("请求成功") //记录来自服务器的响应
+      } else {
+        console.log('请求失败。'); //记录错误消息
+      }
+    };
+    xhr.onerror = () => {
+      console.log('请求失败。'); //如果请求失败，记录错误消息
+    };
+    xhr.send(JSON.stringify(params)); // 发送JSON格式的请求体
+    
+    }	
+</script>
 
 </html>

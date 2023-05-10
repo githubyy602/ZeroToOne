@@ -26,9 +26,10 @@ DTO(Data Transfer Object)数据传输对象：我们sql查询的时候是通过I
 4、微服务间调用与通讯（feign）                                              -【已完成】
 5、微服务网关搭建（gateway）                                               -【已完成】   
 6、微服务熔断器搭建（hystrix）                                              -【已完成】   
-7、组件接入：redis、MQ、websocket、xxljob、ES、flink等（结合具体功能引入）
-8、权限框架接入
-.、HA架构优化
+7、组件接入：redis、MQ、websocket、xxljob、ES、flink、xxljob等（结合具体功能引入）
+8、权限框架接入（功能权限、数据权限-注解方式处理）
+9、
+n、HA架构优化
 
 
 【功能实现】
