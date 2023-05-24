@@ -104,36 +104,47 @@
 <script>
 	
 	function validateForm() {
-		var name = document.forms["loginForm"]["Name"].value;
-		if (name == null || name == "") {
-			alert("请输入登录名");
-			return false;
-		}
-		
-		var pwd = document.forms["loginForm"]["Password"].value;
-		if (pwd == null || pwd == "") {
-			alert("请输入密码");
-			return false;
-		}
-	
-	
-	const xhr = new XMLHttpRequest(); //创建新的XHR对象
-    const url = '10001/user/login/online'; //目标URL
-    const params = { loginName: 'admin', password: '123456',sign:'aeec18be0fc1ae9e5788a958e9af751e' }; //具体的参数对象
-    xhr.open('POST', url); //设置请求方法为POST，并指定URL为目标URL
-    xhr.setRequestHeader('Content-Type', 'application/json'); //设置请求头的Content-Type为JSON类型
-    xhr.onload = () => {
-      if (xhr.status >= 200 && xhr.status < 300) { //如果请求成功
-        alert("请求成功") //记录来自服务器的响应
-      } else {
-        console.log('请求失败。'); //记录错误消息
-      }
-    };
-    xhr.onerror = () => {
-      console.log('请求失败。'); //如果请求失败，记录错误消息
-    };
-    xhr.send(JSON.stringify(params)); // 发送JSON格式的请求体
-    
+        var name = document.forms["loginForm"]["Name"].value;
+        if (name == null || name == "") {
+            alert("请输入登录名");
+            return false;
+        }
+
+        var pwd = document.forms["loginForm"]["Password"].value;
+        if (pwd == null || pwd == "") {
+            alert("请输入密码");
+            return false;
+        }
+
+        const params = {loginName: 'admin', password: '123456', sign: '00522005e2363b3365ddfa4ca88b4645'}; //具体的参数对象
+        $.ajax({
+            url: "http://localhost:20001/user/login/online",
+            method: "POST",
+            data: JSON.stringify(params),
+			async: true,
+    		dataType: "json",
+    		contentType: "application/json;charset=UTF-8",
+			beforeSend: function(XHR) {
+				XHR.setRequestHeader("Access-Control-Allow-Origin","*");
+				// XHR.setRequestHeader("userId", encodeURIComponent(userInfo.userId));
+			},
+            success: function (data) {
+                // debugger;
+                // var res = JSON.parse(data);
+                if(data.code == 1000){
+                    // 设置全局参数
+					localStorage.setItem('userId', data.data.userId);
+					localStorage.setItem('accessToken', data.data.accessToken);
+                    window.location.href="http://localhost:20001/web/index";
+                }else{
+                     alert(data.message);
+				}
+            },
+            error: function (data) {
+                console.log("请求错误："+data.statusText);
+            }
+
+        });
     }	
 </script>
 

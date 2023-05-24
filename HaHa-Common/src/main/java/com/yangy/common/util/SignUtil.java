@@ -58,6 +58,10 @@ public class SignUtil {
 			params = getParam(request);
 		}
 		
+		if(Objects.isNull(params)){
+			throw CustomException.custom(ResponseCodeEnum.PARAM_ERROR.getCode());
+		}
+		
 		//请求的签名
 		String reqSign = Objects.nonNull(params.get(SIGN)) ? params.get(SIGN).toString() : "";
 		if(StringUtils.isEmpty(reqSign)){

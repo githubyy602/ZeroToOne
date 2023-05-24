@@ -12,4 +12,5 @@ public class CharacterConstant {
 	public static final String COMMA = ",";
 	public static final String EQUAL = "=";  
 	public static final String JUST = "&";
+	public static final String PUNCTUATION_ASTERISK = "*";
 }
