@@ -2,6 +2,8 @@ package com.yangy.hahauser.service.impl;
 
 import com.yangy.common.bean.ResultBean;
 import com.yangy.common.design.factory.OrderFactory;
+import com.yangy.common.design.strategy.EnquiryContext;
+import com.yangy.common.design.strategy.EnquiryDto;
 import com.yangy.hahauser.bean.DTO.OrderDto;
 import com.yangy.hahauser.service.OrderService;
 import org.springframework.stereotype.Service;
@@ -19,10 +21,10 @@ public class OrderServiceImpl implements OrderService {
 	
 	@Resource
 	private Map<String,OrderFactory> factoryMap;
-
+	
 	@Override
 	public ResultBean createOrder(OrderDto order) {
-		
+		//工厂模式
 		OrderFactory orderFactory;
 		if(1 == order.getType()){
 			orderFactory = factoryMap.get("StockOrderFactory");
@@ -47,5 +49,13 @@ public class OrderServiceImpl implements OrderService {
 	@Override
 	public ResultBean orderDetail(OrderDto order) {
 		return null;
+	}
+	
+	@Override
+	public ResultBean dealEnquiry(EnquiryDto  enquiryDto) {
+		EnquiryContext context = new EnquiryContext();
+		ResultBean result = context.dealEnquiry(enquiryDto);
+		
+		return result;
 	}
 }

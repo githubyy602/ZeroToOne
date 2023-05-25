@@ -1,6 +1,7 @@
 package com.yangy.hahauser.service;
 
 import com.yangy.common.bean.ResultBean;
+import com.yangy.common.design.strategy.EnquiryDto;
 import com.yangy.hahauser.bean.DTO.OrderDto;
 
 /**
@@ -15,4 +16,6 @@ public interface OrderService {
 	ResultBean updateOrder(OrderDto order);
 	
 	ResultBean orderDetail(OrderDto order);
+	
+	ResultBean dealEnquiry(EnquiryDto enquiryDto);
 }

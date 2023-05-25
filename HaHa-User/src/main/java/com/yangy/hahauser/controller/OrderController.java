@@ -1,6 +1,7 @@
 package com.yangy.hahauser.controller;
 
 import com.yangy.common.bean.ResultBean;
+import com.yangy.common.design.strategy.EnquiryDto;
 import com.yangy.common.enums.ResponseCodeEnum;
 import com.yangy.hahauser.bean.DTO.OrderDto;
 import com.yangy.hahauser.service.OrderService;
@@ -33,6 +34,11 @@ public class OrderController {
 		}
 		
 		return orderService.createOrder(orderDto);
+	}
+	
+	@PostMapping(value = "/getEnquiryPrice")
+	public ResultBean getEnquiryPrice(@RequestBody EnquiryDto enquiryDto){
+		return orderService.dealEnquiry(enquiryDto);
 	}
 	
 }

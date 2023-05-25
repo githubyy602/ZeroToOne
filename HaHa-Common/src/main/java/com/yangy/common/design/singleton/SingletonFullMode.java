@@ -16,6 +16,19 @@ public class SingletonFullMode {
 	
 	private int num;
 	
+	/**
+	* @Author Yangy
+	* @Description 
+	 * 注意： 使用双重检查微进行初始化的实例必须使volatile关键字修饰
+	 * 原因： instance = new Single() 可 以拆解为3步：
+	 * 1、分配内存
+	 * 2、初始化对象
+	 * 3、指向刚分配的地址，若发生重排序，假设A线程执行了1和3，还没有执行2，B线程来创判断NULL, 
+	 * B线程就会点接返0还没初始化的instance了。volatile可以避免重排序
+	* @Date 12:07 2023/5/25
+	* @Param []
+	* @return com.yangy.common.design.singleton.SingletonFullMode
+	**/
 	public static SingletonFullMode getInstance(){
 		if(SINGLETON_MODE == null){
 			synchronized (SingletonFullMode.class){
