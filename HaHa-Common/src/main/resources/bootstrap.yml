@@ -27,6 +27,14 @@ sys:
     user: 'user'
     
 
+token:
+  except:
+    url: /login/online,getSign
+
+sign:
+  except:
+    url: getSign
+
 #hystrix配置参考
 #hystrix:
 #  command:

@@ -6,11 +6,11 @@ import com.yangy.common.enums.ResponseCodeEnum;
 import com.yangy.common.feign.SendFeignClient;
 import com.yangy.common.util.SignUtil;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
-import java.util.Map;
 import java.util.TreeMap;
 
 /**
@@ -37,10 +37,8 @@ public class UserController {
 	}
 	
 	@PostMapping(value = "/getSign")
-	public ResultBean testSign(){
-		Map<String,Object> param = new TreeMap<>();
-		param.put("loginName","admin");
-		param.put("password","123456");
+	public ResultBean testSign(@RequestBody TreeMap<String,Object> param){
 		return ResultBean.success(SignUtil.getSign(JSON.toJSONString(param)));
 	}
+	
 }

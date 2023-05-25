@@ -31,11 +31,11 @@ public class SignUtil {
 		
 		//正则过滤
         String initStr = com.yangy.common.util.StringUtils.saveLetterDigitOrChinese(param);
-//		log.info("Regex string is : {}",initStr);
+		log.info("Regex string is : {}",initStr);
 
         //base64处理
         String base64Str = Base64Utils.encodeToString(initStr.getBytes(Charset.forName("UTF-8")));
-//		log.info("Base64 string is : {}",base64Str);
+		log.info("Base64 string is : {}",base64Str);
 
         //按ASCII升序排序
         base64Str = com.yangy.common.util.StringUtils.sortCharByASCII(base64Str);
