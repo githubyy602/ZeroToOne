@@ -35,7 +35,7 @@ n、HA架构优化
 【功能实现】
 1、登录接口（token校验/实现实时单点）
 2、简易聊天（socketio实现）
-3、
+3、站内消息推送（Server-Sent Events）
 
 
 【部署实现】

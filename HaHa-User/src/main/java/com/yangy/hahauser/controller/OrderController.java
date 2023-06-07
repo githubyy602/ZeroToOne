@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.Valid;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @Author: Yangy
@@ -39,6 +41,22 @@ public class OrderController {
 	@PostMapping(value = "/getEnquiryPrice")
 	public ResultBean getEnquiryPrice(@RequestBody EnquiryDto enquiryDto){
 		return orderService.dealEnquiry(enquiryDto);
+	}
+
+	public static void main(String[] args) {
+		//无界通配符
+		List<?> list = new ArrayList<>();
+		list.add(null);
+		list.clear();
+		list.remove(0);
+		list.size();
+		
+		//上界通配符
+		List<? extends Number> list1 = new ArrayList<>();
+		list1.add(null);
+		
+		List<? super Integer> list2 = new ArrayList<>();
+		list2.add(null);
 	}
 	
 }
