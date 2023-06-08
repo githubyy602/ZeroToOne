@@ -1,16 +1,24 @@
 package com.yangy.hahauser.controller;
 
 import com.alibaba.fastjson.JSON;
+import com.yangy.common.bean.ReqBaseBean;
 import com.yangy.common.bean.ResultBean;
 import com.yangy.common.enums.ResponseCodeEnum;
 import com.yangy.common.feign.SendFeignClient;
+import com.yangy.common.util.ConvertUtil;
 import com.yangy.common.util.SignUtil;
+import com.yangy.hahauser.bean.DTO.UserInfoDto;
+import com.yangy.hahauser.bean.PO.User;
+import com.yangy.hahauser.mapper.UserMapper;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
+import javax.validation.Valid;
+import java.util.Objects;
 import java.util.TreeMap;
 
 /**
@@ -25,9 +33,18 @@ public class UserController {
 	@Resource
 	private SendFeignClient sendFeignClient;
 	
+	@Resource
+	private UserMapper userMapper;
+	
 	@PostMapping(value = "/getUserInfo")
-	public ResultBean getUserInfo(){
-		return ResultBean.returnResult(ResponseCodeEnum.SUCCESS);
+	public ResultBean getUserInfo(@RequestBody @Valid ReqBaseBean reqBaseBean, BindingResult result){
+		User user = userMapper.selectByPrimaryKey(reqBaseBean.getUserId());
+		if(Objects.isNull(user)){
+			return ResultBean.returnResult(ResponseCodeEnum.USER_NOT_EXIST_ERROR);	
+		}
+
+		UserInfoDto userInfoDto = ConvertUtil.convert(user,new UserInfoDto());
+		return ResultBean.success(userInfoDto);
 	}
 	
 	//测试feign调用

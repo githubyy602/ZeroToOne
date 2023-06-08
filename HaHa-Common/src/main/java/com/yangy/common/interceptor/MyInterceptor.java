@@ -62,9 +62,8 @@ public class MyInterceptor implements HandlerInterceptor {
 				requestWrapper = new HttpRequestWrapper(request);
 			}
 			if(CollectionUtils.isEmpty(urlList) || !urlList.stream().filter(u->url.endsWith(u)).findAny().isPresent()){
-				String token = request.getHeader(CommonConstant.HEADER_ACCESS_TOKEN);
 				//校验token
-				TokenUtil.checkToken(token);
+				TokenUtil.checkToken(requestWrapper);
 			}
 
 			//校验签名

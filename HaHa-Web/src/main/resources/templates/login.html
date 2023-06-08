@@ -26,6 +26,8 @@
 	<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
 	<!-- 引入组件库 -->
 	<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <script src="static/js/crypto-js.js"></script>
+    <script src="static/js/api/common-api.js"></script>
 	<!-- Font-Awesome-Icons-CSS -->
 	<!-- //css files -->
 	<!-- web-fonts -->
@@ -70,7 +72,7 @@
 				<ul>
 					<li>
 						<label class="anim">
-							<input type="checkbox" class="checkbox" required="">
+							<input type="checkbox" class="checkbox">
 							<span>注册账号</span>
 						</label>
 					</li>
@@ -104,6 +106,8 @@
 <script>
 	
 	function validateForm() {
+	    event.preventDefault();//阻止页面在提交后刷新
+	    
         var name = document.forms["loginForm"]["Name"].value;
         if (name == null || name == "") {
             alert("请输入登录名");
@@ -115,12 +119,22 @@
             alert("请输入密码");
             return false;
         }
-
-        const params = {loginName: 'admin', password: '123456', sign: '00522005e2363b3365ddfa4ca88b4645'}; //具体的参数对象
+        
+        var params = new Map();
+        params.set('loginName', 'admin');
+        params.set('password', '123456');
+        var sign = getBackendSignature(params);
+        
+        params.set('sign',sign);
+        var jsonObj = {};
+        params.forEach(function(value, key) {
+          jsonObj[key] = value;
+        });
+        
         $.ajax({
             url: "http://localhost:20001/user/login/online",
             method: "POST",
-            data: JSON.stringify(params),
+            data: JSON.stringify(jsonObj),
 			async: true,
     		dataType: "json",
     		contentType: "application/json;charset=UTF-8",
@@ -129,13 +143,12 @@
 				// XHR.setRequestHeader("userId", encodeURIComponent(userInfo.userId));
 			},
             success: function (data) {
-                // debugger;
-                // var res = JSON.parse(data);
+                
                 if(data.code == 1000){
                     // 设置全局参数
 					localStorage.setItem('userId', data.data.userId);
 					localStorage.setItem('accessToken', data.data.accessToken);
-                    window.location.href="http://localhost:20001/web/index";
+                    window.location.href="./index.html";
                 }else{
                      alert(data.message);
 				}

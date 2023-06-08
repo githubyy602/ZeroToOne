@@ -3,8 +3,10 @@ package com.yangy.common.util;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.yangy.common.bean.Token;
+import com.yangy.common.constant.CommonConstant;
 import com.yangy.common.enums.ResponseCodeEnum;
 import com.yangy.common.exception.CustomException;
+import com.yangy.common.wrapper.HttpRequestWrapper;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.util.StringUtils;
@@ -46,8 +48,8 @@ public class TokenUtil {
 		return DESUtils.encrypt(paramJson);
 	}
 	
-	public static boolean checkToken(String token) throws CustomException {
-
+	public static boolean checkToken(HttpRequestWrapper requestWrapper) throws CustomException {
+		String token = requestWrapper.getHeader(CommonConstant.HEADER_ACCESS_TOKEN);
 		if(StringUtils.isEmpty(token)){
 			throw CustomException.custom(ResponseCodeEnum.TOKEN_ERROR.getCode());
 		}
@@ -62,6 +64,24 @@ public class TokenUtil {
 
 		Token tokenInfo = JSONObject.parseObject(deStr,Token.class);
 		if(Objects.isNull(tokenInfo)){
+			throw CustomException.custom(ResponseCodeEnum.PARAM_ERROR.getCode());
+		}
+		
+		//获取userId进行token匹配
+		String body = requestWrapper.getBody();
+		if(StringUtils.isEmpty(body)){
+			throw CustomException.custom(ResponseCodeEnum.PARAM_ERROR.getCode());
+		}
+		
+		//todo 校验json字符串
+		JSONObject jsonObject = JSONObject.parseObject(body);
+		Object reqUserId = jsonObject.get("userId");
+		if(Objects.isNull(reqUserId)){
+			throw CustomException.custom(ResponseCodeEnum.PARAM_ERROR.getCode());
+		}
+		
+		if(Integer.valueOf(reqUserId.toString()).compareTo(tokenInfo.getUserId()) != 0){
+			log.warn("Request userId is not match token : {} ; token :{}",reqUserId.toString(),token);
 			throw CustomException.custom(ResponseCodeEnum.PARAM_ERROR.getCode());
 		}
 		

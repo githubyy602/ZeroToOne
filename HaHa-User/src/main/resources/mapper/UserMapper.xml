@@ -9,12 +9,12 @@
     <result column="phone" property="phone" jdbcType="VARCHAR" />
     <result column="login_name" property="loginName" jdbcType="VARCHAR" />
     <result column="login_password" property="loginPassword" jdbcType="VARCHAR" />
-    <result column="salt" property="salt" jdbcType="VARCHAR" />
+    <result column="img_url" property="imgUrl" jdbcType="VARCHAR" />
     <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
     <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
   </resultMap>
   <sql id="Base_Column_List" >
-    id, user_name, sex, email, phone, login_name, login_password, salt, create_time, 
+    id, user_name, sex, email, phone, login_name, login_password, img_url, create_time, 
     update_time
   </sql>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
@@ -30,11 +30,11 @@
   <insert id="insert" parameterType="com.yangy.hahauser.bean.PO.User" >
     insert into tb_user (id, user_name, sex, 
       email, phone, login_name, 
-      login_password, salt, create_time, 
+      login_password, img_url, create_time, 
       update_time)
     values (#{id,jdbcType=INTEGER}, #{userName,jdbcType=VARCHAR}, #{sex,jdbcType=CHAR}, 
       #{email,jdbcType=VARCHAR}, #{phone,jdbcType=VARCHAR}, #{loginName,jdbcType=VARCHAR}, 
-      #{loginPassword,jdbcType=VARCHAR}, #{salt,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, 
+      #{loginPassword,jdbcType=VARCHAR}, #{imgUrl,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, 
       #{updateTime,jdbcType=TIMESTAMP})
   </insert>
   <insert id="insertSelective" parameterType="com.yangy.hahauser.bean.PO.User" >
@@ -61,8 +61,8 @@
       <if test="loginPassword != null" >
         login_password,
       </if>
-      <if test="salt != null" >
-        salt,
+      <if test="imgUrl != null" >
+        img_url,
       </if>
       <if test="createTime != null" >
         create_time,
@@ -93,8 +93,8 @@
       <if test="loginPassword != null" >
         #{loginPassword,jdbcType=VARCHAR},
       </if>
-      <if test="salt != null" >
-        #{salt,jdbcType=VARCHAR},
+      <if test="imgUrl != null" >
+        #{imgUrl,jdbcType=VARCHAR},
       </if>
       <if test="createTime != null" >
         #{createTime,jdbcType=TIMESTAMP},
@@ -125,8 +125,8 @@
       <if test="loginPassword != null" >
         login_password = #{loginPassword,jdbcType=VARCHAR},
       </if>
-      <if test="salt != null" >
-        salt = #{salt,jdbcType=VARCHAR},
+      <if test="imgUrl != null" >
+        img_url = #{imgUrl,jdbcType=VARCHAR},
       </if>
       <if test="createTime != null" >
         create_time = #{createTime,jdbcType=TIMESTAMP},
@@ -145,7 +145,7 @@
       phone = #{phone,jdbcType=VARCHAR},
       login_name = #{loginName,jdbcType=VARCHAR},
       login_password = #{loginPassword,jdbcType=VARCHAR},
-      salt = #{salt,jdbcType=VARCHAR},
+      img_url = #{imgUrl,jdbcType=VARCHAR},
       create_time = #{createTime,jdbcType=TIMESTAMP},
       update_time = #{updateTime,jdbcType=TIMESTAMP}
     where id = #{id,jdbcType=INTEGER}

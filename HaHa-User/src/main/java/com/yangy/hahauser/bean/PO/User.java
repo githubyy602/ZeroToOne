@@ -22,7 +22,7 @@ public class User {
 
     private String loginPassword;
 
-    private String salt;
+    private String imgUrl;
 
     private Date createTime;
 
