@@ -17,6 +17,19 @@
         <java.version>8</java.version>
     </properties>
     
+    <dependencyManagement>
+      <dependencies>
+        <!-- Azure SDK BOM -->
+        <dependency>
+          <groupId>com.azure</groupId>
+          <artifactId>azure-sdk-bom</artifactId>
+          <version>2021-09-02</version>
+          <type>pom</type>
+          <scope>import</scope>
+        </dependency>
+      </dependencies>
+    </dependencyManagement>
+    
     <dependencies>
         
          <dependency>
@@ -57,7 +70,32 @@
              <artifactId>mail</artifactId>
              <version>1.5.0-b01</version>
         </dependency>
-
+        
+        <!-- 发邮件 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-mail</artifactId>
+        </dependency>
+        
+        <!-- https://mvnrepository.com/artifact/com.microsoft.graph/microsoft-graph -->
+        <dependency>
+            <groupId>com.microsoft.graph</groupId>
+            <artifactId>microsoft-graph</artifactId>
+            <version>5.59.0</version>
+        </dependency>
+        
+        <!--<dependency>-->
+            <!--<groupId>com.microsoft.azure</groupId>-->
+            <!--<artifactId>msal4j</artifactId>-->
+            <!--<version>1.7.0</version>-->
+        <!--</dependency>-->
+        
+         <!-- Azure Identity -->
+        <dependency>
+            <groupId>com.azure.identity</groupId>
+            <artifactId>azure-identity</artifactId>
+          </dependency>
+        
     </dependencies>
 
     <build>

@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.lang.reflect.UndeclaredThrowableException;
+
 /**
  * @Author: Yangy
  * @Date: 2023/6/8 15:05
@@ -22,4 +24,9 @@ public class GlobalExceptionHandler {
 		return ResultBean.returnResult(ResponseCodeEnum.RUNTIME_ERROR);
 	}
 	
+	//未声明异常捕获
+	@ExceptionHandler({UndeclaredThrowableException.class})
+	public ResultBean undeclaredThrowableExceptionHandler(UndeclaredThrowableException ex){
+		return ResultBean.returnResult(ResponseCodeEnum.UNKOWN_ERROR);
+	}
 }

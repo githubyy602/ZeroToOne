@@ -26,8 +26,6 @@
 	<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
 	<!-- 引入组件库 -->
 	<script src="https://unpkg.com/element-ui/lib/index.js"></script>
-    <script src="static/js/crypto-js.js"></script>
-    <script src="static/js/api/common-api.js"></script>
 	<!-- Font-Awesome-Icons-CSS -->
 	<!-- //css files -->
 	<!-- web-fonts -->
@@ -100,7 +98,8 @@
 	<!-- effect js -->
 	<script src="static/js/canva_moving_effect.js"></script>
 	<!-- //effect js -->
-
+    <script src="static/js/crypto-js.js"></script>
+    <script src="static/js/api/common-api.js"></script>
 </body>
 
 <script>
@@ -146,9 +145,10 @@
                 
                 if(data.code == 1000){
                     // 设置全局参数
+                    debugger;
 					localStorage.setItem('userId', data.data.userId);
 					localStorage.setItem('accessToken', data.data.accessToken);
-                    window.location.href="./index.html";
+                    window.location.href="http://localhost:30000/web/index";
                 }else{
                      alert(data.message);
 				}

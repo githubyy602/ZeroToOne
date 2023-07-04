@@ -854,5 +854,16 @@
 <script src="static/js/swiper.min.js"></script> 
 <script src="static/js/fancybox.min.js"></script> 
 <script src="static/js/scripts.js"></script>
+<script src="static/js/crypto-js.js"></script>
+<script src="static/js/api/common-api.js"></script>
+<script src="static/js/api/user-api.js"></script>
+
+<script>
+    var user = getUserInfo();
+    if(null != user){
+        alert(user.userName);
+    }
+    
+</script>
 </body>
 </html>
