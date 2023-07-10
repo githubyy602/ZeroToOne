@@ -27,7 +27,7 @@
     </form>
 		</div>
 		<!-- end mobile-search -->
-  <a href="account.html" class="button-account"><i class="lni lni-user"></i> ACCOUNT </a>
+            <a href="account.html" class="button-account"> </a>
     <!-- end button-account --> 
 	<div class="site-menu">
     <ul>
@@ -75,7 +75,7 @@
       <!-- end notify-dropdown --> 
     </div>
     <!-- end navbar-notify -->
-    <div class="navbar-account"> <a href="account.html">ACCOUNT <i class="lni lni-user"></i> </a></div>
+    <div class="navbar-account"> <a href="account.html">个人信息：<span id = "userName"></span></a></div>
     <!-- end navbar-account --> 
   </div>
   <!-- end user-menu --> 
@@ -859,9 +859,17 @@
 <script src="static/js/api/user-api.js"></script>
 
 <script>
-    var user = getUserInfo();
-    if(null != user){
-        alert(user.userName);
+    getUserInfo();
+    var storeInfo = localStorage.getItem('userInfo');
+    // console.log(user);
+    var user = JSON.parse(storeInfo);
+    
+    if(null != user && undefined != user){
+        // alert(user.userName);
+        
+        $(function() {
+            $('#userName').html(user.userName); 
+        })
     }
     
 </script>

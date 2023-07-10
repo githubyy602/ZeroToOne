@@ -10,6 +10,8 @@
         <option value="$PROJECT_DIR$/HaHa-User/pom.xml" />
         <option value="$PROJECT_DIR$/HaHa-Web/pom.xml" />
         <option value="$PROJECT_DIR$/HaHa-Send/pom.xml" />
+        <option value="$PROJECT_DIR$/HaHa-Socket/pom.xml" />
+        <option value="$PROJECT_DIR$/HaHa-Search/pom.xml" />
       </list>
     </option>
   </component>
