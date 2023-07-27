@@ -1,5 +1,8 @@
 package com.yangy.hahauser.bean.PO;
 
+import com.yangy.hahauser.annotation.EncryptEntity;
+import com.yangy.hahauser.annotation.EncryptField;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -7,13 +10,19 @@ import java.util.Date;
 
 @Data
 @NoArgsConstructor
+@AllArgsConstructor
+//@TableName(autoResultMap = true)
+@EncryptEntity
 public class User {
+	
     private Integer id;
-
+	
+//    @TableField(typeHandler = EncryptTypeHandler.class)
+	@EncryptField
     private String userName;
 
     private String sex;
-
+	
     private String email;
 
     private String phone;
@@ -28,7 +37,11 @@ public class User {
 
     private Date updateTime;
 
-    public User(String loginName, String loginPassword) {
+	public User(Integer id) {
+		this.id = id;
+	}
+
+	public User(String loginName, String loginPassword) {
         this.loginName = loginName;
         this.loginPassword = loginPassword;
     }

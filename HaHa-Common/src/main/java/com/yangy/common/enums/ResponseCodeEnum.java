@@ -16,6 +16,7 @@ public enum ResponseCodeEnum {
 	PARAM_ERROR(2005,"参数错误"),
 	RUNTIME_ERROR(2006,"运行错误"),
 	UNKOWN_ERROR(2007,"未知错误"),
+	VALID_ERROR(2008,"参数校验错误"),
 	
 	//业务错误码
 	USER_NOT_EXIST_ERROR(2100,"用户不存在"),;

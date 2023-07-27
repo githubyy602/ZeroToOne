@@ -9,7 +9,8 @@ import com.yangy.common.util.ConvertUtil;
 import com.yangy.common.util.SignUtil;
 import com.yangy.hahauser.bean.DTO.UserInfoDto;
 import com.yangy.hahauser.bean.PO.User;
-import com.yangy.hahauser.mapper.UserMapper;
+import com.yangy.hahauser.service.UserService;
+import org.springframework.beans.BeanUtils;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -34,17 +35,24 @@ public class UserController {
 	private SendFeignClient sendFeignClient;
 	
 	@Resource
-	private UserMapper userMapper;
+	private UserService userService;
 	
 	@PostMapping(value = "/getUserInfo")
 	public ResultBean getUserInfo(@RequestBody @Valid ReqBaseBean reqBaseBean, BindingResult result){
-		User user = userMapper.selectByPrimaryKey(reqBaseBean.getUserId());
+		User user = userService.queryUser(new User(reqBaseBean.getUserId()));
 		if(Objects.isNull(user)){
 			return ResultBean.returnResult(ResponseCodeEnum.USER_NOT_EXIST_ERROR);	
 		}
 
 		UserInfoDto userInfoDto = ConvertUtil.convert(user,new UserInfoDto());
 		return ResultBean.success(userInfoDto);
+	}
+	
+	@PostMapping(value = "/createUser")
+	public ResultBean createUser(@RequestBody @Valid UserInfoDto userInfoDto){
+		User user = new User();
+		BeanUtils.copyProperties(userInfoDto,user);
+		return ResultBean.success(userService.createUser(user));
 	}
 	
 	//测试feign调用

@@ -8,5 +8,7 @@ import com.yangy.hahauser.bean.PO.User;
  * @Description
  */
 public interface UserService {
-	User selectUser(User user);
+	User queryUser(User user);
+	
+	int createUser(User user);
 }
