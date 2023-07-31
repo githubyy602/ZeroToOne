@@ -102,17 +102,17 @@ public class AESUtils {
         return sb.toString();
     }
     
-	public static void main(String[] args) throws Exception {
-    	String data = "iloveyy";
-    	String orgKey = "213kjs@m1k2j3#wmqke541";
-    	String key = "23lkj987qe2k3m#@1nh1hw";
-
-//    	byte [] aesKey = initSecretKey(orgKey);
-		String encrypt = encrypt(data, key);
-		String decrypt = decrypt(encrypt, key);
-//		System.out.println("密钥= " + showByteArray(aesKey));
-		System.out.println("加密结果 = " + encrypt);
-		System.out.println("解密 = " + decrypt);
-
-	}
+//	public static void main(String[] args) throws Exception {
+//    	String data = "iloveyy";
+//    	String orgKey = "213kjs@m1k2j3#wmqke541";
+//    	String key = "23lkj987qe2k3m#@1nh1hw";
+//
+////    	byte [] aesKey = initSecretKey(orgKey);
+//		String encrypt = encrypt(data, key);
+//		String decrypt = decrypt(encrypt, key);
+////		System.out.println("密钥= " + showByteArray(aesKey));
+//		System.out.println("加密结果 = " + encrypt);
+//		System.out.println("解密 = " + decrypt);
+//
+//	}
 }

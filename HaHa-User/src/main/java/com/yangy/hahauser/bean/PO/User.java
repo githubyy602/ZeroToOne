@@ -23,8 +23,10 @@ public class User {
 
     private String sex;
 	
+    @EncryptField
     private String email;
 
+    @EncryptField
     private String phone;
 
     private String loginName;

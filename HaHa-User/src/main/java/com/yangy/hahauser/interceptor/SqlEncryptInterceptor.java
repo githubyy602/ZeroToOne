@@ -37,7 +37,7 @@ import java.util.Properties;
         @Signature(type = ResultSetHandler.class, method = "handleResultSets", args = {Statement.class})
 })
 @Slf4j
-public class MyBatisInterceptor implements Interceptor {
+public class SqlEncryptInterceptor implements Interceptor {
 
 	@Resource
     private EncryptService encryptService;
@@ -49,14 +49,14 @@ public class MyBatisInterceptor implements Interceptor {
         if (target instanceof ResultSetHandler) {
             return resultDecrypt(invocation);
         }
-        //拦截sql参数处理器
+        
         if (target instanceof ParameterHandler) {
             return parameterEncrypt(invocation);
         }
-        //拦截sql语句处理器
-        if (target instanceof StatementHandler) {
-            return replaceSql(invocation);
-        }
+        
+//        if (target instanceof StatementHandler) {
+//            return replaceSql(invocation);
+//        }
         return invocation.proceed();
     }
 
