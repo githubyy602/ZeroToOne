@@ -65,7 +65,7 @@ public class AESUtils {
 		} catch (Exception e) {
 			log.error("{}",e.getMessage(),e);
 		}
-		return null;
+		return content;
 	}
 	
 	/*** 解密
@@ -86,7 +86,7 @@ public class AESUtils {
 		} catch (Exception e) {
 			log.error("{}",e.getMessage(),e);
 		}
-		return null;
+		return content;
 	}
 	
 	private static String  showByteArray(byte[] data){

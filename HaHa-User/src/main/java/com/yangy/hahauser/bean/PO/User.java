@@ -1,5 +1,6 @@
 package com.yangy.hahauser.bean.PO;
 
+import com.baomidou.mybatisplus.annotation.TableName;
 import com.yangy.hahauser.annotation.EncryptEntity;
 import com.yangy.hahauser.annotation.EncryptField;
 import lombok.AllArgsConstructor;
@@ -11,13 +12,14 @@ import java.util.Date;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-//@TableName(autoResultMap = true)
+@TableName(value = "tb_user",autoResultMap = true)
 @EncryptEntity
-public class User {
+public class User{
 	
+//	@TableId(value = "id",type = IdType.AUTO)
     private Integer id;
 	
-//    @TableField(typeHandler = EncryptTypeHandler.class)
+//    @TableField(value = "user_name",typeHandler = EncryptTypeHandler.class)
 	@EncryptField
     private String userName;
 

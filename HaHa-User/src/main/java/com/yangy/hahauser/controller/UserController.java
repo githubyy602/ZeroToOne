@@ -1,6 +1,7 @@
 package com.yangy.hahauser.controller;
 
 import com.alibaba.fastjson.JSON;
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.yangy.common.bean.ReqBaseBean;
 import com.yangy.common.bean.ResultBean;
 import com.yangy.common.enums.ResponseCodeEnum;
@@ -9,8 +10,10 @@ import com.yangy.common.util.ConvertUtil;
 import com.yangy.common.util.SignUtil;
 import com.yangy.hahauser.bean.DTO.UserInfoDto;
 import com.yangy.hahauser.bean.PO.User;
+import com.yangy.hahauser.mapper.UserMapper;
 import com.yangy.hahauser.service.UserService;
 import org.springframework.beans.BeanUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -19,6 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
 import javax.validation.Valid;
+import java.util.Date;
 import java.util.Objects;
 import java.util.TreeMap;
 
@@ -37,6 +41,12 @@ public class UserController {
 	@Resource
 	private UserService userService;
 	
+	@Autowired
+	private UserMapper userMapper;
+	
+	@Autowired
+	private BaseMapper baseMapper;
+	
 	@PostMapping(value = "/getUserInfo")
 	public ResultBean getUserInfo(@RequestBody @Valid ReqBaseBean reqBaseBean, BindingResult result){
 		User user = userService.queryUser(new User(reqBaseBean.getUserId()));
@@ -52,6 +62,8 @@ public class UserController {
 	public ResultBean createUser(@RequestBody @Valid UserInfoDto userInfoDto){
 		User user = new User();
 		BeanUtils.copyProperties(userInfoDto,user);
+		user.setCreateTime(new Date());
+//		return ResultBean.success(userMapper.insert(user));
 		return ResultBean.success(userService.createUser(user));
 	}
 	

@@ -3,10 +3,8 @@ package com.yangy.common.handler;
 import com.yangy.common.bean.ResultBean;
 import com.yangy.common.constant.CommonConstant;
 import com.yangy.common.enums.ResponseCodeEnum;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.lang.reflect.UndeclaredThrowableException;
 
@@ -16,7 +14,7 @@ import java.lang.reflect.UndeclaredThrowableException;
  * @Description
  */
 @ControllerAdvice(value = CommonConstant.BASE_PACKAGE)
-@ConditionalOnClass(ResponseBody.class)
+//@ConditionalOnClass({ResponseBody.class,ServletException.class,SQLException.class})
 public class GlobalExceptionHandler {
 	
 	@ExceptionHandler(RuntimeException.class)
@@ -28,5 +26,10 @@ public class GlobalExceptionHandler {
 	@ExceptionHandler({UndeclaredThrowableException.class})
 	public ResultBean undeclaredThrowableExceptionHandler(UndeclaredThrowableException ex){
 		return ResultBean.returnResult(ResponseCodeEnum.UNKOWN_ERROR);
+	}
+	
+	@ExceptionHandler
+	public ResultBean defaultExceptionHandler(Exception ex){
+		return ResultBean.returnResult(ResponseCodeEnum.UNKOWN_ERROR,ex.getMessage());
 	}
 }

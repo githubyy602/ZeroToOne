@@ -5,6 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.ibatis.type.BaseTypeHandler;
 import org.apache.ibatis.type.JdbcType;
+import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
 import java.sql.CallableStatement;
@@ -18,9 +19,10 @@ import java.sql.SQLException;
  * @Description
  */
 @Slf4j
-//@MappedTypes({String.class})
+//加上如下2个注解，即可对指定的类型进行类型转换处理，如下配置就会对String字符串类型的字段，都加解密
+//@MappedTypes({EncryptTypeHandler.class})
 //@MappedJdbcTypes(JdbcType.VARCHAR)
-//@Component
+@Component
 public class EncryptTypeHandler extends BaseTypeHandler<String> {
 	
 	@Resource
@@ -31,6 +33,7 @@ public class EncryptTypeHandler extends BaseTypeHandler<String> {
 		try {
 			preparedStatement.setString(i,encryptService.encrypt(t));
 		} catch (Exception e) {
+			preparedStatement.setString(i,t);
 			log.error("{}",e.getMessage(),e);
 		}
 	}
