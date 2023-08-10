@@ -25,12 +25,12 @@
     where id = #{id,jdbcType=INTEGER}
   </select>
     
-  <select id="selectById" parameterType="java.lang.Integer" resultMap="BaseResultMap">
-    select 
-    <include refid="Base_Column_List" />
-    from tb_user
-    where id = #{id,jdbcType=INTEGER}
-  </select>  
+  <!--<select id="selectById" parameterType="java.lang.Integer" resultMap="BaseResultMap">-->
+    <!--select -->
+    <!--<include refid="Base_Column_List" />-->
+    <!--from tb_user-->
+    <!--where id = #{id,jdbcType=INTEGER}-->
+  <!--</select>  -->
     
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from tb_user
@@ -47,75 +47,74 @@
       #{updateTime,jdbcType=TIMESTAMP})
   </insert>
     
-  <insert id="insertSelective" parameterType="com.yangy.hahauser.bean.PO.User" 
-  >
-    insert into tb_user
-    <trim prefix="(" suffix=")" suffixOverrides="," >
-      <if test="id != null" >
-        id,
-      </if>
-      <if test="userName != null" >
-        user_name,
-      </if>
-      <if test="sex != null" >
-        sex,
-      </if>
-      <if test="email != null" >
-        email,
-      </if>
-      <if test="phone != null" >
-        phone,
-      </if>
-      <if test="loginName != null" >
-        login_name,
-      </if>
-      <if test="loginPassword != null" >
-        login_password,
-      </if>
-      <if test="imgUrl != null" >
-        img_url,
-      </if>
-      <if test="createTime != null" >
-        create_time,
-      </if>
-      <if test="updateTime != null" >
-        update_time,
-      </if>
-    </trim>
-    <trim prefix="values (" suffix=")" suffixOverrides="," >
-      <if test="id != null" >
-        #{id,jdbcType=INTEGER},
-      </if>
-      <if test="userName != null" >
-        #{userName,jdbcType=VARCHAR},
-          <!--#{userName,jdbcType=VARCHAR,typeHandler=com.yangy.hahauser.handler.EncryptTypeHandler},-->
-      </if>
-      <if test="sex != null" >
-        #{sex,jdbcType=CHAR},
-      </if>
-      <if test="email != null" >
-        #{email,jdbcType=VARCHAR},
-      </if>
-      <if test="phone != null" >
-        #{phone,jdbcType=VARCHAR},
-      </if>
-      <if test="loginName != null" >
-        #{loginName,jdbcType=VARCHAR},
-      </if>
-      <if test="loginPassword != null" >
-        #{loginPassword,jdbcType=VARCHAR},
-      </if>
-      <if test="imgUrl != null" >
-        #{imgUrl,jdbcType=VARCHAR},
-      </if>
-      <if test="createTime != null" >
-        #{createTime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="updateTime != null" >
-        #{updateTime,jdbcType=TIMESTAMP},
-      </if>
-    </trim>
-  </insert>
+  <!--<insert id="insertSelective" parameterType="com.yangy.hahauser.bean.PO.User">-->
+    <!--insert into tb_user-->
+    <!--<trim prefix="(" suffix=")" suffixOverrides="," >-->
+      <!--<if test="id != null" >-->
+        <!--id,-->
+      <!--</if>-->
+      <!--<if test="userName != null" >-->
+        <!--user_name,-->
+      <!--</if>-->
+      <!--<if test="sex != null" >-->
+        <!--sex,-->
+      <!--</if>-->
+      <!--<if test="email != null" >-->
+        <!--email,-->
+      <!--</if>-->
+      <!--<if test="phone != null" >-->
+        <!--phone,-->
+      <!--</if>-->
+      <!--<if test="loginName != null" >-->
+        <!--login_name,-->
+      <!--</if>-->
+      <!--<if test="loginPassword != null" >-->
+        <!--login_password,-->
+      <!--</if>-->
+      <!--<if test="imgUrl != null" >-->
+        <!--img_url,-->
+      <!--</if>-->
+      <!--<if test="createTime != null" >-->
+        <!--create_time,-->
+      <!--</if>-->
+      <!--<if test="updateTime != null" >-->
+        <!--update_time,-->
+      <!--</if>-->
+    <!--</trim>-->
+    <!--<trim prefix="values (" suffix=")" suffixOverrides="," >-->
+      <!--<if test="id != null" >-->
+        <!--#{id,jdbcType=INTEGER},-->
+      <!--</if>-->
+      <!--<if test="userName != null" >-->
+        <!--#{userName,jdbcType=VARCHAR},-->
+          <!--&lt;!&ndash;#{userName,jdbcType=VARCHAR,typeHandler=com.yangy.hahauser.handler.EncryptTypeHandler},&ndash;&gt;-->
+      <!--</if>-->
+      <!--<if test="sex != null" >-->
+        <!--#{sex,jdbcType=CHAR},-->
+      <!--</if>-->
+      <!--<if test="email != null" >-->
+        <!--#{email,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="phone != null" >-->
+        <!--#{phone,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="loginName != null" >-->
+        <!--#{loginName,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="loginPassword != null" >-->
+        <!--#{loginPassword,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="imgUrl != null" >-->
+        <!--#{imgUrl,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="createTime != null" >-->
+        <!--#{createTime,jdbcType=TIMESTAMP},-->
+      <!--</if>-->
+      <!--<if test="updateTime != null" >-->
+        <!--#{updateTime,jdbcType=TIMESTAMP},-->
+      <!--</if>-->
+    <!--</trim>-->
+  <!--</insert>-->
   <update id="updateByPrimaryKeySelective" parameterType="com.yangy.hahauser.bean.PO.User" >
     update tb_user
     <set >

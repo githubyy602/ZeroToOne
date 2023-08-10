@@ -8,7 +8,7 @@ import org.apache.ibatis.annotations.Mapper;
 public interface UserMapper extends BaseMapper<User> {
     int deleteByPrimaryKey(Integer id);
 
-    int insertSelective(User record);
+//    int insertSelective(User record);
 
     User selectByPrimaryKey(Integer id);
 
@@ -18,5 +18,5 @@ public interface UserMapper extends BaseMapper<User> {
     
     User selectUserByLoginInfo(User user);
     
-    User selectById(Integer id);
+//    User selectById(Integer id);
 }

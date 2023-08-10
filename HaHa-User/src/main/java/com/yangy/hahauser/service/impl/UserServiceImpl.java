@@ -21,6 +21,6 @@ public class UserServiceImpl extends ServiceImpl<UserMapper,User> implements Use
 
 	@Override
 	public int createUser(User user) {
-		return baseMapper.insertSelective(user);
+		return baseMapper.insert(user);
 	}
 }

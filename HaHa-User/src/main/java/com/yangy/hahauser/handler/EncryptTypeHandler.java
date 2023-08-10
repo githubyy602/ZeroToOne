@@ -23,17 +23,21 @@ import java.sql.SQLException;
 //@MappedTypes({EncryptTypeHandler.class})
 //@MappedJdbcTypes(JdbcType.VARCHAR)
 @Component
-public class EncryptTypeHandler extends BaseTypeHandler<String> {
+public class EncryptTypeHandler extends BaseTypeHandler<Object> {
 	
 	@Resource
 	private EncryptService encryptService;
 	
 	@Override
-	public void setNonNullParameter(PreparedStatement preparedStatement, int i, String t, JdbcType jdbcType) throws SQLException {
+	public void setNonNullParameter(PreparedStatement preparedStatement, int i, Object t, JdbcType jdbcType) throws SQLException {
 		try {
-			preparedStatement.setString(i,encryptService.encrypt(t));
+			if(t instanceof String){
+				preparedStatement.setString(i,encryptService.encrypt(t.toString()));
+			}else {
+				preparedStatement.setObject(i,t);	
+			}
 		} catch (Exception e) {
-			preparedStatement.setString(i,t);
+			preparedStatement.setString(i,t.toString());
 			log.error("{}",e.getMessage(),e);
 		}
 	}
