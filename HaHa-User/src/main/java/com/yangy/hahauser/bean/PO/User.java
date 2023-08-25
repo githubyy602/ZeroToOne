@@ -1,10 +1,8 @@
 package com.yangy.hahauser.bean.PO;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
-import com.yangy.hahauser.handler.EncryptTypeHandler;
+import com.yangy.hahauser.annotation.EncryptEntity;
+import com.yangy.hahauser.annotation.EncryptField;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -16,24 +14,24 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 @TableName(value = "tb_user",autoResultMap = true)
-//@EncryptEntity
+@EncryptEntity
 public class User implements Serializable {
 	
-	@TableId(value = "id",type = IdType.AUTO)
+//	@TableId(value = "id",type = IdType.AUTO)
     private Integer id;
 	
-    @TableField(typeHandler = EncryptTypeHandler.class)
-//	@EncryptField
+//    @TableField(typeHandler = EncryptTypeHandler.class)
+	@EncryptField
     private String userName;
 	
     private String sex;
     
-	@TableField(typeHandler = EncryptTypeHandler.class)
-//    @EncryptField
+//	@TableField(typeHandler = EncryptTypeHandler.class)
+    @EncryptField
     private String email;
 	
-	@TableField(typeHandler = EncryptTypeHandler.class)
-//    @EncryptField
+//	@TableField(typeHandler = EncryptTypeHandler.class)
+    @EncryptField
     private String phone;
 
     private String loginName;

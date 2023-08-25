@@ -38,8 +38,8 @@ public class AESUtils {
         kg.init(256,secureRandom);
         //生成一个密钥
         SecretKey secretKey = kg.generateKey();
-		System.out.println("生成的秘钥为："+showByteArray(secretKey.getEncoded()));
-		System.out.println("字符串："+new String(secretKey.getEncoded(),"UTF-8"));
+//		System.out.println("生成的秘钥为："+showByteArray(secretKey.getEncoded()));
+//		System.out.println("字符串："+new String(secretKey.getEncoded(),"UTF-8"));
         return secretKey.getEncoded();
     }
     
