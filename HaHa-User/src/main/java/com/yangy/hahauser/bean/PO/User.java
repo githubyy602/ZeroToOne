@@ -1,5 +1,7 @@
 package com.yangy.hahauser.bean.PO;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.yangy.hahauser.annotation.EncryptEntity;
 import com.yangy.hahauser.annotation.EncryptField;
@@ -17,7 +19,7 @@ import java.util.Date;
 @EncryptEntity
 public class User implements Serializable {
 	
-//	@TableId(value = "id",type = IdType.AUTO)
+	@TableId(value = "id",type = IdType.AUTO)
     private Integer id;
 	
 //    @TableField(typeHandler = EncryptTypeHandler.class)

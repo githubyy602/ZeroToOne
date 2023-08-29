@@ -1,7 +1,6 @@
 package com.yangy.common.util;
 
 import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.codec.binary.Hex;
 
 import javax.crypto.Cipher;
 import javax.crypto.KeyGenerator;
@@ -11,6 +10,7 @@ import java.io.UnsupportedEncodingException;
 import java.nio.charset.StandardCharsets;
 import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
+import java.util.Base64;
 
 /**
  * @Author: Yangy
@@ -61,7 +61,7 @@ public class AESUtils {
 			//这里使用的是Apache的commons-codec进行处理为16进制
 			// 加密
 			byte[] result = cipher.doFinal(content.getBytes(StandardCharsets.UTF_8));
-			return new String(Hex.encodeHex(result));
+			return Base64.getEncoder().encodeToString(result);
 		} catch (Exception e) {
 			log.error("{}",e.getMessage(),e);
 		}
@@ -81,8 +81,8 @@ public class AESUtils {
 			// 初始化
 			cipher.init(Cipher.DECRYPT_MODE, key);
 			// 解密
-			byte[] result = cipher.doFinal(Hex.decodeHex(content.toCharArray()));
-			return new String(result);
+			byte[] result = cipher.doFinal(Base64.getDecoder().decode(content));
+			return new String(result,"UTF-8");
 		} catch (Exception e) {
 			log.error("{}",e.getMessage(),e);
 		}
