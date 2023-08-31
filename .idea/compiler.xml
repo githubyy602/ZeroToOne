@@ -9,6 +9,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="HaHa-Common" />
+        <module name="HaHa-File" />
         <module name="HaHa-Gateway" />
         <module name="HaHa-Search" />
         <module name="HaHa-Send" />

@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 /**
  * @Author: Yangy
  * @Date: 2023/7/25 14:37
- * @Description 加解密存储方案一：结合mybatis-plus的来实现，继承BaseTypeHandler实现加解密
+ * @Description 
  */
 @Service
 public class EncryptServiceImpl implements EncryptService {

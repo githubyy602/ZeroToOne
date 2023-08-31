@@ -2,8 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5a82bc85-19e5-4a1a-9070-52429c963c2e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/HaHa-Common/src/main/java/com/yangy/common/util/AESUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-Common/src/main/java/com/yangy/common/util/AESUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-User/src/main/java/com/yangy/hahauser/bean/PO/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-User/src/main/java/com/yangy/hahauser/bean/PO/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HaHa-File/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HaHa-File/src/main/java/com/yangy/hahafile/HahafileApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HaHa-File/src/main/java/com/yangy/hahafile/service/FileService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HaHa-File/src/main/java/com/yangy/hahafile/service/impl/FileServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HaHa-File/src/main/java/com/yangy/hahafile/util/FileUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HaHa-File/src/main/resources/application-dev.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HaHa-File/src/main/resources/application-prod.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HaHa-File/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaHa-Common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-Common/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaHa-User/src/main/java/com/yangy/hahauser/service/impl/EncryptServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-User/src/main/java/com/yangy/hahauser/service/impl/EncryptServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaHa-User/src/main/resources/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-User/src/main/resources/application-dev.properties" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -19,6 +28,7 @@
     <ignored path="$PROJECT_DIR$/HaHa-Send/target/" />
     <ignored path="$PROJECT_DIR$/HaHa-Search/target/" />
     <ignored path="$PROJECT_DIR$/HaHa-Socket/target/" />
+    <ignored path="$PROJECT_DIR$/HaHa-File/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -55,20 +65,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="270">
-      <file leaf-file-name="EncryptTypeHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HaHa-User/src/main/java/com/yangy/hahauser/handler/EncryptTypeHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="572">
-              <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="UserServiceImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HaHa-User/src/main/java/com/yangy/hahauser/service/impl/UserServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="528">
-              <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+              <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#504#505#0" expanded="true" />
@@ -84,7 +85,7 @@
         <entry file="file://$PROJECT_DIR$/HaHa-User/src/main/java/com/yangy/hahauser/controller/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="322">
-              <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
+              <caret line="46" selection-start-line="46" selection-end-line="46" />
             </state>
           </provider>
         </entry>
@@ -122,8 +123,8 @@
       <file leaf-file-name="SqlEncryptInterceptor.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HaHa-User/src/main/java/com/yangy/hahauser/interceptor/SqlEncryptInterceptor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="482">
-              <caret line="116" column="56" selection-start-line="116" selection-start-column="56" selection-end-line="116" selection-end-column="56" />
+            <state relative-caret-position="613">
+              <caret line="43" column="21" selection-start-line="43" selection-start-column="21" selection-end-line="43" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -131,10 +132,19 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="EncryptService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HaHa-User/src/main/java/com/yangy/hahauser/service/EncryptService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="154">
+              <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="logback.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HaHa-User/src/main/resources/logback.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="858">
+            <state relative-caret-position="574">
               <caret line="39" column="23" selection-start-line="39" selection-start-column="23" selection-end-line="39" selection-end-column="23" />
             </state>
           </provider>
@@ -143,10 +153,11 @@
       <file leaf-file-name="EncryptServiceImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HaHa-User/src/main/java/com/yangy/hahauser/service/impl/EncryptServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="17" column="44" lean-forward="true" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
+            <state relative-caret-position="238">
+              <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#477#478#0" expanded="true" />
                 <element signature="e#522#523#0" expanded="true" />
                 <element signature="e#577#578#0" expanded="true" />
                 <element signature="e#623#624#0" expanded="true" />
@@ -155,26 +166,27 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AESUtils.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AESUtils.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HaHa-Common/src/main/java/com/yangy/common/util/AESUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="616">
-              <caret line="50" column="29" lean-forward="true" selection-start-line="50" selection-start-column="29" selection-end-line="50" selection-end-column="29" />
+            <state relative-caret-position="-966">
+              <caret line="31" column="25" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HaHa-User/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="154">
+              <caret line="13" column="37" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
+            </state>
+          </provider>
+          <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
         </entry>
       </file>
       <file leaf-file-name="EncryptField.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HaHa-User/src/main/java/com/yangy/hahauser/annotation/EncryptField.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EncryptEntity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HaHa-User/src/main/java/com/yangy/hahauser/annotation/EncryptEntity.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="264">
               <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
@@ -182,20 +194,147 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HaHa-User/src/main/resources/application.properties">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HaHa-Search/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="550">
-              <caret line="25" column="26" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
+            <state relative-caret-position="-528" />
+          </provider>
+          <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HaHa-Send/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="60" column="21" selection-start-line="34" selection-start-column="9" selection-end-line="60" selection-end-column="21" />
+            </state>
+          </provider>
+          <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+        </entry>
+      </file>
+      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HaHa-File/src/main/resources/application.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="66">
+              <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HaHaUserApplication.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HaHa-User/src/main/java/com/yangy/hahauser/HaHaUserApplication.java">
+      <file leaf-file-name="application-dev.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HaHa-File/src/main/resources/application-dev.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="22">
+              <caret line="1" column="29" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application-prod.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HaHa-File/src/main/resources/application-prod.properties">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HaHa-Search/src/main/resources/application.properties">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HaHa-Socket/src/main/resources/application.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="308">
+              <caret line="14" column="37" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application-dev.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HaHa-User/src/main/resources/application-dev.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="22">
+              <caret line="1" column="36" selection-start-line="1" selection-start-column="36" selection-end-line="1" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HaHa-File/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="132">
+              <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+            </state>
+          </provider>
+          <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+        </entry>
+      </file>
+      <file leaf-file-name="FileUtils.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HaHa-File/src/main/java/com/yangy/hahafile/util/FileUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="50">
+              <caret line="121" column="35" lean-forward="true" selection-start-line="121" selection-start-column="35" selection-end-line="121" selection-end-column="35" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FileService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HaHa-File/src/main/java/com/yangy/hahafile/service/FileService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="242">
+              <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FileServiceImpl.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/HaHa-File/src/main/java/com/yangy/hahafile/service/impl/FileServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="63" column="63" lean-forward="true" selection-start-line="63" selection-start-column="63" selection-end-line="63" selection-end-column="63" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HaHa-Common/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="418">
+              <caret line="82" column="21" selection-start-line="82" selection-start-column="21" selection-end-line="82" selection-end-column="21" />
+            </state>
+          </provider>
+          <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+        </entry>
+      </file>
+      <file leaf-file-name="HahafileApplication.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HaHa-File/src/main/java/com/yangy/hahafile/HahafileApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="110">
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HaHa-Web/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="176">
-              <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+              <caret line="8" column="13" selection-start-line="4" selection-start-column="4" selection-end-line="8" selection-end-column="13" />
+            </state>
+          </provider>
+          <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+        </entry>
+      </file>
+      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HaHa-User/src/main/resources/application.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret selection-end-line="3" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -209,68 +348,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ResponseCodeEnum.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HaHa-Common/src/main/java/com/yangy/common/enums/ResponseCodeEnum.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ResultBean.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HaHa-Common/src/main/java/com/yangy/common/bean/ResultBean.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="25" column="29" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WapperRequestFilter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HaHa-Common/src/main/java/com/yangy/common/filter/WapperRequestFilter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="792">
-              <caret line="47" column="3" selection-start-line="47" selection-start-column="3" selection-end-line="47" selection-end-column="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SendFallBack.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HaHa-Common/src/main/java/com/yangy/common/hystrix/SendFallBack.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ReadMe.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ReadMe.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="1012">
-                <caret line="46" column="31" selection-start-line="46" selection-start-column="31" selection-end-line="46" selection-end-column="31" />
+              <first_editor relative-caret-position="594">
+                <caret line="27" selection-start-line="27" selection-end-line="27" />
               </first_editor>
               <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SendFeignClient.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HaHa-Common/src/main/java/com/yangy/common/feign/SendFeignClient.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CommonConstant.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HaHa-Common/src/main/java/com/yangy/common/constant/CommonConstant.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -291,8 +376,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>party_desc</find>
-      <find>localhost:63342</find>
       <find>63342</find>
       <find>crmplatform.easyview.com.hk</find>
       <find>如果要继续</find>
@@ -321,6 +404,8 @@
       <find>selectById</find>
       <find>mybatis-plus</find>
       <find>成的秘钥为</find>
+      <find>2000</find>
+      <find>200</find>
     </findStrings>
     <replaceStrings>
       <replace>.</replace>
@@ -340,16 +425,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/HaHa-Search/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/HaHa-Send/pom.xml" />
-        <option value="$PROJECT_DIR$/HaHa-Search/src/main/java/com/yangy/search/controller.java" />
-        <option value="$PROJECT_DIR$/HaHa-Web/src/main/resources/templates/login.html" />
-        <option value="$PROJECT_DIR$/HaHa-Web/src/main/resources/templates/static/js/api/common-api.js" />
-        <option value="$PROJECT_DIR$/HaHa-Common/src/main/java/com/yangy/common/wrapper/CustomOutputStream.java" />
-        <option value="$PROJECT_DIR$/HaHa-Common/src/main/java/com/yangy/common/wrapper/HttpResponseWrapper.java" />
-        <option value="$PROJECT_DIR$/HaHa-Common/src/main/java/com/yangy/common/wrapper/CustomPrintWriter.java" />
-        <option value="$PROJECT_DIR$/HaHa-Web/src/main/resources/templates/index.html" />
-        <option value="$PROJECT_DIR$/HaHa-Web/src/main/resources/templates/static/js/api/user-api.js" />
         <option value="$PROJECT_DIR$/HaHa-Search/src/main/resources/index.json" />
         <option value="$PROJECT_DIR$/HaHa-Common/src/main/java/com/yangy/common/wrapper/HttpRequestWrapper.java" />
         <option value="$PROJECT_DIR$/HaHa-Common/src/main/java/com/yangy/common/util/Md5Util.java" />
@@ -372,9 +447,7 @@
         <option value="$PROJECT_DIR$/HaHa-User/src/main/java/com/yangy/hahauser/HaHaUserApplication.java" />
         <option value="$PROJECT_DIR$/HaHa-User/src/main/java/com/yangy/hahauser/config/MybatisPlusConfig.java" />
         <option value="$PROJECT_DIR$/HaHa-User/src/main/java/com/yangy/hahauser/config/MybatisConfig.java" />
-        <option value="$PROJECT_DIR$/HaHa-User/src/main/java/com/yangy/hahauser/service/impl/EncryptServiceImpl.java" />
         <option value="$PROJECT_DIR$/HaHa-Common/src/main/java/com/yangy/common/config/WebMvcConfig.java" />
-        <option value="$PROJECT_DIR$/HaHa-Common/pom.xml" />
         <option value="$PROJECT_DIR$/HaHa-User/src/main/java/com/yangy/hahauser/annotation/EncryptField.java" />
         <option value="$PROJECT_DIR$/HaHa-User/src/main/java/com/yangy/hahauser/annotation/EncryptEntity.java" />
         <option value="$PROJECT_DIR$/HaHa-User/src/main/java/com/yangy/hahauser/interceptor/MyBatisInterceptor.java" />
@@ -391,6 +464,18 @@
         <option value="$PROJECT_DIR$/HaHa-User/src/main/java/com/yangy/hahauser/interceptor/SqlEncryptInterceptor.java" />
         <option value="$PROJECT_DIR$/HaHa-User/src/main/java/com/yangy/hahauser/bean/PO/User.java" />
         <option value="$PROJECT_DIR$/HaHa-Common/src/main/java/com/yangy/common/util/AESUtils.java" />
+        <option value="$PROJECT_DIR$/HaHa-User/src/main/resources/application-dev.properties" />
+        <option value="$PROJECT_DIR$/HaHa-File/pom.xml" />
+        <option value="$PROJECT_DIR$/HaHa-File/src/main/java/com/yangy/hahafile/service/DownloadService.java" />
+        <option value="$PROJECT_DIR$/HaHa-File/src/main/java/com/yangy/hahafile/service/UploadService.java" />
+        <option value="$PROJECT_DIR$/HaHa-File/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/HaHa-File/src/main/resources/application-dev.properties" />
+        <option value="$PROJECT_DIR$/HaHa-File/src/main/java/com/yangy/hahafile/service/impl/UploadServiceImpl.java" />
+        <option value="$PROJECT_DIR$/HaHa-Common/pom.xml" />
+        <option value="$PROJECT_DIR$/HaHa-File/src/main/java/com/yangy/hahafile/service/FileService.java" />
+        <option value="$PROJECT_DIR$/HaHa-User/src/main/java/com/yangy/hahauser/service/impl/EncryptServiceImpl.java" />
+        <option value="$PROJECT_DIR$/HaHa-File/src/main/java/com/yangy/hahafile/util/FileUtils.java" />
+        <option value="$PROJECT_DIR$/HaHa-File/src/main/java/com/yangy/hahafile/service/impl/FileServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -538,80 +623,6 @@
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="yangy" type="462c0819:PsiDirectoryNode" />
               <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="bean" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HaHaShow" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HaHaShow" type="462c0819:PsiDirectoryNode" />
-              <item name="HaHa-Common" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="yangy" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HaHaShow" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HaHaShow" type="462c0819:PsiDirectoryNode" />
-              <item name="HaHa-Common" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="yangy" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="constant" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HaHaShow" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HaHaShow" type="462c0819:PsiDirectoryNode" />
-              <item name="HaHa-Common" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="yangy" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="design" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HaHaShow" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HaHaShow" type="462c0819:PsiDirectoryNode" />
-              <item name="HaHa-Common" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="yangy" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="design" type="462c0819:PsiDirectoryNode" />
-              <item name="singleton" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HaHaShow" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HaHaShow" type="462c0819:PsiDirectoryNode" />
-              <item name="HaHa-Common" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="yangy" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="design" type="462c0819:PsiDirectoryNode" />
-              <item name="strategy" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HaHaShow" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HaHaShow" type="462c0819:PsiDirectoryNode" />
-              <item name="HaHa-Common" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="yangy" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
               <item name="enums" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -736,11 +747,120 @@
               <item name="HaHaShow" type="462c0819:PsiDirectoryNode" />
               <item name="HaHa-Common" type="462c0819:PsiDirectoryNode" />
               <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HaHaShow" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HaHaShow" type="462c0819:PsiDirectoryNode" />
+              <item name="HaHa-Common" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
               <item name="generated-sources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="HaHaShow" type="b2602c69:ProjectViewProjectNode" />
               <item name="HaHaShow" type="462c0819:PsiDirectoryNode" />
+              <item name="HaHa-File" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HaHaShow" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HaHaShow" type="462c0819:PsiDirectoryNode" />
+              <item name="HaHa-File" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HaHaShow" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HaHaShow" type="462c0819:PsiDirectoryNode" />
+              <item name="HaHa-File" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HaHaShow" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HaHaShow" type="462c0819:PsiDirectoryNode" />
+              <item name="HaHa-File" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HaHaShow" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HaHaShow" type="462c0819:PsiDirectoryNode" />
+              <item name="HaHa-File" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HaHaShow" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HaHaShow" type="462c0819:PsiDirectoryNode" />
+              <item name="HaHa-File" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="yangy" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HaHaShow" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HaHaShow" type="462c0819:PsiDirectoryNode" />
+              <item name="HaHa-File" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="yangy" type="462c0819:PsiDirectoryNode" />
+              <item name="hahafile" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HaHaShow" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HaHaShow" type="462c0819:PsiDirectoryNode" />
+              <item name="HaHa-File" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="yangy" type="462c0819:PsiDirectoryNode" />
+              <item name="hahafile" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HaHaShow" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HaHaShow" type="462c0819:PsiDirectoryNode" />
+              <item name="HaHa-File" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="yangy" type="462c0819:PsiDirectoryNode" />
+              <item name="hahafile" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HaHaShow" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HaHaShow" type="462c0819:PsiDirectoryNode" />
+              <item name="HaHa-File" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="yangy" type="462c0819:PsiDirectoryNode" />
+              <item name="hahafile" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HaHaShow" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HaHaShow" type="462c0819:PsiDirectoryNode" />
+              <item name="HaHa-File" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HaHaShow" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HaHaShow" type="462c0819:PsiDirectoryNode" />
               <item name="HaHa-User" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -793,43 +913,6 @@
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="yangy" type="462c0819:PsiDirectoryNode" />
               <item name="hahauser" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HaHaShow" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HaHaShow" type="462c0819:PsiDirectoryNode" />
-              <item name="HaHa-User" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="yangy" type="462c0819:PsiDirectoryNode" />
-              <item name="hahauser" type="462c0819:PsiDirectoryNode" />
-              <item name="annotation" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HaHaShow" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HaHaShow" type="462c0819:PsiDirectoryNode" />
-              <item name="HaHa-User" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="yangy" type="462c0819:PsiDirectoryNode" />
-              <item name="hahauser" type="462c0819:PsiDirectoryNode" />
-              <item name="bean" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HaHaShow" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HaHaShow" type="462c0819:PsiDirectoryNode" />
-              <item name="HaHa-User" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="yangy" type="462c0819:PsiDirectoryNode" />
-              <item name="hahauser" type="462c0819:PsiDirectoryNode" />
-              <item name="bean" type="462c0819:PsiDirectoryNode" />
-              <item name="PO" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="HaHaShow" type="b2602c69:ProjectViewProjectNode" />
@@ -925,141 +1008,6 @@
               <item name="HaHaShow" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
-            <path>
-              <item name="HaHaShow" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: com.baomidou:mybatis-plus-core:3.5.2" type="70bed36:NamedLibraryElementNode" />
-            </path>
-            <path>
-              <item name="HaHaShow" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: com.baomidou:mybatis-plus-core:3.5.2" type="70bed36:NamedLibraryElementNode" />
-              <item name="mybatis-plus-core-3.5.2.jar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HaHaShow" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: com.baomidou:mybatis-plus-core:3.5.2" type="70bed36:NamedLibraryElementNode" />
-              <item name="mybatis-plus-core-3.5.2.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="META-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HaHaShow" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: com.baomidou:mybatis-plus-core:3.5.2" type="70bed36:NamedLibraryElementNode" />
-              <item name="mybatis-plus-core-3.5.2.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="META-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="maven" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HaHaShow" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: com.baomidou:mybatis-plus-core:3.5.2" type="70bed36:NamedLibraryElementNode" />
-              <item name="mybatis-plus-core-3.5.2.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="META-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="maven" type="462c0819:PsiDirectoryNode" />
-              <item name="com.baomidou" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HaHaShow" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: com.baomidou:mybatis-plus-core:3.5.2" type="70bed36:NamedLibraryElementNode" />
-              <item name="mybatis-plus-core-3.5.2.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="META-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="maven" type="462c0819:PsiDirectoryNode" />
-              <item name="com.baomidou" type="462c0819:PsiDirectoryNode" />
-              <item name="mybatis-plus-core" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HaHaShow" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.mybatis:mybatis:3.5.10" type="70bed36:NamedLibraryElementNode" />
-            </path>
-            <path>
-              <item name="HaHaShow" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.mybatis:mybatis:3.5.10" type="70bed36:NamedLibraryElementNode" />
-              <item name="mybatis-3.5.10.jar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HaHaShow" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.mybatis:mybatis:3.5.10" type="70bed36:NamedLibraryElementNode" />
-              <item name="mybatis-3.5.10.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HaHaShow" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.mybatis:mybatis:3.5.10" type="70bed36:NamedLibraryElementNode" />
-              <item name="mybatis-3.5.10.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="apache" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HaHaShow" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.mybatis:mybatis:3.5.10" type="70bed36:NamedLibraryElementNode" />
-              <item name="mybatis-3.5.10.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="apache" type="462c0819:PsiDirectoryNode" />
-              <item name="ibatis" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HaHaShow" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.mybatis:mybatis:3.5.10" type="70bed36:NamedLibraryElementNode" />
-              <item name="mybatis-3.5.10.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="apache" type="462c0819:PsiDirectoryNode" />
-              <item name="ibatis" type="462c0819:PsiDirectoryNode" />
-              <item name="type" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HaHaShow" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework:spring-jdbc:5.2.12.RELEASE" type="70bed36:NamedLibraryElementNode" />
-            </path>
-            <path>
-              <item name="HaHaShow" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework:spring-jdbc:5.2.12.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-jdbc-5.2.12.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HaHaShow" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework:spring-jdbc:5.2.12.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-jdbc-5.2.12.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HaHaShow" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework:spring-jdbc:5.2.12.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-jdbc-5.2.12.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="springframework" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HaHaShow" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework:spring-jdbc:5.2.12.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-jdbc-5.2.12.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="springframework" type="462c0819:PsiDirectoryNode" />
-              <item name="jdbc" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HaHaShow" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework:spring-jdbc:5.2.12.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-jdbc-5.2.12.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="springframework" type="462c0819:PsiDirectoryNode" />
-              <item name="jdbc" type="462c0819:PsiDirectoryNode" />
-              <item name="object" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -1106,12 +1054,12 @@
     <selection>jr</selection>
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Java\ZeroToOne\code\HaHaShow\HaHa-File\src\main\resources" />
+      <recent name="D:\Java\ZeroToOne\code\HaHaShow\HaHa-Send\src\main\java\com\yangy\send\strategy" />
       <recent name="D:\Java\ZeroToOne\code\HaHaShow\HaHa-Web\src\main\resources\templates" />
-      <recent name="D:\Java\ZeroToOne\code\HaHaShow\HaHa-Web\src\main\resources\templates\static" />
       <recent name="D:\Java\ZeroToOne\code\HaHaShow\HaHa-Web\src\main\resources" />
-      <recent name="D:\Java\ZeroToOne\code\HaHaShow\HaHa-Web\src\main\resources\templates\static\html" />
-      <recent name="D:\Java\ZeroToOne\code\HaHaShow\HaHa-Web\src\main\resources\templates\static\originFile" />
+      <recent name="D:\Java\ZeroToOne\code\HaHaShow\HaHa-Web\src\main\resources\static\templates" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.yangy.common.wrapper" />
@@ -1120,12 +1068,12 @@
       <recent name="com.yangy.common.util" />
       <recent name="com.yangy.gateway.filter" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Java\ZeroToOne\code\HaHaShow\HaHa-Send\src\main\java\com\yangy\send\strategy" />
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Java\ZeroToOne\code\HaHaShow\HaHa-Web\src\main\resources\templates" />
+      <recent name="D:\Java\ZeroToOne\code\HaHaShow\HaHa-Web\src\main\resources\templates\static" />
       <recent name="D:\Java\ZeroToOne\code\HaHaShow\HaHa-Web\src\main\resources" />
-      <recent name="D:\Java\ZeroToOne\code\HaHaShow\HaHa-Web\src\main\resources\static\templates" />
-      <recent name="D:\Java\ZeroToOne\code\HaHaShow\HaHa-Web\src\main\resources\templates\static\js" />
+      <recent name="D:\Java\ZeroToOne\code\HaHaShow\HaHa-Web\src\main\resources\templates\static\html" />
+      <recent name="D:\Java\ZeroToOne\code\HaHaShow\HaHa-Web\src\main\resources\templates\static\originFile" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -1146,7 +1094,18 @@
     </option>
     <option name="contentProportion" value="0.2045952" />
   </component>
-  <component name="RunManager" selected="Spring Boot.HaHaUserApplication">
+  <component name="RunManager" selected="Application.FileServiceImpl">
+    <configuration name="FileServiceImpl" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.yangy.hahafile.service.impl.FileServiceImpl" />
+      <module name="HaHa-File" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.yangy.hahafile.service.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -1200,6 +1159,10 @@
       <option name="ACTIVE_PROFILES" value="dev" />
       <option name="ALTERNATIVE_JRE_PATH" />
     </configuration>
+    <configuration name="HahafileApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="HaHa-File" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.yangy.hahafile.HahafileApplication" />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -1239,7 +1202,14 @@
       <item itemvalue="Spring Boot.HaHaSendApplication" />
       <item itemvalue="Spring Boot.HaHaSocketApplication" />
       <item itemvalue="Spring Boot.HaHaSearchApplication" />
+      <item itemvalue="Spring Boot.HahafileApplication" />
+      <item itemvalue="Application.FileServiceImpl" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.FileServiceImpl" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -1287,12 +1257,12 @@
       <workItem from="1691403444607" duration="3645000" />
       <workItem from="1691481730029" duration="28486000" />
       <workItem from="1692857795293" duration="12231000" />
-      <workItem from="1693186775008" duration="8804000" />
+      <workItem from="1693186775008" duration="23959000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="619883000" />
+    <option name="totallyTimeSpent" value="635038000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1312,7 +1282,7 @@
       <window_info anchor="right" id="Ant Build" order="3" weight="0.25" />
       <window_info id="UI Designer" order="7" />
       <window_info anchor="right" id="JRebel Setup Guide" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="5" weight="0.33449477" />
+      <window_info active="true" anchor="bottom" id="Debug" order="5" visible="true" weight="0.33449477" />
       <window_info anchor="bottom" id="TODO" order="11" />
       <window_info anchor="bottom" id="Messages" order="14" weight="0.3263647" />
       <window_info id="MyBatis Builder" order="6" side_tool="true" />
@@ -1329,6 +1299,7 @@
       <window_info id="Web" order="5" side_tool="true" />
       <window_info id="JRebel" order="3" side_tool="true" />
       <window_info anchor="bottom" id="SonarLint" order="7" />
+      <window_info anchor="bottom" id="Find" order="3" weight="0.32830626" />
       <window_info anchor="right" id="SciView" order="12" weight="0.2671306" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="right" id="Coverage" order="14" side_tool="true" weight="0.32976446" />
@@ -1340,7 +1311,6 @@
       <window_info anchor="right" id="Module Dependencies" order="1" weight="0.32976446" />
       <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
       <window_info anchor="bottom" id="Eval Reset" order="19" weight="0.32868758" />
-      <window_info anchor="bottom" id="Find" order="3" weight="0.32830626" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="2" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="2" />
     </layout>
@@ -1407,146 +1377,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ReadMe.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="1012">
-            <caret line="46" column="31" selection-start-line="46" selection-start-column="31" selection-end-line="46" selection-end-column="31" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HaHa-Common/src/main/java/com/yangy/common/feign/SendFeignClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HaHa-Common/src/main/java/com/yangy/common/constant/CommonConstant.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HaHa-User/src/main/java/com/yangy/hahauser/interceptor/SqlEncryptInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2904">
-          <caret line="156" column="50" selection-start-line="156" selection-start-column="50" selection-end-line="156" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../../JavaEnvSoft/install/new-maven-repository/org/springframework/spring-jdbc/5.2.12.RELEASE/spring-jdbc-5.2.12.RELEASE-sources.jar!/org/springframework/jdbc/object/BatchSqlUpdate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3388">
-          <caret line="192" column="42" selection-start-line="192" selection-start-column="42" selection-end-line="192" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../../JavaEnvSoft/install/new-maven-repository/org/springframework/spring-jdbc/5.2.12.RELEASE/spring-jdbc-5.2.12.RELEASE-sources.jar!/org/springframework/jdbc/object/MappingSqlQueryWithParameters.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2090">
-          <caret line="118" selection-start-line="118" selection-end-line="118" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../../JavaEnvSoft/install/new-maven-repository/org/mybatis/mybatis/3.5.6/mybatis-3.5.6.jar!/org/apache/ibatis/type/BaseTypeHandler.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../../JavaEnvSoft/install/new-maven-repository/com/baomidou/mybatis-plus-extension/3.4.1/mybatis-plus-extension-3.4.1.jar!/com/baomidou/mybatisplus/extension/handlers/AbstractJsonTypeHandler.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="6" column="88" selection-start-line="6" selection-start-column="88" selection-end-line="6" selection-end-column="88" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../../JavaEnvSoft/install/new-maven-repository/com/baomidou/mybatis-plus-annotation/3.4.1/mybatis-plus-annotation-3.4.1.jar!/com/baomidou/mybatisplus/annotation/TableField.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../../JavaEnvSoft/install/new-maven-repository/com/baomidou/mybatis-plus-core/3.5.2/mybatis-plus-core-3.5.2.jar!/META-INF/maven/com.baomidou/mybatis-plus-core/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="924">
-          <caret line="42" column="22" selection-start-line="42" selection-start-column="22" selection-end-line="42" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../../JavaEnvSoft/install/new-maven-repository/org/mybatis/mybatis/3.5.10/mybatis-3.5.10.jar!/org/apache/ibatis/type/TypeHandlerRegistry.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="6" column="38" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../../JavaEnvSoft/install/new-maven-repository/org/mybatis/mybatis/3.5.10/mybatis-3.5.10-sources.jar!/org/apache/ibatis/type/MappedTypes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="45" column="21" selection-start-line="45" selection-start-column="21" selection-end-line="45" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../../JavaEnvSoft/install/new-maven-repository/org/mybatis/mybatis/3.5.10/mybatis-3.5.10-sources.jar!/org/apache/ibatis/type/TypeHandlerRegistry.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="395" column="7" lean-forward="true" selection-start-line="395" selection-start-column="7" selection-end-line="395" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HaHa-Common/src/main/java/com/yangy/common/bean/ReqBaseBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HaHa-User/src/main/java/com/yangy/hahauser/controller/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="32" column="31" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../../JavaEnvSoft/install/new-maven-repository/com/baomidou/mybatis-plus-extension/3.5.2/mybatis-plus-extension-3.5.2-sources.jar!/com/baomidou/mybatisplus/extension/service/impl/ServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="164" column="69" selection-start-line="164" selection-start-column="69" selection-end-line="164" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../../JavaEnvSoft/install/new-maven-repository/com/baomidou/mybatis-plus-extension/3.5.2/mybatis-plus-extension-3.5.2-sources.jar!/com/baomidou/mybatisplus/extension/service/IService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="291" column="35" selection-start-line="291" selection-start-column="31" selection-end-line="291" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../../JavaEnvSoft/install/new-maven-repository/com/baomidou/mybatis-plus-core/3.5.2/mybatis-plus-core-3.5.2-sources.jar!/com/baomidou/mybatisplus/core/mapper/Mapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HaHa-User/target/classes/com/yangy/hahauser/handler/EncryptTypeHandler.class" />
-    <entry file="jar://$PROJECT_DIR$/../../../JavaEnvSoft/install/new-maven-repository/com/baomidou/mybatis-plus-annotation/3.5.2/mybatis-plus-annotation-3.5.2-sources.jar!/com/baomidou/mybatisplus/annotation/TableName.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="28" column="18" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/../../../JavaEnvSoft/install/new-maven-repository/org/mybatis/mybatis/3.5.10/mybatis-3.5.10-sources.jar!/org/apache/ibatis/mapping/ResultMapping.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
@@ -1596,27 +1426,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ReadMe.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="1012">
-            <caret line="46" column="31" selection-start-line="46" selection-start-column="31" selection-end-line="46" selection-end-column="31" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/HaHa-User/src/main/java/com/yangy/hahauser/annotation/EncryptEntity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
           <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HaHa-User/src/main/java/com/yangy/hahauser/annotation/EncryptField.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -1676,13 +1489,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HaHa-User/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="25" column="26" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/../../../JavaEnvSoft/install/new-maven-repository/com/baomidou/mybatis-plus-core/3.5.2/mybatis-plus-core-3.5.2-sources.jar!/com/baomidou/mybatisplus/core/mapper/BaseMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
@@ -1697,27 +1503,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HaHa-User/src/main/resources/logback.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="858">
-          <caret line="39" column="23" selection-start-line="39" selection-start-column="23" selection-end-line="39" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/HaHa-Common/src/main/java/com/yangy/common/handler/GlobalExceptionHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="682">
           <caret line="39" column="82" selection-start-line="39" selection-start-column="82" selection-end-line="39" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HaHa-User/src/main/java/com/yangy/hahauser/interceptor/SqlEncryptInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
-          <caret line="116" column="56" selection-start-line="116" selection-start-column="56" selection-end-line="116" selection-end-column="56" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1745,30 +1534,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HaHa-User/src/main/java/com/yangy/hahauser/service/impl/EncryptServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="17" column="44" lean-forward="true" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#522#523#0" expanded="true" />
-            <element signature="e#577#578#0" expanded="true" />
-            <element signature="e#623#624#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/HaHa-User/src/main/java/com/yangy/hahauser/controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
-          <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/HaHa-User/src/main/java/com/yangy/hahauser/service/impl/UserServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="528">
-          <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+          <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#504#505#0" expanded="true" />
@@ -1779,10 +1555,210 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/HaHa-Web/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="13" selection-start-line="4" selection-start-column="4" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ReadMe.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="594">
+            <caret line="27" selection-start-line="27" selection-end-line="27" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HaHa-User/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="3" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HaHa-User/src/main/resources/logback.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="574">
+          <caret line="39" column="23" selection-start-line="39" selection-start-column="23" selection-end-line="39" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HaHa-User/src/main/resources/application-dev.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="36" selection-start-line="1" selection-start-column="36" selection-end-line="1" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HaHa-User/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="13" column="37" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
+        </state>
+      </provider>
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HaHa-Search/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-528" />
+      </provider>
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HaHa-Send/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="60" column="21" selection-start-line="34" selection-start-column="9" selection-end-line="60" selection-end-column="21" />
+        </state>
+      </provider>
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HaHa-File/src/main/java/com/yangy/hahafile/HahafileApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HaHa-File/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+        </state>
+      </provider>
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HaHa-Search/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HaHa-Socket/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" column="37" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HaHa-File/src/main/resources/application-prod.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HaHa-File/src/main/java/com/yangy/hahafile/service/UploadService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="30" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HaHa-Common/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="82" column="21" selection-start-line="82" selection-start-column="21" selection-end-line="82" selection-end-column="21" />
+        </state>
+      </provider>
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HaHa-File/src/main/java/com/yangy/hahafile/service/DownloadService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="34" lean-forward="true" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HaHa-File/src/main/java/com/yangy/hahafile/service/impl/UploadServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HaHa-File/src/main/java/com/yangy/hahafile/service/FileService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HaHa-User/src/main/java/com/yangy/hahauser/annotation/EncryptField.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HaHa-User/src/main/java/com/yangy/hahauser/interceptor/SqlEncryptInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="613">
+          <caret line="43" column="21" selection-start-line="43" selection-start-column="21" selection-end-line="43" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HaHa-User/src/main/java/com/yangy/hahauser/service/EncryptService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HaHa-File/src/main/resources/application-dev.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="29" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HaHa-File/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/HaHa-Common/src/main/java/com/yangy/common/util/AESUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="616">
-          <caret line="50" column="29" lean-forward="true" selection-start-line="50" selection-start-column="29" selection-end-line="50" selection-end-column="29" />
+        <state relative-caret-position="-966">
+          <caret line="31" column="25" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HaHa-User/src/main/java/com/yangy/hahauser/service/impl/EncryptServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#477#478#0" expanded="true" />
+            <element signature="e#522#523#0" expanded="true" />
+            <element signature="e#577#578#0" expanded="true" />
+            <element signature="e#623#624#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HaHa-File/src/main/java/com/yangy/hahafile/util/FileUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="121" column="35" lean-forward="true" selection-start-line="121" selection-start-column="35" selection-end-line="121" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HaHa-File/src/main/java/com/yangy/hahafile/service/impl/FileServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="63" column="63" lean-forward="true" selection-start-line="63" selection-start-column="63" selection-end-line="63" selection-end-column="63" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
