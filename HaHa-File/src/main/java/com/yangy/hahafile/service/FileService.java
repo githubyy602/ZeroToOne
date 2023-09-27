@@ -15,4 +15,7 @@ public interface FileService {
 	
 	void decryptFile();
 	
+	//todo 上传
+	
+	//todo 下载
 }

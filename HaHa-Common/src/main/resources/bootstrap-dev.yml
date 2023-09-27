@@ -3,15 +3,20 @@ spring:
     nacos:
       discovery:
         server-addr: 127.0.0.1:8848
-        namespace: a663dc6b-98ff-4518-9a06-ffb3e3c4b697
+        namespace: a9a3fda3-f7db-4ea0-b986-c6d4db53cfef
         group: hahashow-dev
+        #新版本nacos需要输入账密
+        username: nacos
+        password: nacos
       config:
         server-addr: 127.0.0.1:8848
-        namespace: a663dc6b-98ff-4518-9a06-ffb3e3c4b697
+        namespace: a9a3fda3-f7db-4ea0-b986-c6d4db53cfef
         group: hahashow-dev
-        refresh-enabled: true
         prefix: common
         file-extension: yaml
+        #新版本nacos需要输入账密
+        username: nacos
+        password: nacos
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/hahashow?characterEncoding=utf-8&serverTimezone=Asia/Shanghai&allowMultiQueries=true

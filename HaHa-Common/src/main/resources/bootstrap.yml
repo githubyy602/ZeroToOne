@@ -29,11 +29,11 @@ sys:
 
 token:
   except:
-    url: /login/online,getSign,/user/createUser,/user/getUserInfo
+    url: /login/online,/getSign,/user/createUser,/user/getUserInfo
 
 sign:
   except:
-    url: getSign,/user/createUser,/user/getUserInfo
+    url: /getSign,/user/createUser,/user/getUserInfo
 
 #hystrix配置参考
 #hystrix:

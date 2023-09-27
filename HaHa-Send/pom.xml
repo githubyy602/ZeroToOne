@@ -20,13 +20,13 @@
     <dependencyManagement>
       <dependencies>
         <!-- Azure SDK BOM -->
-        <dependency>
-          <groupId>com.azure</groupId>
-          <artifactId>azure-sdk-bom</artifactId>
-          <version>2021-09-02</version>
-          <type>pom</type>
-          <scope>import</scope>
-        </dependency>
+        <!--<dependency>-->
+          <!--<groupId>com.azure</groupId>-->
+          <!--<artifactId>azure-sdk-bom</artifactId>-->
+          <!--<version>2021-09-02</version>-->
+          <!--<type>pom</type>-->
+          <!--<scope>import</scope>-->
+        <!--</dependency>-->
       </dependencies>
     </dependencyManagement>
     
@@ -91,10 +91,10 @@
         <!--</dependency>-->
         
          <!-- Azure Identity -->
-        <dependency>
-            <groupId>com.azure.identity</groupId>
-            <artifactId>azure-identity</artifactId>
-          </dependency>
+        <!--<dependency>-->
+            <!--<groupId>com.azure.identity</groupId>-->
+            <!--<artifactId>azure-identity</artifactId>-->
+          <!--</dependency>-->
         
     </dependencies>
 
