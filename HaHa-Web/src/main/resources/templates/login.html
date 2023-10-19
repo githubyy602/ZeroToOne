@@ -120,8 +120,10 @@
         }
         
         var params = new Map();
-        params.set('loginName', 'admin');
-        params.set('password', '123456');
+        // params.set('loginName', 'admin');
+        // params.set('password', '123456');
+        params.set('loginName', name);
+        params.set('password', pwd);
         var sign = getBackendSignature(params);
         
         params.set('sign',sign);
@@ -131,7 +133,7 @@
         });
         
         $.ajax({
-            url: "http://localhost:20001/user/login/online",
+            url: "http://localhost:20011/user/login/online",
             method: "POST",
             data: JSON.stringify(jsonObj),
 			async: true,

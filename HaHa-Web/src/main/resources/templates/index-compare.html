@@ -10,9 +10,7 @@
 <meta name="keywords" content="digiflex, video, movie, show, tv, watch, online, streaming, stream, ads, trailer, imdb, dram, action, hollywood, cinema, rate">
 
 <!-- CSS FILES -->
-<!--<link rel="stylesheet" th:href="@{/static/css/lineicons.css" >-->
-<link rel="stylesheet" th:href="@{/static/css/lineicons.css}" >
-    
+<link rel="stylesheet" th:href="@{/static/css/lineicons.css}">
 <link rel="stylesheet" th:href="@{/static/css/fancybox.min.css}">
 <link rel="stylesheet" th:href="@{/static/css/swiper.min.css}">
 <link rel="stylesheet" th:href="@{/static/css/bootstrap.min.css}">
@@ -29,14 +27,14 @@
     </form>
 		</div>
 		<!-- end mobile-search -->
-            <a href="account.html" class="button-account"> </a>
+  <a href="account.html" class="button-account"><i class="lni lni-user"></i> ACCOUNT </a>
     <!-- end button-account --> 
 	<div class="site-menu">
     <ul>
-      <li><a href="index.html">首页</a></li>
-      <li><a href="movies.html">视频</a></li>
-      <li><a href="tv-shows.html">博客</a></li>
-      <li><a href="error.html">关于Me</a></li>
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="movies.html">MOVIES</a></li>
+      <li><a href="tv-shows.html">TV SHOWS</a></li>
+      <li><a href="error.html">TIPS</a></li>
     </ul>
   </div>
   <!-- end site-menu -->
@@ -45,14 +43,14 @@
 	</nav>
 	<!-- end mobile-menu -->
 <nav class="navbar">
-  <div class="logo"> <a href="index.html"> <img src="static/picture/logo.png" alt="Image"> </a> </div>
+  <div class="logo"> <a href="index.html"> <img th:src="@{/static/picture/logo.png}" alt="Image"> </a> </div>
   <!-- end logo -->
   <div class="site-menu">
     <ul>
-      <li><a href="index.html">首页</a></li>
-      <li><a href="movies.html">视频</a></li>
-      <li><a href="tv-shows.html">博客</a></li>
-      <li><a href="error.html">关于Me</a></li>
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="movies.html">MOVIES</a></li>
+      <li><a href="tv-shows.html">TV SHOWS</a></li>
+      <li><a href="error.html">TIPS</a></li>
     </ul>
   </div>
   <!-- end site-menu -->
@@ -77,7 +75,7 @@
       <!-- end notify-dropdown --> 
     </div>
     <!-- end navbar-notify -->
-    <div class="navbar-account"> <a id="accInfo" href="account.html">个人信息：<span id = "userName"></span></a></div>
+    <div class="navbar-account"> <a href="account.html">ACCOUNT <i class="lni lni-user"></i> </a></div>
     <!-- end navbar-account --> 
   </div>
   <!-- end user-menu --> 
@@ -112,112 +110,103 @@
   <div class="main-slider">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
-        <div class="slide-inner" data-background="static/images/slide01.jpg">
+        <div class="slide-inner" data-background="static/images/slide01.jpg}">
           <div class="container" data-swiper-parallax="200">
-            <h6 class="tagline">最新发布</h6>
-            <!--<h2 class="name">The Rise of<br>-->
-              <!--<strong>Football</strong></h2>-->
-            <!--<ul class="features">-->
-              <!--<li>-->
-                <!--<div class="rate">-->
-                  <!--<svg class="circle-chart" viewBox="0 0 30 30" width="40" height="40" xmlns="http://www.w3.org/2000/svg">-->
-                    <!--<circle class="circle-chart__background" stroke="#2f3439" stroke-width="2" fill="none" cx="15" cy="15" r="14"></circle>-->
-                    <!--<circle class="circle-chart__circle" stroke="#4eb04b" stroke-width="2" stroke-dasharray="50,100" cx="15" cy="15" r="14"></circle>-->
-                  <!--</svg>-->
-                  <!--<b>5.4</b> IMDB SCORE </div>-->
-                <!--&lt;!&ndash; end rate &ndash;&gt; -->
-              <!--</li>-->
-              <!--<li>-->
-                <!--<div class="year">2020</div>-->
-              <!--</li>-->
-              <!--<li>-->
-                <!--<div class="hd">4K <b>ULTRA HD</b></div>-->
-              <!--</li>-->
-              <!--<li>-->
-                <!--<div class="tags">Romance, Action</div>-->
-              <!--</li>-->
-            <!--</ul>-->
-            
-            <img th:src="@{/static/images/springboot-logo.jpg}" height="600px" width="1100px" />
+            <h6 class="tagline">NEW RELEASES</h6>
+            <h2 class="name">The Rise of<br>
+              <strong>Football</strong></h2>
+            <ul class="features">
+              <li>
+                <div class="rate">
+                  <svg class="circle-chart" viewBox="0 0 30 30" width="40" height="40" xmlns="http://www.w3.org/2000/svg">
+                    <circle class="circle-chart__background" stroke="#2f3439" stroke-width="2" fill="none" cx="15" cy="15" r="14"></circle>
+                    <circle class="circle-chart__circle" stroke="#4eb04b" stroke-width="2" stroke-dasharray="50,100" cx="15" cy="15" r="14"></circle>
+                  </svg>
+                  <b>5.4</b> IMDB SCORE </div>
+                <!-- end rate --> 
+              </li>
+              <li>
+                <div class="year">2020</div>
+              </li>
+              <li>
+                <div class="hd">4K <b>ULTRA HD</b></div>
+              </li>
+              <li>
+                <div class="tags">Romance, Action</div>
+              </li>
+            </ul>
             <p class="description">
-				最新SpringBoot学习内容，赶紧瞧过来
-			</p>
-            <a th:href="@{/detail1}" class="play-btn">点击看详情</a> 
-            <!--<a href="account.html" class="add-btn">+</a>--> 
-          </div>
+				'The Football' follows Dee Dee Allen and Barry Glickman <br>who are New York City stage stars.
+				</p>
+            <a href="movie-single.html" class="play-btn">WATCH TRAILER</a> <a href="account.html" class="add-btn">+</a> </div>
           <!-- end container --> 
         </div>
         <!-- end slide-inner --> 
       </div>
       <!-- end swiper-slide -->
       <div class="swiper-slide">
-        <div class="slide-inner bg-image" data-background="static/images/slide02.jpg">
+        <div class="slide-inner bg-image" data-background="static/images/slide02.jpg}">
           <div class="container" data-swiper-parallax="200">
-            <h6 class="tagline">最新发布</h6>
-            <!--<h2 class="name">The History of <br>-->
-              <!--<strong>Ottomans</strong></h2>-->
-            <!--<ul class="features">-->
-              <!--<li>-->
-                <!--<div class="rate">-->
-                  <!--<svg class="circle-chart" viewBox="0 0 30 30" width="40" height="40" xmlns="http://www.w3.org/2000/svg">-->
-                    <!--<circle class="circle-chart__background" stroke="#2f3439" stroke-width="2" fill="none" cx="15" cy="15" r="14"></circle>-->
-                    <!--<circle class="circle-chart__circle" stroke="#4eb04b" stroke-width="2" stroke-dasharray="50,100" cx="15" cy="15" r="14"></circle>-->
-                  <!--</svg>-->
-                  <!--<b>5.4</b> IMDB SCORE </div>-->
-                <!--&lt;!&ndash; end rate &ndash;&gt; -->
-              <!--</li>-->
-              <!--<li>-->
-                <!--<div class="year">2020</div>-->
-              <!--</li>-->
-              <!--<li>-->
-                <!--<div class="hd">1080 <b>HD</b></div>-->
-              <!--</li>-->
-              <!--<li>-->
-                <!--<div class="tags">Romance, Action</div>-->
-              <!--</li>-->
-            <!--</ul>-->
-            <img th:src="@{/static/images/mysql-logo.jpg}" height="600px" width="1100px" />
-            <p class="description">Mysql进阶学习内容，不容错过哦 </p>
-            <a href="movie-single.html" class="play-btn">点击看详情</a> 
-              <!--<a href="account.html" class="add-btn">+</a>--> 
-          </div>
+            <h6 class="tagline">NEW RELEASES</h6>
+            <h2 class="name">The History of <br>
+              <strong>Ottomans</strong></h2>
+            <ul class="features">
+              <li>
+                <div class="rate">
+                  <svg class="circle-chart" viewBox="0 0 30 30" width="40" height="40" xmlns="http://www.w3.org/2000/svg">
+                    <circle class="circle-chart__background" stroke="#2f3439" stroke-width="2" fill="none" cx="15" cy="15" r="14"></circle>
+                    <circle class="circle-chart__circle" stroke="#4eb04b" stroke-width="2" stroke-dasharray="50,100" cx="15" cy="15" r="14"></circle>
+                  </svg>
+                  <b>5.4</b> IMDB SCORE </div>
+                <!-- end rate --> 
+              </li>
+              <li>
+                <div class="year">2020</div>
+              </li>
+              <li>
+                <div class="hd">1080 <b>HD</b></div>
+              </li>
+              <li>
+                <div class="tags">Romance, Action</div>
+              </li>
+            </ul>
+            <p class="description">From attending the prom with her girlfriend, Alyssa<br>
+ When Dee Dee and Barry decide that Emma's </p>
+            <a href="movie-single.html" class="play-btn">PLAY MOVIE</a> <a href="account.html" class="add-btn">+</a> </div>
           <!-- end container --> 
         </div>
         <!-- end slide-inner --> 
       </div>
       <!-- end swiper-slide -->
       <div class="swiper-slide">
-        <div class="slide-inner bg-image" data-background="static/images/slide03.jpg">
+        <div class="slide-inner bg-image" data-background="static/images/slide03.jpg}">
           <div class="container" data-swiper-parallax="200">
-            <h6 class="tagline">最新发布</h6>
-            <!--<h2 class="name">La Guerra de<br>-->
-              <!--<strong>Mandou</strong></h2>-->
-            <!--<ul class="features">-->
-              <!--<li>-->
-                <!--<div class="rate">-->
-                  <!--<svg class="circle-chart" viewBox="0 0 30 30" width="40" height="40" xmlns="http://www.w3.org/2000/svg">-->
-                    <!--<circle class="circle-chart__background" stroke="#2f3439" stroke-width="2" fill="none" cx="15" cy="15" r="14"></circle>-->
-                    <!--<circle class="circle-chart__circle" stroke="#4eb04b" stroke-width="2" stroke-dasharray="50,100" cx="15" cy="15" r="14"></circle>-->
-                  <!--</svg>-->
-                  <!--<b>5.4</b> IMDB SCORE </div>-->
-                <!--&lt;!&ndash; end rate &ndash;&gt; -->
-              <!--</li>-->
-              <!--<li>-->
-                <!--<div class="year">2020</div>-->
-              <!--</li>-->
-              <!--<li>-->
-                <!--<div class="hd">720P <b>HD</b></div>-->
-              <!--</li>-->
-              <!--<li>-->
-                <!--<div class="tags">Romance, Action</div>-->
-              <!--</li>-->
-            <!--</ul>-->
-            
-            <img th:src="@{/static/images/redis-logo.jpg}" height="600px" width="1100px" />
-            <p class="description">Redis全新内容，快来瞧瞧 </p>
-            <a href="movie-single.html" class="play-btn">点击看详情</a>
-            <!--<a href="account.html" class="add-btn">+</a>--> 
-          </div>
+            <h6 class="tagline">NEW RELEASES</h6>
+            <h2 class="name">La Guerra de<br>
+              <strong>Mandou</strong></h2>
+            <ul class="features">
+              <li>
+                <div class="rate">
+                  <svg class="circle-chart" viewBox="0 0 30 30" width="40" height="40" xmlns="http://www.w3.org/2000/svg">
+                    <circle class="circle-chart__background" stroke="#2f3439" stroke-width="2" fill="none" cx="15" cy="15" r="14"></circle>
+                    <circle class="circle-chart__circle" stroke="#4eb04b" stroke-width="2" stroke-dasharray="50,100" cx="15" cy="15" r="14"></circle>
+                  </svg>
+                  <b>5.4</b> IMDB SCORE </div>
+                <!-- end rate --> 
+              </li>
+              <li>
+                <div class="year">2020</div>
+              </li>
+              <li>
+                <div class="hd">720P <b>HD</b></div>
+              </li>
+              <li>
+                <div class="tags">Romance, Action</div>
+              </li>
+            </ul>
+            <p class="description">She can truly celebrate who she is. Directed by Ryan Murphy<br>'The Mandou' is the spectacular, big-hearted film.
+				</p>
+            <a href="movie-single.html" class="play-btn">PLAY TRAILER</a> <a href="account.html" class="add-btn">+</a> </div>
           <!-- end container --> 
         </div>
         <!-- end slide-inner --> 
@@ -245,7 +234,7 @@
         <!-- end col-12 -->
         <div class="col-lg-3 col-sm-6">
           <div class="category-thumb">
-            <figure class="category-image"> <img src="static/picture/serial-category01.jpg" alt="Image"> </figure>
+            <figure class="category-image"> <img th:src="@{/static/picture/serial-category01.jpg}" alt="Image"> </figure>
             <div class="category-content">
               <ul class="tags">
                 <li>Romance</li>
@@ -262,7 +251,7 @@
         
         <div class="col-lg-3 col-sm-6">
           <div class="category-thumb">
-            <figure class="category-image"> <img src="static/picture/serial-category02.jpg" alt="Image"> </figure>
+            <figure class="category-image"> <img th:src="@{/static/picture/serial-category02.jpg}" alt="Image"> </figure>
             <div class="category-content">
               <ul class="tags">
                 <li>Action</li>
@@ -277,7 +266,7 @@
         <!-- end col-3 -->
         <div class="col-lg-3 col-sm-6">
           <div class="category-thumb">
-            <figure class="category-image"> <img src="static/picture/serial-category03.jpg" alt="Image"> </figure>
+            <figure class="category-image"> <img th:src="@{/static/picture/serial-category03.jpg}" alt="Image"> </figure>
             <div class="category-content">
               <ul class="tags">
                 <li>Romance</li>
@@ -292,7 +281,7 @@
         <!-- end col-3 -->
         <div class="col-lg-3 col-sm-6">
           <div class="category-thumb">
-            <figure class="category-image"> <img src="static/picture/serial-category04.jpg" alt="Image"> </figure>
+            <figure class="category-image"> <img th:src="@{/static/picture/serial-category04.jpg}" alt="Image"> </figure>
             <div class="category-content">
               <ul class="tags">
                 <li>Romance</li>
@@ -316,7 +305,7 @@
     <div class="container">
       <div class="row align-items-center no-gutters">
         <div class="col-lg-6">
-          <figure class="side-image full-left"> <img src="static/picture/side-image01.png" alt="Image"> </figure>
+          <figure class="side-image full-left"> <img th:src="@{/static/picture/side-image01.png}" alt="Image"> </figure>
           <!-- end side-image --> 
         </div>
         <!-- end col-6 -->
@@ -325,7 +314,7 @@
             <h2>Best pick for hassle-free <u>streaming</u> experience.</h2>
             <ul class="icon-list">
               <li>
-                <figure> <img src="static/picture/icon01.png" alt="Image"> </figure>
+                <figure> <img th:src="@{/static/picture/icon01.png}" alt="Image"> </figure>
                 <div class="content">
                   <h4>Access while traveling</h4>
                   <p>Keep access to your entertainment content while
@@ -333,7 +322,7 @@
                 </div>
               </li>
               <li>
-                <figure> <img src="static/picture/icon02.png" alt="Image"> </figure>
+                <figure> <img th:src="@{/static/picture/icon02.png}" alt="Image"> </figure>
                 <div class="content">
                   <h4>Stream with no interruptions</h4>
                   <p>Pause for snacks, not buffering. Stream smoothly with
@@ -341,7 +330,7 @@
                 </div>
               </li>
               <li>
-                <figure> <img src="static/picture/icon03.png" alt="Image"> </figure>
+                <figure> <img th:src="@{/static/picture/icon03.png}" alt="Image"> </figure>
                 <div class="content">
                   <h4>Stay secure at all times</h4>
                   <p>Securely access and enjoy your favorite content,
@@ -372,7 +361,7 @@
         <!-- end col-12 -->
         <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6">
           <div class="video-thumb light">
-            <figure class="video-image"> <a href="#"><img src="static/picture/movies01.jpg" alt="Image"></a>
+            <figure class="video-image"> <a href="#"><img th:src="@{/static/picture/movies01.jpg}" alt="Image"></a>
               <div class="circle-rate">
                 <svg class="circle-chart" viewBox="0 0 30 30" width="100" height="100" xmlns="http://www.w3.org/2000/svg">
                   <circle class="circle-chart__background" stroke="#2f3439" stroke-width="2" fill="none" cx="15" cy="15" r="14"></circle>
@@ -398,7 +387,7 @@
         <!-- end col-2 -->
         <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6">
           <div class="video-thumb light">
-            <figure class="video-image"> <a href="#"><img src="static/picture/movies02.jpg" alt="Image"></a>
+            <figure class="video-image"> <a href="#"><img th:src="@{/static/picture/movies02.jpg}" alt="Image"></a>
               <div class="circle-rate">
                 <svg class="circle-chart" viewBox="0 0 30 30" width="100" height="100" xmlns="http://www.w3.org/2000/svg">
                   <circle class="circle-chart__background" stroke="#2f3439" stroke-width="2" fill="none" cx="15" cy="15" r="14"></circle>
@@ -424,7 +413,7 @@
         <!-- end col-2 -->
         <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6">
           <div class="video-thumb light">
-            <figure class="video-image"> <a href="#"><img src="static/picture/movies03.jpg" alt="Image"></a>
+            <figure class="video-image"> <a href="#"><img th:src="@{/static/picture/movies03.jpg}" alt="Image"></a>
               <div class="circle-rate">
                 <svg class="circle-chart" viewBox="0 0 30 30" width="100" height="100" xmlns="http://www.w3.org/2000/svg">
                   <circle class="circle-chart__background" stroke="#2f3439" stroke-width="2" fill="none" cx="15" cy="15" r="14"></circle>
@@ -450,7 +439,7 @@
         <!-- end col-2 -->
         <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6">
           <div class="video-thumb light">
-            <figure class="video-image"> <a href="#"><img src="static/picture/movies04.jpg" alt="Image"></a>
+            <figure class="video-image"> <a href="#"><img th:src="@{/static/picture/movies04.jpg}" alt="Image"></a>
               <div class="circle-rate">
                 <svg class="circle-chart" viewBox="0 0 30 30" width="100" height="100" xmlns="http://www.w3.org/2000/svg">
                   <circle class="circle-chart__background" stroke="#2f3439" stroke-width="2" fill="none" cx="15" cy="15" r="14"></circle>
@@ -476,7 +465,7 @@
         <!-- end col-2 -->
         <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6">
           <div class="video-thumb light">
-            <figure class="video-image"> <a href="#"><img src="static/picture/movies05.jpg" alt="Image"></a>
+            <figure class="video-image"> <a href="#"><img th:src="@{/static/picture/movies05.jpg}" alt="Image"></a>
               <div class="circle-rate">
                 <svg class="circle-chart" viewBox="0 0 30 30" width="100" height="100" xmlns="http://www.w3.org/2000/svg">
                   <circle class="circle-chart__background" stroke="#2f3439" stroke-width="2" fill="none" cx="15" cy="15" r="14"></circle>
@@ -502,7 +491,7 @@
         <!-- end col-2 -->
         <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6">
           <div class="video-thumb light">
-            <figure class="video-image"> <a href="#"><img src="static/picture/movies06.jpg" alt="Image"></a>
+            <figure class="video-image"> <a href="#"><img th:src="@{/static/picture/movies06.jpg}" alt="Image"></a>
               <div class="circle-rate">
                 <svg class="circle-chart" viewBox="0 0 30 30" width="100" height="100" xmlns="http://www.w3.org/2000/svg">
                   <circle class="circle-chart__background" stroke="#2f3439" stroke-width="2" fill="none" cx="15" cy="15" r="14"></circle>
@@ -528,7 +517,7 @@
         <!-- end col-2 -->
         <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6">
           <div class="video-thumb light">
-            <figure class="video-image"> <a href="#"><img src="static/picture/movies07.jpg" alt="Image"></a>
+            <figure class="video-image"> <a href="#"><img th:src="@{/static/picture/movies07.jpg}" alt="Image"></a>
               <div class="circle-rate">
                 <svg class="circle-chart" viewBox="0 0 30 30" width="100" height="100" xmlns="http://www.w3.org/2000/svg">
                   <circle class="circle-chart__background" stroke="#2f3439" stroke-width="2" fill="none" cx="15" cy="15" r="14"></circle>
@@ -554,7 +543,7 @@
         <!-- end col-2 -->
         <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6">
           <div class="video-thumb light">
-            <figure class="video-image"> <a href="#"><img src="static/picture/movies08.jpg" alt="Image"></a>
+            <figure class="video-image"> <a href="#"><img th:src="@{/static/picture/movies08.jpg}" alt="Image"></a>
               <div class="circle-rate">
                 <svg class="circle-chart" viewBox="0 0 30 30" width="100" height="100" xmlns="http://www.w3.org/2000/svg">
                   <circle class="circle-chart__background" stroke="#2f3439" stroke-width="2" fill="none" cx="15" cy="15" r="14"></circle>
@@ -580,7 +569,7 @@
         <!-- end col-2 -->
         <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6">
           <div class="video-thumb light">
-            <figure class="video-image"> <a href="#"><img src="static/picture/movies09.jpg" alt="Image"></a>
+            <figure class="video-image"> <a href="#"><img th:src="@{/static/picture/movies09.jpg}" alt="Image"></a>
               <div class="circle-rate">
                 <svg class="circle-chart" viewBox="0 0 30 30" width="100" height="100" xmlns="http://www.w3.org/2000/svg">
                   <circle class="circle-chart__background" stroke="#2f3439" stroke-width="2" fill="none" cx="15" cy="15" r="14"></circle>
@@ -606,7 +595,7 @@
         <!-- end col-2 -->
         <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6">
           <div class="video-thumb light">
-            <figure class="video-image"> <a href="#"><img src="static/picture/movies10.jpg" alt="Image"></a>
+            <figure class="video-image"> <a href="#"><img th:src="@{/static/picture/movies10.jpg}" alt="Image"></a>
               <div class="circle-rate">
                 <svg class="circle-chart" viewBox="0 0 30 30" width="100" height="100" xmlns="http://www.w3.org/2000/svg">
                   <circle class="circle-chart__background" stroke="#2f3439" stroke-width="2" fill="none" cx="15" cy="15" r="14"></circle>
@@ -632,7 +621,7 @@
         <!-- end col-2 -->
         <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6">
           <div class="video-thumb light">
-            <figure class="video-image"> <a href="#"><img src="static/picture/movies11.jpg" alt="Image"></a>
+            <figure class="video-image"> <a href="#"><img th:src="@{/static/picture/movies11.jpg}" alt="Image"></a>
               <div class="circle-rate">
                 <svg class="circle-chart" viewBox="0 0 30 30" width="100" height="100" xmlns="http://www.w3.org/2000/svg">
                   <circle class="circle-chart__background" stroke="#2f3439" stroke-width="2" fill="none" cx="15" cy="15" r="14"></circle>
@@ -658,7 +647,7 @@
         <!-- end col-2 -->
         <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6">
           <div class="video-thumb light">
-            <figure class="video-image"> <a href="#"><img src="static/picture/movies12.jpg" alt="Image"></a>
+            <figure class="video-image"> <a href="#"><img th:src="@{/static/picture/movies12.jpg}" alt="Image"></a>
               <div class="circle-rate">
                 <svg class="circle-chart" viewBox="0 0 30 30" width="100" height="100" xmlns="http://www.w3.org/2000/svg">
                   <circle class="circle-chart__background" stroke="#2f3439" stroke-width="2" fill="none" cx="15" cy="15" r="14"></circle>
@@ -690,7 +679,7 @@
     <!-- end container --> 
   </section>
   <!-- end content-section -->
-  <section class="content-section" data-background="static/images/section-pattern01.png">
+  <section class="content-section" data-background="static/images/section-pattern01.png}">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-lg-7">
@@ -701,7 +690,7 @@
               has a large and diverse collection of servers, an
               excellent collection of advanced features, strong
               privacy and security ”</blockquote>
-            <figure> <img src="static/picture/avatar01.jpg" alt="Image"> <img src="static/picture/brand01.jpg" alt="Image"> </figure>
+            <figure> <img th:src="@{/static/picture/avatar01.jpg}" alt="Image"> <img th:src="@{/static/picture/brand01.jpg}" alt="Image"> </figure>
             <h6>Max Eddy <br>
               <small>Software analyst, PCMag</small> </h6>
           </div>
@@ -709,7 +698,7 @@
         </div>
         <!-- end col-7 -->
         <div class="col-lg-5">
-          <figure class="side-image"> <img src="static/picture/side-image02.png" alt="Image"> </figure>
+          <figure class="side-image"> <img th:src="@{/static/picture/side-image02.png}" alt="Image"> </figure>
           <!-- end side-image --> 
         </div>
         <!-- end col-5 --> 
@@ -721,7 +710,7 @@
   <!-- end content-section -->
   <section class="content-section">
     <div class="video-bg">
-      <video src="" autoplay muted playsinline loop></video>
+      <video src="video01.mp4" autoplay muted playsinline loop></video>
     </div>
     <!-- end video-bg -->
     <div class="container">
@@ -739,7 +728,7 @@
       <div class="row">
         <div class="col-lg-4">
           <div class="price-box">
-            <figure class="icon"><img src="static/picture/icon04.png" alt="Image"></figure>
+            <figure class="icon"><img th:src="@{/static/picture/icon04.png}" alt="Image"></figure>
             <div class="months">1-month plan</div>
             <div class="price"><span>$</span> <b>9.99</b> <small>per month</small> </div>
             <a href="#">GET THE DEAL</a>
@@ -750,7 +739,7 @@
         <!-- end col-4 -->
         <div class="col-lg-4">
           <div class="price-box">
-            <figure class="icon"><img src="static/picture/icon05.png" alt="Image"></figure>
+            <figure class="icon"><img th:src="@{/static/picture/icon05.png}" alt="Image"></figure>
             <div class="months">12-months plan</div>
             <div class="price"><span>$</span> <b>3.99</b> <small>per month</small> </div>
             <div class="save">Save 68%</div>
@@ -763,7 +752,7 @@
         <!-- end col-4 -->
         <div class="col-lg-4">
           <div class="price-box">
-            <figure class="icon"><img src="static/picture/icon06.png" alt="Image"></figure>
+            <figure class="icon"><img th:src="@{/static/picture/icon06.png}" alt="Image"></figure>
             <div class="months">6-months plan</div>
             <div class="price"><span>$</span> <b>6.99</b> <small>per month</small> </div>
             <a href="#">GET THE DEAL</a>
@@ -865,30 +854,5 @@
 <script th:src="@{/static/js/swiper.min.js}"></script> 
 <script th:src="@{/static/js/fancybox.min.js}"></script> 
 <script th:src="@{/static/js/scripts.js}"></script>
-<script th:src="@{/static/js/crypto-js.js}"></script>
-<script th:src="@{/static/js/api/common-api.js}"></script>
-<script th:src="@{/static/js/api/user-api.js}"></script>
-
-<script>
-    getUserInfo();
-    var storeInfo = localStorage.getItem('userInfo');
-    // console.log(user);
-    var user = JSON.parse(storeInfo);
-    
-    if(null != user && undefined != user){
-        // alert(user.userName);
-        
-        $(function() {
-            $('#userName').html(user.userName); 
-        })
-    }else {
-        $(function() {
-            var linkElement = $('<a>').attr('href', 'http://localhost:30000/web/login').text('登录/注册');
-            $('#accInfo').remove();
-            $('.navbar-account').append(linkElement);
-        })
-    }
-    
-</script>
 </body>
 </html>

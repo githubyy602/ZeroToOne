@@ -60,8 +60,10 @@ public class LoginController {
 				log.error("{}",e.getMessage(),e);
 				return ResultBean.returnResult(ResponseCodeEnum.TOKEN_FAILED);
 			}
+		}else {
+
+			return ResultBean.returnResult(ResponseCodeEnum.USER_NOT_EXIST_ERROR);
 		}
-		return ResultBean.returnResult(ResponseCodeEnum.FAIL);
 	}
 
 }

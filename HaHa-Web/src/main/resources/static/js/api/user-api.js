@@ -17,11 +17,12 @@ function getUserInfo(){
     param = {"userId":userId,"sign":sign};
 
     $.ajax({
-            url: "http://localhost:20001/user/getUserInfo",
+            url: "http://localhost:20011/user/getUserInfo",
             method: "POST",
             data: JSON.stringify(param),
             headers : {"accessToken":accessToken},
 			async: false,
+            timeout : 5000,
     		dataType: "json",
     		contentType: "application/json;charset=UTF-8",
 			beforeSend: function(XHR) {

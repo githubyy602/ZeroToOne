@@ -2,7 +2,6 @@ package com.yangy.hahaweb.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 
 
 /**
@@ -11,22 +10,31 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * @Description
  */
 @Controller
-@RequestMapping
 public class IndexController {
 	
-	@RequestMapping(value = "/",method = RequestMethod.GET)
+	@RequestMapping(value = "/")
 	public String defaultPage(){
 		return "/index";
 	}
 	
-	@RequestMapping(value = "/index",method = RequestMethod.GET)
+	@RequestMapping("/testIndex")
+	public String testIndex(){
+		return "/index-compare";
+	}
+	
+	@RequestMapping(value = "/index")
 	public String index(){
 		return "/index";
 	}
 	
-	@RequestMapping(value = "/login",method = RequestMethod.GET)
+	@RequestMapping(value = "/login")
 	public String login(){
 		return "/login";
+	}
+	
+	@RequestMapping(value = "/detail1")
+	public String detail1(){
+		return "/movie-single";
 	}
 
 }

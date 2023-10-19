@@ -12,7 +12,7 @@ public class ErrorController {
 
 //	@RequestMapping("/error")
 //	public String error(){
-//		return "tips";
+//		return "/error";
 //	}
 
 }

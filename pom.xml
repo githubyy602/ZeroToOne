@@ -121,4 +121,36 @@
 
     </dependencies>
     
+    <build>
+        <plugins>
+            <plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>3.0.2</version>
+				<!-- 不同环境的资源文件 -->
+				<executions>
+					<execution>
+						<id>copy-resources</id>
+						<phase>package</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+                        <configuration>
+							<!--将指定resource文件复制到的目标文件夹-->
+							<outputDirectory>target/resources</outputDirectory>
+							<resources>
+								<resource>
+									<!--自定义项: 复制src/main/resources/目录下的文件,若不需要复制resources下的其他文件夹内容,就不需要这个<resource>-->
+									<directory>src/main/resources</directory>
+                                    <include>**/**</include>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+            
+        </plugins>
+    </build>
+    
 </project>
