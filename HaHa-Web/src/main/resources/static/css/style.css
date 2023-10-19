@@ -821,10 +821,10 @@ button[type="submit"] i {
   height: 100vh;
   display: flex;
   flex-wrap: wrap;
-  position: fixed;
+  /*position: fixed;*/
   left: 0;
   top: 0;
-  background: #111111;
+  background: #363636;
 }
 .slider .main-slider {
   width: 100%;
@@ -854,7 +854,7 @@ button[type="submit"] i {
   content: "";
   width: 100%;
   height: 100%;
-  background: url("../images/bg-noise.bak.gif");
+  /*background: url("../images/bg-noise.bak.gif");*/
   background-size: 200px auto;
   position: absolute;
   left: 0;
@@ -1334,11 +1334,13 @@ button[type="submit"] i {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  padding: 100px 0;
+  padding: 50px 0;
   position: relative;
   background-size: cover !important;
   background-position: center;
   overflow-x: hidden;
+  background: #363636;
+  color: white;  
 }
 
 main {
@@ -1465,7 +1467,7 @@ main {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  position: absolute;
+  /*position: absolute;*/
   left: 0;
   bottom: 0;
   padding: 15px 30px;
@@ -2887,7 +2889,7 @@ main {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  padding-top: 100px;
+  padding-top: 50px;
   background: #111111;
   color: #fff;
   position: relative;

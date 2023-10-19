@@ -19,7 +19,7 @@ public class IndexController {
 	
 	@RequestMapping("/testIndex")
 	public String testIndex(){
-		return "/index-compare";
+		return "index-test";
 	}
 	
 	@RequestMapping(value = "/index")
@@ -29,7 +29,7 @@ public class IndexController {
 	
 	@RequestMapping(value = "/login")
 	public String login(){
-		return "/login";
+		return "/login-new";
 	}
 	
 	@RequestMapping(value = "/detail1")

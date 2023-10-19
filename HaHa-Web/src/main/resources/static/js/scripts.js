@@ -24,10 +24,10 @@
 
 
     // MAIN SPACER
-    $(window).on('resize', function () {
-      var mastHeight = $('.page-header, .slider').outerHeight();
-      $('main').css('margin-top', mastHeight);
-    });
+    // $(window).on('resize', function () {
+    //   var mastHeight = $('.page-header, .slider').outerHeight();
+    //   $('main').css('margin-top', mastHeight);
+    // });
 
     $(window).trigger('resize');
 
