@@ -1,5 +1,6 @@
 package com.yangy.hahauser.service;
 
+import com.yangy.common.bean.ResultBean;
 import com.yangy.hahauser.bean.PO.User;
 
 /**
@@ -10,5 +11,5 @@ import com.yangy.hahauser.bean.PO.User;
 public interface UserService {
 	User queryUser(User user);
 	
-	int createUser(User user);
+	ResultBean createUser(User user);
 }

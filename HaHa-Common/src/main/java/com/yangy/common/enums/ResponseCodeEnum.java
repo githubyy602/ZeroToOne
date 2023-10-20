@@ -19,7 +19,8 @@ public enum ResponseCodeEnum {
 	VALID_ERROR(2008,"参数校验错误"),
 	
 	//业务错误码
-	USER_NOT_EXIST_ERROR(2100,"用户不存在"),;
+	USER_NOT_EXIST_ERROR(2100,"用户不存在"),
+	USER_ALREADY_EXIST_ERROR(2101,"用户已存在");
 	
 	private int code;
 	private String desc;

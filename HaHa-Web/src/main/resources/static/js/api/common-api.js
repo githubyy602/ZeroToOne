@@ -26,3 +26,10 @@ function getBackendSignature(obj) {
     
     return hmac;
 }
+
+function encryptPwd(obj) {
+    var secretKey = '84B2J2hvk2jdnvk4#@#';
+    var hmac = CryptoJS.HmacMD5(obj, secretKey).toString();
+    
+    return hmac;
+}

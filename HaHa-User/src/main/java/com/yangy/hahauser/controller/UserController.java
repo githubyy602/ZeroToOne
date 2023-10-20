@@ -55,7 +55,7 @@ public class UserController {
 		BeanUtils.copyProperties(userInfoDto,user);
 		user.setCreateTime(new Date());
 //		return ResultBean.success(userMapper.insert(user));
-		return ResultBean.success(userService.createUser(user));
+		return userService.createUser(user);
 	}
 	
 	//测试feign调用

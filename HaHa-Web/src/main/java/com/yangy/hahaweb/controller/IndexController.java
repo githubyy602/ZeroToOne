@@ -29,7 +29,7 @@ public class IndexController {
 	
 	@RequestMapping(value = "/login")
 	public String login(){
-		return "/login-new";
+		return "/login";
 	}
 	
 	@RequestMapping(value = "/detail1")
