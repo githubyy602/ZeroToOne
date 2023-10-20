@@ -1,3 +1,8 @@
+//全局变量
+var req_domain = "http://localhost:";
+var user_service_port = "20011";
+var web_service_port = "30000";
+
 // 全局方法，用于获取后端签名
 function getBackendSignature(obj) {
     var map = obj;

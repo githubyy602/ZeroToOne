@@ -213,7 +213,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     });
     
     $.ajax({
-        url: "http://localhost:20011/user/login/online",
+        url: req_domain+user_service_port+"/user/login/online",
         method: "POST",
         data: JSON.stringify(jsonObj),
         async: true,
@@ -229,7 +229,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 // 设置全局参数
                 localStorage.setItem('userId', data.data.userId);
                 localStorage.setItem('accessToken', data.data.accessToken);
-                window.location.href="http://localhost:30000/web/index";
+                window.location.href=req_domain+web_service_port+"/web/index";
             }else{
                  alert(data.message);
             }
@@ -291,7 +291,7 @@ function register() {
     });
     
     $.ajax({
-        url: "http://localhost:20011/user/createUser",
+        url: req_domain+user_service_port+"/user/createUser",
         method: "POST",
         data: JSON.stringify(jsonObj),
         async: true,

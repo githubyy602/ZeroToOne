@@ -17,7 +17,7 @@ function getUserInfo(){
     param = {"userId":userId,"sign":sign};
 
     $.ajax({
-            url: "http://localhost:20011/user/getUserInfo",
+            url: req_domain+user_service_port+"/user/getUserInfo",
             method: "POST",
             data: JSON.stringify(param),
             headers : {"accessToken":accessToken},
@@ -43,7 +43,7 @@ function getUserInfo(){
                     
                 }else{
                      alert("请登录");
-                     window.location.href="http://localhost:30000/web/login";
+                     window.location.href=req_domain+web_service_port+"/web/login";
 				}
             },
             error: function (data) {
@@ -53,4 +53,33 @@ function getUserInfo(){
         });
 }
 
+function setAccountInfo() {
+    getUserInfo();
+    $(function() {
+        var storeInfo = localStorage.getItem('userInfo');
+        // console.log(user);
+        var user = JSON.parse(storeInfo);
+        
+        if(null != user && undefined != user){
+            // alert(user.userName);
+            $('#userName').html(user.userName); 
+            
+        }else {
+            var linkElement = $('<a>').attr('href', req_domain+web_service_port+'/web/login').text('登录/注册');
+            $('#accInfo').remove();
+            $('.navbar-account').append(linkElement);
+            $("#logout").hide();
+        }
+        
+        //退出登录
+        $("#logout").click(function () {
+            localStorage.removeItem('userId');
+            localStorage.removeItem('accessToken');
+            localStorage.removeItem('userInfo');
+            location.reload();
+        });
+        
+        
+    });
+}
 

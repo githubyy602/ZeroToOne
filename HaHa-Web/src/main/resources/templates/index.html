@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="theme-color" content="#e90101"/>
-<title>digiflex | Online Movie Streaming</title>
+<title>Haha Show-首页</title>
 <meta name="author" content="Themezinho">
 <meta name="description" content="For all kind of video streaming website">
 <meta name="keywords" content="digiflex, video, movie, show, tv, watch, online, streaming, stream, ads, trailer, imdb, dram, action, hollywood, cinema, rate">
@@ -890,34 +890,8 @@
 <script th:src="@{/static/js/api/user-api.js}"></script>
 
 <script>
-    getUserInfo();
-    $(function() {
-        var storeInfo = localStorage.getItem('userInfo');
-        // console.log(user);
-        var user = JSON.parse(storeInfo);
-        
-        if(null != user && undefined != user){
-            // alert(user.userName);
-            $('#userName').html(user.userName); 
-            
-        }else {
-            var linkElement = $('<a>').attr('href', 'http://localhost:30000/web/login').text('登录/注册');
-            $('#accInfo').remove();
-            $('.navbar-account').append(linkElement);
-            $("#logout").hide();
-        }
-        
-        //退出登录
-        $("#logout").click(function () {
-            localStorage.removeItem('userId');
-            localStorage.removeItem('accessToken');
-            localStorage.removeItem('userInfo');
-            location.reload();
-        });
-        
-        
-    })
     
+    setAccountInfo();
     
 </script>
 </body>
