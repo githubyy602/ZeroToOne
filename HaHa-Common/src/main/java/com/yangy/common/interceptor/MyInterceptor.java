@@ -56,7 +56,7 @@ public class MyInterceptor implements HandlerInterceptor {
 			
 			//转换request对象，因为要校验json类型的参数，必须转换后才能获取到入参
 			HttpRequestWrapper requestWrapper;
-			if (request instanceof HttpRequestWrapper) {
+				if (request instanceof HttpRequestWrapper) {
 				requestWrapper = (HttpRequestWrapper) request;
 			} else {
 				requestWrapper = new HttpRequestWrapper(request);

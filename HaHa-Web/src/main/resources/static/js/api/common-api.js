@@ -1,18 +1,14 @@
 //全局变量
 var req_domain = "http://localhost:";
 var user_service_port = "20011";
+var file_service_port = "20012";
+var business_service_port = "20013";
 var web_service_port = "30000";
 
 // 全局方法，用于获取后端签名
 function getBackendSignature(obj) {
-    var map = obj;
   
-    var jsonObj = {};
-    map.forEach(function(value, key) {
-      jsonObj[key] = value;
-    });
-  
-    var jsonString = JSON.stringify(jsonObj);
+    var jsonString = JSON.stringify(obj);
     // console.log(jsonString);
     
     var filteredString = jsonString.replace(/[^\u4E00-\u9FA5a-zA-Z0-9]/g, '');

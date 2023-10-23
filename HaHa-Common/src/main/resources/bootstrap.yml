@@ -27,13 +27,13 @@ sys:
     user: 'user'
     
 
-token:
-  except:
-    url: /login/online,/getSign,/user/createUser,/user/getUserInfo
+#token:
+#  except:
+#    url: /login/online,/getSign,/user/createUser
 
 sign:
   except:
-    url: /getSign,/user/createUser,/user/getUserInfo
+    url: /getSign,/user/createUser
 
 #hystrix配置参考
 #hystrix:

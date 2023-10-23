@@ -10,11 +10,10 @@ function getUserInfo(){
     }
     
     var param = new Map(); 
-    param.set("userId",userId);
+    param['userId'] = userId;
 
     var sign = getBackendSignature(param);
-    param.set("userId",userId);
-    param = {"userId":userId,"sign":sign};
+    param['sign'] = sign;
 
     $.ajax({
             url: req_domain+user_service_port+"/user/getUserInfo",
