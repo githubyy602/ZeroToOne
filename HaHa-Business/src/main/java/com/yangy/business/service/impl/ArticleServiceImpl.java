@@ -30,4 +30,9 @@ public class ArticleServiceImpl implements ArticleService {
 		PageInfo<Articles> articlesPageInfo = new PageInfo<>(articlesList);
 		return articlesPageInfo;
 	}
+
+	@Override
+	public Articles queryOne(Integer id) {
+		return articlesMapper.selectByPrimaryKey(id);
+	}
 }

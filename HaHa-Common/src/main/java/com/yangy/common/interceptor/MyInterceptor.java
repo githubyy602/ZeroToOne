@@ -45,12 +45,12 @@ public class MyInterceptor implements HandlerInterceptor {
             response.setStatus(HttpServletResponse.SC_OK);
             return true;
         }
-		
+        
 		try {
 
-        	//免token校验放行，如登录接口
+        	//免token校验放行
 			String url = request.getRequestURI();
-			if(url.endsWith("/error")){
+			if(url.endsWith("/error") || url.contains("/static")){
 				return true;
 			}
 			
@@ -61,10 +61,13 @@ public class MyInterceptor implements HandlerInterceptor {
 			} else {
 				requestWrapper = new HttpRequestWrapper(request);
 			}
-			if(CollectionUtils.isEmpty(urlList) || !urlList.stream().filter(u->url.endsWith(u)).findAny().isPresent()){
-				//校验token
-				TokenUtil.checkToken(requestWrapper);
+			
+			if(!CollectionUtils.isEmpty(urlList) && urlList.stream().filter(u->url.endsWith(u) || url.startsWith(u)).findAny().isPresent()){
+				//免登陆
+				return true;
 			}
+			//校验token
+			TokenUtil.checkToken(requestWrapper);
 
 			//校验签名
 			if(CollectionUtils.isEmpty(signExceptUrlList) || !signExceptUrlList.stream().filter(u->url.endsWith(u)).findAny().isPresent()){

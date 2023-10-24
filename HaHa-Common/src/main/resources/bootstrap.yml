@@ -20,20 +20,22 @@ spring:
       
 sys:
   serviceName:
-    send: 'haha-send'
-    user: 'haha-user'
+    send : 'haha-send'
+    user : 'haha-user'
+    business : 'haha-business'
   serviceContext:
-    send: 'send'
-    user: 'user'
+    send : 'send'
+    user : 'user'
+    business : 'business'
     
 
 #token:
 #  except:
 #    url: /login/online,/getSign,/user/createUser
 
-sign:
-  except:
-    url: /getSign,/user/createUser
+#sign:
+#  except:
+#    url: /getSign,/user/createUser
 
 #hystrix配置参考
 #hystrix:

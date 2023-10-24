@@ -1,5 +1,5 @@
 function queryArticles(pageIndex,pageSize) {
-    
+    var count = 20;
     $(function() {
         var param = new Map(); 
         // param.set("pageIndex","0");
@@ -26,7 +26,8 @@ function queryArticles(pageIndex,pageSize) {
                 if(data.code == 1000){
                     if(null != data.data && '' != data.data){
                         //分页
-                        showList(data.data.list)
+                        showList(data.data.list);
+                        count = data.data.list.length;
                     }else{
                         $('#articleList').append('暂未内容！');
                     }
@@ -43,6 +44,7 @@ function queryArticles(pageIndex,pageSize) {
         
     });
     
+    return count;
 }
 
 function showList(data) {
@@ -51,7 +53,13 @@ function showList(data) {
 
     // 遍历数据，生成列表项并插入到列表容器中
     for (var i = 0; i < data.length; i++) {
-      var listItem = '<li>' + data[i].title + '</li>';
+      var link = document.createElement("a");
+      link.href = req_domain+web_service_port+'/web/detail/'+data[i].id;
+      link.textContent = data[i].title;
+      link.style.color = 'white';
+      
+      var listItem = document.createElement("li");
+      listItem.appendChild(link);
       $('#articleList').append(listItem);
     }
 }

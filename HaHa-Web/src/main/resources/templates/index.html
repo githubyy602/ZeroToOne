@@ -887,21 +887,22 @@
 <script>
     
     setAccountInfo();
+    var count = queryArticles(0,20);
     //分页
     layui.use(function(){
       var laypage = layui.laypage;
       // 自定义主题
       laypage.render({
-        elem: 'demo-laypage-theme-1',
+        elem: 'pageDiv',
+        count:count,
         limit: 20,
         theme: '#1E9FFF',
+        groups:5,  
         jump: function(obj, first){
             
             // 首次不执行
             if(!first){
                queryArticles(obj.curr,obj.limit);
-            }else {
-               queryArticles(0,20);
             }
           }
           

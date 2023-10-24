@@ -47,7 +47,7 @@
                 </exclusion>
                 <exclusion>
                     <groupId>com.baomidou</groupId>
-                    <artifactId>mybatisplus-spring-boot-starter</artifactId>
+                    <artifactId>mybatis-plus-boot-starter</artifactId>
                 </exclusion>
                 <exclusion>
                     <groupId>com.baomidou</groupId>

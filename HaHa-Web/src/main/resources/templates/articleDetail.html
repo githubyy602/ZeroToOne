@@ -46,10 +46,12 @@
 </nav>
 
 <main>
-  <section class="content-section" >
-    <div class="container">
-      <div class="row" style="">
-        
+  <section class="content-section" style="width: 100%;height:100%; min-height: 750px;">
+    <div class="container" >
+      <div class="row" style="margin: 100px 0;">
+        <div th:if="${detail != null && detail.content != null}" th:text="${detail.content}" style="color: black;">
+            
+        </div>
         <!-- end col-3 --> 
       </div>
       <!-- end row --> 

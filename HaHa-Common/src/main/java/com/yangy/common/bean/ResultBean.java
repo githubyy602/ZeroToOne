@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class ResultBean {
+public class ResultBean<T> {
 	
 	private int code;
 	private String message;
