@@ -28,6 +28,7 @@ public class CommonConstant {
 	
 	//方法类型
 	public static final String METHOD_TYPE_OPTIONS = "OPTIONS";
+	public static final String METHOD_TYPE_GET = "GET";
 	
 	
 	

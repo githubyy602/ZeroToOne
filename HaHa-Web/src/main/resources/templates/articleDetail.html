@@ -10,13 +10,19 @@
 <meta name="keywords" content="digiflex, video, movie, show, tv, watch, online, streaming, stream, ads, trailer, imdb, dram, action, hollywood, cinema, rate">
 
 <!-- CSS FILES -->
-<!--<link rel="stylesheet" th:href="@{/static/css/lineicons.css" >-->
+<!--<link rel="stylesheet" th:href="@{/static/css/lineicons.css}" >-->
 <link rel="stylesheet" th:href="@{/static/css/lineicons.css}" >
     
 <link rel="stylesheet" th:href="@{/static/css/fancybox.min.css}">
 <link rel="stylesheet" th:href="@{/static/css/swiper.min.css}">
 <link rel="stylesheet" th:href="@{/static/css/bootstrap.min.css}">
 <link rel="stylesheet" th:href="@{/static/css/style.css}">
+<!--文章排版专属css-->
+<!--<link th:href="@{/static/css/iconfont/iconfont.css}" rel="stylesheet">-->
+<link th:href="@{/static/css/bootstrap-reboot.min.css}" rel="stylesheet">
+<link th:href="@{/static/css/prism.css}" rel="stylesheet">
+<link th:href="@{/static/css/content.min.css}" rel="stylesheet">
+<link th:href="@{/static/css/main.min.css}" rel="stylesheet">
 </head>
 <body>
 <nav class="navbar" style="background: black;">
@@ -49,9 +55,251 @@
   <section class="content-section" style="width: 100%;height:100%; min-height: 750px;">
     <div class="container" >
       <div class="row" style="margin: 100px 0;">
-        <div th:if="${detail != null && detail.content != null}" th:text="${detail.content}" style="color: black;">
+        <div th:if="${detail != null && detail.content != null}" th:utext="${detail.content}">
             
         </div>
+
+      <!--<div class="workspace anm2 active">-->
+          <!--<div class="article scroll">-->
+              <!--<div class="article-head">-->
+                  <!--<div class="left tools">-->
+                      <!--<a class="abtn" name="catalog"><i class="iconfont icon-mulu"></i></a>-->
+                  <!--</div>-->
+                  <!--<h1>未命名章节</h1>-->
+                  <!--<div class="right tools">-->
+                      <!--<a class="abtn" name="share"><i class="iconfont icon-fenxiang"></i></a>-->
+                  <!--</div>-->
+              <!--</div>-->
+              <!--<div class="article-body mce-content-body ">-->
+                  <!--<p><span data-cke-copybin-start="1">​</span></p>-->
+                  <!--<h1><span id="cke_bm_280S">&nbsp;</span>1、在window系统安装Linux（开启微软的Linux子系统功能-WSL）</h1>-->
+                  <!--<h3><strong>1.1 什么是WSL？</strong></h3>-->
+                  <!--<p><span-->
+                          <!--class="cke_widget_wrapper cke_widget_inline cke_widget_image cke_image_nocaption cke_widget_selected"-->
+                          <!--tabindex="-1" role="region" contenteditable="false" aria-label=" 图像 小部件"-->
+                          <!--data-cke-display-name="图像" data-cke-filter="off" data-cke-widget-id="11"-->
+                          <!--data-cke-widget-wrapper="1"><img class="cke_widget_element" src="files/3iJDIa.png" alt=""-->
+                                                           <!--data-cke-saved-src="https://img-blog.csdnimg.cn/ed10463328bc426baafc24fdd36bf013.png"-->
+                                                           <!--data-cke-widget-data="%7B%22hasCaption%22%3Afalse%2C%22src%22%3A%22https%3A%2F%2Fimg-blog.csdnimg.cn%2Fed10463328bc426baafc24fdd36bf013.png%22%2C%22alt%22%3A%22%22%2C%22width%22%3A%22%22%2C%22height%22%3A%22%22%2C%22lock%22%3Atrue%2C%22align%22%3A%22none%22%2C%22classes%22%3Anull%7D"-->
+                                                           <!--data-cke-widget-keep-attr="0"-->
+                                                           <!--data-cke-widget-upcasted="1" data-widget="image"/><span-->
+                          <!--class="cke_reset cke_widget_drag_handler_container"><img-->
+                          <!--class="cke_reset cke_widget_drag_handler" title="点击并拖拽以移动" role="presentation"-->
+                          <!--draggable="true" src="files/E4DqNz.gif" width="15" height="15"-->
+                          <!--data-cke-widget-drag-handler="1"/></span><span class="cke_image_resizer"-->
+                                                                         <!--title="点击并拖拽以改变尺寸">​</span><span-->
+                          <!--class="cke_widget_edit_container" title="编辑图片">编辑</span></span></p>-->
+                  <!--<p>&nbsp;</p>-->
+                  <!--<p><strong>传送门：<span-->
+                          <!--class="cke_widget_wrapper cke_widget_inline cke_widget_csdnlink cke_widget_selected"-->
+                          <!--tabindex="-1" role="region" contenteditable="false" aria-label="a 小部件"-->
+                          <!--data-cke-display-name="a" data-cke-filter="off" data-cke-widget-id="10"-->
+                          <!--data-cke-widget-wrapper="1"><a class="cke_widget_editable cke_widget_element"-->
+                                                         <!--title="适用于 Linux 的 Windows 子系统安装指南 (Windows 10)"-->
+                                                         <!--contenteditable="true"-->
+                                                         <!--href="https://docs.microsoft.com/zh-cn/windows/wsl/about"-->
+                                                         <!--data-cke-enter-mode="2"-->
+                                                         <!--data-cke-saved-href="https://docs.microsoft.com/zh-cn/windows/wsl/about"-->
+                                                         <!--data-cke-widget-data="%7B%22url%22%3A%22https%3A%2F%2Fdocs.microsoft.com%2Fzh-cn%2Fwindows%2Fwsl%2Fabout%22%2C%22text%22%3A%22%E9%80%82%E7%94%A8%E4%BA%8E%20Linux%20%E7%9A%84%20Windows%20%E5%AD%90%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97%20(Windows%2010)%22%2C%22desc%22%3A%22%22%2C%22icon%22%3A%22https%3A%2F%2Fcsdnimg.cn%2Frelease%2Fblog_editor_html%2Frelease2.2.3%2Fckeditor%2Fplugins%2FCsdnLink%2Ficons%2Ficon-default.png%3Ft%3DN176%22%2C%22isCard%22%3Afalse%2C%22hasResquest%22%3Atrue%2C%22iconDefault%22%3A%22https%3A%2F%2Fcsdnimg.cn%2Frelease%2Fblog_editor_html%2Frelease2.3.6%2Fckeditor%2Fplugins%2FCsdnLink%2Ficons%2Ficon-default.png%3Ft%3DN7T8%22%2C%22id%22%3A%22BrCsNt-1698225828461%22%2C%22classes%22%3Anull%7D"-->
+                                                         <!--data-cke-widget-editable="text"-->
+                                                         <!--data-cke-widget-keep-attr="0" data-cke-widget-upcasted="1"-->
+                                                         <!--data-link-icon="https://csdnimg.cn/release/blog_editor_html/release2.2.3/ckeditor/plugins/CsdnLink/icons/icon-default.png?t=N176"-->
+                                                         <!--data-link-title="适用于 Linux 的 Windows 子系统安装指南 (Windows 10)"-->
+                                                         <!--data-widget="csdnlink">适用于 Linux 的 Windows 子系统安装指南 (Windows 10)</a></span></strong>-->
+                  <!--</p>-->
+                  <!--<p><strong>链接里有全部的步骤</strong></p>-->
+                  <!--<p>&nbsp;</p>-->
+                  <!--<h3><strong>1.2&nbsp;开启 WSL</strong></h3>-->
+                  <!--<p><strong>在 控制面板&#45;&#45;&gt;程序和功能 页面找到 Windows 功能 ，在 Windows 功能 窗口中勾选 适用于 Linux 的 Windows 子系统-->
+                      <!--功能，点击确定，并按照提示重启电脑。</strong></p>-->
+                  <!--<p><span-->
+                          <!--class="cke_widget_wrapper cke_widget_inline cke_widget_image cke_image_nocaption cke_widget_selected"-->
+                          <!--tabindex="-1" role="region" contenteditable="false" aria-label=" 图像 小部件"-->
+                          <!--data-cke-display-name="图像" data-cke-filter="off" data-cke-widget-id="9"-->
+                          <!--data-cke-widget-wrapper="1"><img class="cke_widget_element" src="files/8i8adP.png" alt=""-->
+                                                           <!--data-cke-saved-src="https://img-blog.csdnimg.cn/d85dde9a5ac24d7b925736d60ab5cc72.png"-->
+                                                           <!--data-cke-widget-data="%7B%22hasCaption%22%3Afalse%2C%22src%22%3A%22https%3A%2F%2Fimg-blog.csdnimg.cn%2Fd85dde9a5ac24d7b925736d60ab5cc72.png%22%2C%22alt%22%3A%22%22%2C%22width%22%3A%22%22%2C%22height%22%3A%22%22%2C%22lock%22%3Atrue%2C%22align%22%3A%22none%22%2C%22classes%22%3Anull%7D"-->
+                                                           <!--data-cke-widget-keep-attr="0"-->
+                                                           <!--data-cke-widget-upcasted="1" data-widget="image"/><span-->
+                          <!--class="cke_reset cke_widget_drag_handler_container"><img-->
+                          <!--class="cke_reset cke_widget_drag_handler" title="点击并拖拽以移动" role="presentation"-->
+                          <!--draggable="true" src="files/vcSo8r.gif" width="15" height="15"-->
+                          <!--data-cke-widget-drag-handler="1"/></span><span class="cke_image_resizer"-->
+                                                                         <!--title="点击并拖拽以改变尺寸">​</span><span-->
+                          <!--class="cke_widget_edit_container" title="编辑图片">编辑</span></span></p>-->
+                  <!--<p>重启之后，基本就安装完成了。如果不行的话，看下是否电脑是否符合一下要求：</p>-->
+                  <!--<p><span-->
+                          <!--class="cke_widget_wrapper cke_widget_inline cke_widget_image cke_image_nocaption cke_widget_selected"-->
+                          <!--tabindex="-1" role="region" contenteditable="false" aria-label=" 图像 小部件"-->
+                          <!--data-cke-display-name="图像" data-cke-filter="off" data-cke-widget-id="8"-->
+                          <!--data-cke-widget-wrapper="1"><img class="cke_widget_element" src="files/xTmjsf.png" alt=""-->
+                                                           <!--data-cke-saved-src="https://img-blog.csdnimg.cn/819b309a99214052b66000695a58ad15.png"-->
+                                                           <!--data-cke-widget-data="%7B%22hasCaption%22%3Afalse%2C%22src%22%3A%22https%3A%2F%2Fimg-blog.csdnimg.cn%2F819b309a99214052b66000695a58ad15.png%22%2C%22alt%22%3A%22%22%2C%22width%22%3A%22%22%2C%22height%22%3A%22%22%2C%22lock%22%3Atrue%2C%22align%22%3A%22none%22%2C%22classes%22%3Anull%7D"-->
+                                                           <!--data-cke-widget-keep-attr="0"-->
+                                                           <!--data-cke-widget-upcasted="1" data-widget="image"/><span-->
+                          <!--class="cke_reset cke_widget_drag_handler_container"><img-->
+                          <!--class="cke_reset cke_widget_drag_handler" title="点击并拖拽以移动" role="presentation"-->
+                          <!--draggable="true" src="files/ZhAdL6.gif" width="15" height="15"-->
+                          <!--data-cke-widget-drag-handler="1"/></span><span class="cke_image_resizer"-->
+                                                                         <!--title="点击并拖拽以改变尺寸">​</span><span-->
+                          <!--class="cke_widget_edit_container" title="编辑图片">编辑</span></span></p>-->
+                  <!--<h3><strong>1.3 安装linux系统</strong></h3>-->
+                  <!--<p><strong>在 Windows 应用商店搜索 WSL ，然后搜索栏会提示&ldquo;在 Windows 上运行 Linux&rdquo;，点进去，选择自己喜欢的 Linux-->
+                      <!--发行版，安装即可。这里我选择的是 Ubuntu</strong></p>-->
+                  <!--<p><strong><span-->
+                          <!--class="cke_widget_wrapper cke_widget_inline cke_widget_image cke_image_nocaption cke_widget_selected"-->
+                          <!--tabindex="-1" role="region" contenteditable="false" aria-label=" 图像 小部件"-->
+                          <!--data-cke-display-name="图像" data-cke-filter="off" data-cke-widget-id="7"-->
+                          <!--data-cke-widget-wrapper="1"><img class="cke_widget_element" src="files/jcKDRp.png" alt=""-->
+                                                           <!--data-cke-saved-src="https://img-blog.csdnimg.cn/4205d606c46d461bb6ba182fe4f0beda.png"-->
+                                                           <!--data-cke-widget-data="%7B%22hasCaption%22%3Afalse%2C%22src%22%3A%22https%3A%2F%2Fimg-blog.csdnimg.cn%2F4205d606c46d461bb6ba182fe4f0beda.png%22%2C%22alt%22%3A%22%22%2C%22width%22%3A%22%22%2C%22height%22%3A%22%22%2C%22lock%22%3Atrue%2C%22align%22%3A%22none%22%2C%22classes%22%3Anull%7D"-->
+                                                           <!--data-cke-widget-keep-attr="0"-->
+                                                           <!--data-cke-widget-upcasted="1" data-widget="image"/><span-->
+                          <!--class="cke_reset cke_widget_drag_handler_container"><img-->
+                          <!--class="cke_reset cke_widget_drag_handler" title="点击并拖拽以移动" role="presentation"-->
+                          <!--draggable="true" src="files/K4pvsI.gif" width="15" height="15"-->
+                          <!--data-cke-widget-drag-handler="1"/></span><span class="cke_image_resizer"-->
+                                                                         <!--title="点击并拖拽以改变尺寸">​</span><span-->
+                          <!--class="cke_widget_edit_container" title="编辑图片">编辑</span></span></strong></p>-->
+                  <!--<h3><strong>1.4 初始化 WSL</strong></h3>-->
+                  <!--<p>安装完成后可在开始菜单里找到 Ubuntu 的快捷方式，打开 Ubuntu 的快捷方式，第一次打开需要等待一段时间让它完成初始化。</p>-->
+                  <!--<p>&nbsp;初次启动，会要求我们设置一个 非root 账户，以后每次打开&nbsp; Ubuntu 默认的就是 我们新建的 用户 。设置完用户密码后，修改一下账户权限：</p>-->
+                  <!--<div class="cke_widget_wrapper cke_widget_block cke_widget_codeSnippet cke_widget_selected"-->
+                       <!--tabindex="-1" role="region" contenteditable="false" aria-label="代码段 小部件"-->
+                       <!--data-cke-display-name="代码段" data-cke-filter="off" data-cke-widget-id="6"-->
+                       <!--data-cke-widget-wrapper="1">-->
+                      <!--<pre class="cke_widget_element"-->
+                           <!--data-cke-widget-data="%7B%22code%22%3A%22%24%20sudo%20vim%20%2Fetc%2Fsudoers%22%2C%22classes%22%3Anull%7D"-->
+                           <!--data-cke-widget-keep-attr="0" data-cke-widget-upcasted="1"-->
+                           <!--data-widget="codeSnippet"><code class="hljs}">$ sudo vim /etc/sudoers</code></pre>-->
+                      <!--<span class="cke_reset cke_widget_drag_handler_container"><img-->
+                              <!--class="cke_reset cke_widget_drag_handler" title="点击并拖拽以移动" role="presentation"-->
+                              <!--src="files/OKJ6ge.gif" width="15" height="15"-->
+                              <!--data-cke-widget-drag-handler="1"/></span></div>-->
+                  <!--<p>修改部分文件内容如下，将下面 newUsername 替换成刚刚新建的用户的用户名：</p>-->
+                  <!--<div class="cke_widget_wrapper cke_widget_block cke_widget_codeSnippet cke_widget_selected"-->
+                       <!--tabindex="-1" role="region" contenteditable="false" aria-label="代码段 小部件"-->
+                       <!--data-cke-display-name="代码段" data-cke-filter="off" data-cke-widget-id="5"-->
+                       <!--data-cke-widget-wrapper="1">-->
+<!--<pre class="cke_widget_element"-->
+ <!--data-cke-widget-data="%7B%22lang%22%3A%22bash%22%2C%22code%22%3A%22%23%20User%20privilege%20specification%5Cnroot%20ALL%3D(ALL)%20ALL%5CnnewUsername%20ALL%3D(ALL)%20ALL%22%2C%22classes%22%3Anull%7D"-->
+ <!--data-cke-widget-keep-attr="0" data-cke-widget-upcasted="1" data-widget="codeSnippet"><code-->
+    <!--class="language-bash hljs}"><span class="hljs-comment"># User privilege specification</span>-->
+<!--root ALL=(ALL) ALL-->
+<!--newUsername ALL=(ALL) ALL</code></pre>-->
+                      <!--<span class="cke_reset cke_widget_drag_handler_container"><img-->
+                              <!--class="cke_reset cke_widget_drag_handler" title="点击并拖拽以移动" role="presentation"-->
+                              <!--src="files/XnPlBN.gif" width="15" height="15"-->
+                              <!--data-cke-widget-drag-handler="1"/></span></div>-->
+                  <!--<p>/etc/sudoers&nbsp; 是配置linux 用户权限的系统文件</p>-->
+                  <!--<p>加上 这行代码，表示赋予 自定义用户， 所有的权限</p>-->
+                  <!--<h1>&nbsp;</h1>-->
+                  <!--<p>将WSL转换版本，从1换成2：</p>-->
+                  <!--<blockquote>-->
+                      <!--<p>wsl &#45;&#45;set-version Ubuntu-22.04 2</p>-->
+                  <!--</blockquote>-->
+                  <!--<p>转换后如图：</p>-->
+                  <!--<p><span-->
+                          <!--class="cke_widget_wrapper cke_widget_inline cke_widget_image cke_image_nocaption cke_widget_selected"-->
+                          <!--tabindex="-1" role="region" contenteditable="false" aria-label=" 图像 小部件"-->
+                          <!--data-cke-display-name="图像" data-cke-filter="off" data-cke-widget-id="4"-->
+                          <!--data-cke-widget-wrapper="1"><img class="cke_widget_element" src="files/nltG4C.png" alt=""-->
+                                                           <!--width="420" height="76"-->
+                                                           <!--data-cke-saved-src="https://img-blog.csdnimg.cn/e4fa52df6cf54e2a98c06bb5df83f4c8.png"-->
+                                                           <!--data-cke-widget-data="%7B%22hasCaption%22%3Afalse%2C%22src%22%3A%22https%3A%2F%2Fimg-blog.csdnimg.cn%2Fe4fa52df6cf54e2a98c06bb5df83f4c8.png%22%2C%22alt%22%3A%22%22%2C%22width%22%3A%22420%22%2C%22height%22%3A%2276%22%2C%22lock%22%3Atrue%2C%22align%22%3A%22none%22%2C%22classes%22%3Anull%7D"-->
+                                                           <!--data-cke-widget-keep-attr="0"-->
+                                                           <!--data-cke-widget-upcasted="1" data-widget="image"/><span-->
+                          <!--class="cke_reset cke_widget_drag_handler_container"><img-->
+                          <!--class="cke_reset cke_widget_drag_handler" title="点击并拖拽以移动" role="presentation"-->
+                          <!--draggable="true" src="files/9Cn5XI.gif" width="15" height="15"-->
+                          <!--data-cke-widget-drag-handler="1"/></span><span class="cke_image_resizer"-->
+                                                                         <!--title="点击并拖拽以改变尺寸">​</span><span-->
+                          <!--class="cke_widget_edit_container" title="编辑图片">编辑</span></span></p>-->
+                  <!--<p>确认自己的wsl子系统，也可以根据这个version来判断！！&nbsp;</p>-->
+                  <!--<p>&nbsp;</p>-->
+                  <!--<h1>2、安装docker</h1>-->
+                  <!--<p>第一步 下载安装包</p>-->
+                  <!--<p><span class="cke_widget_wrapper cke_widget_inline cke_widget_csdnlink cke_widget_selected"-->
+                           <!--tabindex="-1" role="region" contenteditable="false" aria-label="a 小部件"-->
+                           <!--data-cke-display-name="a" data-cke-filter="off" data-cke-widget-id="3"-->
+                           <!--data-cke-widget-wrapper="1"><a class="cke_widget_editable cke_widget_element"-->
+                                                          <!--title="Get Docker Desktop for Windows"-->
+                                                          <!--contenteditable="true"-->
+                                                          <!--href="https://links.jianshu.com/go?to=https%3A%2F%2Fdesktop.docker.com%2Fwin%2Fstable%2Famd64%2FDocker%2520Desktop%2520Installer.exe"-->
+                                                          <!--data-cke-enter-mode="2"-->
+                                                          <!--data-cke-saved-href="https://links.jianshu.com/go?to=https%3A%2F%2Fdesktop.docker.com%2Fwin%2Fstable%2Famd64%2FDocker%2520Desktop%2520Installer.exe"-->
+                                                          <!--data-cke-widget-data="%7B%22url%22%3A%22https%3A%2F%2Flinks.jianshu.com%2Fgo%3Fto%3Dhttps%253A%252F%252Fdesktop.docker.com%252Fwin%252Fstable%252Famd64%252FDocker%252520Desktop%252520Installer.exe%22%2C%22text%22%3A%22Get%20Docker%20Desktop%20for%20Windows%22%2C%22desc%22%3A%22%22%2C%22icon%22%3A%22https%3A%2F%2Fcsdnimg.cn%2Frelease%2Fblog_editor_html%2Frelease2.2.3%2Fckeditor%2Fplugins%2FCsdnLink%2Ficons%2Ficon-default.png%3Ft%3DN176%22%2C%22isCard%22%3Afalse%2C%22hasResquest%22%3Atrue%2C%22iconDefault%22%3A%22https%3A%2F%2Fcsdnimg.cn%2Frelease%2Fblog_editor_html%2Frelease2.3.6%2Fckeditor%2Fplugins%2FCsdnLink%2Ficons%2Ficon-default.png%3Ft%3DN7T8%22%2C%22id%22%3A%22KkcyPO-1698225828453%22%2C%22classes%22%3Anull%7D"-->
+                                                          <!--data-cke-widget-editable="text"-->
+                                                          <!--data-cke-widget-keep-attr="0" data-cke-widget-upcasted="1"-->
+                                                          <!--data-link-icon="https://csdnimg.cn/release/blog_editor_html/release2.2.3/ckeditor/plugins/CsdnLink/icons/icon-default.png?t=N176"-->
+                                                          <!--data-link-title="Get Docker Desktop for Windows"-->
+                                                          <!--data-widget="csdnlink">Get Docker Desktop for Windows</a></span>-->
+                  <!--</p>-->
+                  <!--<p>第二步 安装</p>-->
+                  <!--<p>找到下载好的安装包 Docker Desktop Installer.exe 双击，按照提示进行操作即可。</p>-->
+                  <!--<p>&nbsp;</p>-->
+                  <!--<h1>3、在ubuntu中运行docker</h1>-->
+                  <!--<p>在ubuntu命令界面，执行以下命令：</p>-->
+                  <!--<blockquote>-->
+                      <!--<p>docker run -d -p 80:80 docker/getting-started</p>-->
+                  <!--</blockquote>-->
+                  <!--<p><span-->
+                          <!--class="cke_widget_wrapper cke_widget_inline cke_widget_image cke_image_nocaption cke_widget_selected"-->
+                          <!--tabindex="-1" role="region" contenteditable="false" aria-label=" 图像 小部件"-->
+                          <!--data-cke-display-name="图像" data-cke-filter="off" data-cke-widget-id="2"-->
+                          <!--data-cke-widget-wrapper="1"><img class="cke_widget_element" src="files/EHG2A7.png" alt=""-->
+                                                           <!--width="729" height="261"-->
+                                                           <!--data-cke-saved-src="https://img-blog.csdnimg.cn/f0b1db226f1643c4a2a6d1bc682070b8.png"-->
+                                                           <!--data-cke-widget-data="%7B%22hasCaption%22%3Afalse%2C%22src%22%3A%22https%3A%2F%2Fimg-blog.csdnimg.cn%2Ff0b1db226f1643c4a2a6d1bc682070b8.png%22%2C%22alt%22%3A%22%22%2C%22width%22%3A%22729%22%2C%22height%22%3A%22261%22%2C%22lock%22%3Atrue%2C%22align%22%3A%22none%22%2C%22classes%22%3Anull%7D"-->
+                                                           <!--data-cke-widget-keep-attr="0"-->
+                                                           <!--data-cke-widget-upcasted="1" data-widget="image"/><span-->
+                          <!--class="cke_reset cke_widget_drag_handler_container"><img-->
+                          <!--class="cke_reset cke_widget_drag_handler" title="点击并拖拽以移动" role="presentation"-->
+                          <!--draggable="true" src="files/cOclA0.gif" width="15" height="15"-->
+                          <!--data-cke-widget-drag-handler="1"/></span><span class="cke_image_resizer"-->
+                                                                         <!--title="点击并拖拽以改变尺寸">​</span><span-->
+                          <!--class="cke_widget_edit_container" title="编辑图片">编辑</span></span></p>-->
+                  <!--<p><span-->
+                          <!--class="cke_widget_wrapper cke_widget_inline cke_widget_image cke_image_nocaption cke_widget_selected"-->
+                          <!--tabindex="-1" role="region" contenteditable="false" aria-label=" 图像 小部件"-->
+                          <!--data-cke-display-name="图像" data-cke-filter="off" data-cke-widget-id="1"-->
+                          <!--data-cke-widget-wrapper="1"><img class="cke_widget_element" src="files/6R7OJM.png" alt=""-->
+                                                           <!--width="957" height="90"-->
+                                                           <!--data-cke-saved-src="https://img-blog.csdnimg.cn/6d1b64cf3a294744aed7e14d1beeac3a.png"-->
+                                                           <!--data-cke-widget-data="%7B%22hasCaption%22%3Afalse%2C%22src%22%3A%22https%3A%2F%2Fimg-blog.csdnimg.cn%2F6d1b64cf3a294744aed7e14d1beeac3a.png%22%2C%22alt%22%3A%22%22%2C%22width%22%3A%22957%22%2C%22height%22%3A%2290%22%2C%22lock%22%3Atrue%2C%22align%22%3A%22none%22%2C%22classes%22%3Anull%7D"-->
+                                                           <!--data-cke-widget-keep-attr="0"-->
+                                                           <!--data-cke-widget-upcasted="1" data-widget="image"/><span-->
+                          <!--class="cke_reset cke_widget_drag_handler_container"><img-->
+                          <!--class="cke_reset cke_widget_drag_handler" title="点击并拖拽以移动" role="presentation"-->
+                          <!--draggable="true" src="files/RKNQ8M.gif" width="15" height="15"-->
+                          <!--data-cke-widget-drag-handler="1"/></span><span class="cke_image_resizer"-->
+                                                                         <!--title="点击并拖拽以改变尺寸">​</span><span-->
+                          <!--class="cke_widget_edit_container" title="编辑图片">编辑</span></span></p>-->
+                  <!--<p><span-->
+                          <!--class="cke_widget_wrapper cke_widget_inline cke_widget_image cke_image_nocaption cke_widget_selected"-->
+                          <!--tabindex="-1" role="region" contenteditable="false" aria-label=" 图像 小部件"-->
+                          <!--data-cke-display-name="图像" data-cke-filter="off" data-cke-widget-id="0"-->
+                          <!--data-cke-widget-wrapper="1"><img class="cke_widget_element" src="files/SdYtW9.png" alt=""-->
+                                                           <!--width="1200" height="720"-->
+                                                           <!--data-cke-saved-src="https://img-blog.csdnimg.cn/8c244977524b49a0a3f7ef007ef656ce.png"-->
+                                                           <!--data-cke-widget-data="%7B%22hasCaption%22%3Afalse%2C%22src%22%3A%22https%3A%2F%2Fimg-blog.csdnimg.cn%2F8c244977524b49a0a3f7ef007ef656ce.png%22%2C%22alt%22%3A%22%22%2C%22width%22%3A%221200%22%2C%22height%22%3A%22720%22%2C%22lock%22%3Atrue%2C%22align%22%3A%22none%22%2C%22classes%22%3Anull%7D"-->
+                                                           <!--data-cke-widget-keep-attr="0"-->
+                                                           <!--data-cke-widget-upcasted="1" data-widget="image"/><span-->
+                          <!--class="cke_reset cke_widget_drag_handler_container"><img-->
+                          <!--class="cke_reset cke_widget_drag_handler" title="点击并拖拽以移动" role="presentation"-->
+                          <!--draggable="true" src="files/7vByJa.gif" width="15" height="15"-->
+                          <!--data-cke-widget-drag-handler="1"/></span><span class="cke_image_resizer"-->
+                                                                         <!--title="点击并拖拽以改变尺寸">​</span><span-->
+                          <!--class="cke_widget_edit_container" title="编辑图片">编辑</span></span></p>-->
+                  <!--<p>至此，在window下安装linux和docker就完成啦！！！</p>-->
+                  <!--<p><span data-cke-copybin-end="1">​</span></p>-->
+              <!--</div>-->
+
+          <!--</div>-->
+      <!--</div>-->
+          
+          
+				</div>
         <!-- end col-3 --> 
       </div>
       <!-- end row --> 
@@ -80,7 +328,10 @@
 <script th:src="@{/static/js/crypto-js.js}"></script>
 <script th:src="@{/static/js/api/common-api.js}"></script>
 <script th:src="@{/static/js/api/user-api.js}"></script>
-
+<!--文章排版专属js-->
+<script th:src="@{/static/js/prism.js}"></script>
+<script th:src="@{/static/js/jquery.qrcode.min.js}"></script>
+<script th:src="@{/static/js/main.min.js}"></script>
 <script>
     
     setAccountInfo();

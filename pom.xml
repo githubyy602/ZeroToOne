@@ -22,7 +22,7 @@
         <module>HaHa-Gateway</module>
         <module>HaHa-User</module>
         <module>HaHa-Business</module>
-        <module>HaHa-Web</module>
+        <module>HaHa-Front</module>
         <module>HaHa-Send</module>
         <module>HaHa-Socket</module>
         <module>HaHa-Search</module>

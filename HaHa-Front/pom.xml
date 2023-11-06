@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.yangy</groupId>
+        <artifactId>HaHaShow</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    
+    <groupId>com.yangy</groupId>
+    <artifactId>haha-front</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>haha-front</name>
+    <description>front service</description>
+    
+    <properties>
+        <java.version>8</java.version>
+    </properties>
+    
+    <dependencies>
+        <dependency>
+            <groupId>com.yangy</groupId>
+            <artifactId>HaHa-Common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.alibaba.cloud</groupId>
+                    <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+                </exclusion>
+                
+                <exclusion>
+                    <groupId>com.alibaba.cloud</groupId>
+                    <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.boot</groupId>-->
+            <!--<artifactId>spring-boot-starter</artifactId>-->
+        <!--</dependency>-->
+        <!---->
+        <!--&lt;!&ndash; https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web &ndash;&gt;-->
+        <!--&lt;!&ndash;没有此以来客户端服务启动会立即退出&ndash;&gt;-->
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.boot</groupId>-->
+            <!--<artifactId>spring-boot-starter-web</artifactId>-->
+        <!--</dependency>-->
+        
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+        
+         <!-- 模板引擎 -->
+        <!--生成模板文件时需要此依赖，否则会报java.lang.ClassNotFoundException: org.apache.velocity.context.Context的错误-->
+        <dependency>
+            <groupId>org.apache.velocity</groupId>
+            <artifactId>velocity-engine-core</artifactId>
+            <version>2.3</version>
+        </dependency>
+        
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

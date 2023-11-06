@@ -29,13 +29,13 @@ sys:
     business : 'business'
     
 
-#token:
-#  except:
-#    url: /login/online,/getSign,/user/createUser
+token:
+  except:
+    url: /login/online,/getSign,/user/createUser
 
-#sign:
-#  except:
-#    url: /getSign,/user/createUser
+sign:
+  except:
+    url: /getSign,/user/createUser
 
 #hystrix配置参考
 #hystrix:

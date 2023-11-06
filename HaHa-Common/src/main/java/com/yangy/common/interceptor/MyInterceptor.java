@@ -46,6 +46,11 @@ public class MyInterceptor implements HandlerInterceptor {
             return true;
         }
         
+        if(request.getMethod().equals(CommonConstant.METHOD_TYPE_GET)){
+        	//GET类型放行
+        	return true;
+		}
+        
 		try {
 
         	//免token校验放行
