@@ -3735,7 +3735,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 .sign {
   display: block;
   position: relative;
-  background: url("../img/bg.jpg") no-repeat center/cover;
+  /*background: url("../img/bg.jpg") no-repeat center/cover;*/
 }
 .sign__content {
   display: -webkit-flex;
@@ -3793,7 +3793,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   width: auto;
 }
 .sign__logo img {
-  width: 60px;
+  width: 185px;
 }
 .sign__input {
   width: 100%;
@@ -4327,6 +4327,9 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   border-top: 1px solid rgba(133,153,171,0.2);
   -webkit-box-shadow: 0 2px 26px 0 rgba(133,153,171,0.1);
   box-shadow: 0 2px 26px 0 rgba(133,153,171,0.1);
+  position: absolute;
+  bottom: 0;
+  width: 100%;  
 }
 .footer__content {
   display: -webkit-flex;

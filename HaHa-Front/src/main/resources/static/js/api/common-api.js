@@ -1,9 +1,18 @@
 //全局变量
 var req_domain = "http://localhost:";
+
 var user_service_port = "20011";
 var file_service_port = "20012";
 var business_service_port = "20013";
-var web_service_port = "30000";
+var front_service_port = "30000";
+
+var context_user = "/user";
+var context_view = "/view";
+var context_business = "/business";
+
+var base_url_user = req_domain+user_service_port+context_user;
+var base_url_view = req_domain+front_service_port+context_view;
+var base_url_business = req_domain+business_service_port+context_business;
 
 // 全局方法，用于获取后端签名
 function getBackendSignature(obj) {

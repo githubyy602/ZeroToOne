@@ -54,7 +54,7 @@ function showList(data) {
     // 遍历数据，生成列表项并插入到列表容器中
     for (var i = 0; i < data.length; i++) {
       var link = document.createElement("a");
-      link.href = req_domain+web_service_port+'/web/detail/'+data[i].id;
+      link.href = req_domain+front_service_port+'/web/detail/'+data[i].id;
       link.textContent = data[i].title;
       link.style.color = 'white';
       

@@ -3,29 +3,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
-    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/nouislider.min.css">
-    <link rel="stylesheet" href="css/select2.min.css">
-    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
-    <link rel="stylesheet" href="css/ionicons.min.css">
-    <link rel="stylesheet" href="css/main.css">
-
-    <!-- Favicons -->
-    <link rel="icon" type="image/png" href="icon/favicon-32x32.png" sizes="32x32">
-    <link rel="apple-touch-icon" href="icon/favicon-32x32.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="icon/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="icon/apple-touch-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="icon/apple-touch-icon-144x144.png">
-
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <meta name="author" content="Dmitry Volkov">
-    <title>HaHa-Show博客</title>
-    <!--<link type="text/css" rel="stylesheet" charset="UTF-8"-->
-          <!--href="https://translate.googleapis.com/translate_static/css/translateelement.css">-->
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/common.css">
+	<!-- Favicons -->
+	<link rel="icon" type="image/png" href="icon/favicon-32x32.png" sizes="32x32">
+	<link rel="apple-touch-icon" href="icon/favicon-32x32.png">
+    
+    <title>HaHa-Show</title>
 </head>
 
 <body>
@@ -45,7 +29,7 @@
 
                     <!-- header logo -->
                     <a href="index.html" class="header__logo">
-                        <img src="img/bak.logo.svg" alt="">
+                        <img src="" alt="">
                     </a>
                     <!-- end header logo -->
 
@@ -181,7 +165,7 @@
                              aria-labelledby="dropdownMenuNotifications">
                             <div class="header__ntf">
                                 <a href="#" class="header__ntf-img">
-                                    <img src="img/bak.user3.jpg" alt="">
+                                    <img src="" alt="">
                                 </a>
                                 <h6 class="header__ntf-title">
                                     <span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Marsha Baldwin</font></font></span><font
@@ -191,7 +175,7 @@
 
                             <div class="header__ntf">
                                 <a href="#" class="header__ntf-img">
-                                    <img src="img/bak.user7.jpg" alt="">
+                                    <img src="" alt="">
                                 </a>
                                 <h6 class="header__ntf-title">
                                     <span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">安迪·拉莫斯（Andy Ramos）</font></font></span><font
@@ -201,7 +185,7 @@
 
                             <div class="header__ntf">
                                 <a href="#" class="header__ntf-img">
-                                    <img src="img/bak.user4.jpg" alt="">
+                                    <img src="" alt="">
                                 </a>
                                 <h6 class="header__ntf-title">
                                     <span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Sophia Mendoza</font></font></span><font
@@ -211,7 +195,7 @@
 
                             <div class="header__ntf">
                                 <a href="#" class="header__ntf-img">
-                                    <img src="img/bak.user1.jpg" alt="">
+                                    <img src="" alt="">
                                 </a>
                                 <h6 class="header__ntf-title">
                                     <span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">托尼·扬（Tony Young）</font></font></span><font
@@ -227,23 +211,22 @@
                     <div class="header__profile">
                         <a class="dropdown-toggle header__profile-btn" href="#" role="button" id="dropdownMenuProfile"
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <img src="img/bak.user5.bak.jpg" alt="">
-                            <span><font style="vertical-align: inherit;"><font
-                                    style="vertical-align: inherit;">Yangy</font></font></span>
+                            <img src="" alt="" id="userIcon">
+                            <span><font style="vertical-align: inherit;" id="userName"></font></span>
                         </a>
 
                         <ul class="dropdown-menu dropdown-menu-right header__dropdown-menu header__dropdown-menu--right"
                             aria-labelledby="dropdownMenuProfile">
                             <li><a href="profile.html"><i class="icon ion-ios-settings"></i><font
-                                    style="vertical-align: inherit;"><font style="vertical-align: inherit;"> 设定值</font></font></a>
+                                    style="vertical-align: inherit;"><font style="vertical-align: inherit;"> 个人资料</font></font></a>
                             </li>
                             <li><a href="privacy.html"><i class="icon ion-ios-lock"></i><font
                                     style="vertical-align: inherit;"><font style="vertical-align: inherit;">
-                                隐私</font></font></a></li>
-                            <li><a href="faq.html"><i class="icon ion-ios-help-buoy"></i><font
-                                    style="vertical-align: inherit;"><font style="vertical-align: inherit;"> 常问问题</font></font></a>
-                            </li>
-                            <li><a href="#"><i class="icon ion-ios-exit"></i><font
+                                留言</font></font></a></li>
+                            <!--<li><a href="faq.html"><i class="icon ion-ios-help-buoy"></i><font-->
+                                    <!--style="vertical-align: inherit;"><font style="vertical-align: inherit;"> 退出</font></font></a>-->
+                            <!--</li>-->
+                            <li><a href="#" id="logout"><i class="icon ion-ios-exit"></i><font
                                     style="vertical-align: inherit;"><font style="vertical-align: inherit;">
                                 登出</font></font></a></li>
                         </ul>
@@ -259,12 +242,12 @@
 <main class="main">
     <div class="container">
         <div class="row">
-            <div class="col-12 col-md-5 col-lg-4 col-xl-3">
+            <div class="col-12 col-md-5 col-lg-4 col-xl-3" id="userDiv">
                 <!-- user -->
                 <div class="user">
                     <div class="user__head">
                         <div class="user__img">
-                            <img src="img/bak.user5.bak.jpg" alt="">
+                            <img src="" alt="">
                         </div>
                     </div>
                     <div class="user__title">
@@ -307,7 +290,7 @@
                     <div class="sidebox__content">
                         <div class="sidebox__user">
                             <a href="#" class="sidebox__user-img">
-                                <img src="img/bak.user7.jpg" alt="">
+                                <img src="" alt="">
                             </a>
                             <div class="sidebox__user-title">
                                 <h5><a href="#"><font style="vertical-align: inherit;"><font
@@ -391,7 +374,7 @@
                 <div class="post">
                     <div class="post__head">
                         <a href="#" class="post__head-img">
-                            <img src="img/bak.user8.jpg" alt="">
+                            <img src="" alt="">
                         </a>
                         <div class="post__head-title">
                             <h5><a href="#"><font style="vertical-align: inherit;"><font
@@ -442,7 +425,7 @@
                     </div>
 
                     <h2 class="post__title"><font style="vertical-align: inherit;"><font
-                            style="vertical-align: inherit;">资深Wordpress开发人员</font></font></h2>
+                            style="vertical-align: inherit;">xxxxxxxxx</font></font></h2>
 
                     <div class="post__options">
                         <span><font style="vertical-align: inherit;"><font
@@ -452,10 +435,8 @@
                     </div>
 
                     <div class="post__description">
-                        <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Lorem
-                            Ipsum的段落有很多变体，但是大多数都因注入幽默感或看起来有些难以置信的随机单词而以某种形式发生了变化。</font><font
-                                style="vertical-align: inherit;">如果要使用Lorem
-                            Ipsum的段落，则需要确保文本中间没有隐藏任何令人尴尬的内容。</font></font></p>
+                        <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</font><font
+                                style="vertical-align: inherit;">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</font></font></p>
                         <a href="#"><font style="vertical-align: inherit;"><font
                                 style="vertical-align: inherit;">查看更多</font></font></a>
                     </div>
@@ -951,7 +932,7 @@
             <div class="col-12">
                 <div class="footer__content">
                     <a href="index.html" class="footer__logo">
-                        <img src="img/bak.logo.svg" alt="">
+                        <img src="" alt="">
                     </a>
 
                     <span class="footer__copyright"><font style="vertical-align: inherit;"><font
@@ -992,48 +973,19 @@
 <script src="js/jquery.mousewheel.min.js"></script>
 <script src="js/jquery.mCustomScrollbar.min.js"></script>
 <script src="js/main.js"></script>
-<!--<div id="goog-gt-tt" class="skiptranslate" dir="ltr">-->
-    <!--<div style="padding: 8px;">-->
-        <!--<div>-->
-            <!--<div class="logo"><img src="https://www.gstatic.com/images/branding/product/1x/translate_24dp.png"-->
-                                   <!--width="20" height="20" alt="Google 翻译"></div>-->
-        <!--</div>-->
-    <!--</div>-->
-    <!--<div class="top" style="padding: 8px; float: left; width: 100%;"><h1 class="title gray">原文</h1></div>-->
-    <!--<div class="middle" style="padding: 8px;">-->
-        <!--<div class="original-text"></div>-->
-    <!--</div>-->
-    <!--<div class="bottom" style="padding: 8px;">-->
-        <!--<div class="activity-links"><span class="activity-link">提供更好的翻译建议</span><span class="activity-link"></span>-->
-        <!--</div>-->
-        <!--<div class="started-activity-container">-->
-            <!--<hr style="color: #CCC; background-color: #CCC; height: 1px; border: none;">-->
-            <!--<div class="activity-root"></div>-->
-        <!--</div>-->
-    <!--</div>-->
-    <!--<div class="status-message" style="display: none;"></div>-->
-<!--</div>-->
+<script src="js/crypto-js.js"></script>
+<script src="js/api/common-api.js"></script>
+<script src="js/api/user-api.js"></script>
 
-<!--<div class="goog-te-spinner-pos">-->
-    <!--<div class="goog-te-spinner-animation">-->
-        <!--<svg xmlns="http://www.w3.org/2000/svg" class="goog-te-spinner" width="96px" height="96px" viewBox="0 0 66 66">-->
-            <!--<circle class="goog-te-spinner-path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33"-->
-                    <!--r="30"></circle>-->
-        <!--</svg>-->
-    <!--</div>-->
-<!--</div>-->
-<style>
-    .copyrights {
-        text-indent: -9999px;
-        height: 0;
-        line-height: 0;
-        font-size: 0;
-        overflow: hidden;
-    }
-</style>
-<!--<div class="copyrights" id="links20210126">-->
-    <!--Collect from <a href="http://www.cssmoban.com/" title="网站模板">模板之家</a>-->
-    <!--<a href="http://cooco.net.cn/" title="组卷网">组卷网</a>-->
-<!--</div>-->
+<script>
+    $ (function () {
+
+        setAccountInfo();
+        
+        
+    });
+    
+</script>
+
 </body>
 </html>

@@ -2,7 +2,6 @@ package com.yangy.common.util;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.alibaba.nacos.common.utils.MapUtils;
 import com.yangy.common.enums.ResponseCodeEnum;
 import com.yangy.common.exception.CustomException;
 import com.yangy.common.wrapper.HttpRequestWrapper;
@@ -59,7 +58,7 @@ public class SignUtil {
 			params = getParam(request);
 		}
 		
-		if(MapUtils.isEmpty(params)){
+		if(null == params || params.size() == 0){
 			throw CustomException.custom(ResponseCodeEnum.PARAM_ERROR.getCode());
 		}
 		
