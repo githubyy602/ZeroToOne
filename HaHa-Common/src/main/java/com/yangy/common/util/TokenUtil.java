@@ -64,25 +64,25 @@ public class TokenUtil {
 
 		Token tokenInfo = JSONObject.parseObject(deStr,Token.class);
 		if(Objects.isNull(tokenInfo)){
-			throw CustomException.custom(ResponseCodeEnum.PARAM_ERROR.getCode());
+			throw CustomException.custom(ResponseCodeEnum.TOKEN_ERROR.getCode());
 		}
 		
 		//获取userId进行token匹配
 		String body = requestWrapper.getBody();
 		if(StringUtils.isEmpty(body)){
-			throw CustomException.custom(ResponseCodeEnum.PARAM_ERROR.getCode());
+			throw CustomException.custom(ResponseCodeEnum.TOKEN_ERROR.getCode());
 		}
 		
 		//todo 校验json字符串
 		JSONObject jsonObject = JSONObject.parseObject(body);
 		Object reqUserId = jsonObject.get("userId");
 		if(Objects.isNull(reqUserId)){
-			throw CustomException.custom(ResponseCodeEnum.PARAM_ERROR.getCode());
+			throw CustomException.custom(ResponseCodeEnum.TOKEN_ERROR.getCode());
 		}
 		
 		if(Integer.valueOf(reqUserId.toString()).compareTo(tokenInfo.getUserId()) != 0){
 			log.warn("Request userId is not match token : {} ; token :{}",reqUserId.toString(),token);
-			throw CustomException.custom(ResponseCodeEnum.PARAM_ERROR.getCode());
+			throw CustomException.custom(ResponseCodeEnum.TOKEN_ERROR.getCode());
 		}
 		
 		long now = LocalDateTime.now(ZoneId.systemDefault()).toInstant(ZoneOffset.ofHours(8)).toEpochMilli();

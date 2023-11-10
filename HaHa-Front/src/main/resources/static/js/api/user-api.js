@@ -1,3 +1,5 @@
+// document.write('<link rel="stylesheet" href="../../css/layui.css">');
+
 function getUserInfo(){
     //localStorage存储和取值key得用单引号
     var userId = localStorage.getItem('userId');
@@ -36,14 +38,18 @@ function getUserInfo(){
                         var result = data.data;
                         localStorage.setItem('userInfo',JSON.stringify(result));
                         return result;
-                    }{
-                        return null;
+                        
+                    }else{
+                        localStorage.removeItem('userId');
+                        localStorage.removeItem('accessToken');
+                        localStorage.removeItem('userInfo');
                     }
                     
-                }else{
-                     alert("请登录");
-                     window.location.href=req_domain+front_service_port+"/web/login";
-				}
+                }else if(data.code == 2002 || data.code == 2003){
+                    localStorage.removeItem('userId');
+                    localStorage.removeItem('accessToken');
+                    localStorage.removeItem('userInfo');
+                }
             },
             error: function (data) {
                 console.log("请求错误："+data.statusText);
@@ -62,17 +68,28 @@ function setAccountInfo() {
         if(null != user && undefined != user){
             // alert(user.userName);
             $('#userName').html(user.userName);
+            $('#userNameLeft').html(user.userName);
+            
             var icon = user.imgUrl;
+            var title = user.userTitle;
             if(null != icon && '' != icon && undefined != icon){
                 $('#userIcon').attr('src',icon);
+                $('#userLeftImage').attr('src',icon);
             }else{
                 $('#userIcon').attr('src','../img/user.svg');
+                $('#userLeftImage').attr('src','../img/user.svg');
+            }
+            
+            if(null != title && '' != title && undefined != title){
+                $('#userTitleLeft').html(title);
+            }else{
+                $('#userTitleLeft').html('无敌开发工程师');
             }
             
         }else {
             $(".user").hide();
             $(".header__profile").empty();
-            var linkElement = $('<a>').attr('href', 'signin.html').text('登录/注册');
+            var linkElement = $('<a>').attr('href', 'signin.html').css('color','white').text('登录/注册');
             $(".header__profile").append(linkElement);
             
         }
@@ -119,7 +136,7 @@ function login() {
     });
     
     $.ajax({
-        url: req_domain+user_service_port+"/user/login/online",
+        url: base_url_user+"/login/online",
         method: "POST",
         data: JSON.stringify(jsonObj),
         async: true,
@@ -141,6 +158,8 @@ function login() {
                  // alert(data.message);
                  layer.open({
                       title: '提示',
+                      closeBtn :2,
+                      anim:1,
                       content: data.message
                     });
             }
@@ -181,14 +200,20 @@ function register() {
     }
     
     if(pwd != cPwd){
-        alert("两次输入的密码不一致，请确认");
+        layer.open({
+          title: '提示',
+          type:2,
+          closeBtn :1,
+          time:3000,
+          content: '两次输入的密码不一致，请重新输入'
+        });
         return false;
     }
     
     var sex = $("input[type='radio']:checked").val();
     
     var params = new Map();
-    params.set('userName', "client"+Math.random().toString(18).substr());
+    params.set('userName', "client"+Math.random().toString(8).substr());
     params.set('loginName', name);
     params.set('email', email);
     params.set('loginPassword', encryptPwd(pwd));
@@ -215,13 +240,23 @@ function register() {
             
             if(data.code == 1000){
                 // 设置全局参数
-                alert("已注册成功，请登录");
-                $(document).ready(function() {
-                   $('.register-form').hide(); 
-                   $('.login-form').show(); 
-                });
+                layer.open({
+                      title: '提示',
+                      closeBtn :2,
+                      time:3000,
+                      anim:1,
+                      content: data.message+'(3秒后自动跳转登录)',
+                      cancel: function(index, layero){ 
+                           window.location.href= 'signin.html';
+                        }    
+                    });
             }else{
-                 alert(data.message);
+                 layer.open({
+                      title: '提示',
+                      closeBtn :2,
+                      anim:1,
+                      content: data.message
+                    });
             }
         },
         error: function (data) {

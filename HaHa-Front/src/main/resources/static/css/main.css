@@ -435,6 +435,7 @@ ul {
 }
 .header__search {
   display: none;
+  margin: 10px 50px;
 }
 .header__profile,
 .header__notifications {

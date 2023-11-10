@@ -7,7 +7,7 @@ var business_service_port = "20013";
 var front_service_port = "30000";
 
 var context_user = "/user";
-var context_view = "/view";
+var context_view = "";
 var context_business = "/business";
 
 var base_url_user = req_domain+user_service_port+context_user;

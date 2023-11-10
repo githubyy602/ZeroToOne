@@ -33,4 +33,6 @@ public class UserInfoDto {
 
     private Date createTime;
 	
+    //用户职称
+    private String userTitle;
 }

@@ -247,14 +247,14 @@
                 <div class="user">
                     <div class="user__head">
                         <div class="user__img">
-                            <img src="" alt="">
+                            <img src="" alt="" id="userLeftImage">
                         </div>
                     </div>
                     <div class="user__title">
                         <h2><font style="vertical-align: inherit;"><font
-                                style="vertical-align: inherit;">Yangy</font></font></h2>
+                                style="vertical-align: inherit;" id="userNameLeft"></font></font></h2>
                         <p><font style="vertical-align: inherit;"><font
-                                style="vertical-align: inherit;">Java开发工程师</font></font></p>
+                                style="vertical-align: inherit;" id="userTitleLeft"></font></font></p>
                     </div>
                     <div class="user__btns">
                         <a href="add-project.html" class="user__btn user__btn--blue"><span><font
@@ -973,6 +973,7 @@
 <script src="js/jquery.mousewheel.min.js"></script>
 <script src="js/jquery.mCustomScrollbar.min.js"></script>
 <script src="js/main.js"></script>
+<script src="layui/layui.js"></script>
 <script src="js/crypto-js.js"></script>
 <script src="js/api/common-api.js"></script>
 <script src="js/api/user-api.js"></script>
@@ -981,7 +982,6 @@
     $ (function () {
 
         setAccountInfo();
-        
         
     });
     
