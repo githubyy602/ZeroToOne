@@ -1,8 +1,13 @@
 package com.yangy.file.service;
 
+import com.yangy.common.exception.CustomException;
+import com.yangy.file.entity.File;
+import org.springframework.web.multipart.MultipartFile;
+
 import java.io.FileNotFoundException;
 import java.io.UnsupportedEncodingException;
 import java.security.NoSuchAlgorithmException;
+import java.util.List;
 
 /**
  * @Author: Yangy
@@ -16,6 +21,9 @@ public interface FileService {
 	void decryptFile();
 	
 	//todo 上传
+	List<File>  uploadFile(List<MultipartFile> fileList) throws CustomException;
 	
 	//todo 下载
+	
+	int createFile(List<File> files);
 }

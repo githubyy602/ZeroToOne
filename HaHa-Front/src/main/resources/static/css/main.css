@@ -4329,7 +4329,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   -webkit-box-shadow: 0 2px 26px 0 rgba(133,153,171,0.1);
   box-shadow: 0 2px 26px 0 rgba(133,153,171,0.1);
   position: absolute;
-  bottom: 0;
+  bottom: -20em;
   width: 100%;  
 }
 .footer__content {

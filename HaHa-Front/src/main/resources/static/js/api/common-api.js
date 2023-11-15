@@ -7,12 +7,15 @@ var business_service_port = "20013";
 var front_service_port = "30000";
 
 var context_user = "/user";
-var context_view = "";
 var context_business = "/business";
+var context_file = "/file";
 
 var base_url_user = req_domain+user_service_port+context_user;
-var base_url_view = req_domain+front_service_port+context_view;
+var base_url_view = req_domain+front_service_port;
 var base_url_business = req_domain+business_service_port+context_business;
+var base_url_file = req_domain+file_service_port+context_file;
+
+var response_status_success = 1000;
 
 // 全局方法，用于获取后端签名
 function getBackendSignature(obj) {

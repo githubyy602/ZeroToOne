@@ -24,6 +24,7 @@
         <module>HaHa-Business</module>
         <module>HaHa-Front</module>
         <module>HaHa-Send</module>
+        <module>HaHa-File</module>
         <module>HaHa-Socket</module>
         <module>HaHa-Search</module>
     </modules>

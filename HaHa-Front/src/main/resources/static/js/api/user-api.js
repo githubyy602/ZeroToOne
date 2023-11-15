@@ -1,10 +1,10 @@
 // document.write('<link rel="stylesheet" href="../../css/layui.css">');
-
+/**
+ * 获取用户信息
+ */
 function getUserInfo(){
     //localStorage存储和取值key得用单引号
     var userId = localStorage.getItem('userId');
-    // localStorage.setItem('userId', data.data.userId);
-    // localStorage.setItem('accessToken', data.data.accessToken);
     var accessToken = localStorage.getItem('accessToken');
     if(null == userId || null == accessToken || undefined == userId || undefined == accessToken){
         console.log("Present user info is null.")
@@ -37,7 +37,7 @@ function getUserInfo(){
                         console.log(data.data);
                         var result = data.data;
                         localStorage.setItem('userInfo',JSON.stringify(result));
-                        return result;
+                        return true;
                         
                     }else{
                         localStorage.removeItem('userId');
@@ -50,16 +50,21 @@ function getUserInfo(){
                     localStorage.removeItem('accessToken');
                     localStorage.removeItem('userInfo');
                 }
+                return true;
             },
             error: function (data) {
                 console.log("请求错误："+data.statusText);
+                return true;
             }
 
         });
 }
 
+/**
+ * 设置界面的用户信息
+ */
 function setAccountInfo() {
-    getUserInfo();
+    
     $(function() {
         var storeInfo = localStorage.getItem('userInfo');
         // console.log(user);
@@ -104,6 +109,18 @@ function setAccountInfo() {
         
         
     });
+}
+
+function verifyUser() {
+    var storeInfo = localStorage.getItem('userInfo');
+    var user = JSON.parse(storeInfo);
+    
+    if(null != user && undefined != user){
+        setAccountInfo();
+    }else {
+        layer.tips('请先登录');
+        window.location.href= 'signin.html';
+    }
 }
 
 function login() {
@@ -152,7 +169,8 @@ function login() {
                 // 设置全局参数
                 localStorage.setItem('userId', data.data.userId);
                 localStorage.setItem('accessToken', data.data.accessToken);
-                // window.location.href=req_domain+front_service_port+"/web/index";
+                //获取用户信息
+                getUserInfo();
                 window.location.href= 'index.html';
             }else{
                  // alert(data.message);
@@ -177,33 +195,47 @@ function register() {
     
     var name = document.forms["registerForm"]["Username"].value;
     if (name == null || name == "") {
-        alert("请输入登录名");
+        layer.open({
+          title: '提示',
+          time:3000,
+          content: '请输入登录名'
+        });
         return false;
     }
     
     var email = document.forms["registerForm"]["Email"].value;
     if (email == null || email == "") {
-        alert("请输入邮箱");
+        layer.open({
+          title: '提示',
+          time:3000,
+          content: '请输入邮箱'
+        });
         return false;
     }
 
     var pwd = document.forms["registerForm"]["Password"].value;
     if (pwd == null || pwd == "") {
-        alert("请输入密码");
+        layer.open({
+          title: '提示',
+          time:3000,
+          content: '请输入密码'
+        });
         return false;
     }
     
     var cPwd = document.forms["registerForm"]["Confirm password"].value;
     if(cPwd == null || cPwd == ""){
-        alert("请输入确认密码");
+        layer.open({
+          title: '提示',
+          time:3000,
+          content: '请输入确认密码'
+        });
         return false;
     }
     
     if(pwd != cPwd){
         layer.open({
           title: '提示',
-          type:2,
-          closeBtn :1,
           time:3000,
           content: '两次输入的密码不一致，请重新输入'
         });
@@ -213,7 +245,7 @@ function register() {
     var sex = $("input[type='radio']:checked").val();
     
     var params = new Map();
-    params.set('userName', "client"+Math.random().toString(8).substr());
+    params.set('userName', "user."+Math.random().toString(36).substr(2,5));
     params.set('loginName', name);
     params.set('email', email);
     params.set('loginPassword', encryptPwd(pwd));
@@ -227,7 +259,7 @@ function register() {
     });
     
     $.ajax({
-        url: req_domain+user_service_port+"/user/createUser",
+        url: base_url_user+"/createUser",
         method: "POST",
         data: JSON.stringify(jsonObj),
         async: true,
@@ -248,7 +280,10 @@ function register() {
                       content: data.message+'(3秒后自动跳转登录)',
                       cancel: function(index, layero){ 
                            window.location.href= 'signin.html';
-                        }    
+                        },
+                      end: function(){
+                           window.location.href= 'signin.html';
+                        }
                     });
             }else{
                  layer.open({
