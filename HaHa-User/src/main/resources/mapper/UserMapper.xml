@@ -10,12 +10,13 @@
     <result column="phone" property="phone" jdbcType="VARCHAR" />
     <result column="login_name" property="loginName" jdbcType="VARCHAR" />
     <result column="login_password" property="loginPassword" jdbcType="VARCHAR" />
-    <result column="img_url" property="imgUrl" jdbcType="VARCHAR" />
+    <result column="img_id" property="imgId" jdbcType="INTEGER" />
     <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
     <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+    <result column="imgUrl" property="imgUrl" jdbcType="VARCHAR" />
   </resultMap>
   <sql id="Base_Column_List">
-    id, user_name, sex, email, phone, login_name, login_password, img_url, create_time, 
+    id, user_name, sex, email, phone, login_name, login_password, img_id, create_time, 
     update_time
   </sql>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
@@ -25,12 +26,13 @@
     where id = #{id,jdbcType=INTEGER}
   </select>
     
-  <!--<select id="selectById" parameterType="java.lang.Integer" resultMap="BaseResultMap">-->
-    <!--select -->
-    <!--<include refid="Base_Column_List" />-->
-    <!--from tb_user-->
-    <!--where id = #{id,jdbcType=INTEGER}-->
-  <!--</select>  -->
+  <select id="selectById" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    tu.*,tf.url as imgUrl
+    from tb_user tu
+    left join tb_file tf on tu.img_id = tf.id
+    where tu.id = #{id,jdbcType=INTEGER}
+  </select>  
     
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from tb_user
@@ -39,11 +41,11 @@
   <insert id="insert" parameterType="com.yangy.user.bean.PO.User" >
     insert into tb_user (id, user_name, sex, 
       email, phone, login_name, 
-      login_password, img_url, create_time, 
+      login_password, img_id, create_time, 
       update_time)
     values (#{id,jdbcType=INTEGER}, #{userName,jdbcType=VARCHAR}, #{sex,jdbcType=CHAR}, 
       #{email,jdbcType=VARCHAR}, #{phone,jdbcType=VARCHAR}, #{loginName,jdbcType=VARCHAR}, 
-      #{loginPassword,jdbcType=VARCHAR}, #{imgUrl,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, 
+      #{loginPassword,jdbcType=VARCHAR}, #{imgId,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, 
       #{updateTime,jdbcType=TIMESTAMP})
   </insert>
     
@@ -71,8 +73,8 @@
       <!--<if test="loginPassword != null" >-->
         <!--login_password,-->
       <!--</if>-->
-      <!--<if test="imgUrl != null" >-->
-        <!--img_url,-->
+      <!--<if test="imgId != null" >-->
+        <!--img_id,-->
       <!--</if>-->
       <!--<if test="createTime != null" >-->
         <!--create_time,-->
@@ -104,8 +106,8 @@
       <!--<if test="loginPassword != null" >-->
         <!--#{loginPassword,jdbcType=VARCHAR},-->
       <!--</if>-->
-      <!--<if test="imgUrl != null" >-->
-        <!--#{imgUrl,jdbcType=VARCHAR},-->
+      <!--<if test="imgId != null" >-->
+        <!--#{imgId,jdbcType=VARCHAR},-->
       <!--</if>-->
       <!--<if test="createTime != null" >-->
         <!--#{createTime,jdbcType=TIMESTAMP},-->
@@ -136,8 +138,8 @@
       <if test="loginPassword != null" >
         login_password = #{loginPassword,jdbcType=VARCHAR},
       </if>
-      <if test="imgUrl != null" >
-        img_url = #{imgUrl,jdbcType=VARCHAR},
+      <if test="imgId != null" >
+        img_id = #{imgId,jdbcType=VARCHAR},
       </if>
       <if test="createTime != null" >
         create_time = #{createTime,jdbcType=TIMESTAMP},
@@ -156,7 +158,7 @@
       phone = #{phone,jdbcType=VARCHAR},
       login_name = #{loginName,jdbcType=VARCHAR},
       login_password = #{loginPassword,jdbcType=VARCHAR},
-      img_url = #{imgUrl,jdbcType=VARCHAR},
+      img_id = #{imgId,jdbcType=VARCHAR},
       create_time = #{createTime,jdbcType=TIMESTAMP},
       update_time = #{updateTime,jdbcType=TIMESTAMP}
     where id = #{id,jdbcType=INTEGER}

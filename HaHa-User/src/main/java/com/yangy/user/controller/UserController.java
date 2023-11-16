@@ -44,8 +44,9 @@ public class UserController {
 		if(Objects.isNull(user)){
 			return ResultBean.returnResult(ResponseCodeEnum.USER_NOT_EXIST_ERROR);	
 		}
-
+		
 		UserInfoDto userInfoDto = ConvertUtil.convert(user,new UserInfoDto());
+		
 		return ResultBean.success(userInfoDto);
 	}
 	

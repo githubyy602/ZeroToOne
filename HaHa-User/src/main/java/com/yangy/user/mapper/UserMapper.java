@@ -18,5 +18,5 @@ public interface UserMapper extends BaseMapper<User> {
     
     User selectUserByLoginInfo(User user);
     
-//    User selectById(Integer id);
+    User selectById(Integer id);
 }

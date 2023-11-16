@@ -40,11 +40,13 @@ public class User implements Serializable {
 
     private String loginPassword;
 
-    private String imgUrl;
+    private Integer imgId;
 
     private Date createTime;
 
     private Date updateTime;
+    //非表字段，仅赋值使用
+    private String imgUrl;
 
 	public User(Integer id) {
 		this.id = id;
