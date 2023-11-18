@@ -8,6 +8,7 @@ import com.yangy.common.enums.ResponseCodeEnum;
 import com.yangy.user.bean.PO.User;
 import com.yangy.user.mapper.UserMapper;
 import com.yangy.user.service.UserService;
+import org.apache.commons.lang.StringUtils;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -34,6 +35,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper,User> implements Use
 			return ResultBean.returnResult(ResponseCodeEnum.USER_ALREADY_EXIST_ERROR);
 		}
 		
+		user.setSex(StringUtils.isNotEmpty(user.getSex()) ? user.getSex() : "1");
 		return ResultBean.success(baseMapper.insert(user));
 	}
 }

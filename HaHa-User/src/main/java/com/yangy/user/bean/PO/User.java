@@ -1,6 +1,7 @@
 package com.yangy.user.bean.PO;
 
 import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.yangy.user.annotation.EncryptEntity;
@@ -26,7 +27,7 @@ public class User implements Serializable {
 	@EncryptField
     private String userName;
 	
-    private String sex;
+    private String sex ="1";
     
 //	@TableField(typeHandler = EncryptTypeHandler.class)
     @EncryptField
@@ -46,6 +47,8 @@ public class User implements Serializable {
 
     private Date updateTime;
     //非表字段，仅赋值使用
+	
+	@TableField(exist = false)
     private String imgUrl;
 
 	public User(Integer id) {

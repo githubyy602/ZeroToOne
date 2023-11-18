@@ -88,6 +88,16 @@ function setAccountInfo() {
                 icon = base_url_file + Base64.decode(icon);
                 $('#userIcon').attr('src',icon);
                 $('#userLeftImage').attr('src',icon);
+                $('#userImage').attr('src',icon);
+                $('#slogin').html(user.loginName);
+                $('#sname').html(user.userName);
+                $('#semail').html(user.email);
+                $('#sphone').html(user.phone);
+                if(user.sex == 1){
+                    $('#sex').html("男");
+                }else{
+                    $('#sex').html("女");
+                }
             }else{
                 $('#userIcon').attr('src','../img/user.svg');
                 $('#userLeftImage').attr('src','../img/user.svg');
@@ -435,8 +445,10 @@ function userDetailUpdate() {
                     
                     if(data.code == 1000){
                         if(null != data.data && '' != data.data){
-                            getUserInfo();
-                            location.reload();
+                            layer.msg('用户信息更新成功',{time:2000},function () {
+                                getUserInfo();
+                                location.reload();    
+                            });
                             return;
                         }
                     }
@@ -530,7 +542,7 @@ function userModifyPwd() {
                             logout();
                         });
                     }else{
-                        layer.msg('密码修改失败',{
+                        layer.msg(data.message,{
                             time:2000
                         });
                     }

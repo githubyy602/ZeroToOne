@@ -4,10 +4,12 @@ import com.yangy.common.bean.ResultBean;
 import com.yangy.common.constant.CommonConstant;
 import com.yangy.common.enums.ResponseCodeEnum;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.validation.BindException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.validation.ValidationException;
 import java.lang.reflect.UndeclaredThrowableException;
 
 /**
@@ -24,6 +26,13 @@ public class GlobalExceptionHandler {
 	public ResultBean runtimeExceptionHandler(RuntimeException ex){
 		log.error("GlobalExceptionHandler catch exception:{}",ex.getMessage(),ex);
 		return ResultBean.returnResult(ResponseCodeEnum.RUNTIME_ERROR,ex.getMessage());
+	}
+	
+	@ResponseBody
+	@ExceptionHandler({BindException.class, ValidationException.class})
+	public ResultBean validationExceptionHandler(Exception ex){
+		log.error("GlobalExceptionHandler catch exception:{}",ex.getMessage(),ex);
+		return ResultBean.returnResult(ResponseCodeEnum.VALID_ERROR,ex.getMessage());
 	}
 	
 	//未声明异常捕获

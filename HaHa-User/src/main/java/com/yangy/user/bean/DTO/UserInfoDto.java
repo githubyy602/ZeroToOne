@@ -18,7 +18,6 @@ public class UserInfoDto {
 	@NotEmpty(message = "用户名不允许为空")
     private String userName;
 
-	@NotEmpty(message = "性别不允许为空")
     private String sex;
 
     private String email;
