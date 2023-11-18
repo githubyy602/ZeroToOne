@@ -31,14 +31,18 @@ public class SignUtil {
 		
 		//正则过滤
         String initStr = com.yangy.common.util.StringUtils.saveLetterDigitOrChinese(param);
-//		log.info("Regex string is : {}",initStr);
-
+		log.info("Regex string is : {}",initStr);
+		
+		//按ASCII升序排序
+		String sortStr = com.yangy.common.util.StringUtils.sortCharByASCII(initStr);
+		log.info("sortStr : {}",sortStr);
         //base64处理
-        String base64Str = Base64Utils.encodeToString(initStr.getBytes(Charset.forName("UTF-8")));
-//		log.info("Base64 string is : {}",base64Str);
+        String base64Str = Base64Utils.encodeToString(sortStr.getBytes(Charset.forName("UTF-8")));
+		log.info("Base64 string is : {}",base64Str);
 
         //按ASCII升序排序
         base64Str = com.yangy.common.util.StringUtils.sortCharByASCII(base64Str);
+        log.info("ASCII base64Str : {}",base64Str);
 		
 		return HmacMd5Util.encrypt(base64Str,SALT);
 	}

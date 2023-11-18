@@ -87,6 +87,7 @@ public class TokenUtil {
 		
 		long now = LocalDateTime.now(ZoneId.systemDefault()).toInstant(ZoneOffset.ofHours(8)).toEpochMilli();
 		if(Objects.isNull(tokenInfo.getTime()) || now - tokenInfo.getTime() > 7200*1000){
+			log.info("Present token expired !!! Token : {}",token);
 			throw CustomException.custom(ResponseCodeEnum.TOKEN_EXPIRE.getCode());
 		}
 		

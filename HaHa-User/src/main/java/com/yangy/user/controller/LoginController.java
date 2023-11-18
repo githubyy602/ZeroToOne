@@ -9,6 +9,7 @@ import com.yangy.user.bean.DTO.LoginInfoRespDto;
 import com.yangy.user.bean.PO.User;
 import com.yangy.user.mapper.UserMapper;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -40,8 +41,12 @@ public class LoginController {
 	
 	@PostMapping(value = "/online")
 	public ResultBean online(@RequestBody @Valid LoginInfoReqDto loginInfoReqDto){
-		User loginUser = userMapper.selectUserByLoginInfo(new User(loginInfoReqDto.getLoginName(),loginInfoReqDto.getPassword()));
+		User loginUser = userMapper.selectUserByLoginInfo(new User(loginInfoReqDto.getLoginName()));
 		if(Objects.nonNull(loginUser)){
+			if(!StringUtils.equals(loginUser.getLoginPassword(),loginInfoReqDto.getPassword())){
+				return ResultBean.returnResult(ResponseCodeEnum.USER_PASSWORD_ERROR);
+			}
+			
 			//todo 目前假设这里有账户+验证码的登录形式，需要通过feign获取验证码
 			ResultBean resultBean = sendFeignClient.sendSMS();
 			log.info("获取到的验证码是：{}",resultBean.getData());

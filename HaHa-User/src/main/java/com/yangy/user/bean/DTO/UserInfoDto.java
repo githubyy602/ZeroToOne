@@ -13,6 +13,8 @@ import java.util.Date;
 @Data
 public class UserInfoDto {
 	
+	private Integer userId;
+	
 	@NotEmpty(message = "用户名不允许为空")
     private String userName;
 
@@ -35,4 +37,6 @@ public class UserInfoDto {
 	
     //用户职称
     private String userTitle;
+    //头像文件id
+    private Integer imgId;
 }

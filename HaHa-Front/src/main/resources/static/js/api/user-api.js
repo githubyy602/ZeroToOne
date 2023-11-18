@@ -60,6 +60,13 @@ function getUserInfo(){
         });
 }
 
+function logout() {
+    localStorage.removeItem('userId');
+    localStorage.removeItem('accessToken');
+    localStorage.removeItem('userInfo');
+    window.location.href= 'index.html';
+}
+
 /**
  * 设置界面的用户信息
  */
@@ -71,14 +78,14 @@ function setAccountInfo() {
         var user = JSON.parse(storeInfo);
         
         if(null != user && undefined != user){
-            // alert(user.userName);
+            $(".user").show();
             $('#userName').html(user.userName);
             $('#userNameLeft').html(user.userName);
             
             var icon = user.imgUrl;
             var title = user.userTitle;
             if(null != icon && '' != icon && undefined != icon){
-                icon = base_url_file+icon;
+                icon = base_url_file + Base64.decode(icon);
                 $('#userIcon').attr('src',icon);
                 $('#userLeftImage').attr('src',icon);
             }else{
@@ -100,27 +107,69 @@ function setAccountInfo() {
             
         }
         
-        //退出登录
-        $("#logout").click(function () {
-            localStorage.removeItem('userId');
-            localStorage.removeItem('accessToken');
-            localStorage.removeItem('userInfo');
-            location.reload();
-        });
-        
-        
     });
 }
 
 function verifyUser() {
     var storeInfo = localStorage.getItem('userInfo');
     var user = JSON.parse(storeInfo);
+    var access = false;
     
     if(null != user && undefined != user){
-        setAccountInfo();
+        //token校验
+        var accessToken = localStorage.getItem('accessToken');
+        var userId = localStorage.getItem('userId');
+    
+        if(null != accessToken && undefined != accessToken && null != userId && undefined != userId){
+            var param = new Map(); 
+            param['userId'] = userId;
+            
+            $.ajax({
+            url: base_url_user+"/checkAuth",
+            method: "POST",
+            data:JSON.stringify(param),
+            headers : {"accessToken":accessToken},
+			async: false,
+            timeout : 5000,
+    		dataType: "json",
+    		contentType: "application/json;charset=UTF-8",
+			beforeSend: function(XHR) {
+				XHR.setRequestHeader("Access-Control-Allow-Origin","*");
+				// XHR.setRequestHeader("userId", encodeURIComponent(userInfo.userId));
+			},
+            success: function (data) {
+                
+                if(data.code == 1000){
+                    access = true;
+                    setAccountInfo();
+                    
+                }else {
+                   access = false; 
+                }
+                
+            },
+            error: function (data) {
+                console.log("请求错误："+data.statusText);
+                return true;
+            }
+
+            });
+            
+        }else{
+            access = false;
+        }
+        
     }else {
-        layer.tips('请先登录');
-        window.location.href= 'signin.html';
+        access = false;
+    }
+    
+    if(access == false){
+        //未登录
+        layer.msg('请登录',{
+            time:2000
+        },function(){
+            logout();
+        });
     }
 }
 
@@ -243,14 +292,12 @@ function register() {
         return false;
     }
     
-    var sex = $("input[type='radio']:checked").val();
     
     var params = new Map();
     params.set('userName', "user."+Math.random().toString(36).substr(2,5));
     params.set('loginName', name);
     params.set('email', email);
     params.set('loginPassword', encryptPwd(pwd));
-    params.set('sex', sex == null ? 1 : sex);
     var sign = getBackendSignature(params);
     
     params.set('sign',sign);
@@ -300,4 +347,210 @@ function register() {
         }
 
     });
-}	
+}
+
+function userDetailUpload() {
+    $(document).ready(function() {
+      $('#uploadInput').on('change', function() {
+        var fileInput = document.getElementById('uploadInput');
+        var files = fileInput.files;
+        if(null == files || undefined == files){
+            return;
+        }
+        var formData = new FormData();
+        formData.append("fileList", files[0]);
+          
+        $.ajax({
+          url: base_url_file+'/upload', // 替换为你的后端接口地址
+          type: 'POST',
+          data: formData,
+          cache: false,
+          processData: false,   // 告诉jquery要传输data对象
+          contentType: false,   // 告诉jquery不需要增加请求头对于contentType的设置,
+          success: function(response) {
+            // 处理后端返回的响应
+            var code = response.code;
+            if(code == response_status_success){
+                 $('#userLeftImage').attr('src', base_url_file+Base64.decode(response.data[0].path));
+                 $('#fileInput').val(response.data[0].id);
+            }
+          },
+          error: function(xhr, status, error) {
+            // 处理错误
+            layer.msg('上传失败！');
+          }
+        });
+      });
+    });
+}
+
+function userDetailUpdate() {
+    $(document).ready(function() {
+       var accessToken = localStorage.getItem('accessToken');
+       var userId = localStorage.getItem('userId');
+       if(null == userId || null == accessToken || undefined == userId || undefined == accessToken){
+            return;
+       }
+        
+       var loginName = $('#loginName').val();
+       var email = $('#email').val();
+       var name = $('#name').val();
+       var phone = $('#phone').val();
+       var imgId = $('#fileInput').val();
+       var sex = $('input[name="sex"]:checked').val();
+       
+       var param = new Map(); 
+       param['loginName'] = loginName;
+       param['email'] = email;
+       param['userName'] = name;
+       param['phone'] = phone;
+       param['imgId'] = imgId;
+       param['sex'] = sex;
+       param['userId'] = userId;
+       
+       if(null == loginName && null == email && null == userName && null == phone && null == imgId ){
+           layer.msg('请填写要更新的用户信息',{
+                        time:2000
+                    });
+           return;
+       }
+       
+       
+       var sign = getBackendSignature(param);
+        param['sign'] = sign;
+    
+        $.ajax({
+                url: base_url_user+"/updateUserInfo",
+                method: "POST",
+                data: JSON.stringify(param),
+                headers : {"accessToken":accessToken},
+                async: false,
+                timeout : 5000,
+                dataType: "json",
+                contentType: "application/json;charset=UTF-8",
+                beforeSend: function(XHR) {
+                    XHR.setRequestHeader("Access-Control-Allow-Origin","*");
+                },
+                success: function (data) {
+                    
+                    if(data.code == 1000){
+                        if(null != data.data && '' != data.data){
+                            getUserInfo();
+                            location.reload();
+                            return;
+                        }
+                    }
+                    
+                    layer.msg('修改用户信息失败',{
+                        time:2000
+                    });
+                },
+                error: function (data) {
+                    console.log("请求错误："+data.statusText);
+                    return true;
+                }
+    
+            });
+    });
+}
+
+///updateUserPwd
+function userModifyPwd() {
+    $(document).ready(function() {
+       var accessToken = localStorage.getItem('accessToken');
+       var userId = localStorage.getItem('userId');
+       if(null == userId || null == accessToken || undefined == userId || undefined == accessToken){
+            return;
+       }
+        
+       var oldpass = $('#oldpass').val();
+       if(null == oldpass || '' == oldpass){
+           layer.msg('请填写原密码',{
+                        time:2000
+                    });
+           return;
+       }
+       
+       var newpass = $('#newpass').val();
+       if(null == newpass || '' == newpass){
+           layer.msg('请填写新密码',{
+                        time:2000
+                    });
+           return;
+       }
+       
+       if(newpass == oldpass){
+           layer.msg('原密码与新密码一样',{
+                        time:2000
+                    });
+           return;
+       }
+       
+       var confirmpass = $('#confirmpass').val();
+       if(null == confirmpass || '' == confirmpass){
+           layer.msg('请填写确认密码',{
+                        time:2000
+                    });
+           return;
+       }
+       
+       if(newpass != confirmpass){
+           layer.msg('新密码与确认密码不一致',{
+                        time:2000
+                    });
+           return;
+       }
+       
+       var param = new Map(); 
+       param['pwd'] = encryptPwd(oldpass);
+       param['newPwd'] = encryptPwd(newpass);
+       param['userId'] = userId;
+       
+       var sign = getBackendSignature(param);
+        param['sign'] = sign;
+    
+        $.ajax({
+                url: base_url_user+"/updateUserPwd",
+                method: "POST",
+                data: JSON.stringify(param),
+                headers : {"accessToken":accessToken},
+                async: false,
+                timeout : 5000,
+                dataType: "json",
+                contentType: "application/json;charset=UTF-8",
+                beforeSend: function(XHR) {
+                    XHR.setRequestHeader("Access-Control-Allow-Origin","*");
+                },
+                success: function (data) {
+                    
+                    if(data.code == 1000){
+                        layer.msg('密码修改成功,请重新登录',{
+                            time:2000
+                        },function () {
+                            logout();
+                        });
+                    }else{
+                        layer.msg('密码修改失败',{
+                            time:2000
+                        });
+                    }
+                    
+                },
+                error: function (data) {
+                    console.log("请求错误："+data.statusText);
+                    return true;
+                }
+    
+            });
+    });
+}
+
+$(function() {
+    
+    //退出登录
+    $("#logout").click(function () {
+        logout();
+    });
+    
+});
+

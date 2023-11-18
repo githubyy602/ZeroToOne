@@ -20,7 +20,8 @@ public enum ResponseCodeEnum {
 	
 	//业务错误码
 	USER_NOT_EXIST_ERROR(2100,"用户不存在"),
-	USER_ALREADY_EXIST_ERROR(2101,"用户已存在");
+	USER_ALREADY_EXIST_ERROR(2101,"用户已存在"),
+	USER_PASSWORD_ERROR(2102,"密码错误");
 	
 	private int code;
 	private String desc;

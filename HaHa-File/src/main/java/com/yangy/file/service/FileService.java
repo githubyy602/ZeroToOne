@@ -25,5 +25,4 @@ public interface FileService {
 	
 	//todo 下载
 	
-	int createFile(List<File> files);
 }

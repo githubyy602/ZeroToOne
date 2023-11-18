@@ -21,4 +21,6 @@ public interface FileDao {
     int updateByPrimaryKey(File record);
     
     int batchInsertFiles(@Param("list") List<File> files);
+    
+    File selectByNameSize(File file);
 }

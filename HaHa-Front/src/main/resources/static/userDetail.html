@@ -595,6 +595,7 @@
 										<div class="form__group">
 											<div class="user__img" style="margin: 0;position: unset;">
                                                 <img src="img/user.svg" alt="" id="userLeftImage">
+                                                <input hidden="hidden" id="fileInput" value="">
                                                 <div id="upload-text"></div>
                                                 <div class="layui-progress layui-progress-big" lay-showPercent="yes" lay-filter="filter-demo">
                                                     <div class="layui-progress-bar" lay-percent=""></div>
@@ -606,8 +607,8 @@
                                     
 									<div class="col-12 col-lg-6">
 										<div class="form__group">
-											<label for="login" class="form__label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">登录名：</font></font></label>
-											<input name="login" id="login" type="text" class="form__input" placeholder="登录">
+											<label for="loginName" class="form__label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">登录名：</font></font></label>
+											<input name="login" id="loginName" type="text" class="form__input" placeholder="登录">
 										</div>
 									</div>
 
@@ -620,28 +621,28 @@
 
 									<div class="col-12 col-lg-6">
 										<div class="form__group">
-											<label for="firstname" class="form__label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">昵称：</font></font></label>
-											<input name="firstname" id="firstname" type="text" class="form__input" placeholder="请输入长度10以内的昵称">
+											<label for="name" class="form__label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">昵称：</font></font></label>
+											<input name="firstname" id="name" type="text" class="form__input" placeholder="请输入长度10以内的昵称">
 										</div>
 									</div>
 
 									<div class="col-12 col-lg-6">
 										<div class="form__group">
-											<label for="lastname" class="form__label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">电话：</font></font></label>
-											<input name="lastname" id="lastname" type="text" class="form__input" placeholder="请输入电话号码">
+											<label for="phone" class="form__label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">电话：</font></font></label>
+											<input name="lastname" id="phone" type="text" class="form__input" placeholder="请输入电话号码">
 										</div>
 									</div>
                                     
                                     <div class="col-12 col-lg-6">
 										<div class="layui-form">
-                                        <label for="login" class="form__label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">性别：</font></font></label>
-                                        <input type="radio" title="男" value="1">
-                                        <input type="radio" title="女" value="2">
+                                        <label class="form__label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">性别：</font></font></label>
+                                        <input type="radio" title="男" name="sex" value="1">
+                                        <input type="radio" title="女" name="sex" value="2">
                                         </div>
 									</div>
 
 									<div class="col-12">
-										<button class="form__btn" type="button"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">保存</font></font></span></button>
+										<button class="form__btn" type="button" onclick="userDetailUpdate()"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">保存</font></font></span></button>
 									</div>
 								</div>
 							</form>
@@ -656,7 +657,7 @@
 
 									<div class="col-12 col-lg-6">
 										<div class="form__group">
-											<label for="oldpass" class="form__label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">旧密码：</font></font></label>
+											<label for="oldpass" class="form__label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">原密码：</font></font></label>
 											<input name="oldpass" id="oldpass" type="password" class="form__input">
 										</div>
 									</div>
@@ -676,7 +677,7 @@
 									</div>
 
 									<div class="col-12">
-										<button class="form__btn" type="button"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">更改</font></font></span></button>
+										<button class="form__btn" type="button" onclick="userModifyPwd()"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">更改</font></font></span></button>
 									</div>
 								</div>
 							</form>
@@ -813,42 +814,13 @@
 	<script src="js/jquery.mCustomScrollbar.min.js"></script>
 	<script src="js/main.js"></script>
     <script src="layui/layui.js"></script>
+    <script src="js/Base64.js"></script>
     <script src="js/crypto-js.js"></script>
     <script src="js/api/common-api.js"></script>
     <script src="js/api/user-api.js"></script>
 
 <script>
     verifyUser();
+    userDetailUpload();
     
-    $(document).ready(function() {
-      $('#uploadInput').on('change', function() {
-        var fileInput = document.getElementById('uploadInput');
-        var files = fileInput.files;
-        if(null == files || undefined == files){
-            return;
-        }
-        var formData = new FormData();
-        formData.append("fileList", files[0]);
-          
-        $.ajax({
-          url: base_url_file+'/upload', // 替换为你的后端接口地址
-          type: 'POST',
-          data: formData,
-          cache: false,
-          processData: false,   // 告诉jquery要传输data对象
-          contentType: false,   // 告诉jquery不需要增加请求头对于contentType的设置
-          success: function(response) {
-            // 处理后端返回的响应
-            var code = response.code;
-            if(code == response_status_success){
-                 $('#userLeftImage').attr('src', base_url_file+response.data[0].path);
-            }
-          },
-          error: function(xhr, status, error) {
-            // 处理错误
-            layer.msg('上传失败！');
-          }
-        });
-      });
-    });
 </script>

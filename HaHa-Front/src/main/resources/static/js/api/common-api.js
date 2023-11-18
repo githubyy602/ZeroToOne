@@ -21,17 +21,19 @@ var response_status_success = 1000;
 function getBackendSignature(obj) {
   
     var jsonString = JSON.stringify(obj);
-    // console.log(jsonString);
+    console.log(jsonString);
     
     var filteredString = jsonString.replace(/[^\u4E00-\u9FA5a-zA-Z0-9]/g, '');
-    // console.log(filteredString);
+    console.log(filteredString);
     
+    var sortedFilterString = Array.from(filteredString).sort().join('');
+    console.log(sortedFilterString);
     
-    var base64String = btoa(filteredString);
-    // console.log(base64String);
+    var base64String = Base64.encode(sortedFilterString);
+    console.log(base64String);
 
     var sortedString = Array.from(base64String).sort().join('');
-    // console.log(sortedString);
+    console.log(sortedString);
 
     
     var secretKey = '84B2J2hvk2jdnvk4#@#';

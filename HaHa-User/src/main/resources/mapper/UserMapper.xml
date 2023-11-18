@@ -120,25 +120,25 @@
   <update id="updateByPrimaryKeySelective" parameterType="com.yangy.user.bean.PO.User" >
     update tb_user
     <set >
-      <if test="userName != null" >
+      <if test="userName != null and userName != '' " >
         user_name = #{userName,jdbcType=VARCHAR},
       </if>
-      <if test="sex != null" >
+      <if test="sex != null and sex != '' " >
         sex = #{sex,jdbcType=CHAR},
       </if>
-      <if test="email != null" >
+      <if test="email != null and email != '' " >
         email = #{email,jdbcType=VARCHAR},
       </if>
-      <if test="phone != null" >
+      <if test="phone != null and phone != '' " >
         phone = #{phone,jdbcType=VARCHAR},
       </if>
-      <if test="loginName != null" >
+      <if test="loginName != null and loginName != '' " >
         login_name = #{loginName,jdbcType=VARCHAR},
       </if>
-      <if test="loginPassword != null" >
+      <if test="loginPassword != null and loginPassword != '' " >
         login_password = #{loginPassword,jdbcType=VARCHAR},
       </if>
-      <if test="imgId != null" >
+      <if test="imgId != null and imgId > 0 " >
         img_id = #{imgId,jdbcType=VARCHAR},
       </if>
       <if test="createTime != null" >
@@ -169,7 +169,7 @@
     select 
     <include refid="Base_Column_List"/>
     from 
-    tb_user where login_name = #{loginName} and login_password = #{loginPassword} 
+    tb_user where login_name = #{loginName} 
     limit 1
   </select>
   

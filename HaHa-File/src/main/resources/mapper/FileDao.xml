@@ -145,7 +145,7 @@
     where id = #{id,jdbcType=INTEGER}
   </update>
     
-  <insert id="batchInsertFiles" parameterType="com.yangy.file.entity.File">
+  <insert id="batchInsertFiles" parameterType="com.yangy.file.entity.File" useGeneratedKeys="true" keyProperty="id">
       insert into tb_file (file_name, file_size, `type`, 
       `path`, url
       )
@@ -155,4 +155,11 @@
         #{file.path},#{file.url}
     </foreach>
   </insert>  
+  
+  <select id="selectByNameSize" parameterType="com.yangy.file.entity.File" 
+          resultMap="BaseResultMap">
+      select * from tb_file
+      where file_name = #{fileName} and file_size = #{fileSize} and deleted = 0 limit 1
+  </select>
+    
 </mapper>

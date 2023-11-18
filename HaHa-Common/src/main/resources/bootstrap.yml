@@ -35,7 +35,7 @@ token:
 
 sign:
   except:
-    url: /getSign,/user/createUser
+    url: /getSign,/user/checkAuth
 
 #hystrix配置参考
 #hystrix:
