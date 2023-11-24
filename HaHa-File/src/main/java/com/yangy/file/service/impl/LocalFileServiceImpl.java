@@ -1,6 +1,7 @@
 package com.yangy.file.service.impl;
 
 import cn.hutool.core.collection.CollectionUtil;
+import cn.hutool.core.io.FileUtil;
 import cn.hutool.core.util.StrUtil;
 import com.google.common.base.Charsets;
 import com.yangy.common.enums.ResponseCodeEnum;
@@ -32,7 +33,7 @@ public class LocalFileServiceImpl extends AbstractFileService {
 	
 	public String localPath = System.getProperty("user.dir") + "/HaHa-File/src/main" + "/resources/files/";
 	public static String IMAGE_SUFFIX = "image,jpg,png,jpeg";
-	public static String FILE_SUFFIX = "txt,doc,pdf,csv";
+	public static String FILE_SUFFIX = "txt,doc,pdf,csv,docx";
 	
 	@Autowired
 	private FileDao fileDao;
@@ -47,8 +48,14 @@ public class LocalFileServiceImpl extends AbstractFileService {
 				String originalFilename = file.getOriginalFilename();
 				// 文件大小
 				long size = file.getSize();
+				//默认小于20M
+				if(size > 20*1024*1024){
+					throw CustomException.custom(ResponseCodeEnum.FILE_SIZE_ERROR.getCode());
+				}
+				
 				// 文件类型
 				String type = file.getContentType();
+				String fileSuffix = FileUtil.extName(originalFilename);;
 				
 				File insertFile = File.builder()
 						.fileName(originalFilename)
@@ -62,10 +69,12 @@ public class LocalFileServiceImpl extends AbstractFileService {
 				}
 				
 				String prefix_path = "";
-				if(StringUtils.contains(type,"image")){
+				if(StringUtils.contains(IMAGE_SUFFIX,fileSuffix)){
 					prefix_path = "/image";
-				}else{
+				}else if(StringUtils.contains(FILE_SUFFIX,fileSuffix)){
 					prefix_path = "/file";
+				}else {
+					throw CustomException.custom(ResponseCodeEnum.FILE_TYPE_ERROR.getCode());
 				}
 				
 				String filePath =  prefix_path+StrUtil.C_SLASH+originalFilename;

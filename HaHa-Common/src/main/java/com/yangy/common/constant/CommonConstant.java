@@ -24,6 +24,7 @@ public class CommonConstant {
 	public static final String ACCESS_CONTROL_ALLOW_ORIGIN = "Access-Control-Allow-Origin";
 	public static final String ACCESS_CONTROL_ALLOW_METHODS = "Access-Control-Allow-Methods";
 	public static final String ACCESS_CONTROL_ALLOW_HEADERS = "Access-Control-Allow-Headers";
+	public static final String ACCESS_CONTROL_ALLOW_CREDENTIALS = "Access-Control-Allow-Credentials";
 	
 	
 	//方法类型
@@ -31,8 +32,16 @@ public class CommonConstant {
 	public static final String METHOD_TYPE_GET = "GET";
 	
 	
-	
 	//字符编码
 	public static final String CHARSET_UTF8 = "UTF-8";
+	
+	//客户端
+	public static final int CLIENT_TYPE_WEB = 1;
+	public static final int CLIENT_TYPE_ANDROID = 2;
+	public static final int CLIENT_TYPE_IOS = 3;
+	
+	//结果标识
+	public static final int SUCCESS = 1;
+	public static final int FAIL = 2;
 	
 }

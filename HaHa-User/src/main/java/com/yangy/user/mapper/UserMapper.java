@@ -4,6 +4,8 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.yangy.user.bean.PO.User;
 import org.apache.ibatis.annotations.Mapper;
 
+import java.util.List;
+
 @Mapper
 public interface UserMapper extends BaseMapper<User> {
     int deleteByPrimaryKey(Integer id);
@@ -19,4 +21,6 @@ public interface UserMapper extends BaseMapper<User> {
     User selectUserByLoginInfo(User user);
     
     User selectById(Integer id);
+    
+    List<User> selectLatestUserLog();
 }

@@ -4,6 +4,7 @@ import com.yangy.common.interceptor.MyInterceptor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import java.util.List;
@@ -30,8 +31,14 @@ public class WebMvcConfig implements WebMvcConfigurer {
 		//下面这句必须有才生效
 		WebMvcConfigurer.super.addInterceptors(registry);
 	}
-	
-//	@Bean
+
+	@Override
+	public void addResourceHandlers(ResourceHandlerRegistry registry) {
+		registry.addResourceHandler("/file/**")
+                .addResourceLocations("file:src/main/resources/files/");
+	}
+
+	//	@Bean
 //	public ServletRegistrationBean<DispatcherServlet> servletServletRegistrationBean(DispatcherServlet dispatcherServlet){
 //		ServletRegistrationBean servletRegistrationBean = new ServletRegistrationBean(dispatcherServlet);
 //		//配置请求url后缀匹配。必须结合

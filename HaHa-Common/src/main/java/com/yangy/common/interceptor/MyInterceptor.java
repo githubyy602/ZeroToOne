@@ -2,6 +2,7 @@ package com.yangy.common.interceptor;
 
 import com.yangy.common.bean.ResultBean;
 import com.yangy.common.constant.CommonConstant;
+import com.yangy.common.enums.ResponseCodeEnum;
 import com.yangy.common.exception.CustomException;
 import com.yangy.common.util.ResponseUtil;
 import com.yangy.common.util.SignUtil;
@@ -9,6 +10,7 @@ import com.yangy.common.util.TokenUtil;
 import com.yangy.common.wrapper.HttpRequestWrapper;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.util.CollectionUtils;
 import org.springframework.web.servlet.HandlerInterceptor;
@@ -26,6 +28,7 @@ import java.util.List;
 @RefreshScope
 @Data
 @NoArgsConstructor
+@Slf4j
 public class MyInterceptor implements HandlerInterceptor {
 	
 	private List<String> urlList;
@@ -80,8 +83,13 @@ public class MyInterceptor implements HandlerInterceptor {
 			}
 
 			return true;
-		} catch (CustomException e) {
-			ResponseUtil.responseOutWithJson(response, ResultBean.returnResult(e.getCode()));
+		} catch (Exception e) {
+        	if(e instanceof CustomException){
+				ResponseUtil.responseOutWithJson(response, ResultBean.returnResult(((CustomException)e).getCode()));
+			}else {
+        		log.error("",e);
+        		ResponseUtil.responseOutWithJson(response, ResultBean.returnResult(ResponseCodeEnum.RUNTIME_ERROR));
+			}
 			return false;
 		}
 	}

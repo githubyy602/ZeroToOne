@@ -1,4 +1,4 @@
-﻿<html lang="zh-CN" class="translated-ltr">
+﻿<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -187,7 +187,7 @@
 
                         <ul class="dropdown-menu dropdown-menu-right header__dropdown-menu header__dropdown-menu--right"
                             aria-labelledby="dropdownMenuProfile">
-                            <li><a href="profile.html"><i class="icon ion-ios-settings"></i><font
+                            <li><a href="userDetail.html"><i class="icon ion-ios-settings"></i><font
                                     style="vertical-align: inherit;"><font style="vertical-align: inherit;"> 个人资料</font></font></a>
                             </li>
                             <li><a href="privacy.html"><i class="icon ion-ios-lock"></i><font
@@ -248,7 +248,7 @@
                                     style="vertical-align: inherit;">88</font></font></span>
                         </li>
                     </ul>
-                    <a href="userDetail.html" class="sidebox__more"><font style="vertical-align: inherit;"><font
+                    <a href="" id="toUserDetail" class="sidebox__more"><font style="vertical-align: inherit;"><font
                             style="vertical-align: inherit;">查看个人资料</font></font></a>
                 </div>
                 <!-- end user -->
@@ -257,14 +257,15 @@
                 <div class="sidebox">
                     <h4 class="sidebox__title"><font style="vertical-align: inherit;"><font
                             style="vertical-align: inherit;">最近访问</font></font></h4>
-                    <div class="sidebox__content">
-                        <div class="sidebox__user">
+                    <div class="sidebox__content" th:if = "${accessUserList != null}" th:each=" user : ${accessUserList}">
+                        
+                        <div class="sidebox__user" >
                             <a href="#" class="sidebox__user-img">
-                                <img src="" alt="">
+                                <img th:src= "'http://localhost:20012/file/'+${user.imgUrl}" alt="">
                             </a>
                             <div class="sidebox__user-title">
                                 <h5><a href="#"><font style="vertical-align: inherit;"><font
-                                        style="vertical-align: inherit;">海绵宝宝</font></font></a></h5>
+                                        style="vertical-align: inherit;" th:text="${user.userName}"></font></font></a></h5>
                                 <p><font style="vertical-align: inherit;"><font
                                         style="vertical-align: inherit;">比奇堡一哥</font></font></p>
                             </div>
@@ -953,6 +954,13 @@
     $ (function () {
 
         setAccountInfo();
+        
+        $('#toUserDetail').click(function () {
+            if(verifyUser() == true){
+                window.location.href= 'userDetail.html';
+            }
+            
+        });
         
     });
     

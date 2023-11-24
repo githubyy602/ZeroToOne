@@ -49,6 +49,16 @@ public class TokenUtil {
 	}
 	
 	public static boolean checkToken(HttpRequestWrapper requestWrapper) throws CustomException {
+		String body = requestWrapper.getBody();
+		if(StringUtils.isEmpty(body)){
+			throw CustomException.custom(ResponseCodeEnum.TOKEN_ERROR.getCode());
+		}
+		
+		if(body.contains("WebKitFormBoundary")){
+			//如果是文件流参数，则不进行token校验
+			return true;
+		}
+		
 		String token = requestWrapper.getHeader(CommonConstant.HEADER_ACCESS_TOKEN);
 		if(StringUtils.isEmpty(token)){
 			throw CustomException.custom(ResponseCodeEnum.TOKEN_ERROR.getCode());
@@ -67,14 +77,16 @@ public class TokenUtil {
 			throw CustomException.custom(ResponseCodeEnum.TOKEN_ERROR.getCode());
 		}
 		
-		//获取userId进行token匹配
-		String body = requestWrapper.getBody();
-		if(StringUtils.isEmpty(body)){
+		
+		JSONObject jsonObject = null;
+		try {
+			jsonObject = JSONObject.parseObject(body);
+		} catch (Exception e) {
+			log.error("requestWrapper body parse to json occurs exception!!! Body content is : {} \n {}",body,e.getMessage());
 			throw CustomException.custom(ResponseCodeEnum.TOKEN_ERROR.getCode());
 		}
 		
-		//todo 校验json字符串
-		JSONObject jsonObject = JSONObject.parseObject(body);
+		//获取userId进行token匹配
 		Object reqUserId = jsonObject.get("userId");
 		if(Objects.isNull(reqUserId)){
 			throw CustomException.custom(ResponseCodeEnum.TOKEN_ERROR.getCode());

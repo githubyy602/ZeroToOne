@@ -13,7 +13,6 @@ function queryArticles(pageIndex,pageSize) {
             url: req_domain+business_service_port+"/business/article/getArticleList",
             method: "POST",
             data: JSON.stringify(param),
-            // headers : {"accessToken":accessToken},
 			async: false,
             timeout : 5000,
     		dataType: "json",

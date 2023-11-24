@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yangy.user.mapper.LoginLogMapper">
+  <resultMap id="BaseResultMap" type="com.yangy.user.bean.PO.LoginLog">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="user_id" jdbcType="INTEGER" property="userId" />
+    <result column="login_time" jdbcType="TIMESTAMP" property="loginTime" />
+    <result column="login_result" jdbcType="INTEGER" property="loginResult" />
+    <result column="client_type" jdbcType="INTEGER" property="clientType" />
+    <result column="login_ip" jdbcType="VARCHAR" property="loginIp" />
+    <result column="sys_version" jdbcType="VARCHAR" property="sysVersion" />
+    <result column="logout_time" jdbcType="TIMESTAMP" property="logoutTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, user_id, login_time, login_result,client_type, login_ip, sys_version, logout_time, update_time
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from tb_login_log
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from tb_login_log
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.yangy.user.bean.PO.LoginLog" useGeneratedKeys="true">
+    insert into tb_login_log (user_id, login_time,login_result, client_type, 
+      login_ip, sys_version, logout_time, 
+      update_time)
+    values (#{userId,jdbcType=INTEGER}, #{loginTime,jdbcType=TIMESTAMP},  #{loginResult,jdbcType=INTEGER},#{clientType,jdbcType=INTEGER}, 
+      #{loginIp,jdbcType=VARCHAR}, #{sysVersion,jdbcType=VARCHAR}, #{logoutTime,jdbcType=TIMESTAMP}, 
+      #{updateTime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.yangy.user.bean.PO.LoginLog" useGeneratedKeys="true">
+    insert into tb_login_log
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="userId != null">
+        user_id,
+      </if>
+      <if test="loginTime != null">
+        login_time,
+      </if>
+      <if test="loginResult != null">
+        login_result,
+      </if>
+      <if test="clientType != null">
+        client_type,
+      </if>
+      <if test="loginIp != null">
+        login_ip,
+      </if>
+      <if test="sysVersion != null">
+        sys_version,
+      </if>
+      <if test="logoutTime != null">
+        logout_time,
+      </if>
+      <if test="updateTime != null">
+        update_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="userId != null">
+        #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="loginTime != null">
+        #{loginTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="loginResult != null">
+        #{loginResult,jdbcType=TIMESTAMP},
+      </if>
+      <if test="clientType != null">
+        #{clientType,jdbcType=INTEGER},
+      </if>
+      <if test="loginIp != null">
+        #{loginIp,jdbcType=VARCHAR},
+      </if>
+      <if test="sysVersion != null">
+        #{sysVersion,jdbcType=VARCHAR},
+      </if>
+      <if test="logoutTime != null">
+        #{logoutTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.yangy.user.bean.PO.LoginLog">
+    update tb_login_log
+    <set>
+      <if test="userId != null">
+        user_id = #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="loginTime != null">
+        login_time = #{loginTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="loginResult != null">
+        login_result = #{loginResult,jdbcType=TIMESTAMP},
+      </if>  
+      <if test="clientType != null">
+        client_type = #{clientType,jdbcType=INTEGER},
+      </if>
+      <if test="loginIp != null">
+        login_ip = #{loginIp,jdbcType=VARCHAR},
+      </if>
+      <if test="sysVersion != null">
+        sys_version = #{sysVersion,jdbcType=VARCHAR},
+      </if>
+      <if test="logoutTime != null">
+        logout_time = #{logoutTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+    
+  <update id="updateByPrimaryKey" parameterType="com.yangy.user.bean.PO.LoginLog">
+    update tb_login_log
+    set user_id = #{userId,jdbcType=INTEGER},
+      login_time = #{loginTime,jdbcType=TIMESTAMP},
+      login_result = #{loginResult,jdbcType=INTEGER},
+      client_type = #{clientType,jdbcType=INTEGER},
+      login_ip = #{loginIp,jdbcType=VARCHAR},
+      sys_version = #{sysVersion,jdbcType=VARCHAR},
+      logout_time = #{logoutTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  
+  <select id="selectLatestLog" resultType="com.yangy.user.bean.PO.LoginLog">
+      select 
+        id
+        from tb_login_log
+        where user_id = #{userId,jdbcType=INTEGER} order by login_time desc 
+      limit 1
+  </select>
+</mapper>

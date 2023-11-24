@@ -1,12 +1,10 @@
 package com.yangy.user.controller;
 
-import com.alibaba.fastjson.JSON;
 import com.yangy.common.bean.ReqBaseBean;
 import com.yangy.common.bean.ResultBean;
 import com.yangy.common.enums.ResponseCodeEnum;
 import com.yangy.common.feign.SendFeignClient;
 import com.yangy.common.util.ConvertUtil;
-import com.yangy.common.util.SignUtil;
 import com.yangy.user.bean.DTO.UserInfoDto;
 import com.yangy.user.bean.DTO.UserPwdDto;
 import com.yangy.user.bean.PO.User;
@@ -23,7 +21,6 @@ import javax.annotation.Resource;
 import javax.validation.Valid;
 import java.util.Date;
 import java.util.Objects;
-import java.util.TreeMap;
 
 /**
  * @Author: Yangy
@@ -112,15 +109,20 @@ public class UserController {
 		return ResultBean.success(null);
 	}
 	
-	//测试feign调用
-	@PostMapping(value = "/getMessage")
-	public ResultBean getMessage(){
-		return sendFeignClient.sendSMS();
+	@PostMapping(value = "/getLatestUsers")
+	public ResultBean getLatestUsers(){
+		return ResultBean.success(userMapper.selectLatestUserLog());
 	}
 	
-	@PostMapping(value = "/getSign")
-	public ResultBean testSign(@RequestBody TreeMap<String,Object> param){
-		return ResultBean.success(SignUtil.getSign(JSON.toJSONString(param)));
-	}
+	//测试feign调用
+//	@PostMapping(value = "/getMessage")
+//	public ResultBean getMessage(){
+//		return sendFeignClient.sendSMS();
+//	}
+//	
+//	@PostMapping(value = "/getSign")
+//	public ResultBean testSign(@RequestBody TreeMap<String,Object> param){
+//		return ResultBean.success(SignUtil.getSign(JSON.toJSONString(param)));
+//	}
 	
 }

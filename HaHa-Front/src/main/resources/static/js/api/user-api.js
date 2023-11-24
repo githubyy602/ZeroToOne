@@ -1,4 +1,3 @@
-// document.write('<link rel="stylesheet" href="../../css/layui.css">');
 /**
  * 获取用户信息
  */
@@ -46,6 +45,7 @@ function getUserInfo(){
                     }
                     
                 }else if(data.code == 2002 || data.code == 2003){
+                    layer.msg('登录信息已失效',{time:2000});
                     localStorage.removeItem('userId');
                     localStorage.removeItem('accessToken');
                     localStorage.removeItem('userInfo');
@@ -58,13 +58,6 @@ function getUserInfo(){
             }
 
         });
-}
-
-function logout() {
-    localStorage.removeItem('userId');
-    localStorage.removeItem('accessToken');
-    localStorage.removeItem('userInfo');
-    window.location.href= 'index.html';
 }
 
 /**
@@ -89,15 +82,7 @@ function setAccountInfo() {
                 $('#userIcon').attr('src',icon);
                 $('#userLeftImage').attr('src',icon);
                 $('#userImage').attr('src',icon);
-                $('#slogin').html(user.loginName);
-                $('#sname').html(user.userName);
-                $('#semail').html(user.email);
-                $('#sphone').html(user.phone);
-                if(user.sex == 1){
-                    $('#sex').html("男");
-                }else{
-                    $('#sex').html("女");
-                }
+                
             }else{
                 $('#userIcon').attr('src','../img/user.svg');
                 $('#userLeftImage').attr('src','../img/user.svg');
@@ -107,6 +92,17 @@ function setAccountInfo() {
                 $('#userTitleLeft').html(title);
             }else{
                 $('#userTitleLeft').html('无敌开发工程师');
+            }
+            
+            //detail
+            $('#slogin').html(user.loginName);
+            $('#sname').html(user.userName);
+            $('#semail').html(user.email);
+            $('#sphone').html(user.phone);
+            if(user.sex == 1){
+                $('#sex').html("男");
+            }else{
+                $('#sex').html("女");
             }
             
         }else {
@@ -144,8 +140,7 @@ function verifyUser() {
     		dataType: "json",
     		contentType: "application/json;charset=UTF-8",
 			beforeSend: function(XHR) {
-				XHR.setRequestHeader("Access-Control-Allow-Origin","*");
-				// XHR.setRequestHeader("userId", encodeURIComponent(userInfo.userId));
+                XHR.withCredentials = true;
 			},
             success: function (data) {
                 
@@ -178,9 +173,13 @@ function verifyUser() {
         layer.msg('请登录',{
             time:2000
         },function(){
-            logout();
+            localStorage.removeItem('userId');
+            localStorage.removeItem('accessToken');
+            localStorage.removeItem('userInfo');
+            window.location.href= 'index.html';
         });
     }
+    return access;
 }
 
 function login() {
@@ -359,35 +358,100 @@ function register() {
     });
 }
 
+function logout() {
+    
+    var userId = localStorage.getItem('userId');
+    var accessToken = localStorage.getItem('accessToken');
+    if(null == userId || null == accessToken ){
+        localStorage.removeItem('userInfo');
+        window.location.href= 'index.html';
+        return;
+    }
+    
+    var param = new Map(); 
+    param['userId'] = userId;
+    
+    param = assembleSignParam(param);
+    
+    $.ajax({
+        url: base_url_user+"/login/out",
+        method: "POST",
+        data:JSON.stringify(param),
+        headers : {"accessToken":accessToken},
+        async: false,
+        timeout : 5000,
+        dataType: "json",
+        contentType: "application/json;charset=UTF-8",
+        beforeSend: function(XHR) {
+            XHR.withCredentials = true;
+        },
+        success: function (data) {
+            
+            if(data.code == 1000){
+                localStorage.removeItem('userId');
+                localStorage.removeItem('accessToken');
+                localStorage.removeItem('userInfo');
+                window.location.href= 'index.html';
+            }else {
+               layer.msg(data.message,{time:2000});
+            }
+            
+        },
+        error: function (data) {
+            console.log("请求错误："+data.statusText);
+            return true;
+        }
+
+    });
+    
+    
+}
+
 function userDetailUpload() {
     $(document).ready(function() {
       $('#uploadInput').on('change', function() {
+        var accessToken = localStorage.getItem('accessToken');
+        var userId = localStorage.getItem('userId');
+        if(verifyUser() == false){
+            return;
+        }
+          
         var fileInput = document.getElementById('uploadInput');
         var files = fileInput.files;
         if(null == files || undefined == files){
             return;
         }
+        
         var formData = new FormData();
         formData.append("fileList", files[0]);
+        formData.append('userId',userId);
           
         $.ajax({
           url: base_url_file+'/upload', // 替换为你的后端接口地址
           type: 'POST',
           data: formData,
+          headers : {"accessToken":accessToken},
           cache: false,
           processData: false,   // 告诉jquery要传输data对象
           contentType: false,   // 告诉jquery不需要增加请求头对于contentType的设置,
+          beforeSend: function(XHR) {
+            XHR.withCredentials = true;
+          },
           success: function(response) {
             // 处理后端返回的响应
             var code = response.code;
             if(code == response_status_success){
                  $('#userLeftImage').attr('src', base_url_file+Base64.decode(response.data[0].path));
                  $('#fileInput').val(response.data[0].id);
+            }else {
+                $('#uploadInput').val('');
+                layer.msg('上传失败：'+response.message,{time:2000});
             }
           },
           error: function(xhr, status, error) {
             // 处理错误
             layer.msg('上传失败！');
+            $('#uploadInput').val('');
           }
         });
       });
@@ -398,9 +462,9 @@ function userDetailUpdate() {
     $(document).ready(function() {
        var accessToken = localStorage.getItem('accessToken');
        var userId = localStorage.getItem('userId');
-       if(null == userId || null == accessToken || undefined == userId || undefined == accessToken){
+       if(verifyUser() == false){
             return;
-       }
+        }
         
        var loginName = $('#loginName').val();
        var email = $('#email').val();
@@ -439,7 +503,7 @@ function userDetailUpdate() {
                 dataType: "json",
                 contentType: "application/json;charset=UTF-8",
                 beforeSend: function(XHR) {
-                    XHR.setRequestHeader("Access-Control-Allow-Origin","*");
+                    XHR.withCredentials = true;
                 },
                 success: function (data) {
                     
@@ -471,7 +535,7 @@ function userModifyPwd() {
     $(document).ready(function() {
        var accessToken = localStorage.getItem('accessToken');
        var userId = localStorage.getItem('userId');
-       if(null == userId || null == accessToken || undefined == userId || undefined == accessToken){
+       if(verifyUser() == false){
             return;
        }
         
@@ -531,7 +595,7 @@ function userModifyPwd() {
                 dataType: "json",
                 contentType: "application/json;charset=UTF-8",
                 beforeSend: function(XHR) {
-                    XHR.setRequestHeader("Access-Control-Allow-Origin","*");
+                    XHR.withCredentials = true;
                 },
                 success: function (data) {
                     

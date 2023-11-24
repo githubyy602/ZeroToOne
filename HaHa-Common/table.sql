@@ -39,3 +39,16 @@ CREATE TABLE `tb_articles` (
   `update_time` timestamp NULL DEFAULT NULL COMMENT '更新时间',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='文章内容表';
+
+CREATE TABLE `tb_login_log` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `user_id` int NOT NULL COMMENT '登录用户id',
+  `login_time` timestamp NOT NULL COMMENT '登录时间',
+  `login_result` int NOT NULL COMMENT '登录结果：1=成功，2=失败',
+  `client_type` int NOT NULL DEFAULT '1' COMMENT '登录端类型：1=web，2=安卓，3=ios',
+  `login_ip` varchar(100) DEFAULT NULL COMMENT '登录ip',
+  `sys_version` varchar(30) DEFAULT NULL COMMENT '登录系统版本',
+  `logout_time` timestamp NULL DEFAULT NULL COMMENT '登出时间',
+  `update_time` timestamp NULL DEFAULT NULL COMMENT '更新时间',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COMMENT='登录日志表'

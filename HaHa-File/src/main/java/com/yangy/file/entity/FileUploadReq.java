@@ -1,5 +1,6 @@
 package com.yangy.file.entity;
 
+import com.yangy.common.bean.ReqBaseBean;
 import lombok.Data;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -11,8 +12,8 @@ import java.util.List;
  * @Description
  */
 @Data
-public class FileUploadReq {
-//	@JSONField(serialize = false)
+public class FileUploadReq extends ReqBaseBean {
+	
 	List<MultipartFile> fileList;
 	
 }
