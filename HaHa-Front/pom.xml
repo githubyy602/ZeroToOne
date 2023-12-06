@@ -24,15 +24,37 @@
             <artifactId>HaHa-Common</artifactId>
             <version>1.0-SNAPSHOT</version>
             <exclusions>
+                <!--nacos相关-->
                 <exclusion>
                     <groupId>com.alibaba.cloud</groupId>
                     <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
                 </exclusion>
-                
                 <exclusion>
                     <groupId>com.alibaba.cloud</groupId>
                     <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
                 </exclusion>
+                
+                <exclusion>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-jdbc</artifactId>
+                </exclusion>
+
+                <!--mysql相关-->
+                <exclusion>
+                    <groupId>mysql</groupId>
+                    <artifactId>mysql-connector-java</artifactId>
+                </exclusion>
+        
+                <exclusion>
+                    <groupId>com.baomidou</groupId>
+                    <artifactId>mybatis-plus-boot-starter</artifactId>
+                </exclusion>
+        
+                <exclusion>
+                   <groupId>com.alibaba</groupId>
+                   <artifactId>druid-spring-boot-starter</artifactId>
+                </exclusion>
+                
             </exclusions>
         </dependency>
         

@@ -1,4 +1,4 @@
-package com.yangy.user.annotation;
+package com.yangy.common.annotation;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;

@@ -131,10 +131,12 @@
     where id = #{id,jdbcType=INTEGER}
   </update>
     
-  <select id="selectAllArticles" resultType="com.yangy.business.bean.PO.Articles">
-      select <include refid="Base_Column_List"/>
+  <select id="selectAllArticles" resultType="com.yangy.business.bean.VO.ArticleVo">
+      select t.*,tu.user_name ,tf.`path` as imgUrl
       from 
-      tb_articles
+      tb_articles t
+      left join tb_user tu on t.creator = tu.id 
+      left join tb_file tf on tf.id = tu.img_id 
       order by publish_time desc , create_time desc
   </select>  
     

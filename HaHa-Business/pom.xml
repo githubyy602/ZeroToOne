@@ -24,17 +24,17 @@
             <groupId>com.yangy</groupId>
             <artifactId>HaHa-Common</artifactId>
             <version>1.0-SNAPSHOT</version>
-            <!--<exclusions>-->
-                <!--<exclusion>-->
-                    <!--<groupId>com.alibaba.cloud</groupId>-->
-                    <!--<artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>-->
-                <!--</exclusion>-->
-                <!---->
-                <!--<exclusion>-->
-                    <!--<groupId>com.alibaba.cloud</groupId>-->
-                    <!--<artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>-->
-                <!--</exclusion>-->
-            <!--</exclusions>-->
+            <exclusions>
+                <exclusion>
+                    <groupId>com.alibaba.cloud</groupId>
+                    <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+                </exclusion>
+                
+                <exclusion>
+                    <groupId>com.alibaba.cloud</groupId>
+                    <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         
         <dependency>
@@ -61,34 +61,6 @@
             <version>1.4.6</version>
         </dependency>
         
-        <!--数据库连接jdbc依赖-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-jdbc</artifactId>
-        </dependency>
-
-        <!--mysql链接依赖-->
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>${mysql.connector.version}</version>
-        </dependency>
-
-        <!-- https://mvnrepository.com/artifact/com.baomidou/mybatis-plus-boot-starter -->
-        <!--mybatis-plus依赖-->
-        <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-boot-starter</artifactId>
-            <version>${mybatisplus.starter.version}</version>
-        </dependency>
-
-        <!--阿里druid数据库链接依赖-->
-        <dependency>
-           <groupId>com.alibaba</groupId>
-           <artifactId>druid-spring-boot-starter</artifactId>
-           <version>1.2.15</version>
-        </dependency>
-
     </dependencies>
 
     <build>

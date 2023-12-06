@@ -2,6 +2,7 @@ package com.yangy.business.service;
 
 import com.github.pagehelper.PageInfo;
 import com.yangy.business.bean.PO.Articles;
+import com.yangy.business.bean.VO.ArticleVo;
 import com.yangy.common.bean.PageQuery;
 
 /**
@@ -11,7 +12,7 @@ import com.yangy.common.bean.PageQuery;
  */
 public interface ArticleService {
 	
-	PageInfo<Articles> queryArticleListByPage(PageQuery query);
+	PageInfo<ArticleVo> queryArticleListByPage(PageQuery query);
 	
 	Articles queryOne(Integer id);
 }

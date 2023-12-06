@@ -1,8 +1,8 @@
-package com.yangy.user.interceptor;
+package com.yangy.common.interceptor;
 
-import com.yangy.user.annotation.EncryptEntity;
-import com.yangy.user.annotation.EncryptField;
-import com.yangy.user.service.EncryptService;
+import com.yangy.common.annotation.EncryptEntity;
+import com.yangy.common.annotation.EncryptField;
+import com.yangy.common.util.EncryptUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.ibatis.executor.parameter.ParameterHandler;
 import org.apache.ibatis.executor.resultset.ResultSetHandler;
@@ -13,12 +13,12 @@ import org.apache.ibatis.plugin.Intercepts;
 import org.apache.ibatis.plugin.Invocation;
 import org.apache.ibatis.plugin.Plugin;
 import org.apache.ibatis.plugin.Signature;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.core.annotation.AnnotationUtils;
 import org.springframework.stereotype.Component;
 import org.springframework.util.CollectionUtils;
 import org.springframework.util.StopWatch;
 
-import javax.annotation.Resource;
 import java.lang.reflect.Field;
 import java.sql.PreparedStatement;
 import java.sql.Statement;
@@ -33,16 +33,13 @@ import java.util.Properties;
  */
 @Component
 @Intercepts({
-//        @Signature(type = StatementHandler.class, method = "prepare", args = {Connection.class, String.class}),
         @Signature(type = ParameterHandler.class, method = "setParameters", args = PreparedStatement.class),
         @Signature(type = ResultSetHandler.class, method = "handleResultSets", args = {Statement.class})
 })
 @Slf4j
+@ConditionalOnProperty(prefix = "module",name = "needEncrypt", havingValue = "true")
 public class SqlEncryptInterceptor implements Interceptor {
 
-	@Resource
-    private EncryptService encryptService;
-	
 	private static final StopWatch stopWatch = new StopWatch();
 
     @Override
@@ -114,7 +111,7 @@ public class SqlEncryptInterceptor implements Interceptor {
                 if (object instanceof String) {
                     String value = (String) object;
                     //对注解的字段进行逐一解密
-                    field.set(result, encryptService.decrypt(value));
+                    field.set(result, EncryptUtil.decrypt(value));
                 }
             }
         }
@@ -155,7 +152,7 @@ public class SqlEncryptInterceptor implements Interceptor {
 						if (object instanceof String) {
 							String value = (String) object;
 							//加密  这里我使用自定义的AES加密工具
-							field.set(parameterObject, encryptService.encrypt(value));
+							field.set(parameterObject, EncryptUtil.encrypt(value));
 						}
 					}
 				}

@@ -1,6 +1,7 @@
 package com.yangy.business.mapper;
 
 import com.yangy.business.bean.PO.Articles;
+import com.yangy.business.bean.VO.ArticleVo;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
@@ -19,6 +20,6 @@ public interface ArticlesMapper {
 
     int updateByPrimaryKey(Articles record);
     
-    List<Articles> selectAllArticles();
+    List<ArticleVo> selectAllArticles();
     
 }

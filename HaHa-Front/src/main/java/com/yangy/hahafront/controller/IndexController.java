@@ -1,6 +1,7 @@
 package com.yangy.hahafront.controller;
 
 import com.yangy.common.bean.ResultBean;
+import com.yangy.common.constant.UrlConstant;
 import com.yangy.common.feign.UserFeignClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -18,10 +19,12 @@ public class IndexController {
 	@Autowired
 	private UserFeignClient userFeignClient;
 	
+	
 	@RequestMapping(value = "/")
 	public String defaultPage(Model model){
 		ResultBean resultBean = userFeignClient.getLatestUsers();
 		model.addAttribute("accessUserList",resultBean.getData());
+		model.addAttribute("fileDomain", UrlConstant.FILE_SERVICE_URL);
 		return "/index";
 	}
 	
@@ -29,7 +32,7 @@ public class IndexController {
 	public String index(Model model){
 		ResultBean resultBean = userFeignClient.getLatestUsers();
 		model.addAttribute("accessUserList",resultBean.getData());
-		
+		model.addAttribute("fileDomain",UrlConstant.FILE_SERVICE_URL);
 		return "/index";
 	}
 	
@@ -37,7 +40,7 @@ public class IndexController {
 	public String indexHtml(Model model){
 		ResultBean resultBean = userFeignClient.getLatestUsers();
 		model.addAttribute("accessUserList",resultBean.getData());
-		
+		model.addAttribute("fileDomain",UrlConstant.FILE_SERVICE_URL);
 		return "/index";
 	}
 	

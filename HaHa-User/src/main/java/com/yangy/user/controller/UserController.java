@@ -3,7 +3,6 @@ package com.yangy.user.controller;
 import com.yangy.common.bean.ReqBaseBean;
 import com.yangy.common.bean.ResultBean;
 import com.yangy.common.enums.ResponseCodeEnum;
-import com.yangy.common.feign.SendFeignClient;
 import com.yangy.common.util.ConvertUtil;
 import com.yangy.user.bean.DTO.UserInfoDto;
 import com.yangy.user.bean.DTO.UserPwdDto;
@@ -30,9 +29,6 @@ import java.util.Objects;
 @RestController
 @RequestMapping
 public class UserController {
-	
-	@Resource
-	private SendFeignClient sendFeignClient;
 	
 	@Resource
 	private UserService userService;

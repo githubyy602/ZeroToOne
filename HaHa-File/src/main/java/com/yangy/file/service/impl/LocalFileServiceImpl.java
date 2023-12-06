@@ -80,6 +80,7 @@ public class LocalFileServiceImpl extends AbstractFileService {
 				String filePath =  prefix_path+StrUtil.C_SLASH+originalFilename;
 				
 				java.io.File newFile = new java.io.File(localPath+filePath);
+				//todo 文件存储需要换一个容器，因为放在项目目录下，上传后无法立即回显，需要重启
 				file.transferTo(newFile);
 				
 				String base64Path = Base64Utils.encodeToString(filePath.getBytes(Charsets.UTF_8));
