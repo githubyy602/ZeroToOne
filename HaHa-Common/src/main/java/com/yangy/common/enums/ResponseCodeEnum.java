@@ -17,6 +17,7 @@ public enum ResponseCodeEnum {
 	RUNTIME_ERROR(2006,"运行错误"),
 	UNKOWN_ERROR(2007,"未知错误"),
 	VALID_ERROR(2008,"参数校验错误"),
+	FEIGN_ERROR(2009,"Feign调用错误"),
 	
 	//业务错误码
 	//21xx 用户相关

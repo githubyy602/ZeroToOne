@@ -1,7 +1,11 @@
 package com.yangy.common.hystrix;
 
+import com.github.pagehelper.PageInfo;
+import com.yangy.common.bean.PageQuery;
 import com.yangy.common.bean.ResultBean;
+import com.yangy.common.bean.feign.ArticleVo;
 import com.yangy.common.bean.feign.Articles;
+import com.yangy.common.enums.ResponseCodeEnum;
 import com.yangy.common.feign.BusinessFeignClient;
 import org.springframework.stereotype.Component;
 
@@ -15,6 +19,11 @@ public class BusinessFallBack implements BusinessFeignClient {
 
 	@Override
 	public ResultBean<Articles> getArticleDetail(Integer id) {
-		return ResultBean.success("暂时无法获取文章内容，请稍后再试！");
+		return ResultBean.returnResult(ResponseCodeEnum.FEIGN_ERROR);
+	}
+
+	@Override
+	public ResultBean<PageInfo<ArticleVo>> getArticleList(PageQuery query) {
+		return ResultBean.returnResult(ResponseCodeEnum.FEIGN_ERROR);
 	}
 }

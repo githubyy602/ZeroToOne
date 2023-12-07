@@ -11,6 +11,7 @@ import com.yangy.common.wrapper.HttpRequestWrapper;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang.StringUtils;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.util.CollectionUtils;
 import org.springframework.web.servlet.HandlerInterceptor;
@@ -52,6 +53,11 @@ public class MyInterceptor implements HandlerInterceptor {
         if(request.getMethod().equals(CommonConstant.METHOD_TYPE_GET)){
         	//GET类型放行
         	return true;
+		}
+		
+		String feignFlag = request.getHeader(CommonConstant.HEADER_CHECK_REQ);
+		if(StringUtils.equals(CommonConstant.HEADER_FROM_FEIGN,feignFlag)){
+			return true;
 		}
         
 		try {

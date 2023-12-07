@@ -289,50 +289,6 @@
                             <!--</button>-->
                         <!--</div>-->
 
-                        <!--<div class="sidebox__user">-->
-                            <!--<a href="#" class="sidebox__user-img">-->
-                                <!--<img src="img/bak.user2.jpg" alt="">-->
-                            <!--</a>-->
-                            <!--<div class="sidebox__user-title">-->
-                                <!--<h5><a href="#"><font style="vertical-align: inherit;"><font-->
-                                        <!--style="vertical-align: inherit;">圣地亚哥·罗宾逊</font></font></a></h5>-->
-                                <!--<p><font style="vertical-align: inherit;"><font-->
-                                        <!--style="vertical-align: inherit;">时装设计师</font></font></p>-->
-                            <!--</div>-->
-                            <!--<button class="sidebox__user-btn" type="button">-->
-                                <!--<i class="icon ion-ios-add"></i>-->
-                            <!--</button>-->
-                        <!--</div>-->
-
-                        <!--<div class="sidebox__user">-->
-                            <!--<a href="#" class="sidebox__user-img">-->
-                                <!--<img src="img/bak.user3.jpg" alt="">-->
-                            <!--</a>-->
-                            <!--<div class="sidebox__user-title">-->
-                                <!--<h5><a href="#"><font style="vertical-align: inherit;"><font-->
-                                        <!--style="vertical-align: inherit;">索菲亚·门多萨（Sophia Mendoza）</font></font></a></h5>-->
-                                <!--<p><font style="vertical-align: inherit;"><font-->
-                                        <!--style="vertical-align: inherit;">教学助手</font></font></p>-->
-                            <!--</div>-->
-                            <!--<button class="sidebox__user-btn" type="button">-->
-                                <!--<i class="icon ion-ios-add"></i>-->
-                            <!--</button>-->
-                        <!--</div>-->
-
-                        <!--<div class="sidebox__user">-->
-                            <!--<a href="#" class="sidebox__user-img">-->
-                                <!--<img src="img/bak.user4.jpg" alt="">-->
-                            <!--</a>-->
-                            <!--<div class="sidebox__user-title">-->
-                                <!--<h5><a href="#"><font style="vertical-align: inherit;"><font-->
-                                        <!--style="vertical-align: inherit;">玛莎·鲍德温（Marsha Baldwin）</font></font></a></h5>-->
-                                <!--<p><font style="vertical-align: inherit;"><font-->
-                                        <!--style="vertical-align: inherit;">园丁</font></font></p>-->
-                            <!--</div>-->
-                            <!--<button class="sidebox__user-btn" type="button">-->
-                                <!--<i class="icon ion-ios-add"></i>-->
-                            <!--</button>-->
-                        <!--</div>-->
                     </div>
                     <a href="#" class="sidebox__more"><font style="vertical-align: inherit;"><font
                             style="vertical-align: inherit;">查看更多</font></font></a>
@@ -342,16 +298,16 @@
 
             <div class="col-12 col-md-7 col-lg-8 col-xl-6">
                 <!-- post -->
-                <div class="post">
+                <div class="post" th:if="${articleList != null}" th:each="article : ${articleList}">
                     <div class="post__head">
                         <a href="#" class="post__head-img">
-                            <img src="" alt="">
+                            <img th:src="@{{base}{sys}(base=${fileDomain},sys=${article.imgUrl})}" alt="">
                         </a>
                         <div class="post__head-title">
                             <h5><a href="#"><font style="vertical-align: inherit;"><font
-                                    style="vertical-align: inherit;">Yangy</font></font></a></h5>
+                                    style="vertical-align: inherit;" th:text="${article.userName}"></font></font></a></h5>
                             <p><font style="vertical-align: inherit;"><font
-                                    style="vertical-align: inherit;">11分钟前</font></font></p>
+                                    style="vertical-align: inherit;" th:text="${${article.createTime}}"></font></font></p>
                         </div>
 
                         <div class="post__dropdown">
@@ -396,7 +352,7 @@
                     </div>
 
                     <h2 class="post__title"><font style="vertical-align: inherit;"><font
-                            style="vertical-align: inherit;">xxxxxxxxx</font></font></h2>
+                            style="vertical-align: inherit;">${article.title}</font></font></h2>
 
                     <div class="post__options">
                         <span><font style="vertical-align: inherit;"><font
@@ -406,8 +362,8 @@
                     </div>
 
                     <div class="post__description">
-                        <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</font><font
-                                style="vertical-align: inherit;">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</font></font></p>
+                        <p><font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;" th:text="${#strings.substring(article.content,0,100)}"></font></font></p>
                         <a href="#"><font style="vertical-align: inherit;"><font
                                 style="vertical-align: inherit;">查看更多</font></font></a>
                     </div>
@@ -445,250 +401,6 @@
                         </form>
                     </div>
                 </div>
-                <!-- end post -->
-
-                <!--&lt;!&ndash; post &ndash;&gt;-->
-                <!--<div class="post">-->
-                    <!--<div class="post__head">-->
-                        <!--<a href="#" class="post__head-img">-->
-                            <!--<img src="img/bak.user5.bak.jpg" alt="">-->
-                        <!--</a>-->
-                        <!--<div class="post__head-title">-->
-                            <!--<h5><a href="#"><font style="vertical-align: inherit;"><font-->
-                                    <!--style="vertical-align: inherit;">约翰·杜</font></font></a></h5>-->
-                            <!--<p><font style="vertical-align: inherit;"><font-->
-                                    <!--style="vertical-align: inherit;">24分钟前</font></font></p>-->
-                        <!--</div>-->
-
-                        <!--<div class="post__dropdown">-->
-                            <!--<a class="dropdown-toggle post__dropdown-btn" href="#" role="button" id="dropdownMenu3"-->
-                               <!--data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
-                                <!--<i class="icon ion-md-more"></i>-->
-                            <!--</a>-->
-
-                            <!--<ul class="dropdown-menu dropdown-menu-right post__dropdown-menu"-->
-                                <!--aria-labelledby="dropdownMenu3">-->
-                                <!--<li><a href="#"><font style="vertical-align: inherit;"><font-->
-                                        <!--style="vertical-align: inherit;">编辑</font></font></a></li>-->
-                                <!--<li><a href="#"><font style="vertical-align: inherit;"><font-->
-                                        <!--style="vertical-align: inherit;">删除</font></font></a></li>-->
-                                <!--<li><a href="#"><font style="vertical-align: inherit;"><font-->
-                                        <!--style="vertical-align: inherit;">隐藏</font></font></a></li>-->
-                            <!--</ul>-->
-                        <!--</div>-->
-                    <!--</div>-->
-
-                    <!--<div class="post__wrap">-->
-                        <!--<div class="post__company">-->
-                            <!--<i class="icon ion-ios-briefcase"></i>-->
-                            <!--<span><font style="vertical-align: inherit;"><font-->
-                                    <!--style="vertical-align: inherit;">前端开发人员</font></font></span>-->
-                        <!--</div>-->
-
-                        <!--<div class="post__actions">-->
-                            <!--<a class="post__actions-btn post__actions-btn&#45;&#45;green" href="#">-->
-                                <!--<i class="icon ion-ios-bookmark"></i>-->
-                            <!--</a>-->
-                            <!--<a class="post__actions-btn post__actions-btn&#45;&#45;red" href="#">-->
-                                <!--<i class="icon ion-ios-mail"></i>-->
-                            <!--</a>-->
-                            <!--<a href="#" class="post__actions-btn post__actions-btn&#45;&#45;blue"><span><font-->
-                                    <!--style="vertical-align: inherit;"><font style="vertical-align: inherit;">现在出价</font></font></span></a>-->
-                        <!--</div>-->
-                    <!--</div>-->
-
-                    <!--<h2 class="post__title"><font style="vertical-align: inherit;"><font-->
-                            <!--style="vertical-align: inherit;">PSD转换为HTML</font></font></h2>-->
-
-                    <!--<div class="post__options">-->
-                        <!--<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">$ 300-$-->
-                            <!--350</font></font></p>-->
-                    <!--</div>-->
-
-                    <!--<div class="post__description">-->
-                        <!--<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Lorem-->
-                            <!--Ipsum的段落有很多变体，但是大多数都因注入幽默感或看起来有些难以置信的随机单词而以某种形式发生了变化。</font><font-->
-                                <!--style="vertical-align: inherit;">如果要使用Lorem-->
-                            <!--Ipsum的段落，则需要确保文本中间没有隐藏任何令人尴尬的内容。</font></font></p>-->
-                        <!--<a href="#"><font style="vertical-align: inherit;"><font-->
-                                <!--style="vertical-align: inherit;">查看更多</font></font></a>-->
-                    <!--</div>-->
-
-                    <!--<div class="post__tags">-->
-                        <!--<a href="#"><font style="vertical-align: inherit;"><font-->
-                                <!--style="vertical-align: inherit;">HTML </font></font></a>-->
-                        <!--<a href="#"><font style="vertical-align: inherit;"><font-->
-                                <!--style="vertical-align: inherit;">CSS </font></font></a>-->
-                        <!--<a href="#"><font style="vertical-align: inherit;"><font-->
-                                <!--style="vertical-align: inherit;">JS </font></font></a>-->
-                        <!--<a href="#"><font style="vertical-align: inherit;"><font-->
-                                <!--style="vertical-align: inherit;">PSD</font></font></a>-->
-                    <!--</div>-->
-
-                    <!--<div class="post__stats">-->
-                        <!--<div>-->
-                            <!--<a class="post__likes" href="#"><i class="icon ion-ios-heart"></i> <span><font-->
-                                    <!--style="vertical-align: inherit;"><font-->
-                                    <!--style="vertical-align: inherit;">15</font></font></span></a>-->
-                            <!--<a class="post__comments" data-toggle="collapse" href="#collapse3" role="button"-->
-                               <!--aria-expanded="false" aria-controls="collapse1"><i class="icon ion-ios-text"></i>-->
-                                <!--<span><font style="vertical-align: inherit;"><font-->
-                                        <!--style="vertical-align: inherit;">0</font></font></span></a>-->
-                        <!--</div>-->
-
-                        <!--<div class="post__views">-->
-                            <!--<i class="icon ion-ios-eye"></i> <span><font style="vertical-align: inherit;"><font-->
-                                <!--style="vertical-align: inherit;">214</font></font></span>-->
-                        <!--</div>-->
-                    <!--</div>-->
-
-                    <!--<div class="collapse post__collapse" id="collapse3">-->
-                        <!--<form action="#" class="post__form">-->
-                            <!--<input type="text" placeholder="输入您的评论...">-->
-                            <!--<button type="button"><i class="icon ion-ios-paper-plane"></i></button>-->
-                        <!--</form>-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--&lt;!&ndash; end post &ndash;&gt;-->
-
-                <!--&lt;!&ndash; post &ndash;&gt;-->
-                <!--<div class="post">-->
-                    <!--<div class="post__head">-->
-                        <!--<a href="#" class="post__head-img">-->
-                            <!--<img src="img/bak.user8.jpg" alt="">-->
-                        <!--</a>-->
-                        <!--<div class="post__head-title">-->
-                            <!--<h5><a href="#"><font style="vertical-align: inherit;"><font-->
-                                    <!--style="vertical-align: inherit;">塞巴斯蒂安·李</font></font></a></h5>-->
-                            <!--<p><font style="vertical-align: inherit;"><font-->
-                                    <!--style="vertical-align: inherit;">45分钟前</font></font></p>-->
-                        <!--</div>-->
-
-                        <!--<div class="post__dropdown">-->
-                            <!--<a class="dropdown-toggle post__dropdown-btn" href="#" role="button" id="dropdownMenu2"-->
-                               <!--data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
-                                <!--<i class="icon ion-md-more"></i>-->
-                            <!--</a>-->
-
-                            <!--<ul class="dropdown-menu dropdown-menu-right post__dropdown-menu"-->
-                                <!--aria-labelledby="dropdownMenu2">-->
-                                <!--<li><a href="#"><font style="vertical-align: inherit;"><font-->
-                                        <!--style="vertical-align: inherit;">编辑</font></font></a></li>-->
-                                <!--<li><a href="#"><font style="vertical-align: inherit;"><font-->
-                                        <!--style="vertical-align: inherit;">删除</font></font></a></li>-->
-                                <!--<li><a href="#"><font style="vertical-align: inherit;"><font-->
-                                        <!--style="vertical-align: inherit;">隐藏</font></font></a></li>-->
-                            <!--</ul>-->
-                        <!--</div>-->
-                    <!--</div>-->
-
-                    <!--<div class="post__wrap">-->
-                        <!--<div class="post__company">-->
-                            <!--<i class="icon ion-ios-briefcase"></i>-->
-                            <!--<span><font style="vertical-align: inherit;"><font-->
-                                    <!--style="vertical-align: inherit;">Envato</font></font></span>-->
-                        <!--</div>-->
-
-                        <!--<div class="post__location">-->
-                            <!--<i class="icon ion-ios-navigate"></i>-->
-                            <!--<span><font style="vertical-align: inherit;"><font-->
-                                    <!--style="vertical-align: inherit;">澳大利亚</font></font></span>-->
-                        <!--</div>-->
-
-                        <!--<div class="post__actions">-->
-                            <!--<a class="post__actions-btn post__actions-btn&#45;&#45;green" href="#">-->
-                                <!--<i class="icon ion-ios-bookmark"></i>-->
-                            <!--</a>-->
-                            <!--<a class="post__actions-btn post__actions-btn&#45;&#45;red" href="#">-->
-                                <!--<i class="icon ion-ios-mail"></i>-->
-                            <!--</a>-->
-                        <!--</div>-->
-                    <!--</div>-->
-
-                    <!--<h2 class="post__title"><font style="vertical-align: inherit;"><font-->
-                            <!--style="vertical-align: inherit;">资深Wordpress开发人员</font></font></h2>-->
-
-                    <!--<div class="post__options">-->
-                        <!--<span><font style="vertical-align: inherit;"><font-->
-                                <!--style="vertical-align: inherit;">全职</font></font></span>-->
-                        <!--<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">$ 36 /小时</font></font>-->
-                        <!--</p>-->
-                    <!--</div>-->
-
-                    <!--<div class="post__description">-->
-                        <!--<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Lorem-->
-                            <!--Ipsum的段落有很多变体，但是大多数都因注入幽默感或看起来有些难以置信的随机单词而以某种形式发生了变化。</font><font-->
-                                <!--style="vertical-align: inherit;">如果要使用Lorem-->
-                            <!--Ipsum的段落，则需要确保文本中间没有隐藏任何令人尴尬的内容。</font></font></p>-->
-                        <!--<a href="#"><font style="vertical-align: inherit;"><font-->
-                                <!--style="vertical-align: inherit;">查看更多</font></font></a>-->
-                    <!--</div>-->
-
-                    <!--<div class="post__tags">-->
-                        <!--<a href="#"><font style="vertical-align: inherit;"><font-->
-                                <!--style="vertical-align: inherit;">HTML </font></font></a>-->
-                        <!--<a href="#"><font style="vertical-align: inherit;"><font-->
-                                <!--style="vertical-align: inherit;">CSS </font></font></a>-->
-                        <!--<a href="#"><font style="vertical-align: inherit;"><font-->
-                                <!--style="vertical-align: inherit;">PHP</font></font></a>-->
-                    <!--</div>-->
-
-                    <!--<div class="post__stats">-->
-                        <!--<div>-->
-                            <!--<a class="post__likes" href="#"><i class="icon ion-ios-heart"></i> <span><font-->
-                                    <!--style="vertical-align: inherit;"><font-->
-                                    <!--style="vertical-align: inherit;">15</font></font></span></a>-->
-                            <!--<a class="post__comments" data-toggle="collapse" href="#collapse2" role="button"-->
-                               <!--aria-expanded="true" aria-controls="collapse2"><i class="icon ion-ios-text"></i>-->
-                                <!--<span><font style="vertical-align: inherit;"><font-->
-                                        <!--style="vertical-align: inherit;">2</font></font></span></a>-->
-                        <!--</div>-->
-
-                        <!--<div class="post__views">-->
-                            <!--<i class="icon ion-ios-eye"></i> <span><font style="vertical-align: inherit;"><font-->
-                                <!--style="vertical-align: inherit;">214</font></font></span>-->
-                        <!--</div>-->
-                    <!--</div>-->
-
-                    <!--<div class="collapse show post__collapse" id="collapse2">-->
-                        <!--<form action="#" class="post__form">-->
-                            <!--<input type="text" placeholder="输入您的评论...">-->
-                            <!--<button type="button"><i class="icon ion-ios-paper-plane"></i></button>-->
-                        <!--</form>-->
-
-                        <!--<div class="post__comment">-->
-                            <!--<a href="#" class="post__comment-img">-->
-                                <!--<img src="img/bak.user9.jpg" alt="">-->
-                            <!--</a>-->
-                            <!--<div class="post__comment-title">-->
-                                <!--<h5><a href="#"><font style="vertical-align: inherit;"><font-->
-                                        <!--style="vertical-align: inherit;">艾伦·帕特里克</font></font></a></h5>-->
-                                <!--<p><font style="vertical-align: inherit;"><font-->
-                                        <!--style="vertical-align: inherit;">20分钟前</font></font></p>-->
-                            <!--</div>-->
-
-                            <!--<p class="post__comment-text"><font style="vertical-align: inherit;"><font-->
-                                    <!--style="vertical-align: inherit;">现在，许多桌面出版软件包和网页编辑器都使用Lorem Ipsum作为默认模型文本，并且搜索“-->
-                                <!--lorem ipsum”将发现许多仍处于起步阶段的网站。</font></font></p>-->
-                        <!--</div>-->
-
-                        <!--<div class="post__comment">-->
-                            <!--<a href="#" class="post__comment-img">-->
-                                <!--<img src="img/bak.user2.jpg" alt="">-->
-                            <!--</a>-->
-                            <!--<div class="post__comment-title">-->
-                                <!--<h5><a href="#"><font style="vertical-align: inherit;"><font-->
-                                        <!--style="vertical-align: inherit;">迭戈·科斯塔</font></font></a></h5>-->
-                                <!--<p><font style="vertical-align: inherit;"><font-->
-                                        <!--style="vertical-align: inherit;">22分钟前</font></font></p>-->
-                            <!--</div>-->
-
-                            <!--<p class="post__comment-text"><font style="vertical-align: inherit;"><font-->
-                                    <!--style="vertical-align: inherit;">现在，许多桌面出版软件包和网页编辑器都使用Lorem Ipsum作为默认模型文本，并且搜索“-->
-                                <!--lorem ipsum”将发现许多仍处于起步阶段的网站。</font></font></p>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
                 <!-- end post -->
 
                 <!-- view more -->

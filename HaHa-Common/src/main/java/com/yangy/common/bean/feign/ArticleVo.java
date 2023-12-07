@@ -1,8 +1,5 @@
-package com.yangy.business.bean.VO;
+package com.yangy.common.bean.feign;
 
-import com.yangy.business.bean.PO.Articles;
-import com.yangy.common.annotation.EncryptEntity;
-import com.yangy.common.annotation.EncryptField;
 import lombok.Data;
 
 /**
@@ -10,14 +7,11 @@ import lombok.Data;
  * @Date: 2023/12/5 17:46
  * @Description
  */
-@EncryptEntity
 @Data
 public class ArticleVo extends Articles {
 	
-	@EncryptField
     private String userName;
 	
-	@EncryptField
     private String imgUrl;
 	
     //用户职称

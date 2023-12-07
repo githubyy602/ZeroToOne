@@ -26,6 +26,9 @@ public class CommonConstant {
 	public static final String ACCESS_CONTROL_ALLOW_HEADERS = "Access-Control-Allow-Headers";
 	public static final String ACCESS_CONTROL_ALLOW_CREDENTIALS = "Access-Control-Allow-Credentials";
 	
+	//Feign
+	public static final String HEADER_CHECK_REQ = "checkReqFrom";
+	public static final String HEADER_FROM_FEIGN = "feign";
 	
 	//方法类型
 	public static final String METHOD_TYPE_OPTIONS = "OPTIONS";

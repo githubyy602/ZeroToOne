@@ -17,7 +17,8 @@ spring:
       max-pool-prepared-statement-per-connection-size: 20
       use-global-data-source-stat: true
       connection-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
-      
+
+
 sys:
   serviceName:
     send : 'haha-send'
@@ -31,11 +32,18 @@ sys:
 
 token:
   except:
-    url: /login/online,/getSign,/user/createUser,/user/getLatestUsers
+    url: /login/online,/getSign,/user/createUser,/user/getLatestUsers,/article/getArticleList
 
 sign:
   except:
     url: /getSign,/user/checkAuth,/file/upload,/user/getLatestUsers
+    
+feign:
+  client:
+    config: 
+      default:
+        requestInterceptors:
+          - com.yangy.common.interceptor.FeignHeaderInterceptor
 
 #hystrix配置参考
 #hystrix:

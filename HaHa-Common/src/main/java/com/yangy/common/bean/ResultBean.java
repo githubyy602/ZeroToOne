@@ -17,7 +17,7 @@ public class ResultBean<T> {
 	
 	private int code;
 	private String message;
-	private Object data;
+	private T data;
 	
 	public static ResultBean returnResult(int code){
 		return returnResult(ResponseCodeEnum.getResp(code),null);
