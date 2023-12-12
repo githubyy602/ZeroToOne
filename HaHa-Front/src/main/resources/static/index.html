@@ -301,111 +301,112 @@
                 <div class="post" th:if="${articleList != null}" th:each="article : ${articleList}">
                     <div class="post__head">
                         <a href="#" class="post__head-img">
-                            <img th:src="@{{base}{sys}(base=${fileDomain},sys=${article.imgUrl})}" alt="">
+                            <img th:src="${fileDomain+article.imgUrl} ?: 'img/user.svg'" alt=""/>
                         </a>
                         <div class="post__head-title">
                             <h5><a href="#"><font style="vertical-align: inherit;"><font
                                     style="vertical-align: inherit;" th:text="${article.userName}"></font></font></a></h5>
                             <p><font style="vertical-align: inherit;"><font
-                                    style="vertical-align: inherit;" th:text="${${article.createTime}}"></font></font></p>
+                                    style="vertical-align: inherit;" th:text="*{#dates.format(article.createTime, 'yyyy/MM/dd HH:mm:ss')}"></font></font></p>
                         </div>
 
-                        <div class="post__dropdown">
-                            <a class="dropdown-toggle post__dropdown-btn" href="#" role="button" id="dropdownMenu1"
-                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="icon ion-md-more"></i>
-                            </a>
+                        <!--<div class="post__dropdown">-->
+                            <!--<a class="dropdown-toggle post__dropdown-btn" href="#" role="button" id="dropdownMenu1"-->
+                               <!--data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+                                <!--<i class="icon ion-md-more"></i>-->
+                            <!--</a>-->
 
-                            <ul class="dropdown-menu dropdown-menu-right post__dropdown-menu"
-                                aria-labelledby="dropdownMenu1">
-                                <li><a href="#"><font style="vertical-align: inherit;"><font
-                                        style="vertical-align: inherit;">编辑</font></font></a></li>
-                                <li><a href="#"><font style="vertical-align: inherit;"><font
-                                        style="vertical-align: inherit;">删除</font></font></a></li>
-                                <li><a href="#"><font style="vertical-align: inherit;"><font
-                                        style="vertical-align: inherit;">隐藏</font></font></a></li>
-                            </ul>
-                        </div>
+                            <!--<ul class="dropdown-menu dropdown-menu-right post__dropdown-menu"-->
+                                <!--aria-labelledby="dropdownMenu1">-->
+                                <!--<li><a href="#"><font style="vertical-align: inherit;"><font-->
+                                        <!--style="vertical-align: inherit;">编辑</font></font></a></li>-->
+                                <!--<li><a href="#"><font style="vertical-align: inherit;"><font-->
+                                        <!--style="vertical-align: inherit;">删除</font></font></a></li>-->
+                                <!--<li><a href="#"><font style="vertical-align: inherit;"><font-->
+                                        <!--style="vertical-align: inherit;">隐藏</font></font></a></li>-->
+                            <!--</ul>-->
+                        <!--</div>-->
                     </div>
 
-                    <div class="post__wrap">
-                        <div class="post__company">
-                            <i class="icon ion-ios-briefcase"></i>
-                            <span><font style="vertical-align: inherit;"><font
-                                    style="vertical-align: inherit;">Envato</font></font></span>
-                        </div>
+                    <!--<div class="post__wrap">-->
+                        <!--<div class="post__company">-->
+                            <!--<i class="icon ion-ios-briefcase"></i>-->
+                            <!--<span><font style="vertical-align: inherit;"><font-->
+                                    <!--style="vertical-align: inherit;">Envato</font></font></span>-->
+                        <!--</div>-->
 
-                        <div class="post__location">
-                            <i class="icon ion-ios-navigate"></i>
-                            <span><font style="vertical-align: inherit;"><font
-                                    style="vertical-align: inherit;">澳大利亚</font></font></span>
-                        </div>
+                        <!--<div class="post__location">-->
+                            <!--<i class="icon ion-ios-navigate"></i>-->
+                            <!--<span><font style="vertical-align: inherit;"><font-->
+                                    <!--style="vertical-align: inherit;">澳大利亚</font></font></span>-->
+                        <!--</div>-->
 
-                        <div class="post__actions">
-                            <a class="post__actions-btn post__actions-btn--green" href="#">
-                                <i class="icon ion-ios-bookmark"></i>
-                            </a>
-                            <a class="post__actions-btn post__actions-btn--red" href="#">
-                                <i class="icon ion-ios-mail"></i>
-                            </a>
-                        </div>
-                    </div>
+                        <!--<div class="post__actions">-->
+                            <!--<a class="post__actions-btn post__actions-btn&#45;&#45;green" href="#">-->
+                                <!--<i class="icon ion-ios-bookmark"></i>-->
+                            <!--</a>-->
+                            <!--<a class="post__actions-btn post__actions-btn&#45;&#45;red" href="#">-->
+                                <!--<i class="icon ion-ios-mail"></i>-->
+                            <!--</a>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <h2 class="post__title" th:value="${article.id}"><font style="vertical-align: inherit;"><font
+                            style="vertical-align: inherit;" th:text="${article.title}"></font></font></h2>
 
-                    <h2 class="post__title"><font style="vertical-align: inherit;"><font
-                            style="vertical-align: inherit;">${article.title}</font></font></h2>
+                    <!--<div class="post__options">-->
+                        <!--<span><font style="vertical-align: inherit;"><font-->
+                                <!--style="vertical-align: inherit;">全职</font></font></span>-->
+                        <!--<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">$ 36 /小时</font></font>-->
+                        <!--</p>-->
+                    <!--</div>-->
 
-                    <div class="post__options">
-                        <span><font style="vertical-align: inherit;"><font
-                                style="vertical-align: inherit;">全职</font></font></span>
-                        <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">$ 36 /小时</font></font>
-                        </p>
-                    </div>
-
-                    <div class="post__description">
+                    <div class="post__description" th:value="${article.id}">
                         <p><font style="vertical-align: inherit;">
-                            <font style="vertical-align: inherit;" th:text="${#strings.substring(article.content,0,100)}"></font></font></p>
-                        <a href="#"><font style="vertical-align: inherit;"><font
-                                style="vertical-align: inherit;">查看更多</font></font></a>
+                            <font style="vertical-align: inherit;" th:text="${#strings.substring(article.content,0,article.content.length() > 100 ? 100 : article.content.length())}"></font></font></p>
+                        <!--<a href="#"><font style="vertical-align: inherit;"><font-->
+                                <!--style="vertical-align: inherit;">查看更多</font></font></a>-->
                     </div>
 
-                    <div class="post__tags">
-                        <a href="#"><font style="vertical-align: inherit;"><font
-                                style="vertical-align: inherit;">HTML </font></font></a>
-                        <a href="#"><font style="vertical-align: inherit;"><font
-                                style="vertical-align: inherit;">CSS </font></font></a>
-                        <a href="#"><font style="vertical-align: inherit;"><font
-                                style="vertical-align: inherit;">PHP</font></font></a>
-                    </div>
+                    <!--<div class="post__tags">-->
+                        <!--<a href="#"><font style="vertical-align: inherit;"><font-->
+                                <!--style="vertical-align: inherit;">HTML </font></font></a>-->
+                        <!--<a href="#"><font style="vertical-align: inherit;"><font-->
+                                <!--style="vertical-align: inherit;">CSS </font></font></a>-->
+                        <!--<a href="#"><font style="vertical-align: inherit;"><font-->
+                                <!--style="vertical-align: inherit;">PHP</font></font></a>-->
+                    <!--</div>-->
 
                     <div class="post__stats">
                         <div>
                             <a class="post__likes" href="#"><i class="icon ion-ios-heart"></i> <span><font
                                     style="vertical-align: inherit;"><font
                                     style="vertical-align: inherit;">15</font></font></span></a>
-                            <a class="post__comments" data-toggle="collapse" href="#collapse1" role="button"
-                               aria-expanded="false" aria-controls="collapse1"><i class="icon ion-ios-text"></i>
-                                <span><font style="vertical-align: inherit;"><font
-                                        style="vertical-align: inherit;">0</font></font></span></a>
-                        </div>
-
-                        <div class="post__views">
+                            <!--<a class="post__comments" data-toggle="collapse" href="#collapse1" role="button"-->
+                               <!--aria-expanded="false" aria-controls="collapse1"><i class="icon ion-ios-text"></i>-->
+                                <!--<span><font style="vertical-align: inherit;"><font-->
+                                        <!--style="vertical-align: inherit;">0</font></font></span></a>-->
                             <i class="icon ion-ios-eye"></i> <span><font style="vertical-align: inherit;"><font
                                 style="vertical-align: inherit;">214</font></font></span>
                         </div>
+
+                        <!--<div class="post__views">-->
+                            <!--<i class="icon ion-ios-eye"></i> <span><font style="vertical-align: inherit;"><font-->
+                                <!--style="vertical-align: inherit;">214</font></font></span>-->
+                        <!--</div>-->
                     </div>
 
-                    <div class="collapse post__collapse" id="collapse1">
-                        <form action="#" class="post__form">
-                            <input type="text" placeholder="输入您的评论...">
-                            <button type="button"><i class="icon ion-ios-paper-plane"></i></button>
-                        </form>
-                    </div>
+                    <!--<div class="collapse post__collapse" id="collapse1">-->
+                        <!--<form action="#" class="post__form">-->
+                            <!--<input type="text" placeholder="输入您的评论...">-->
+                            <!--<button type="button"><i class="icon ion-ios-paper-plane"></i></button>-->
+                        <!--</form>-->
+                    <!--</div>-->
                 </div>
                 <!-- end post -->
 
                 <!-- view more -->
                 <button class="main__btn" type="button"><span><font style="vertical-align: inherit;"><font
-                        style="vertical-align: inherit;">装载更多</font></font></span></button>
+                        style="vertical-align: inherit;">下拉看更多</font></font></span></button>
                 <!-- end view more -->
             </div>
 
@@ -671,7 +672,11 @@
             if(verifyUser() == true){
                 window.location.href= 'userDetail.html';
             }
-            
+        });
+        
+        $(".post__title,.post__description").click(function () {
+            var id = $(this).attr("value");
+            window.location.href= 'toArticlePage?id='+id;
         });
         
     });

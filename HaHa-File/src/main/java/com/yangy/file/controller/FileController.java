@@ -22,6 +22,7 @@ public class FileController {
 	
 	@PostMapping(value = "/upload")
     public ResultBean<File> upload(FileUploadReq req) throws CustomException {
+		//todo 可以改为免费oss存储，https://developer.qiniu.com/kodo/1233/console-quickstart
 		return ResultBean.success(fileService.uploadFile(req.getFileList()));
 	}
 	

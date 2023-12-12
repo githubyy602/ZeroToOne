@@ -4,7 +4,6 @@ import com.github.pagehelper.PageInfo;
 import com.yangy.common.bean.PageQuery;
 import com.yangy.common.bean.ResultBean;
 import com.yangy.common.bean.feign.ArticleVo;
-import com.yangy.common.bean.feign.Articles;
 import com.yangy.common.enums.ResponseCodeEnum;
 import com.yangy.common.feign.BusinessFeignClient;
 import org.springframework.stereotype.Component;
@@ -18,7 +17,7 @@ import org.springframework.stereotype.Component;
 public class BusinessFallBack implements BusinessFeignClient {
 
 	@Override
-	public ResultBean<Articles> getArticleDetail(Integer id) {
+	public ResultBean<ArticleVo> getArticleDetail(Integer id) {
 		return ResultBean.returnResult(ResponseCodeEnum.FEIGN_ERROR);
 	}
 

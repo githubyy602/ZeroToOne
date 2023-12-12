@@ -5,6 +5,8 @@
 
 	<!-- CSS -->
 	<link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="editor/css/style.css" />
+    <link rel="stylesheet" href="editor/css/editormd.css" />
 	<!-- Favicons -->
 	<link rel="icon" type="image/png" href="icon/logo-icon.png" sizes="32x32">
 	<link rel="apple-touch-icon" href="icon/logo-icon.png">
@@ -166,8 +168,29 @@
 
 <!-- main content -->
 <main class="main">
-    <div class="container">
-        <!--放正文-->
+    <div class="container " style="margin-bottom: 10em;" th:if="${article != null}">
+        
+        <div class="post" >
+            <h2 class="post__title" th:value="${article.id}"><font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit;" th:text="${article.title}"></font></font></h2>
+            
+            <div class="post__head" style="margin-bottom: 30px;">
+                <a href="#" class="post__head-img">
+                    <img src="img/user.svg" alt=""/>
+                </a>
+                <div class="post__head-title">
+                    <h5><a href="#"><font style="vertical-align: inherit;"><font
+                            style="vertical-align: inherit;" th:text="${article.userName}"></font></font></a></h5>
+                    <p><font style="vertical-align: inherit;"><font
+                            style="vertical-align: inherit;" th:text="*{#dates.format(article.createTime, 'yyyy/MM/dd HH:mm:ss')}"></font></font></p>
+                </div>
+            </div>
+            
+            <div class="post__description" id="editorDiv">
+                <textarea style="display: none;" th:text="${article.content}"></textarea>
+            </div>
+            
+        </div>
     </div>
 </main>
 <!-- end main content -->
@@ -223,6 +246,16 @@
 <script src="layui/layui.js"></script>
 <script src="js/Base64.js"></script>
 <script src="js/crypto-js.js"></script>
+<script src="editor/js/jquery.min.js"></script>
+<script src="editor/js/editormd.js"></script>
+<script src="editor/js/editormd.min.js"></script>
+<script src="editor/lib/marked.min.js"></script>
+<script src="editor/lib/prettify.min.js"></script>
+<script src="editor/lib/raphael.min.js"></script>
+<script src="editor/lib/underscore.min.js"></script>
+<script src="editor/lib/sequence-diagram.min.js"></script>
+<script src="editor/lib/flowchart.min.js"></script>
+<script src="editor/lib/jquery.flowchart.min.js"></script>
 <script src="js/api/common-api.js"></script>
 <script src="js/api/user-api.js"></script>
 
@@ -230,6 +263,16 @@
     $ (function () {
 
         setAccountInfo();
+        
+        var editor = editormd.markdownToHTML("editorDiv", {
+            htmlDecode : "style,script,iframe",
+            emoji : true,
+            taskList : true,
+            tex : true, // 默认不解析
+            flowChart : true, // 默认不解析
+            sequenceDiagram : true, // 默认不解析
+            codeFold : true
+        });
         
     });
     

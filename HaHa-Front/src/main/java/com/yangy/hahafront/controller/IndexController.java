@@ -11,6 +11,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import java.util.Objects;
 
 /**
  * @Author: Yangy
@@ -26,7 +29,8 @@ public class IndexController {
 	@Autowired
 	private BusinessFeignClient businessFeignClient;
 	
-	private void getIndexData(Model model){
+	@RequestMapping(value = {"/","/index","/index.html"})
+	public String defaultPage(Model model){
 		ResultBean resultBean = userFeignClient.getLatestUsers();
 		model.addAttribute("accessUserList",resultBean.getData());
 		model.addAttribute("fileDomain",UrlConstant.FILE_SERVICE_URL);
@@ -37,17 +41,23 @@ public class IndexController {
 			PageInfo<ArticleVo> articleVoPageInfo = articleResult.getData();
 			model.addAttribute("articleList",articleVoPageInfo.getList()); 
 		}
-	}
-	
-	@RequestMapping(value = {"/","/index","/index.html"})
-	public String defaultPage(Model model){
-		this.getIndexData(model);
 		return "/index";
 	}
 	
 	@RequestMapping(value = "/loginPage")
 	public String login(){
 		return "/signin";
+	}
+	
+	@RequestMapping(value = "/toArticlePage")
+	public String articleDetail(@RequestParam(value = "id",required = false) Integer id,Model model){
+		if(Objects.nonNull(id) && id > 0){
+			ResultBean<ArticleVo> resultBean = businessFeignClient.getArticleDetail(id);
+			model.addAttribute("article",resultBean.getData());
+			return "/articleDetail";
+		}else {
+			return "redirect:/index";
+		}
 	}
 
 }

@@ -17,10 +17,10 @@
         <module name="HaHa-Send" />
         <module name="HaHa-Socket" />
         <module name="HaHa-User" />
-        <module name="HaHa-Web" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="HaHa-Web" target="1.8" />
       <module name="search" target="1.8" />
       <module name="send" target="1.8" />
       <module name="socket" target="1.8" />

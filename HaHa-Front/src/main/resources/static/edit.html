@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+        <link rel="stylesheet" href="editor/css/style.css" />
+        <link rel="stylesheet" href="editor/css/editormd.css" />
+        <link rel="stylesheet" href="css/common.css">
+        <link rel="shortcut icon" href="icon/logo-icon.png" sizes="32x32">
+    </head>
+    <body>
+        <div id="layout">
+            <header>
+                <h1>文章编辑</h1>
+            </header>
+            <div style="margin-left: 5em;">
+                标题：<input id="title" type="text" />
+            </div>
+            <div style="margin-left: 5em;">
+                封面图：<input id="articleIcon" type="file" />
+            </div>
+            <div id="editorDiv">
+                <textarea style="display:none;"></textarea>
+            </div>
+        </div>
+        <script src="editor/js/jquery.min.js"></script>
+        <script src="editor/js/editormd.min.js"></script>
+        <script src="layui/layui.js"></script>
+        <script src="js/Base64.js"></script>
+        <script src="js/crypto-js.js"></script>
+        <script src="js/api/common-api.js"></script>
+        <script src="js/api/business-api.js"></script>
+        
+        <!--使用api：https://github.com/pandao/editor.md/blob/master/README.md-->
+        <script type="text/javascript">
+			var editor;
+
+            $(function() {
+                editor = editormd("editorDiv", {
+                    width   : "90%",
+                    height  : 640,
+                    syncScrolling : "single",
+                    path    : "editor/lib/",
+                    imageUpload: true, //同意图片上传
+                    imageFormats: ["jpg", "jpeg", "gif", "png", "bmp", "webp"],
+                    imageUploadURL: base_url_file +"/upload",
+                    toolbar              : true,           // show or hide toolbar
+                    toolbarAutoFixed     : true,
+                    /*指定需要显示的功能按钮，参考：https://github.com/pandao/editor.md/blob/master/docs/editormd.js.html*/
+                    toolbarIcons : function() {
+                        return ["undo", "redo", "|", 
+                                "bold", "del", "italic", "quote", "ucwords", "uppercase", "lowercase", "|", 
+                                "h1", "h2", "h3", "h4", "h5", "h6", "|", 
+                                "list-ul", "list-ol", "hr", "|",
+                                "link", "reference-link", "image", "code", "preformatted-text", "code-block", "table", "datetime", "emoji", "html-entities", "pagebreak", "|",
+                                "goto-line", "watch", "preview", "fullscreen", "clear", "search", "|",
+                                "help", "info", "releaseIcon", "index"]
+                    },
+                    /*自定义功能按钮，下面我自定义了2个，一个是发布，一个是返回首页*/
+                    toolbarIconTexts : {
+                        releaseIcon : "<span bgcolor=\"gray\">发布</span>",
+                        index : "<span bgcolor=\"red\">返回首页</span>",
+                    },
+                    /*给自定义按钮指定回调函数*/
+                    toolbarHandlers:{
+                        releaseIcon : function(cm, icon, cursor, selection) {
+                             var content = this.getMarkdown();//编辑器内的内容
+                             var title = $("#title").val();
+                             createArticle(title,content);
+                        },
+                        index : function(){
+                            window.location.href = 'index.html';
+                        }
+                    }
+                    
+                });
+            });
+        </script>
+    </body>
+</html>

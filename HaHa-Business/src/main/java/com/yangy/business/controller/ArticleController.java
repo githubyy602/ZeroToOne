@@ -1,13 +1,14 @@
 package com.yangy.business.controller;
 
 import com.github.pagehelper.PageInfo;
+import com.yangy.business.bean.PO.Articles;
 import com.yangy.business.bean.VO.ArticleVo;
 import com.yangy.business.service.ArticleService;
 import com.yangy.common.bean.PageQuery;
 import com.yangy.common.bean.ResultBean;
-import com.yangy.common.bean.feign.Articles;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -30,7 +31,12 @@ public class ArticleController {
 	}
 	
 	@PostMapping("/getArticleDetail")
-	public ResultBean<Articles> getArticleDetail(@RequestParam Integer id){
+	public ResultBean<ArticleVo> getArticleDetail(@RequestParam("id") Integer id){
 		return ResultBean.success(articleService.queryOne(id));
+	}
+	
+	@PostMapping("/createArticle")
+	public ResultBean createArticle(@RequestBody Articles articles){
+		return ResultBean.success(articleService.insertArticle(articles));
 	}
 }

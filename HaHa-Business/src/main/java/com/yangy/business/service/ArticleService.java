@@ -14,5 +14,7 @@ public interface ArticleService {
 	
 	PageInfo<ArticleVo> queryArticleListByPage(PageQuery query);
 	
-	Articles queryOne(Integer id);
+	ArticleVo queryOne(Integer id);
+	
+	Articles insertArticle(Articles articles);
 }

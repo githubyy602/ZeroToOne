@@ -22,4 +22,5 @@ public interface ArticlesMapper {
     
     List<ArticleVo> selectAllArticles();
     
+    ArticleVo selectArticleDetail(Integer id);
 }

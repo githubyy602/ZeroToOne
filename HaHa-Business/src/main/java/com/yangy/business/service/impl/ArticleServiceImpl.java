@@ -10,6 +10,7 @@ import com.yangy.common.bean.PageQuery;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -33,7 +34,17 @@ public class ArticleServiceImpl implements ArticleService {
 	}
 
 	@Override
-	public Articles queryOne(Integer id) {
-		return articlesMapper.selectByPrimaryKey(id);
+	public ArticleVo queryOne(Integer id) {
+		return articlesMapper.selectArticleDetail(id);
+	}
+
+	@Override
+	public Articles insertArticle(Articles articles) {
+		articles.setCreateTime(new Date());
+		articles.setPublishTime(new Date());
+		articles.setStatus(2);
+		articles.setView(1);
+		articlesMapper.insertSelective(articles);
+		return articles;
 	}
 }

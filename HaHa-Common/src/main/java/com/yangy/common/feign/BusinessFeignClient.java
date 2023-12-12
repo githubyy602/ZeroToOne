@@ -4,7 +4,6 @@ import com.github.pagehelper.PageInfo;
 import com.yangy.common.bean.PageQuery;
 import com.yangy.common.bean.ResultBean;
 import com.yangy.common.bean.feign.ArticleVo;
-import com.yangy.common.bean.feign.Articles;
 import com.yangy.common.hystrix.BusinessFallBack;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -24,6 +23,6 @@ public interface BusinessFeignClient {
 	ResultBean<PageInfo<ArticleVo>> getArticleList(PageQuery query);
 	
 	@RequestMapping(value = "/article/getArticleDetail",method = RequestMethod.POST)
-	ResultBean<Articles> getArticleDetail(@RequestParam("id") Integer id);
+	ResultBean<ArticleVo> getArticleDetail(@RequestParam("id") Integer id);
 	
 }

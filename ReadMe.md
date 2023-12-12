@@ -7,7 +7,7 @@
 | 子模块 | HaHa-Gateway | 业务网关模块 |
 | 子模块 | HaHa-User | 用户模块 |
 | 子模块 | HaHa-Send | 发送服务模块 |
-| 子模块 | HaHa-Web | 系统前后端交互模块 |
+| 子模块 | HaHa-Front | 系统前后端交互模块 |
 | 子模块 | HaHa-Socket | websocket通讯模块 |
 | 子模块 | HaHa-Search | 搜索引擎模块 |
 
