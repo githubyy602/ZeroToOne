@@ -2670,7 +2670,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   opacity: 0;
 }
 .post__title {
-  font-size: 18px;
+  font-size: 25px;
   font-weight: 600;
   color: #364e65;
   margin-bottom: 15px;
@@ -2748,7 +2748,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 .post__description p {
   font-size: 14px;
   line-height: 24px;
-  color: #8599ab;
+  /*color: #8599ab;*/
   margin-bottom: 0;
   margin-top: 15px;
 }

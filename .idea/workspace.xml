@@ -1,53 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="5a82bc85-19e5-4a1a-9070-52429c963c2e" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/java/com/yangy/hahafront/controller/BusinessController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/plugins/code-block-dialog/code-block-dialog.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/plugins/emoji-dialog/emoji-dialog.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/plugins/emoji-dialog/emoji.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/plugins/goto-line-dialog/goto-line-dialog.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/plugins/help-dialog/help-dialog.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/plugins/html-entities-dialog/html-entities-dialog.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/plugins/html-entities-dialog/html-entities.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/plugins/image-dialog/image-dialog.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/plugins/link-dialog/link-dialog.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/plugins/preformatted-text-dialog/preformatted-text-dialog.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/plugins/reference-link-dialog/reference-link-dialog.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/plugins/table-dialog/table-dialog.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/plugins/test-plugin/test-plugin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Business/src/main/java/com/yangy/business/bean/VO/ArticleVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-Business/src/main/java/com/yangy/business/bean/VO/ArticleVo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Business/src/main/java/com/yangy/business/controller/ArticleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-Business/src/main/java/com/yangy/business/controller/ArticleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Business/src/main/java/com/yangy/business/service/ArticleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-Business/src/main/java/com/yangy/business/service/ArticleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Business/src/main/java/com/yangy/business/service/impl/ArticleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-Business/src/main/java/com/yangy/business/service/impl/ArticleServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Common/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-Common/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Front/src/main/java/com/yangy/hahafront/HahaFrontApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-Front/src/main/java/com/yangy/hahafront/HahaFrontApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Front/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/free-mybatis-generator-config.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/articleDetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/articleDetail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/css/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/js/api/business-api.js" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/js/api/business-api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/view.html" beforeDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/out/" />
-    <ignored path="$PROJECT_DIR$/target/" />
-    <ignored path="$PROJECT_DIR$/HaHa-User/target/" />
-    <ignored path="$PROJECT_DIR$/HaHa-Video/target/" />
-    <ignored path="$PROJECT_DIR$/HaHa-Gateway/target/" />
-    <ignored path="$PROJECT_DIR$/HaHa-Common/target/" />
-    <ignored path="$PROJECT_DIR$/Eureka-Server-10002/target/" />
-    <ignored path="$PROJECT_DIR$/Eureka-Server-10001/target/" />
-    <ignored path="$PROJECT_DIR$/HaHa-Registry-10000/target/" />
-    <ignored path="$PROJECT_DIR$/HaHa-Web/target/" />
-    <ignored path="$PROJECT_DIR$/send/target/" />
-    <ignored path="$PROJECT_DIR$/HaHa-Send/target/" />
-    <ignored path="$PROJECT_DIR$/HaHa-Search/target/" />
-    <ignored path="$PROJECT_DIR$/HaHa-Socket/target/" />
-    <ignored path="$PROJECT_DIR$/HaHa-File/target/" />
-    <ignored path="$PROJECT_DIR$/HaHa-Business/target/" />
-    <ignored path="$PROJECT_DIR$/HaHa-Front/target/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -228,15 +198,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="articleDetail.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="articleDetail.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/HaHa-Front/src/main/resources/static/articleDetail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="187" column="46" selection-start-line="187" selection-start-column="46" selection-end-line="187" selection-end-column="46" />
+            <state relative-caret-position="519">
+              <caret line="221" column="86" lean-forward="true" selection-start-line="221" selection-start-column="86" selection-end-line="221" selection-end-column="86" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#0;n#div#1;n#div#0;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#textarea#0;n#div#1;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#font#0;n#font#0;n#a#2;n#nav#0;n#div#0;n#div#0;n#div#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -323,15 +294,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PathVariable.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/../../../JavaEnvSoft/install/new-maven-repository/org/springframework/spring-web/5.2.12.RELEASE/spring-web-5.2.12.RELEASE-sources.jar!/org/springframework/web/bind/annotation/PathVariable.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-156">
-              <caret line="42" column="18" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ArticlesMapper.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HaHa-Business/src/main/resources/mapper/ArticlesMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
@@ -389,11 +351,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EncryptUtil.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="EncryptUtil.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HaHa-Common/src/main/java/com/yangy/common/util/EncryptUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="321">
-              <caret line="21" selection-start-line="21" selection-end-line="21" />
+            <state relative-caret-position="594">
+              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
             </state>
           </provider>
         </entry>
@@ -526,12 +488,12 @@
         <option value="$PROJECT_DIR$/HaHa-Business/src/main/java/com/yangy/business/service/ArticleService.java" />
         <option value="$PROJECT_DIR$/HaHa-Business/src/main/java/com/yangy/business/controller/ArticleController.java" />
         <option value="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/js/api/business-api.js" />
-        <option value="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/articleDetail.html" />
         <option value="$PROJECT_DIR$/HaHa-Front/src/main/java/com/yangy/hahafront/controller/BusinessController.java" />
         <option value="$PROJECT_DIR$/HaHa-Common/src/main/resources/bootstrap.yml" />
         <option value="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/edit.html" />
         <option value="$PROJECT_DIR$/HaHa-Business/src/main/java/com/yangy/business/service/impl/ArticleServiceImpl.java" />
         <option value="$PROJECT_DIR$/HaHa-Business/src/main/java/com/yangy/business/bean/VO/ArticleVo.java" />
+        <option value="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/articleDetail.html" />
       </list>
     </option>
   </component>
@@ -540,6 +502,12 @@
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="KubernetesApiProvider"><![CDATA[{
+  "isMigrated": true
+}]]></component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -553,7 +521,6 @@
       <MavenImportingSettings>
         <option name="downloadDocsAutomatically" value="true" />
         <option name="downloadSourcesAutomatically" value="true" />
-        <option name="importAutomatically" value="true" />
       </MavenImportingSettings>
     </option>
     <option name="enabledProfiles">
@@ -596,12 +563,16 @@
       <path value="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/package.json" />
     </packageJsonPaths>
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-104" />
     <option name="y" value="27" />
     <option name="width" value="1400" />
     <option name="height" value="1000" />
   </component>
+  <component name="ProjectId" id="2ZTuI0l9QOj8NiTZFdakmCaLNDX" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
@@ -914,43 +885,30 @@
       <pane id="Scope" />
     </panes>
   </component>
-  <component name="PropertiesComponent">
-    <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="457" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="457" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="457" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="456" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="457" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="457" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="457" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="456" />
-    <property name="RequestMappingsPanelOrder0" value="0" />
-    <property name="RequestMappingsPanelOrder1" value="1" />
-    <property name="RequestMappingsPanelWidth0" value="75" />
-    <property name="RequestMappingsPanelWidth1" value="75" />
-    <property name="ToolWindowFindBugs-IDEA.ShowToolbar" value="false" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
-    <property name="go.gopath.indexing.explicitly.defined" value="true" />
-    <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="jsx.switch.disabled" value="true" />
-    <property name="last_opened_file_path" value="D:/Go/workplace/easyview-go" />
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.21207431" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
   </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Maven.HaHa-Common [clean].executor": "Run",
+    "Maven.HaHa-Common [install].executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.HahaBusinessApplication.executor": "Debug",
+    "Spring Boot.HahaFrontApplication.executor": "Debug",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/Java/ZeroToOne/code/HaHaShow",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "run.configurations.included.in.services": "true",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
   <component name="RebelAgentSelection">
     <selection>jr</selection>
   </component>
@@ -990,122 +948,111 @@
   <component name="RunDashboard">
     <option name="configurationTypes">
       <set>
+        <option value="MicronautRunConfigurationType" />
+        <option value="QuarkusRunConfigurationType" />
         <option value="SpringBootApplicationConfigurationType" />
       </set>
     </option>
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-    <option name="contentProportion" value="0.2642232" />
   </component>
-  <component name="RunManager" selected="Spring Boot.HahaBusinessApplication">
+  <component name="RunManager" selected="Spring Boot.HahaFrontApplication">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="HaHaShow" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="HaHaSearchApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="HaHa-Search" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.yangy.search.HaHaSearchApplication" />
       <option name="ACTIVE_PROFILES" value="dev" />
-      <option name="ALTERNATIVE_JRE_PATH" />
+      <module name="search" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.yangy.search.HaHaSearchApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="HaHaSendApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="HaHa-Send" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.yangy.send.HaHaSendApplication" />
       <option name="ACTIVE_PROFILES" value="dev" />
-      <option name="ALTERNATIVE_JRE_PATH" />
+      <module name="hahasend" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.yangy.send.HaHaSendApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="HaHaSocketApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="HaHa-Socket" />
+      <module name="socket" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.yangy.socket.HaHaSocketApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="HaHaUserApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <option name="ACTIVE_PROFILES" value="dev" />
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <module name="HaHa-User" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.yangy.user.HaHaUserApplication" />
-      <option name="ACTIVE_PROFILES" value="dev" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="HahaBusinessApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="HaHa-Business" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.yangy.business.HahaBusinessApplication" />
       <option name="ACTIVE_PROFILES" value="dev" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <module name="haha-business" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.yangy.business.HahaBusinessApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="HahaFileApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="HaHa-File" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.yangy.file.HahaFileApplication" />
       <option name="ACTIVE_PROFILES" value="dev" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <module name="hahafile" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.yangy.file.HahaFileApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="HahaFrontApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="HaHa-Front" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.yangy.hahafront.HahaFrontApplication" />
       <option name="ACTIVE_PROFILES" value="dev" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <module name="haha-front" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.yangy.hahafront.HahaFrontApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="HahaGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <option name="ACTIVE_PROFILES" value="dev" />
       <module name="HaHa-Gateway" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.yangy.gateway.HahaGatewayApplication" />
-      <option name="ACTIVE_PROFILES" value="dev" />
-      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration default="true" type="TestNG" factoryName="TestNG">
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
+    <configuration default="true" type="TestNG">
       <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
       <properties />
       <listeners />
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
-      <module name="HaHaShow" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <list>
       <item itemvalue="Spring Boot.HahaFileApplication" />
@@ -1118,6 +1065,14 @@
       <item itemvalue="Spring Boot.HahaBusinessApplication" />
     </list>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-1.8.0_392-corretto-1.8.0_392-3183f394aec4-cb300fc7" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -1176,12 +1131,14 @@
       <workItem from="1700033081811" duration="51539000" />
       <workItem from="1700445168779" duration="38915000" />
       <workItem from="1701763007882" duration="35345000" />
-      <workItem from="1702285892996" duration="31711000" />
+      <workItem from="1702285892996" duration="32967000" />
+      <workItem from="1702458309842" duration="428000" />
+      <workItem from="1702458803904" duration="2239000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1004381000" />
+    <option name="totallyTimeSpent" value="1005637000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1217,13 +1174,13 @@
       <window_info id="MyBatis Builder" order="6" side_tool="true" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="bottom" id="Java Enterprise" order="16" />
-      <window_info active="true" anchor="bottom" id="Run Dashboard" order="22" sideWeight="0.498394" visible="true" weight="0.4680604" />
+      <window_info anchor="bottom" id="Run Dashboard" order="22" sideWeight="0.498394" weight="0.4680604" />
       <window_info anchor="bottom" id="Version Control" order="18" weight="0.3259861" />
       <window_info anchor="bottom" id="Run" order="5" weight="0.271777" />
       <window_info anchor="right" id="Mybatis datasource" order="11" show_stripe_button="false" side_tool="true" />
       <window_info anchor="bottom" id="Spring" order="13" weight="0.329849" />
       <window_info anchor="bottom" id="Terminal" order="14" weight="0.329849" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.30781585" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.30781585" />
       <window_info anchor="right" id="Bean Validation" order="8" weight="0.32976446" />
       <window_info id="Web" order="5" side_tool="true" />
       <window_info id="JRebel" order="3" side_tool="true" />
@@ -1293,18 +1250,7 @@
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints-dialog>
-        <breakpoints-dialog />
-      </breakpoints-dialog>
-      <option name="time" value="207" />
-    </breakpoint-manager>
+    <option name="version" value="3" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
@@ -1546,18 +1492,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HaHa-Front/src/main/resources/static/articleDetail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="187" column="46" selection-start-line="187" selection-start-column="46" selection-end-line="187" selection-end-column="46" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#1;n#div#0;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#textarea#0;n#div#1;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/HaHa-Front/src/main/java/com/yangy/hahafront/controller/BusinessController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -1776,8 +1710,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/HaHa-Common/src/main/java/com/yangy/common/util/EncryptUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        <state relative-caret-position="594">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HaHa-Front/src/main/resources/static/articleDetail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="519">
+          <caret line="221" column="86" lean-forward="true" selection-start-line="221" selection-start-column="86" selection-end-line="221" selection-end-column="86" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#1;n#div#0;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#textarea#0;n#div#1;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#font#0;n#font#0;n#a#2;n#nav#0;n#div#0;n#div#0;n#div#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

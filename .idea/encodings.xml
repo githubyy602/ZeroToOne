@@ -3,15 +3,25 @@
   <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/HaHa-Business" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/HaHa-Business/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/HaHa-Common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/HaHa-Common/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/HaHa-File" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/HaHa-File/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/HaHa-Front" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/HaHa-Front/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/HaHa-Gateway" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/HaHa-Gateway/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/HaHa-Search" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/HaHa-Search/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/HaHa-Send" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/HaHa-Send/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/HaHa-Socket" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/HaHa-Socket/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/HaHa-User" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/HaHa-User/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/HaHa-Web" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

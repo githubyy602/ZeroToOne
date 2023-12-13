@@ -8,22 +8,39 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="HaHa-Business" />
-        <module name="HaHa-Common" />
+        <module name="hahasend" />
         <module name="HaHa-File" />
+        <module name="haha-business" />
+        <module name="HaHa-Search" />
+        <module name="HaHa-Business" />
         <module name="HaHa-Front" />
         <module name="HaHa-Gateway" />
-        <module name="HaHa-Search" />
-        <module name="HaHa-Send" />
         <module name="HaHa-Socket" />
+        <module name="search" />
+        <module name="HaHa-Common" />
+        <module name="haha-front" />
+        <module name="HaHa-Send" />
+        <module name="hahafile" />
+        <module name="socket" />
         <module name="HaHa-User" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="HaHa-Web" target="1.8" />
-      <module name="search" target="1.8" />
       <module name="send" target="1.8" />
-      <module name="socket" target="1.8" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="HaHa-Common" options="-parameters" />
+      <module name="HaHa-Gateway" options="-parameters" />
+      <module name="HaHa-User" options="-parameters" />
+      <module name="haha-business" options="-parameters" />
+      <module name="haha-front" options="-parameters" />
+      <module name="hahafile" options="-parameters" />
+      <module name="hahasend" options="-parameters" />
+      <module name="search" options="-parameters" />
+      <module name="socket" options="-parameters" />
+    </option>
   </component>
 </project>
