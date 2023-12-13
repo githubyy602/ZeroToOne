@@ -17,4 +17,6 @@ public interface ArticleService {
 	ArticleVo queryOne(Integer id);
 	
 	Articles insertArticle(Articles articles);
+	
+	int updateArticle(Articles articles);
 }

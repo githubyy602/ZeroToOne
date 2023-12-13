@@ -257,7 +257,7 @@
                 <div class="sidebox">
                     <h4 class="sidebox__title"><font style="vertical-align: inherit;"><font
                             style="vertical-align: inherit;">最近访问</font></font></h4>
-                    <div class="sidebox__content" th:if = "${accessUserList != null}" th:each=" user : ${accessUserList}">
+                    <div class="sidebox__content" th:if = "${accessUserList != null and accessUserList.size() > 0}" th:each=" user : ${accessUserList}">
                         
                         <div class="sidebox__user" >
                             <a href="#" class="sidebox__user-img">
@@ -290,15 +290,19 @@
                         <!--</div>-->
 
                     </div>
-                    <a href="#" class="sidebox__more"><font style="vertical-align: inherit;"><font
+                    <a href="#" th:if = "${accessUserList != null and accessUserList.size() > 0}" class="sidebox__more"><font style="vertical-align: inherit;"><font
                             style="vertical-align: inherit;">查看更多</font></font></a>
+                    
+                    <div class="sidebox__content" th:if = "${accessUserList == null or accessUserList.size() == 0}" style="align-items: center;">
+                        暂无内容
+                    </div>
                 </div>
                 <!-- end sidebox -->
             </div>
 
             <div class="col-12 col-md-7 col-lg-8 col-xl-6">
                 <!-- post -->
-                <div class="post" th:if="${articleList != null}" th:each="article : ${articleList}">
+                <div class="post" th:if="${articleList != null and articleList.size() > 0} " th:each="article : ${articleList}">
                     <div class="post__head">
                         <a href="#" class="post__head-img">
                             <img th:src="${fileDomain+article.imgUrl} ?: 'img/user.svg'" alt=""/>
@@ -405,9 +409,13 @@
                 <!-- end post -->
 
                 <!-- view more -->
-                <button class="main__btn" type="button"><span><font style="vertical-align: inherit;"><font
+                <button class="main__btn" type="button" th:if="${articleList != null and articleList.size() > 0}"><span><font style="vertical-align: inherit;"><font
                         style="vertical-align: inherit;">下拉看更多</font></font></span></button>
                 <!-- end view more -->
+                
+                <div class="post" th:if="${articleList == null or articleList.size() == 0}" style="align-items: center;height: 500px;padding-top: 40%;">
+                    暂无新的内容(*^_^*)
+                </div>
             </div>
 
             <div class="col-12 col-md-5 col-lg-4 col-xl-3">
@@ -616,7 +624,7 @@
             <div class="col-12">
                 <div class="footer__content">
                     <a href="index.html" class="footer__logo">
-                        <img src="" alt="">
+                        <img src="icon/logo-icon.png" alt="">
                     </a>
 
                     <span class="footer__copyright"><font style="vertical-align: inherit;"><font

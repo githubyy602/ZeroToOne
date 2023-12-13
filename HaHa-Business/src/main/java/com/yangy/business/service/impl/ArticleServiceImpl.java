@@ -47,4 +47,9 @@ public class ArticleServiceImpl implements ArticleService {
 		articlesMapper.insertSelective(articles);
 		return articles;
 	}
+
+	@Override
+	public int updateArticle(Articles articles) {
+		return articlesMapper.updateByPrimaryKeySelective(articles);
+	}
 }

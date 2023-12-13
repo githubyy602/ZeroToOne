@@ -2,526 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5a82bc85-19e5-4a1a-9070-52429c963c2e" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/css/editerView/chart-3456820cac.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/css/editerView/ck_htmledit_views-044f2cf1dc.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/css/editerView/kdoc_html_views-1a98987dfd.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/css/editerView/markdown_views-98b95bb57c.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/edit.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/css/editormd.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/css/editormd.preview.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/fonts/FontAwesome.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/fonts/editormd-logo.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/fonts/editormd-logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/fonts/editormd-logo.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/fonts/editormd-logo.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/fonts/fontawesome-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/images/4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/images/7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/images/8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/images/editormd-screenshot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/images/loading.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/js/editormd.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/js/editormd.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/js/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/js/require.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/js/sea.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/js/seajs-main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/js/zepto.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/AUTHORS" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/addon/comment/comment.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/addon/comment/continuecomment.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/addon/dialog/dialog.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/addon/dialog/dialog.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/addon/display/fullscreen.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/addon/display/fullscreen.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/addon/display/panel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/addon/display/placeholder.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/addon/display/rulers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/addon/edit/closebrackets.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/addon/edit/closetag.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/addon/edit/continuelist.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/addon/edit/matchbrackets.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/addon/edit/matchtags.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/addon/edit/trailingspace.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/addon/fold/brace-fold.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/addon/fold/comment-fold.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/addon/fold/foldcode.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/addon/fold/foldgutter.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/addon/fold/foldgutter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/addon/fold/indent-fold.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/addon/fold/markdown-fold.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/addon/fold/xml-fold.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/addon/hint/anyword-hint.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/addon/hint/css-hint.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/addon/hint/html-hint.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/addon/hint/javascript-hint.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/addon/hint/show-hint.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/addon/hint/show-hint.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/addon/hint/sql-hint.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/addon/hint/xml-hint.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/addon/lint/coffeescript-lint.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/addon/lint/css-lint.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/addon/lint/javascript-lint.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/addon/lint/json-lint.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/addon/lint/lint.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/addon/lint/lint.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/addon/lint/yaml-lint.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/addon/merge/merge.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/addon/merge/merge.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/addon/mode/loadmode.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/addon/mode/multiplex.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/addon/mode/multiplex_test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/addon/mode/overlay.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/addon/mode/simple.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/addon/runmode/colorize.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/addon/runmode/runmode-standalone.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/addon/runmode/runmode.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/addon/runmode/runmode.node.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/addon/scroll/annotatescrollbar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/addon/scroll/scrollpastend.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/addon/scroll/simplescrollbars.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/addon/scroll/simplescrollbars.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/addon/search/match-highlighter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/addon/search/matchesonscrollbar.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/addon/search/matchesonscrollbar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/addon/search/search.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/addon/search/searchcursor.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/addon/selection/active-line.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/addon/selection/mark-selection.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/addon/selection/selection-pointer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/addon/tern/tern.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/addon/tern/tern.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/addon/tern/worker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/addon/wrap/hardwrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/addons.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/bower.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/codemirror.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/codemirror.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/lib/codemirror.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/lib/codemirror.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/apl/apl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/apl/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/asterisk/asterisk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/asterisk/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/clike/clike.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/clike/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/clike/scala.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/clojure/clojure.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/clojure/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/cobol/cobol.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/cobol/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/coffeescript/coffeescript.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/coffeescript/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/commonlisp/commonlisp.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/commonlisp/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/css/css.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/css/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/css/less.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/css/less_test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/css/scss.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/css/scss_test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/css/test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/cypher/cypher.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/cypher/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/d/d.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/d/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/dart/dart.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/dart/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/diff/diff.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/diff/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/django/django.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/django/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/dockerfile/dockerfile.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/dockerfile/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/dtd/dtd.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/dtd/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/dylan/dylan.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/dylan/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/ebnf/ebnf.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/ebnf/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/ecl/ecl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/ecl/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/eiffel/eiffel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/eiffel/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/erlang/erlang.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/erlang/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/forth/forth.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/forth/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/fortran/fortran.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/fortran/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/gas/gas.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/gas/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/gfm/gfm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/gfm/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/gfm/test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/gherkin/gherkin.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/gherkin/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/go/go.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/go/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/groovy/groovy.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/groovy/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/haml/haml.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/haml/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/haml/test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/haskell/haskell.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/haskell/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/haxe/haxe.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/haxe/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/htmlembedded/htmlembedded.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/htmlembedded/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/htmlmixed/htmlmixed.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/htmlmixed/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/http/http.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/http/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/idl/idl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/idl/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/jade/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/jade/jade.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/javascript/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/javascript/javascript.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/javascript/json-ld.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/javascript/test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/javascript/typescript.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/jinja2/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/jinja2/jinja2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/julia/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/julia/julia.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/kotlin/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/kotlin/kotlin.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/livescript/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/livescript/livescript.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/lua/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/lua/lua.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/markdown/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/markdown/markdown.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/markdown/test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/meta.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/mirc/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/mirc/mirc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/mllike/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/mllike/mllike.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/modelica/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/modelica/modelica.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/nginx/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/nginx/nginx.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/ntriples/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/ntriples/ntriples.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/octave/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/octave/octave.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/pascal/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/pascal/pascal.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/pegjs/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/pegjs/pegjs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/perl/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/perl/perl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/php/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/php/php.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/php/test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/pig/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/pig/pig.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/properties/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/properties/properties.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/puppet/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/puppet/puppet.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/python/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/python/python.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/q/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/q/q.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/r/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/r/r.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/rpm/changes/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/rpm/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/rpm/rpm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/rst/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/rst/rst.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/ruby/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/ruby/ruby.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/ruby/test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/rust/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/rust/rust.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/sass/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/sass/sass.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/scheme/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/scheme/scheme.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/shell/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/shell/shell.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/shell/test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/sieve/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/sieve/sieve.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/slim/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/slim/slim.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/slim/test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/smalltalk/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/smalltalk/smalltalk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/smarty/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/smarty/smarty.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/smartymixed/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/smartymixed/smartymixed.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/solr/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/solr/solr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/soy/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/soy/soy.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/sparql/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/sparql/sparql.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/spreadsheet/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/spreadsheet/spreadsheet.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/sql/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/sql/sql.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/stex/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/stex/stex.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/stex/test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/stylus/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/stylus/stylus.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/tcl/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/tcl/tcl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/textile/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/textile/test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/textile/textile.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/tiddlywiki/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/tiddlywiki/tiddlywiki.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/tiddlywiki/tiddlywiki.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/tiki/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/tiki/tiki.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/tiki/tiki.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/toml/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/toml/toml.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/tornado/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/tornado/tornado.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/turtle/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/turtle/turtle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/vb/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/vb/vb.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/vbscript/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/vbscript/vbscript.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/velocity/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/velocity/velocity.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/verilog/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/verilog/test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/verilog/verilog.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/xml/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/xml/test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/xml/xml.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/xquery/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/xquery/test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/xquery/xquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/yaml/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/yaml/yaml.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/z80/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/mode/z80/z80.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/modes.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/theme/3024-day.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/theme/3024-night.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/theme/ambiance-mobile.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/theme/ambiance.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/theme/base16-dark.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/theme/base16-light.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/theme/blackboard.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/theme/cobalt.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/theme/colorforth.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/theme/eclipse.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/theme/elegant.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/theme/erlang-dark.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/theme/lesser-dark.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/theme/mbo.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/theme/mdn-like.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/theme/midnight.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/theme/monokai.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/theme/neat.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/theme/neo.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/theme/night.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/theme/paraiso-dark.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/theme/paraiso-light.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/theme/pastel-on-dark.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/theme/rubyblue.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/theme/solarized.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/theme/the-matrix.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/theme/tomorrow-night-bright.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/theme/tomorrow-night-eighties.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/theme/twilight.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/theme/vibrant-ink.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/theme/xq-dark.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/theme/xq-light.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/codemirror/theme/zenburn.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/flowchart.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/jquery.flowchart.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/marked.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/prettify.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/raphael.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/sequence-diagram.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/lib/underscore.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/view.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/java/com/yangy/hahafront/controller/BusinessController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/plugins/code-block-dialog/code-block-dialog.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/plugins/emoji-dialog/emoji-dialog.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/plugins/emoji-dialog/emoji.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/plugins/goto-line-dialog/goto-line-dialog.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/plugins/help-dialog/help-dialog.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/plugins/html-entities-dialog/html-entities-dialog.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/plugins/html-entities-dialog/html-entities.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/plugins/image-dialog/image-dialog.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/plugins/link-dialog/link-dialog.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/plugins/preformatted-text-dialog/preformatted-text-dialog.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/plugins/reference-link-dialog/reference-link-dialog.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/plugins/table-dialog/table-dialog.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/plugins/test-plugin/test-plugin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaHa-Business/src/main/java/com/yangy/business/bean/VO/ArticleVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-Business/src/main/java/com/yangy/business/bean/VO/ArticleVo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HaHa-Business/src/main/java/com/yangy/business/controller/ArticleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-Business/src/main/java/com/yangy/business/controller/ArticleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Business/src/main/java/com/yangy/business/mapper/ArticlesMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-Business/src/main/java/com/yangy/business/mapper/ArticlesMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HaHa-Business/src/main/java/com/yangy/business/service/ArticleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-Business/src/main/java/com/yangy/business/service/ArticleService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HaHa-Business/src/main/java/com/yangy/business/service/impl/ArticleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-Business/src/main/java/com/yangy/business/service/impl/ArticleServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Business/src/main/resources/mapper/ArticlesMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-Business/src/main/resources/mapper/ArticlesMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Common/src/main/java/com/yangy/common/feign/BusinessFeignClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-Common/src/main/java/com/yangy/common/feign/BusinessFeignClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Common/src/main/java/com/yangy/common/hystrix/BusinessFallBack.java" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-Common/src/main/java/com/yangy/common/hystrix/BusinessFallBack.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HaHa-Common/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-Common/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-File/src/main/java/com/yangy/file/controller/FileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-File/src/main/java/com/yangy/file/controller/FileController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Front/src/main/java/com/yangy/hahafront/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-Front/src/main/java/com/yangy/hahafront/controller/IndexController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaHa-Front/src/main/java/com/yangy/hahafront/HahaFrontApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-Front/src/main/java/com/yangy/hahafront/HahaFrontApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaHa-Front/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/articleDetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/articleDetail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/edit.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/job.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/jobs.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/js/api/business-api.js" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/js/api/business-api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/profile.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/java/com/yangy/web/HaHaWebApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/java/com/yangy/web/config/MvcConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/java/com/yangy/web/controller/ErrorController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/java/com/yangy/web/controller/IndexController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/java/com/yangy/web/controller/Test.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/java/com/yangy/web/controller/TestThread.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/application-dev.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/application-prod.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/logback.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/css/a0573961fad54ab0be4564a490abd445.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/css/bootstrap-reboot.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/css/content.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/css/fancybox.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/css/fontawesome-all.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/css/github-markdown.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/css/layui.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/css/lineicons.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/css/main.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/css/prism.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/css/style-login.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/css/swiper.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/files/1SBsLa.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/files/2vHpPU.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/files/3Cd2EX.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/files/7vByJa.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/files/9Cn5XI.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/files/AaqtdU.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/files/E4DqNz.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/files/K4pvsI.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/files/OKJ6ge.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/files/RKNQ8M.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/files/T1A71A.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/files/XnPlBN.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/files/XqFZMi.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/files/ZhAdL6.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/files/cOclA0.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/files/iYmvpE.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/files/jwls39.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/files/lsuqTS.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/files/vcSo8r.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/files/z1WE4Q.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/fonts/92zatbhpnqw73odd4iyl.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/fonts/92zatbhpnqw73ord4iyl.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/fonts/92zatbhpnqw73otd4g.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/fonts/lineicons.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/fonts/mont-bold.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/fonts/mont-heavy.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/fonts/mont-regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/images/background.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/images/bg-noise.bak.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/images/demo-1-bg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/images/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/images/login_ico.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/images/movie-poster-bg.bak.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/images/movie-single.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/images/movies.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/images/mysql-logo.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/images/page-header-bg.bak.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/images/redis-logo.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/images/section-pattern01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/images/slide01.bak.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/images/slide02.bak.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/images/slide03.bak.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/images/springboot-logo.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/images/tv-shows.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/images/xiaolian-icon.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/js/api/business-api.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/js/api/common-api.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/js/api/user-api.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/js/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/js/canva_moving_effect.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/js/crypto-js.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/js/fancybox.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/js/html5.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/js/jquery-3.3.1.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/js/jquery.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/js/jquery.qrcode.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/js/layui.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/js/main.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/js/prism.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/js/scripts.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/js/swiper.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/js/valida.2.1.6.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/js/validator.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/originFile/picture/avatar.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/originFile/picture/avatar01.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/originFile/picture/brand01.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/originFile/picture/icon01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/originFile/picture/icon02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/originFile/picture/icon03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/originFile/picture/icon04.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/originFile/picture/icon05.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/originFile/picture/icon06.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/originFile/picture/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/originFile/picture/movies01.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/originFile/picture/movies02.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/originFile/picture/movies03.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/originFile/picture/movies04.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/originFile/picture/movies05.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/originFile/picture/movies06.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/originFile/picture/movies07.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/originFile/picture/movies08.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/originFile/picture/movies09.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/originFile/picture/movies10.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/originFile/picture/movies11.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/originFile/picture/movies12.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/originFile/picture/news01.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/originFile/picture/news02.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/originFile/picture/news03.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/originFile/picture/news04.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/originFile/picture/news05.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/originFile/picture/serial-category01.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/originFile/picture/serial-category02.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/originFile/picture/serial-category03.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/originFile/picture/serial-category04.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/originFile/picture/side-image01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/originFile/picture/side-image02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/webfonts/fa-brands-400.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/webfonts/fa-brands-400.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/webfonts/fa-brands-400.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/webfonts/fa-brands-400.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/webfonts/fa-brands-400.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/webfonts/fa-regular-400.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/webfonts/fa-regular-400.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/webfonts/fa-regular-400.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/webfonts/fa-regular-400.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/webfonts/fa-regular-400.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/webfonts/fa-solid-900.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/webfonts/fa-solid-900.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/webfonts/fa-solid-900.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/webfonts/fa-solid-900.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/static/webfonts/fa-solid-900.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/templates/articleDetail.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/templates/error.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/templates/index-test.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/templates/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/templates/login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/templates/movie-single.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/templates/movies.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/templates/tips-single.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Web/src/main/resources/templates/tv-shows.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReadMe.md" beforeDir="false" afterPath="$PROJECT_DIR$/ReadMe.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/view.html" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -587,57 +93,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="360">
-      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HaHa-File/src/main/resources/application.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="19" column="52" selection-start-line="19" selection-start-column="52" selection-end-line="19" selection-end-column="52" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="edit.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HaHa-Front/src/main/resources/static/edit.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="42" column="20" selection-start-line="42" selection-start-column="20" selection-end-line="42" selection-end-column="44" />
+            <state relative-caret-position="273">
+              <caret line="78" column="71" lean-forward="true" selection-start-line="78" selection-start-column="71" selection-end-line="78" selection-end-column="71" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#textarea#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FileController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HaHa-File/src/main/java/com/yangy/file/controller/FileController.java">
+      <file leaf-file-name="MybatisMapperProxy.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/../../../JavaEnvSoft/install/new-maven-repository/com/baomidou/mybatis-plus-core/3.5.2/mybatis-plus-core-3.5.2-sources.jar!/com/baomidou/mybatisplus/core/override/MybatisMapperProxy.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="24" column="83" selection-start-line="24" selection-start-column="83" selection-end-line="24" selection-end-column="83" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="userDetail.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HaHa-Front/src/main/resources/static/userDetail.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="301">
-              <caret line="451" column="4" selection-start-line="451" selection-start-column="4" selection-end-line="453" selection-end-column="43" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="common.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HaHa-Front/src/main/resources/static/css/common.css">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="common-api.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HaHa-Front/src/main/resources/static/js/api/common-api.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="17" column="27" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="27" />
+            <state relative-caret-position="288">
+              <caret line="147" selection-start-line="147" selection-end-line="147" />
             </state>
           </provider>
         </entry>
@@ -645,26 +118,8 @@
       <file leaf-file-name="business-api.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HaHa-Front/src/main/resources/static/js/api/business-api.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="372">
-              <caret line="89" column="54" selection-start-line="89" selection-start-column="54" selection-end-line="89" selection-end-column="54" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bootstrap.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HaHa-Common/src/main/resources/bootstrap.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="355">
-              <caret line="34" column="116" selection-start-line="34" selection-start-column="116" selection-end-line="34" selection-end-column="116" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="user-api.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HaHa-Front/src/main/resources/static/js/api/user-api.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="447" column="64" selection-start-line="447" selection-start-column="16" selection-end-line="447" selection-end-column="64" />
+            <state relative-caret-position="394">
+              <caret line="120" column="25" lean-forward="true" selection-start-line="120" selection-start-column="25" selection-end-line="120" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -672,8 +127,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HaHa-Front/src/main/resources/static/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="434">
-              <caret line="369" column="51" selection-start-line="369" selection-start-column="51" selection-end-line="369" selection-end-column="51" />
+            <state relative-caret-position="406">
+              <caret line="685" column="42" selection-start-line="685" selection-start-column="29" selection-end-line="685" selection-end-column="42" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#font#0;n#a#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -724,6 +179,7 @@
                 <element signature="n#style#0;n#font#0;n#font#0;n#p#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#font#0;n#a#0;n#div#1;n#div#0;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#font#0;n#font#0;n#a#0;n#div#1;n#div#0;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#font#0;n#a#0;n#h5#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#font#0;n#font#0;n#a#0;n#h5#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#font#0;n#p#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -734,6 +190,7 @@
                 <element signature="n#style#0;n#font#0;n#font#0;n#span#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#font#0;n#span#0;n#button#0;n#div#1;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#font#0;n#font#0;n#span#0;n#button#0;n#div#1;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#font#0;n#h4#0;n#div#0;n#div#2;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#font#0;n#font#0;n#h4#0;n#div#0;n#div#2;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#font#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -771,40 +228,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="profiles.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HaHa-Front/src/main/resources/static/profiles.html">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
       <file leaf-file-name="articleDetail.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HaHa-Front/src/main/resources/static/articleDetail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="234" selection-start-line="234" selection-end-line="234" />
+            <state relative-caret-position="220">
+              <caret line="187" column="46" selection-start-line="187" selection-start-column="46" selection-end-line="187" selection-end-column="46" />
               <folding>
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#div#1;n#div#0;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#textarea#0;n#div#1;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ReadMe.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ReadMe.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="515">
-                <caret line="25" column="3" lean-forward="true" selection-start-line="25" selection-start-column="3" selection-end-line="25" selection-end-column="3" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WapperRequestFilter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HaHa-Common/src/main/java/com/yangy/common/filter/WapperRequestFilter.java">
+      <file leaf-file-name="HahaFrontApplication.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HaHa-Front/src/main/java/com/yangy/hahafront/HahaFrontApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="40" selection-start-line="40" selection-end-line="40" />
+            <state relative-caret-position="110">
+              <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -812,8 +254,8 @@
       <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HaHa-Front/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="15" column="39" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
+            <state relative-caret-position="374">
+              <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -821,29 +263,8 @@
       <file leaf-file-name="ArticleController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HaHa-Business/src/main/java/com/yangy/business/controller/ArticleController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="572">
-              <caret line="37" column="32" selection-start-line="37" selection-start-column="19" selection-end-line="37" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ArticleVo.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HaHa-Business/src/main/java/com/yangy/business/bean/VO/ArticleVo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="14" column="39" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="39" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Articles.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HaHa-Business/src/main/java/com/yangy/business/bean/PO/Articles.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+            <state relative-caret-position="548">
+              <caret line="47" column="60" selection-start-line="47" selection-start-column="60" selection-end-line="47" selection-end-column="60" />
             </state>
           </provider>
         </entry>
@@ -851,8 +272,8 @@
       <file leaf-file-name="ArticleService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HaHa-Business/src/main/java/com/yangy/business/service/ArticleService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="18" column="44" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
+            <state relative-caret-position="198">
+              <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -860,66 +281,32 @@
       <file leaf-file-name="ArticleServiceImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HaHa-Business/src/main/java/com/yangy/business/service/impl/ArticleServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="363">
-              <caret line="46" column="8" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
+            <state relative-caret-position="143">
+              <caret line="30" column="60" lean-forward="true" selection-start-line="30" selection-start-column="60" selection-end-line="30" selection-end-column="60" />
               <folding>
-                <element signature="e#1003#1004#0" expanded="true" />
-                <element signature="e#1055#1056#0" expanded="true" />
+                <element signature="e#1070#1071#0" expanded="true" />
+                <element signature="e#1122#1123#0" expanded="true" />
+                <element signature="e#1436#1437#0" expanded="true" />
+                <element signature="e#1451#1452#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ArticlesMapper.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HaHa-Business/src/main/resources/mapper/ArticlesMapper.xml">
+      <file leaf-file-name="SqlEncryptInterceptor.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HaHa-Common/src/main/java/com/yangy/common/interceptor/SqlEncryptInterceptor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22">
-              <caret line="35" column="2" selection-start-line="35" selection-start-column="2" selection-end-line="35" selection-end-column="2" />
+            <state relative-caret-position="350">
+              <caret line="113" selection-start-line="113" selection-end-line="113" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ArticlesMapper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HaHa-Business/src/main/java/com/yangy/business/mapper/ArticlesMapper.java">
+      <file leaf-file-name="BusinessController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HaHa-Front/src/main/java/com/yangy/hahafront/controller/BusinessController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="template.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HaHa-Front/src/main/resources/static/template.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="16" column="23" selection-end-line="238" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IndexController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HaHa-Front/src/main/java/com/yangy/hahafront/controller/IndexController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="836">
-              <caret line="53" column="42" selection-start-line="53" selection-start-column="42" selection-end-line="53" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HaHa-Front/src/main/resources/static/css/main.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95326">
-              <caret line="4333" column="12" selection-start-line="4333" selection-start-column="12" selection-end-line="4333" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BusinessFeignClient.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HaHa-Common/src/main/java/com/yangy/common/feign/BusinessFeignClient.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="25" column="75" selection-start-line="25" selection-start-column="75" selection-end-line="25" selection-end-column="75" />
+            <state relative-caret-position="187">
+              <caret line="28" selection-start-line="28" selection-end-line="28" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -927,11 +314,86 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BusinessFallBack.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HaHa-Common/src/main/java/com/yangy/common/hystrix/BusinessFallBack.java">
+      <file leaf-file-name="bootstrap.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HaHa-Common/src/main/resources/bootstrap.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="19" column="63" selection-start-line="19" selection-start-column="63" selection-end-line="19" selection-end-column="63" />
+            <state relative-caret-position="355">
+              <caret line="34" column="132" selection-start-line="34" selection-start-column="132" selection-end-line="34" selection-end-column="132" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PathVariable.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/../../../JavaEnvSoft/install/new-maven-repository/org/springframework/spring-web/5.2.12.RELEASE/spring-web-5.2.12.RELEASE-sources.jar!/org/springframework/web/bind/annotation/PathVariable.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-156">
+              <caret line="42" column="18" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ArticlesMapper.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HaHa-Business/src/main/resources/mapper/ArticlesMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="174">
+              <caret line="133" column="77" lean-forward="true" selection-start-line="133" selection-start-column="77" selection-end-line="133" selection-end-column="77" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ArticleVo.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HaHa-Business/src/main/java/com/yangy/business/bean/VO/ArticleVo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="418">
+              <caret line="19" column="26" lean-forward="true" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FileController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HaHa-File/src/main/java/com/yangy/file/controller/FileController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="25" column="52" lean-forward="true" selection-start-line="25" selection-start-column="52" selection-end-line="25" selection-end-column="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FileServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HaHa-File/src/main/java/com/yangy/file/service/impl/FileServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="42">
+              <caret line="34" column="46" selection-start-line="34" selection-start-column="46" selection-end-line="34" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LocalFileServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HaHa-File/src/main/java/com/yangy/file/service/impl/LocalFileServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-706">
+              <caret line="41" column="22" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AESUtils.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HaHa-Common/src/main/java/com/yangy/common/util/AESUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="387">
+              <caret line="83" selection-start-line="83" selection-end-line="83" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EncryptUtil.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/HaHa-Common/src/main/java/com/yangy/common/util/EncryptUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="321">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
             </state>
           </provider>
         </entry>
@@ -952,19 +414,11 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>userLogout</find>
-      <find>userId</find>
-      <find>/checkAuth</find>
-      <find>logout</find>
-      <find>Access-Control-Allow-Credentials</find>
-      <find>sign.except.url</find>
-      <find>content</find>
       <find>.user__img img</find>
       <find>/getSign</find>
       <find>/login</find>
       <find>@FeignClient(name =</find>
       <find>th:</find>
-      <find>getLatestUsers</find>
       <find>selectLatestUserLog</find>
       <find>new String</find>
       <find>imgUrl</find>
@@ -982,6 +436,14 @@
       <find>editorDiv</find>
       <find>haha-web</find>
       <find>js/md/</find>
+      <find>header</find>
+      <find>getLatestUsers</find>
+      <find>/getLatestUsers</find>
+      <find>accessUserList</find>
+      <find>?id=</find>
+      <find>articleList != null</find>
+      <find>articleId</find>
+      <find>updateArticle</find>
     </findStrings>
     <replaceStrings>
       <replace>.</replace>
@@ -1019,8 +481,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/HaHa-Common/table.sql" />
-        <option value="$PROJECT_DIR$/HaHa-User/src/main/java/com/yangy/user/mapper/UserMapper.java" />
         <option value="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/js/api/user-api.js" />
         <option value="$PROJECT_DIR$/HaHa-Front/src/main/java/com/yangy/hahafront/controller/UserController.java" />
         <option value="$PROJECT_DIR$/HaHa-Common/src/main/java/com/yangy/common/hystrix/UserFallBack.java" />
@@ -1041,10 +501,8 @@
         <option value="$PROJECT_DIR$/HaHa-User/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/HaHa-Common/src/main/java/com/yangy/common/interceptor/SqlEncryptInterceptor.java" />
         <option value="$PROJECT_DIR$/HaHa-Common/src/main/java/com/yangy/common/bean/feign/ArticleVo.java" />
-        <option value="$PROJECT_DIR$/HaHa-Business/src/main/java/com/yangy/business/bean/VO/ArticleVo.java" />
         <option value="$PROJECT_DIR$/HaHa-Business/pom.xml" />
         <option value="$PROJECT_DIR$/HaHa-Common/pom.xml" />
-        <option value="$PROJECT_DIR$/HaHa-Front/src/main/java/com/yangy/hahafront/controller/BusinessController.java" />
         <option value="$PROJECT_DIR$/HaHa-Common/src/main/java/com/yangy/common/bean/ResultBean.java" />
         <option value="$PROJECT_DIR$/HaHa-Common/src/main/java/com/yangy/common/enums/ResponseCodeEnum.java" />
         <option value="$PROJECT_DIR$/HaHa-Common/src/main/java/com/yangy/common/constant/UrlConstant.java" />
@@ -1061,15 +519,19 @@
         <option value="$PROJECT_DIR$/HaHa-Common/src/main/java/com/yangy/common/hystrix/BusinessFallBack.java" />
         <option value="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/css/detail_enter-4cf7875a8c.min.css" />
         <option value="$PROJECT_DIR$/HaHa-File/src/main/java/com/yangy/file/controller/FileController.java" />
+        <option value="$PROJECT_DIR$/ReadMe.md" />
+        <option value="$PROJECT_DIR$/HaHa-Front/src/main/java/com/yangy/hahafront/HahaFrontApplication.java" />
+        <option value="$PROJECT_DIR$/HaHa-Front/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/index.html" />
         <option value="$PROJECT_DIR$/HaHa-Business/src/main/java/com/yangy/business/service/ArticleService.java" />
         <option value="$PROJECT_DIR$/HaHa-Business/src/main/java/com/yangy/business/controller/ArticleController.java" />
+        <option value="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/js/api/business-api.js" />
+        <option value="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/articleDetail.html" />
+        <option value="$PROJECT_DIR$/HaHa-Front/src/main/java/com/yangy/hahafront/controller/BusinessController.java" />
+        <option value="$PROJECT_DIR$/HaHa-Common/src/main/resources/bootstrap.yml" />
         <option value="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/edit.html" />
         <option value="$PROJECT_DIR$/HaHa-Business/src/main/java/com/yangy/business/service/impl/ArticleServiceImpl.java" />
-        <option value="$PROJECT_DIR$/HaHa-Common/src/main/resources/bootstrap.yml" />
-        <option value="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/js/api/business-api.js" />
-        <option value="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/index.html" />
-        <option value="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/articleDetail.html" />
-        <option value="$PROJECT_DIR$/ReadMe.md" />
+        <option value="$PROJECT_DIR$/HaHa-Business/src/main/java/com/yangy/business/bean/VO/ArticleVo.java" />
       </list>
     </option>
   </component>
@@ -1258,28 +720,192 @@
             <path>
               <item name="HaHaShow" type="b2602c69:ProjectViewProjectNode" />
               <item name="HaHaShow" type="462c0819:PsiDirectoryNode" />
-              <item name="HaHa-Common" type="462c0819:PsiDirectoryNode" />
+              <item name="HaHa-File" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="HaHaShow" type="b2602c69:ProjectViewProjectNode" />
               <item name="HaHaShow" type="462c0819:PsiDirectoryNode" />
-              <item name="HaHa-Common" type="462c0819:PsiDirectoryNode" />
+              <item name="HaHa-File" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="HaHaShow" type="b2602c69:ProjectViewProjectNode" />
               <item name="HaHaShow" type="462c0819:PsiDirectoryNode" />
-              <item name="HaHa-Common" type="462c0819:PsiDirectoryNode" />
+              <item name="HaHa-File" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="HaHaShow" type="b2602c69:ProjectViewProjectNode" />
               <item name="HaHaShow" type="462c0819:PsiDirectoryNode" />
-              <item name="HaHa-Common" type="462c0819:PsiDirectoryNode" />
+              <item name="HaHa-File" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HaHaShow" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HaHaShow" type="462c0819:PsiDirectoryNode" />
+              <item name="HaHa-File" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HaHaShow" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HaHaShow" type="462c0819:PsiDirectoryNode" />
+              <item name="HaHa-File" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="yangy" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HaHaShow" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HaHaShow" type="462c0819:PsiDirectoryNode" />
+              <item name="HaHa-File" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="yangy" type="462c0819:PsiDirectoryNode" />
+              <item name="file" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HaHaShow" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HaHaShow" type="462c0819:PsiDirectoryNode" />
+              <item name="HaHa-File" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="yangy" type="462c0819:PsiDirectoryNode" />
+              <item name="file" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HaHaShow" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HaHaShow" type="462c0819:PsiDirectoryNode" />
+              <item name="HaHa-File" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HaHaShow" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HaHaShow" type="462c0819:PsiDirectoryNode" />
+              <item name="HaHa-File" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="files" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HaHaShow" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HaHaShow" type="462c0819:PsiDirectoryNode" />
+              <item name="HaHa-File" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="files" type="462c0819:PsiDirectoryNode" />
+              <item name="image" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HaHaShow" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HaHaShow" type="462c0819:PsiDirectoryNode" />
+              <item name="HaHa-Front" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HaHaShow" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HaHaShow" type="462c0819:PsiDirectoryNode" />
+              <item name="HaHa-Front" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HaHaShow" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HaHaShow" type="462c0819:PsiDirectoryNode" />
+              <item name="HaHa-Front" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HaHaShow" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HaHaShow" type="462c0819:PsiDirectoryNode" />
+              <item name="HaHa-Front" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HaHaShow" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HaHaShow" type="462c0819:PsiDirectoryNode" />
+              <item name="HaHa-Front" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HaHaShow" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HaHaShow" type="462c0819:PsiDirectoryNode" />
+              <item name="HaHa-Front" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="yangy" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HaHaShow" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HaHaShow" type="462c0819:PsiDirectoryNode" />
+              <item name="HaHa-Front" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="yangy" type="462c0819:PsiDirectoryNode" />
+              <item name="hahafront" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HaHaShow" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HaHaShow" type="462c0819:PsiDirectoryNode" />
+              <item name="HaHa-Front" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="yangy" type="462c0819:PsiDirectoryNode" />
+              <item name="hahafront" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HaHaShow" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HaHaShow" type="462c0819:PsiDirectoryNode" />
+              <item name="HaHa-Front" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HaHaShow" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HaHaShow" type="462c0819:PsiDirectoryNode" />
+              <item name="HaHa-Front" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HaHaShow" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HaHaShow" type="462c0819:PsiDirectoryNode" />
+              <item name="HaHa-Front" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="editor" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -1330,11 +956,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Java\ZeroToOne\code\HaHaShow\HaHa-Front\src\main\resources\static\editor\plugins" />
       <recent name="D:\Java\ZeroToOne\code\HaHaShow\HaHa-Front\src\main\resources\static" />
       <recent name="D:\Java\ZeroToOne\code\HaHaShow\HaHa-Front\src\main\resources\static\editor\js" />
       <recent name="D:\Java\ZeroToOne\code\HaHaShow\HaHa-Front\src\main\resources\static\editor\images" />
       <recent name="D:\Java\ZeroToOne\code\HaHaShow\HaHa-Front\src\main\resources\static\editor" />
-      <recent name="D:\Java\ZeroToOne\code\HaHaShow\HaHa-Front\src\main\resources\static\editor\css" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.yangy.common.bean.feign" />
@@ -1377,9 +1003,9 @@
         </RuleState>
       </list>
     </option>
-    <option name="contentProportion" value="0.2237418" />
+    <option name="contentProportion" value="0.2642232" />
   </component>
-  <component name="RunManager" selected="Spring Boot.HaHaUserApplication">
+  <component name="RunManager" selected="Spring Boot.HahaBusinessApplication">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -1550,12 +1176,12 @@
       <workItem from="1700033081811" duration="51539000" />
       <workItem from="1700445168779" duration="38915000" />
       <workItem from="1701763007882" duration="35345000" />
-      <workItem from="1702285892996" duration="16168000" />
+      <workItem from="1702285892996" duration="31711000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="988838000" />
+    <option name="totallyTimeSpent" value="1004381000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1587,11 +1213,11 @@
       <window_info anchor="right" id="JRebel Setup Guide" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="6" weight="0.33449477" />
       <window_info anchor="bottom" id="TODO" order="12" weight="0.329849" />
-      <window_info anchor="bottom" id="Messages" order="15" weight="0.32482597" />
+      <window_info anchor="bottom" id="Messages" order="15" weight="0.3240418" />
       <window_info id="MyBatis Builder" order="6" side_tool="true" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="bottom" id="Java Enterprise" order="16" />
-      <window_info anchor="bottom" id="Run Dashboard" order="22" sideWeight="0.498394" weight="0.39372823" />
+      <window_info active="true" anchor="bottom" id="Run Dashboard" order="22" sideWeight="0.498394" visible="true" weight="0.4680604" />
       <window_info anchor="bottom" id="Version Control" order="18" weight="0.3259861" />
       <window_info anchor="bottom" id="Run" order="5" weight="0.271777" />
       <window_info anchor="right" id="Mybatis datasource" order="11" show_stripe_button="false" side_tool="true" />
@@ -1634,7 +1260,7 @@
       <window_info anchor="right" id="JRebel Setup Guide" order="10" side_tool="true" />
       <window_info anchor="right" x="92" y="92" width="1736" height="856" id="DSM" order="0" type="FLOATING" />
       <window_info anchor="bottom" id="Event Log" order="19" sideWeight="0.501606" side_tool="true" weight="0.3387471" />
-      <window_info anchor="bottom" id="Messages" order="15" weight="0.32482597" />
+      <window_info anchor="bottom" id="Messages" order="15" weight="0.3240418" />
       <window_info anchor="bottom" id="TODO" order="12" weight="0.329849" />
       <window_info anchor="bottom" id="SonarLint" order="8" weight="0.329849" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="4" weight="0.25" />
@@ -1663,7 +1289,7 @@
       <window_info anchor="right" id="SciView" order="12" weight="0.2671306" />
       <window_info anchor="bottom" id="Debug" order="6" weight="0.33449477" />
       <window_info anchor="right" id="Bean Validation" order="8" weight="0.32976446" />
-      <window_info anchor="bottom" id="Run Dashboard" order="22" sideWeight="0.498394" visible="true" weight="0.39372823" />
+      <window_info anchor="bottom" id="Run Dashboard" order="22" sideWeight="0.498394" weight="0.4680604" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1677,7 +1303,7 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="200" />
+      <option name="time" value="207" />
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
@@ -1690,123 +1316,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/HaHa-Common/src/main/java/com/yangy/common/bean/feign/ArticleVo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="36" lean-forward="true" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HaHa-Common/src/main/java/com/yangy/common/bean/feign/Articles.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="34" column="27" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HaHa-Common/src/main/java/com/yangy/common/bean/ResultBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
-          <caret line="33" column="29" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HaHa-Common/src/main/java/com/yangy/common/enums/ResponseCodeEnum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HaHa-Business/src/main/java/com/yangy/business/HahaBusinessApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HaHa-Front/src/main/java/com/yangy/hahafront/HahaFrontApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding>
-            <element signature="e#648#649#0" expanded="true" />
-            <element signature="e#710#711#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../../JavaEnvSoft/install/new-maven-repository/org/apache/tomcat/embed/tomcat-embed-core/9.0.41/tomcat-embed-core-9.0.41-sources.jar!/javax/servlet/http/HttpServletRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="207" column="18" selection-start-line="207" selection-start-column="18" selection-end-line="207" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HaHa-Common/src/main/java/com/yangy/common/constant/UrlConstant.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HaHa-Common/src/main/java/com/yangy/common/util/TokenUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="61" column="70" lean-forward="true" selection-start-line="61" selection-start-column="70" selection-end-line="61" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../../JavaEnvSoft/install/new-maven-repository/io/github/openfeign/feign-core/10.7.4/feign-core-10.7.4-sources.jar!/feign/Headers.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="74" column="18" selection-start-line="74" selection-start-column="18" selection-end-line="74" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HaHa-User/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="27" selection-start-line="27" selection-end-line="28" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HaHa-Business/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="36" column="23" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HaHa-Common/src/main/java/com/yangy/common/constant/CommonConstant.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="29" column="47" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HaHa-Common/src/main/java/com/yangy/common/interceptor/MyInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="57" selection-start-line="57" selection-end-line="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HaHa-Common/src/main/java/com/yangy/common/interceptor/FeignHeaderInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HaHa-Web/src/main/resources/static/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63580">
-          <caret line="2890" selection-start-line="2890" selection-end-line="2890" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HaHa-Front/src/main/resources/static/profile.html" />
     <entry file="file://$PROJECT_DIR$/HaHa-Front/src/main/resources/static/profiles.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1814,37 +1323,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
           <caret line="16" column="23" selection-end-line="238" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HaHa-Front/src/main/resources/static/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95326">
-          <caret line="4333" column="12" selection-start-line="4333" selection-start-column="12" selection-end-line="4333" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HaHa-Business/src/main/java/com/yangy/business/mapper/ArticlesMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HaHa-Common/src/main/java/com/yangy/common/feign/BusinessFeignClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="25" column="75" selection-start-line="25" selection-start-column="75" selection-end-line="25" selection-end-column="75" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HaHa-Front/src/main/java/com/yangy/hahafront/controller/IndexController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="836">
-          <caret line="53" column="42" selection-start-line="53" selection-start-column="42" selection-end-line="53" selection-end-column="42" />
         </state>
       </provider>
     </entry>
@@ -1878,86 +1356,13 @@
     <entry file="file://$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/css/editormd.preview.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/HaHa-Front/src/main/resources/static/view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-968">
-          <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/js/editormd.min.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HaHa-File/src/main/java/com/yangy/file/controller/FileController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="24" column="83" selection-start-line="24" selection-start-column="83" selection-end-line="24" selection-end-column="83" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HaHa-Business/src/main/java/com/yangy/business/bean/VO/ArticleVo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" column="39" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HaHa-Business/src/main/java/com/yangy/business/service/ArticleService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="18" column="44" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HaHa-Business/src/main/resources/mapper/ArticlesMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="35" column="2" selection-start-line="35" selection-start-column="2" selection-end-line="35" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HaHa-Front/src/main/resources/static/css/common.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/HaHa-Front/src/main/resources/static/userDetail.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="301">
           <caret line="451" column="4" selection-start-line="451" selection-start-column="4" selection-end-line="453" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HaHa-Business/src/main/java/com/yangy/business/service/impl/ArticleServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="46" column="8" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
-          <folding>
-            <element signature="e#1003#1004#0" expanded="true" />
-            <element signature="e#1055#1056#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HaHa-Business/src/main/java/com/yangy/business/bean/PO/Articles.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HaHa-Business/src/main/java/com/yangy/business/controller/ArticleController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="37" column="32" selection-start-line="37" selection-start-column="19" selection-end-line="37" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HaHa-Common/src/main/resources/bootstrap.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="34" column="116" selection-start-line="34" selection-start-column="116" selection-end-line="34" selection-end-column="116" />
         </state>
       </provider>
     </entry>
@@ -1968,13 +1373,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HaHa-Front/src/main/resources/static/js/api/business-api.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="89" column="54" selection-start-line="89" selection-start-column="54" selection-end-line="89" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/HaHa-Front/src/main/resources/static/js/jquery.mousewheel.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
@@ -1982,13 +1380,6 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HaHa-Front/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="15" column="39" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
         </state>
       </provider>
     </entry>
@@ -2006,10 +1397,188 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ReadMe.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="581">
+            <caret line="28" column="8" lean-forward="true" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="28" column="36" lean-forward="true" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="36" />
+        </state>
+      </provider>
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-impl.jar!/resources/html5-schema/html5/structural.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="131" column="16" selection-start-line="131" selection-start-column="16" selection-end-line="131" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/css/editormd.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="8" column="52" selection-start-line="8" selection-start-column="52" selection-end-line="8" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="60" selection-start-line="60" selection-end-line="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HaHa-Front/src/main/resources/static/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="4333" column="12" selection-start-line="4333" selection-start-column="12" selection-end-line="4333" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HaHa-Front/src/main/resources/static/css/common.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HaHa-Front/src/main/resources/static/view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="27" lean-forward="true" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HaHa-Common/src/main/java/com/yangy/common/hystrix/UserFallBack.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding>
+            <element signature="e#434#435#0" expanded="true" />
+            <element signature="e#515#516#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HaHa-Common/src/main/java/com/yangy/common/feign/UserFeignClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="13" column="129" selection-start-line="13" selection-start-column="129" selection-end-line="13" selection-end-column="129" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HaHa-Front/src/main/java/com/yangy/hahafront/HahaFrontApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HaHa-Front/src/main/resources/static/editor/plugins/test-plugin/test-plugin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-726" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HaHa-User/src/main/java/com/yangy/user/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="108" column="22" selection-start-line="108" selection-start-column="22" selection-end-line="108" selection-end-column="22" />
+          <folding>
+            <element signature="e#3614#3615#0" expanded="true" />
+            <element signature="e#3680#3681#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HaHa-Common/src/main/java/com/yangy/common/feign/BusinessFeignClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HaHa-Business/src/main/java/com/yangy/business/service/ArticleService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HaHa-Business/src/main/java/com/yangy/business/bean/PO/Articles.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HaHa-Business/src/main/java/com/yangy/business/mapper/ArticlesMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="24" column="14" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HaHa-Front/src/main/java/com/yangy/hahafront/controller/IndexController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../../JavaEnvSoft/install/new-maven-repository/org/springframework/spring-web/5.2.12.RELEASE/spring-web-5.2.12.RELEASE-sources.jar!/org/springframework/web/bind/annotation/PathVariable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-156">
+          <caret line="42" column="18" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HaHa-Front/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HaHa-Front/src/main/resources/static/articleDetail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="187" column="46" selection-start-line="187" selection-start-column="46" selection-end-line="187" selection-end-column="46" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#1;n#div#0;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#textarea#0;n#div#1;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HaHa-Front/src/main/java/com/yangy/hahafront/controller/BusinessController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HaHa-Common/src/main/resources/bootstrap.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="34" column="132" selection-start-line="34" selection-start-column="132" selection-end-line="34" selection-end-column="132" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/HaHa-Front/src/main/resources/static/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="369" column="51" selection-start-line="369" selection-start-column="51" selection-end-line="369" selection-end-column="51" />
+        <state relative-caret-position="406">
+          <caret line="685" column="42" selection-start-line="685" selection-start-column="29" selection-end-line="685" selection-end-column="42" />
           <folding>
             <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#font#0;n#a#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -2060,6 +1629,7 @@
             <element signature="n#style#0;n#font#0;n#font#0;n#p#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#font#0;n#a#0;n#div#1;n#div#0;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#font#0;n#font#0;n#a#0;n#div#1;n#div#0;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#font#0;n#a#0;n#h5#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#font#0;n#font#0;n#a#0;n#h5#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#font#0;n#p#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -2070,6 +1640,7 @@
             <element signature="n#style#0;n#font#0;n#font#0;n#span#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#font#0;n#span#0;n#button#0;n#div#1;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#font#0;n#font#0;n#span#0;n#button#0;n#div#1;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#font#0;n#h4#0;n#div#0;n#div#2;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#font#0;n#font#0;n#h4#0;n#div#0;n#div#2;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#font#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -2108,33 +1679,105 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/HaHa-Front/src/main/resources/static/edit.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="42" column="20" selection-start-line="42" selection-start-column="20" selection-end-line="42" selection-end-column="44" />
+        <state relative-caret-position="273">
+          <caret line="78" column="71" lean-forward="true" selection-start-line="78" selection-start-column="71" selection-end-line="78" selection-end-column="71" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#textarea#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HaHa-Front/src/main/resources/static/articleDetail.html">
+    <entry file="jar://$PROJECT_DIR$/../../../JavaEnvSoft/install/new-maven-repository/com/baomidou/mybatis-plus-core/3.5.2/mybatis-plus-core-3.5.2-sources.jar!/com/baomidou/mybatisplus/core/override/MybatisMapperProxy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="234" selection-start-line="234" selection-end-line="234" />
+        <state relative-caret-position="288">
+          <caret line="147" selection-start-line="147" selection-end-line="147" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HaHa-Front/src/main/resources/static/js/api/business-api.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="120" column="25" lean-forward="true" selection-start-line="120" selection-start-column="25" selection-end-line="120" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HaHa-Business/src/main/java/com/yangy/business/controller/ArticleController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="548">
+          <caret line="47" column="60" selection-start-line="47" selection-start-column="60" selection-end-line="47" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HaHa-Business/src/main/java/com/yangy/business/service/impl/ArticleServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="30" column="60" lean-forward="true" selection-start-line="30" selection-start-column="60" selection-end-line="30" selection-end-column="60" />
           <folding>
-            <element signature="n#style#0;n#textarea#0;n#div#1;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#1070#1071#0" expanded="true" />
+            <element signature="e#1122#1123#0" expanded="true" />
+            <element signature="e#1436#1437#0" expanded="true" />
+            <element signature="e#1451#1452#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ReadMe.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="515">
-            <caret line="25" column="3" lean-forward="true" selection-start-line="25" selection-start-column="3" selection-end-line="25" selection-end-column="3" />
-          </first_editor>
-          <second_editor />
+    <entry file="file://$PROJECT_DIR$/HaHa-Common/src/main/java/com/yangy/common/interceptor/SqlEncryptInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="113" selection-start-line="113" selection-end-line="113" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HaHa-Common/src/main/java/com/yangy/common/util/AESUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="387">
+          <caret line="83" selection-start-line="83" selection-end-line="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HaHa-Business/src/main/resources/mapper/ArticlesMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="133" column="77" lean-forward="true" selection-start-line="133" selection-start-column="77" selection-end-line="133" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HaHa-File/src/main/java/com/yangy/file/controller/FileController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="25" column="52" lean-forward="true" selection-start-line="25" selection-start-column="52" selection-end-line="25" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HaHa-File/src/main/java/com/yangy/file/service/impl/FileServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="34" column="46" selection-start-line="34" selection-start-column="46" selection-end-line="34" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HaHa-File/src/main/java/com/yangy/file/service/impl/LocalFileServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-706">
+          <caret line="41" column="22" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HaHa-Business/src/main/java/com/yangy/business/bean/VO/ArticleVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="19" column="26" lean-forward="true" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HaHa-Common/src/main/java/com/yangy/common/util/EncryptUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
         </state>
       </provider>
     </entry>

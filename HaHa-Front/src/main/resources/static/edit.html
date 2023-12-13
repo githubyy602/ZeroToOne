@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
     <head>
         <meta charset="utf-8" />
         <title></title>
@@ -7,20 +7,31 @@
         <link rel="stylesheet" href="editor/css/editormd.css" />
         <link rel="stylesheet" href="css/common.css">
         <link rel="shortcut icon" href="icon/logo-icon.png" sizes="32x32">
+        
+        <style>            
+            .edit-div {
+                width: 90%;
+                margin: 0 auto;
+                font-size: 15px;
+                padding: 10px 0;
+                font-weight: 600;
+            }
+        </style>
     </head>
     <body>
         <div id="layout">
             <header>
                 <h1>文章编辑</h1>
             </header>
-            <div style="margin-left: 5em;">
+            <div class="edit-div">
                 标题：<input id="title" type="text" />
             </div>
-            <div style="margin-left: 5em;">
+            <div class="edit-div">
                 封面图：<input id="articleIcon" type="file" />
             </div>
+            <input style="display: none;" id="articleId" th:if="${article != null}" th:value="${article.id}" />
             <div id="editorDiv">
-                <textarea style="display:none;"></textarea>
+                <textarea style="display:none;" th:if="${article != null}" th:text="${article.content}"></textarea>
             </div>
         </div>
         <script src="editor/js/jquery.min.js"></script>
@@ -64,12 +75,18 @@
                     /*给自定义按钮指定回调函数*/
                     toolbarHandlers:{
                         releaseIcon : function(cm, icon, cursor, selection) {
+                             var id = $("#articleId").attr("value");
                              var content = this.getMarkdown();//编辑器内的内容
                              var title = $("#title").val();
-                             createArticle(title,content);
+                             
+                             if(id != null && id != undefined && id > 0){
+                                 updateArticle(id,title,content);
+                             }else{
+                                 createArticle(title,content);
+                             }
                         },
                         index : function(){
-                            window.location.href = 'index.html';
+                            window.location.href = '/index';
                         }
                     }
                     

@@ -184,6 +184,9 @@
                     <p><font style="vertical-align: inherit;"><font
                             style="vertical-align: inherit;" th:text="*{#dates.format(article.createTime, 'yyyy/MM/dd HH:mm:ss')}"></font></font></p>
                 </div>
+                <div style="text-align: right;font-size: 16px;width: 80%;">
+                    <a th:href="'edit.html?id='+${article.id}" style="color: #01a0e4;">编辑</a>
+                </div>
             </div>
             
             <div class="post__description" id="editorDiv">

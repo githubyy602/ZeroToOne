@@ -103,3 +103,45 @@ function createArticle(title,content) {
         
     });
 }
+
+
+function updateArticle(id,title,content) {
+    $(function() {
+        var param = new Map();
+        param['id'] = id;
+        param['title'] = title;
+        param['content'] = content;
+        var sign = getBackendSignature(param);
+        param['sign'] = sign;
+        
+        $.ajax({
+            url: base_url_business+"/article/updateArticle",
+            method: "POST",
+            data: JSON.stringify(param),
+			async: false,
+            timeout : 5000,
+    		dataType: "json",
+    		contentType: "application/json;charset=UTF-8",
+			beforeSend: function(XHR) {
+				XHR.setRequestHeader("Access-Control-Allow-Origin","*");
+				// XHR.setRequestHeader("userId", encodeURIComponent(userInfo.userId));
+			},
+            success: function (data) {
+                if(data.code == response_status_success){
+                    if(null != data.data && '' != data.data){
+                        layer.msg('更新成功',{time:2000});
+                    }
+                    
+                }else{
+                     layer.msg('更新内容失败：'+data.message,{time:2000});
+				}
+            },
+            error: function (data) {
+                // console.log("请求错误："+data.statusText);
+                layer.msg('请求异常：'+data.statusText);
+            }
+
+        });
+        
+    });
+}

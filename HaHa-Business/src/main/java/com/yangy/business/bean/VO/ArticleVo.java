@@ -17,7 +17,6 @@ public class ArticleVo extends Articles {
 	@EncryptField
     private String userName;
 	
-	@EncryptField
     private String imgUrl;
 	
     //用户职称
