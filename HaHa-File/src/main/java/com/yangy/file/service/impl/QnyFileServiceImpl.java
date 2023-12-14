@@ -3,7 +3,10 @@ package com.yangy.file.service.impl;
 import cn.hutool.core.collection.CollectionUtil;
 import cn.hutool.core.io.FileUtil;
 import cn.hutool.core.util.StrUtil;
-import com.google.common.base.Charsets;
+import com.qiniu.http.Response;
+import com.qiniu.storage.Configuration;
+import com.qiniu.storage.UploadManager;
+import com.qiniu.util.Auth;
 import com.yangy.common.enums.ResponseCodeEnum;
 import com.yangy.common.exception.CustomException;
 import com.yangy.file.constant.FileConstant;
@@ -13,9 +16,9 @@ import com.yangy.file.service.AbstractFileService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.stereotype.Service;
-import org.springframework.util.Base64Utils;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.util.ArrayList;
@@ -24,19 +27,34 @@ import java.util.Objects;
 
 /**
  * @Author: Yangy
- * @Date: 2023/11/13 10:47
+ * @Date: 2023/12/14 15:23
  * @Description
  */
 @Service
-@ConditionalOnProperty(name = "file.service.choose",havingValue = "local",matchIfMissing = false)
+@ConditionalOnProperty(name = "file.service.choose",havingValue = "qny",matchIfMissing = false)
 @Slf4j
-public class LocalFileServiceImpl extends AbstractFileService {
+public class QnyFileServiceImpl extends AbstractFileService {
 	
-	public String localPath = System.getProperty("user.dir") + "/HaHa-File/src/main" + "/resources/files/";
+	@Value("${qny.accessKey:8f6kXZ-AU6MVY7S3e6O6pIzv3sCi9VZ6iaq1zpnN}")
+	private String qnyAccessKey="8f6kXZ-AU6MVY7S3e6O6pIzv3sCi9VZ6iaq1zpnN";
+	
+	private String qnyScreteKey;
+	private String bucket;
+
+	private final Auth auth;
+	private final UploadManager uploadManager;
 	
 	@Autowired
 	private FileDao fileDao;
 	
+	public QnyFileServiceImpl() {
+		qnyScreteKey = System.getProperty("qny.skey");
+		log.info("akey={},skey={}",qnyAccessKey,qnyScreteKey);
+		this.bucket = "hahashow";
+		this.auth = Auth.create(qnyAccessKey, qnyScreteKey);;
+		this.uploadManager = new UploadManager(new Configuration());
+	}
+
 	@Override
 	public List<File> uploadFile(List<MultipartFile> fileList) throws CustomException {
 		try {
@@ -51,11 +69,11 @@ public class LocalFileServiceImpl extends AbstractFileService {
 				if(size > 20*1024*1024){
 					throw CustomException.custom(ResponseCodeEnum.FILE_SIZE_ERROR.getCode());
 				}
-				
+
 				// 文件类型
 				String type = file.getContentType();
 				String fileSuffix = FileUtil.extName(originalFilename);;
-				
+
 				File insertFile = File.builder()
 						.fileName(originalFilename)
 						.fileSize(size+"")
@@ -66,33 +84,32 @@ public class LocalFileServiceImpl extends AbstractFileService {
 					records.add(existFile);
 					continue;
 				}
-				
+
 				String prefix_path = "";
 				if(StringUtils.contains(FileConstant.IMAGE_SUFFIX,fileSuffix)){
-					prefix_path = "/image";
+					prefix_path = "images";
 				}else if(StringUtils.contains(FileConstant.FILE_SUFFIX,fileSuffix)){
-					prefix_path = "/file";
+					prefix_path = "file";
 				}else {
 					throw CustomException.custom(ResponseCodeEnum.FILE_TYPE_ERROR.getCode());
 				}
-				
-				String filePath =  prefix_path+StrUtil.C_SLASH+originalFilename;
-				
-				java.io.File newFile = new java.io.File(localPath+filePath);
-				//todo 文件存储需要换一个容器，因为放在项目目录下，上传后无法立即回显，需要重启
-				file.transferTo(newFile);
-				
-				String base64Path = Base64Utils.encodeToString(filePath.getBytes(Charsets.UTF_8));
-				insertFile.setPath(base64Path);
-				insertFile.setUrl(base64Path);
+
+				String filePath =  prefix_path+ StrUtil.C_SLASH+originalFilename;
+
+				String uploadToken =  auth.uploadToken(bucket+StrUtil.C_SLASH+prefix_path);
+				Response response = uploadManager.put(file.getBytes(),originalFilename,uploadToken);
+				log.info("Qny upload response : {}",response.bodyString());
+
+				insertFile.setPath(filePath);
+				insertFile.setUrl("");
 				insertList.add(insertFile);
 			}
-			
+
 			if(CollectionUtil.isNotEmpty(insertList)){
 				fileDao.batchInsertFiles(insertList);
 				records.addAll(insertList);
 			}
-			
+
 			return records;
 		} catch (Exception e) {
 			log.error("LocalFileServiceImpl.uploadFile occurs an exception!!!\n",e);

@@ -4,13 +4,11 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
-import com.google.common.base.Charsets;
 import com.yangy.common.annotation.EncryptEntity;
 import com.yangy.common.annotation.EncryptField;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.util.Base64Utils;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -52,10 +50,6 @@ public class User implements Serializable {
 	
 	@TableField(exist = false)
     private String imgUrl;
-
-	public void setImgUrl(String imgUrl) {
-		this.imgUrl = new String(Base64Utils.decodeFromString(imgUrl),Charsets.UTF_8);
-	}
 
 	public User(Integer id) {
 		this.id = id;

@@ -5,18 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5a82bc85-19e5-4a1a-9070-52429c963c2e" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/free-mybatis-generator-config.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HaHa-File/src/main/java/com/yangy/file/constant/FileConstant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HaHa-File/src/main/java/com/yangy/file/service/impl/QnyFileServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/articleDetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/articleDetail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaHa-Business/src/main/java/com/yangy/business/bean/PO/Articles.java" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-Business/src/main/java/com/yangy/business/bean/PO/Articles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaHa-Business/src/main/resources/mapper/ArticlesMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-Business/src/main/resources/mapper/ArticlesMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaHa-File/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-File/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaHa-File/src/main/java/com/yangy/file/controller/FileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-File/src/main/java/com/yangy/file/controller/FileController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaHa-File/src/main/java/com/yangy/file/service/impl/LocalFileServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-File/src/main/java/com/yangy/file/service/impl/LocalFileServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaHa-File/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-File/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/js/api/user-api.js" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/js/api/user-api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/userDetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/userDetail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaHa-User/src/main/java/com/yangy/user/bean/PO/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-User/src/main/java/com/yangy/user/bean/PO/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -440,6 +444,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$PROJECT_DIR$/../../../JavaEnvSoft/install/new-maven-repository/com/qiniu/qiniu-java-sdk/7.2.0/qiniu-java-sdk-7.2.0-sources.jar!/com/qiniu/storage/Configuration.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$PROJECT_DIR$/../../../JavaEnvSoft/install/new-maven-repository/org/springframework/spring-beans/5.2.12.RELEASE/spring-beans-5.2.12.RELEASE-sources.jar!/org/springframework/beans/factory/annotation/Value.java" root0="SKIP_INSPECTION" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -503,9 +511,9 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="KubernetesApiProvider"><![CDATA[{
-  "isMigrated": true
-}]]></component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -892,11 +900,21 @@
   "keyToString": {
     "Maven.HaHa-Common [clean].executor": "Run",
     "Maven.HaHa-Common [install].executor": "Run",
+    "Maven.haha-front [clean].executor": "Run",
+    "Maven.haha-front [package].executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.FileController.executor": "Debug",
+    "Spring Boot.HaHaUserApplication.executor": "Debug",
     "Spring Boot.HahaBusinessApplication.executor": "Debug",
+    "Spring Boot.HahaFileApplication.executor": "Debug",
     "Spring Boot.HahaFrontApplication.executor": "Debug",
+    "StatusDashboardGroupingRule": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "D:/Java/ZeroToOne/code/HaHaShow",
@@ -905,8 +923,13 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "模块",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
     "run.configurations.included.in.services": "true",
-    "vue.rearranger.settings.migration": "true"
+    "settings.editor.selected.configurable": "project.propCompiler",
+    "vue.rearranger.settings.migration": "true",
+    "应用程序.FileController.executor": "Debug"
   }
 }]]></component>
   <component name="RebelAgentSelection">
@@ -954,7 +977,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.HahaFrontApplication">
+  <component name="RunManager" selected="Spring Boot.HahaBusinessApplication">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
@@ -1021,8 +1044,11 @@
       <option name="ACTIVE_PROFILES" value="dev" />
       <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="hahafile" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.yangy.file.HahaFileApplication" />
+      <option name="UPDATE_ACTION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <option name="VM_PARAMETERS" value="-Dqny.skey=5lBsYROm5UeQgndbH0BeJUzXGFQXben1wbpAt78x" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -1133,7 +1159,8 @@
       <workItem from="1701763007882" duration="35345000" />
       <workItem from="1702285892996" duration="32967000" />
       <workItem from="1702458309842" duration="428000" />
-      <workItem from="1702458803904" duration="2239000" />
+      <workItem from="1702458803904" duration="7055000" />
+      <workItem from="1702537160873" duration="11382000" />
     </task>
     <servers />
   </component>
@@ -1251,6 +1278,25 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-core" />
+    <option featureType="dependencySupport" implementationName="java:jakarta.validation:jakarta.validation-api" />
+    <option featureType="dependencySupport" implementationName="java:io.projectreactor:reactor-core" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.data:spring-data-commons" />
+    <option featureType="dependencySupport" implementationName="executable:kubectl" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.cloud:spring-cloud-context" />
+    <option featureType="dependencySupport" implementationName="java:org.hibernate.validator:hibernate-validator" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-webmvc" />
+    <option featureType="dependencySupport" implementationName="java:org.projectlombok:lombok" />
+    <option featureType="dependencySupport" implementationName="java:com.azure:azure-core" />
+    <option featureType="dependencySupport" implementationName="executable:docker" />
+    <option featureType="dependencySupport" implementationName="java:org.thymeleaf:thymeleaf" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.boot:spring-boot" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">

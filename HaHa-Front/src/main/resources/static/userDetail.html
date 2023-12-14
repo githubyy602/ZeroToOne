@@ -456,6 +456,12 @@
     <script src="js/api/user-api.js"></script>
 
 <script>
+    if(verifyUser() == false){
+       layer.msg("",{time:2000},function (){
+           window.location.href = "index.html";
+       })    
+    }
+    
     userDetailUpload();
     
     $(function () {

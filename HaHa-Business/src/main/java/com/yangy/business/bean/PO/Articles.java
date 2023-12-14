@@ -24,6 +24,8 @@ public class Articles extends PageQuery implements Serializable{
      */
     private String content;
 
+	private Integer coverImgId;
+	
     /**
      * 创作者
      */

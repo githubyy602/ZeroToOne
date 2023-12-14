@@ -261,7 +261,7 @@
                         
                         <div class="sidebox__user" >
                             <a href="#" class="sidebox__user-img">
-                                <img th:src="${fileDomain}+${user.imgUrl}" alt="">
+                                <img th:src="${user.imgUrl} ?: 'img/user.svg'" alt="">
                             </a>
                             <div class="sidebox__user-title">
                                 <h5><a href="#"><font style="vertical-align: inherit;"><font
@@ -305,7 +305,7 @@
                 <div class="post" th:if="${articleList != null and articleList.size() > 0} " th:each="article : ${articleList}">
                     <div class="post__head">
                         <a href="#" class="post__head-img">
-                            <img th:src="${fileDomain+article.imgUrl} ?: 'img/user.svg'" alt=""/>
+                            <img th:src="${article.imgUrl} ?: 'img/user.svg'" alt=""/>
                         </a>
                         <div class="post__head-title">
                             <h5><a href="#"><font style="vertical-align: inherit;"><font
@@ -637,9 +637,9 @@
                             style="vertical-align: inherit;"></font></a></span>
 
                     <nav class="footer__nav">
-                        <a href="contacts.html"><font style="vertical-align: inherit;"><font
+                        <a href="edit.html"><font style="vertical-align: inherit;"><font
                                 style="vertical-align: inherit;">联系人</font></font></a>
-                        <a href="faq.html"><font style="vertical-align: inherit;"><font
+                        <a href="userDetail.html"><font style="vertical-align: inherit;"><font
                                 style="vertical-align: inherit;">常见问题解答</font></font></a>
                         <a href="privacy.html"><font style="vertical-align: inherit;"><font
                                 style="vertical-align: inherit;">隐私政策</font></font></a>

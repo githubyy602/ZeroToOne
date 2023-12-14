@@ -78,7 +78,10 @@ function setAccountInfo() {
             var icon = user.imgUrl;
             var title = user.userTitle;
             if(null != icon && '' != icon && undefined != icon){
-                icon = base_url_file + Base64.decode(icon);
+                if(icon.indexOf("http") == -1){
+                    icon = base_url_file + Base64.decode(icon);
+                }
+                
                 $('#userIcon').attr('src',icon);
                 $('#userLeftImage').attr('src',icon);
                 $('#userImage').attr('src',icon);

@@ -5,6 +5,7 @@
     <id column="id" jdbcType="INTEGER" property="id" />
     <result column="title" jdbcType="VARCHAR" property="title" />
     <result column="content" jdbcType="VARCHAR" property="content" />
+    <result column="cover_img_id" jdbcType="INTEGER" property="coverImgId" />
     <result column="creator" jdbcType="INTEGER" property="creator" />
     <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
     <result column="status" jdbcType="INTEGER" property="status" />
@@ -13,7 +14,7 @@
     <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
   </resultMap>
   <sql id="Base_Column_List">
-    id, title, content, creator, create_time, `status`, `view`, publish_time, update_time
+    id, title, content,cover_img_id, creator, create_time, `status`, `view`, publish_time, update_time
   </sql>
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select 
@@ -26,10 +27,10 @@
     where id = #{id,jdbcType=INTEGER}
   </delete>
   <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.yangy.business.bean.PO.Articles" useGeneratedKeys="true">
-    insert into tb_articles (title, content, creator, 
+    insert into tb_articles (title, content, cover_img_id,creator, 
       create_time, `status`, `view`, 
       publish_time, update_time)
-    values (#{title,jdbcType=VARCHAR}, #{content,jdbcType=VARCHAR}, #{creator,jdbcType=INTEGER}, 
+    values (#{title,jdbcType=VARCHAR}, #{content,jdbcType=VARCHAR}, #{coverImgId,jdbcType=INTEGER},#{creator,jdbcType=INTEGER}, 
       #{createTime,jdbcType=TIMESTAMP}, #{status,jdbcType=INTEGER}, #{view,jdbcType=INTEGER}, 
       #{publishTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP})
   </insert>
@@ -42,6 +43,9 @@
       <if test="content != null">
         content,
       </if>
+      <if test="coverImgId != null">
+        cover_img_id,
+      </if>  
       <if test="creator != null">
         creator,
       </if>
@@ -67,6 +71,9 @@
       </if>
       <if test="content != null">
         #{content,jdbcType=VARCHAR},
+      </if>
+      <if test="coverImgId != null">
+        #{coverImgId},
       </if>
       <if test="creator != null">
         #{creator,jdbcType=INTEGER},
@@ -97,6 +104,9 @@
       <if test="content != null">
         content = #{content,jdbcType=VARCHAR},
       </if>
+      <if test="coverImgId != null">
+        cover_img_id = #{coverImgId}
+      </if>
       <if test="creator != null">
         creator = #{creator,jdbcType=INTEGER},
       </if>
@@ -122,6 +132,7 @@
     update tb_articles
     set title = #{title,jdbcType=VARCHAR},
       content = #{content,jdbcType=VARCHAR},
+      cover_img_id = #{coverImgId},
       creator = #{creator,jdbcType=INTEGER},
       create_time = #{createTime,jdbcType=TIMESTAMP},
       `status` = #{status,jdbcType=INTEGER},
@@ -132,11 +143,12 @@
   </update>
     
   <select id="selectAllArticles" resultType="com.yangy.business.bean.VO.ArticleVo">
-      select t.*,tu.user_name ,tf.`path` as imgUrl
-      from 
+      select t.*,tu.user_name ,tf.`path` as imgUrl,tf2.url as coverUrl
+      from
       tb_articles t
-      left join tb_user tu on t.creator = tu.id 
-      left join tb_file tf on tf.id = tu.img_id 
+      left join tb_user tu on t.creator = tu.id
+      left join tb_file tf on tf.id = tu.img_id
+      left join tb_file tf2 on tf2.id = t.cover_img_id
       order by publish_time desc , create_time desc
   </select>  
   

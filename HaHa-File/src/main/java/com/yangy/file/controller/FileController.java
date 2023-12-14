@@ -25,6 +25,15 @@ public class FileController {
 		//todo 可以改为免费oss存储，https://developer.qiniu.com/kodo/1233/console-quickstart
 		return ResultBean.success(fileService.uploadFile(req.getFileList()));
 	}
-	
-	
+
+//	public static void main(String[] args) {
+//		SpringApplication app = new SpringApplication(HahaFileApplication.class);
+//
+//		// 获取Environment对象
+//		Environment environment = app.run(args).getEnvironment();
+//
+//		// 通过getProperty获取启动参数
+//		String configPath = environment.getProperty("qny.skey");
+//		System.out.println("Config Path: " + configPath);
+//	}
 }
