@@ -3,9 +3,11 @@ package com.yangy.file.service.impl;
 import cn.hutool.core.collection.CollectionUtil;
 import cn.hutool.core.io.FileUtil;
 import cn.hutool.core.util.StrUtil;
+import com.alibaba.fastjson.JSON;
 import com.qiniu.http.Response;
 import com.qiniu.storage.Configuration;
 import com.qiniu.storage.UploadManager;
+import com.qiniu.storage.model.DefaultPutRet;
 import com.qiniu.util.Auth;
 import com.yangy.common.enums.ResponseCodeEnum;
 import com.yangy.common.exception.CustomException;
@@ -38,6 +40,7 @@ public class QnyFileServiceImpl extends AbstractFileService {
 	@Value("${qny.accessKey:8f6kXZ-AU6MVY7S3e6O6pIzv3sCi9VZ6iaq1zpnN}")
 	private String qnyAccessKey="8f6kXZ-AU6MVY7S3e6O6pIzv3sCi9VZ6iaq1zpnN";
 	
+	private final static String DOMAIN = "http://s5l4ugp8r.bkt.clouddn.com/";
 	private String qnyScreteKey;
 	private String bucket;
 
@@ -96,12 +99,14 @@ public class QnyFileServiceImpl extends AbstractFileService {
 
 				String filePath =  prefix_path+ StrUtil.C_SLASH+originalFilename;
 
-				String uploadToken =  auth.uploadToken(bucket+StrUtil.C_SLASH+prefix_path);
-				Response response = uploadManager.put(file.getBytes(),originalFilename,uploadToken);
+				String uploadToken =  auth.uploadToken(bucket);
+				Response response = uploadManager.put(file.getBytes(),prefix_path+StrUtil.C_SLASH+originalFilename,uploadToken);
 				log.info("Qny upload response : {}",response.bodyString());
+				// 解析上传成功的结果
+				DefaultPutRet putRet = JSON.parseObject(response.bodyString(), DefaultPutRet.class);
 
 				insertFile.setPath(filePath);
-				insertFile.setUrl("");
+				insertFile.setUrl(DOMAIN+putRet.key);
 				insertList.add(insertFile);
 			}
 

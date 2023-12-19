@@ -28,7 +28,7 @@
     
   <select id="selectById" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select 
-    tu.*,tf.url as imgUrl
+    tu.*,if(tf.`url` &lt;&gt; '',tf.`url`,tf.`path`) as imgUrl
     from tb_user tu
     left join tb_file tf on tu.img_id = tf.id
     where tu.id = #{id,jdbcType=INTEGER}
@@ -173,8 +173,8 @@
     limit 1
   </select>
   
-  <select id="selectLatestUserLog" resultMap="BaseResultMap">
-    select tu.*,tf.`path` as imgUrl from tb_user tu 
+  <select id="selectLatestUserList" resultMap="BaseResultMap">
+    select tu.*,if(tf.`url` &lt;&gt; '',tf.`url`,tf.`path`) as imgUrl from tb_user tu 
     left join (select user_id from tb_login_log tll order by login_time desc) a on tu.id = a.user_id
     left join tb_file tf on tu.img_id = tf.id 
     group by tu.id

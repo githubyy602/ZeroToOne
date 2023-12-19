@@ -5,22 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5a82bc85-19e5-4a1a-9070-52429c963c2e" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-File/src/main/java/com/yangy/file/constant/FileConstant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HaHa-File/src/main/java/com/yangy/file/service/impl/QnyFileServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Business/src/main/java/com/yangy/business/bean/PO/Articles.java" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-Business/src/main/java/com/yangy/business/bean/PO/Articles.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Business/src/main/resources/mapper/ArticlesMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-Business/src/main/resources/mapper/ArticlesMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-File/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-File/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-File/src/main/java/com/yangy/file/controller/FileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-File/src/main/java/com/yangy/file/controller/FileController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-File/src/main/java/com/yangy/file/service/impl/LocalFileServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-File/src/main/java/com/yangy/file/service/impl/LocalFileServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-File/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-File/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/js/api/user-api.js" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/js/api/user-api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/userDetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/userDetail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-User/src/main/java/com/yangy/user/bean/PO/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-User/src/main/java/com/yangy/user/bean/PO/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaHa-File/src/main/java/com/yangy/file/service/impl/QnyFileServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-File/src/main/java/com/yangy/file/service/impl/QnyFileServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaHa-User/src/main/java/com/yangy/user/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-User/src/main/java/com/yangy/user/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaHa-User/src/main/java/com/yangy/user/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-User/src/main/java/com/yangy/user/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaHa-User/src/main/resources/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-User/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -896,42 +885,42 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Maven.HaHa-Common [clean].executor": "Run",
-    "Maven.HaHa-Common [install].executor": "Run",
-    "Maven.haha-front [clean].executor": "Run",
-    "Maven.haha-front [package].executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.FileController.executor": "Debug",
-    "Spring Boot.HaHaUserApplication.executor": "Debug",
-    "Spring Boot.HahaBusinessApplication.executor": "Debug",
-    "Spring Boot.HahaFileApplication.executor": "Debug",
-    "Spring Boot.HahaFrontApplication.executor": "Debug",
-    "StatusDashboardGroupingRule": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/Java/ZeroToOne/code/HaHaShow",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "模块",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "run.configurations.included.in.services": "true",
-    "settings.editor.selected.configurable": "project.propCompiler",
-    "vue.rearranger.settings.migration": "true",
-    "应用程序.FileController.executor": "Debug"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Maven.HaHa-Common [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.HaHa-Common [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.haha-front [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.haha-front [package].executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.FileController.executor&quot;: &quot;Debug&quot;,
+    &quot;Spring Boot.HaHaUserApplication.executor&quot;: &quot;Debug&quot;,
+    &quot;Spring Boot.HahaBusinessApplication.executor&quot;: &quot;Debug&quot;,
+    &quot;Spring Boot.HahaFileApplication.executor&quot;: &quot;Debug&quot;,
+    &quot;Spring Boot.HahaFrontApplication.executor&quot;: &quot;Debug&quot;,
+    &quot;StatusDashboardGroupingRule&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Java/ZeroToOne/code/HaHaShow&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;模块&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propCompiler&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;,
+    &quot;应用程序.FileController.executor&quot;: &quot;Debug&quot;
   }
-}]]></component>
+}</component>
   <component name="RebelAgentSelection">
     <selection>jr</selection>
   </component>
@@ -977,7 +966,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.HahaBusinessApplication">
+  <component name="RunManager" selected="Spring Boot.HahaFrontApplication">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
@@ -1160,7 +1149,8 @@
       <workItem from="1702285892996" duration="32967000" />
       <workItem from="1702458309842" duration="428000" />
       <workItem from="1702458803904" duration="7055000" />
-      <workItem from="1702537160873" duration="11382000" />
+      <workItem from="1702537160873" duration="12629000" />
+      <workItem from="1702979579148" duration="2017000" />
     </task>
     <servers />
   </component>
@@ -1293,6 +1283,17 @@
     <option featureType="dependencySupport" implementationName="executable:docker" />
     <option featureType="dependencySupport" implementationName="java:org.thymeleaf:thymeleaf" />
     <option featureType="dependencySupport" implementationName="java:org.springframework.boot:spring-boot" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/HaHa-File/src/main/java/com/yangy/file/service/impl/QnyFileServiceImpl.java</url>
+          <line>101</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

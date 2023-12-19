@@ -107,7 +107,7 @@ public class UserController {
 	
 	@PostMapping(value = "/getLatestUsers")
 	public ResultBean getLatestUsers(){
-		return ResultBean.success(userMapper.selectLatestUserLog());
+		return ResultBean.success(userMapper.selectLatestUserList());
 	}
 	
 	//测试feign调用
