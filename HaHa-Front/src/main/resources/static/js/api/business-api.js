@@ -63,12 +63,16 @@ function showList(data) {
     }
 }
 
-function createArticle(title,content) {
+function createArticle(title,content,coverId) {
     $(function() {
         var param = new Map(); 
         param['title'] = title;
         param['content'] = content;
         param['creator'] = 1;
+        if(null != coverId && undefined != coverId && coverId >0 ){
+            param['coverImgId'] = coverId;
+        }
+        
         var sign = getBackendSignature(param);
         param['sign'] = sign;
         
@@ -105,12 +109,16 @@ function createArticle(title,content) {
 }
 
 
-function updateArticle(id,title,content) {
+function updateArticle(id,title,content,coverId) {
     $(function() {
         var param = new Map();
         param['id'] = id;
         param['title'] = title;
         param['content'] = content;
+        if(null != coverId && undefined != coverId && coverId >0 ){
+            param['coverImgId'] = coverId;
+        }
+        
         var sign = getBackendSignature(param);
         param['sign'] = sign;
         
@@ -143,5 +151,57 @@ function updateArticle(id,title,content) {
 
         });
         
+    });
+}
+
+function uploadCoverImage(){
+    $(function () {
+        $('#articleIcon').on('change', function() {
+            var accessToken = localStorage.getItem('accessToken');
+            var userId = localStorage.getItem('userId');
+            if(verifyUser() == false){
+                return;
+            }
+
+            var fileInput = document.getElementById('articleIcon');
+            var files = fileInput.files;
+            if(null == files || undefined == files){
+                return;
+            }
+
+            var formData = new FormData();
+            formData.append("fileList", files[0]);
+            formData.append('userId',userId);
+
+            $.ajax({
+                url: base_url_file+'/upload', // 替换为你的后端接口地址
+                type: 'POST',
+                data: formData,
+                headers : {"accessToken":accessToken},
+                cache: false,
+                processData: false,   // 告诉jquery要传输data对象
+                contentType: false,   // 告诉jquery不需要增加请求头对于contentType的设置,
+                beforeSend: function(XHR) {
+                    XHR.withCredentials = true;
+                },
+                success: function(response) {
+                    // 处理后端返回的响应
+                    var code = response.code;
+                    if(code == response_status_success){
+                        
+                        $('#coverImg').attr('src', response.data[0].path);
+                        $('#coverInput').val(response.data[0].id);
+                    }else {
+                        $('#articleIcon').val('');
+                        layer.msg('上传失败：'+response.message,{time:2000});
+                    }
+                },
+                error: function(xhr, status, error) {
+                    // 处理错误
+                    layer.msg('上传失败！');
+                    $('#uploadInput').val('');
+                }
+            });
+        });
     });
 }

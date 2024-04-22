@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <option name="BUILD_PROCESS_HEAP_SIZE" value="1000" />
+    <option name="BUILD_PROCESS_HEAP_SIZE" value="2048" />
     <annotationProcessing>
       <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
@@ -10,7 +10,6 @@
         <outputRelativeToContentRoot value="true" />
         <module name="hahasend" />
         <module name="HaHa-File" />
-        <module name="haha-business" />
         <module name="HaHa-Search" />
         <module name="HaHa-Business" />
         <module name="HaHa-Front" />
@@ -18,7 +17,6 @@
         <module name="HaHa-Socket" />
         <module name="search" />
         <module name="HaHa-Common" />
-        <module name="haha-front" />
         <module name="HaHa-Send" />
         <module name="hahafile" />
         <module name="socket" />
@@ -32,7 +30,10 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="HaHa-Business" options="-parameters" />
       <module name="HaHa-Common" options="-parameters" />
+      <module name="HaHa-File" options="-parameters" />
+      <module name="HaHa-Front" options="-parameters" />
       <module name="HaHa-Gateway" options="-parameters" />
       <module name="HaHa-User" options="-parameters" />
       <module name="haha-business" options="-parameters" />

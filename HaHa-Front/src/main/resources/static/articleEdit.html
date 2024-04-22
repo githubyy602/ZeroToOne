@@ -28,6 +28,10 @@
             </div>
             <div class="edit-div">
                 封面图：<input id="articleIcon" type="file" />
+                <div style="display: inline;">
+                    <img src="http://s5l4ugp8r.bkt.clouddn.com/images/0-1.jpg" id="coverImg" style="width: 100px;height: 100px;"/>
+                    <input hidden="hidden" id="coverInput" value="">
+                </div>
             </div>
             <input style="display: none;" id="articleId" th:if="${article != null}" th:value="${article.id}" />
             <div id="editorDiv">
@@ -47,6 +51,7 @@
 			var editor;
 
             $(function() {
+                
                 editor = editormd("editorDiv", {
                     width   : "90%",
                     height  : 640,
@@ -78,11 +83,12 @@
                              var id = $("#articleId").attr("value");
                              var content = this.getMarkdown();//编辑器内的内容
                              var title = $("#title").val();
+                             var coverId = $("#coverInput").val();
                              
                              if(id != null && id != undefined && id > 0){
-                                 updateArticle(id,title,content);
+                                 updateArticle(id,title,content,coverId);
                              }else{
-                                 createArticle(title,content);
+                                 createArticle(title,content,coverId);
                              }
                         },
                         index : function(){
@@ -91,6 +97,9 @@
                     }
                     
                 });
+                
+                //封面
+                uploadCoverImage();
             });
         </script>
     </body>

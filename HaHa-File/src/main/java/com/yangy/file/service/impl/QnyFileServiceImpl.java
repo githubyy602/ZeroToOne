@@ -30,7 +30,7 @@ import java.util.Objects;
 /**
  * @Author: Yangy
  * @Date: 2023/12/14 15:23
- * @Description
+ * @Description 七牛云
  */
 @Service
 @ConditionalOnProperty(name = "file.service.choose",havingValue = "qny",matchIfMissing = false)

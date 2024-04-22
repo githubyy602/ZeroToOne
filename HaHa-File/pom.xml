@@ -9,9 +9,9 @@
     </parent>
     
     <groupId>com.yangy</groupId>
-    <artifactId>hahafile</artifactId>
+    <artifactId>HaHa-File</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>hahafile</name>
+    <name>HaHa-File</name>
     <description>File relation service</description>
     <properties>
         <java.version>8</java.version>

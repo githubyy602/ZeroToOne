@@ -9,9 +9,9 @@
     </parent>
     
     <groupId>com.yangy</groupId>
-    <artifactId>haha-front</artifactId>
+    <artifactId>HaHa-Front</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>haha-front</name>
+    <name>HaHa-Front</name>
     <description>front service</description>
     
     <properties>
@@ -25,14 +25,14 @@
             <version>1.0-SNAPSHOT</version>
             <exclusions>
                 <!--nacos相关-->
-                <exclusion>
-                    <groupId>com.alibaba.cloud</groupId>
-                    <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>com.alibaba.cloud</groupId>
-                    <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
-                </exclusion>
+<!--                <exclusion>-->
+<!--                    <groupId>com.alibaba.cloud</groupId>-->
+<!--                    <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>-->
+<!--                </exclusion>-->
+<!--                <exclusion>-->
+<!--                    <groupId>com.alibaba.cloud</groupId>-->
+<!--                    <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>-->
+<!--                </exclusion>-->
                 
                 <exclusion>
                     <groupId>org.springframework.boot</groupId>
@@ -58,18 +58,19 @@
             </exclusions>
         </dependency>
         
-        <!--<dependency>-->
-            <!--<groupId>org.springframework.boot</groupId>-->
-            <!--<artifactId>spring-boot-starter</artifactId>-->
-        <!--</dependency>-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
         <!---->
         <!--&lt;!&ndash; https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web &ndash;&gt;-->
         <!--&lt;!&ndash;没有此以来客户端服务启动会立即退出&ndash;&gt;-->
-        <!--<dependency>-->
-            <!--<groupId>org.springframework.boot</groupId>-->
-            <!--<artifactId>spring-boot-starter-web</artifactId>-->
-        <!--</dependency>-->
-        
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>

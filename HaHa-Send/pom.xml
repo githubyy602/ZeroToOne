@@ -9,7 +9,7 @@
     </parent>
     
     <groupId>com.yangy</groupId>
-    <artifactId>hahasend</artifactId>
+    <artifactId>send</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>HaHa-Send</name>
     <description>Send service</description>

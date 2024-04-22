@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 /**
  * @Author: Yangy
  * @Date: 2023/11/24 16:25
- * @Description
+ * @Description url = "http://localhost:20011"
  */
-@FeignClient(name = "${sys.serviceName.user}",path = "${sys.serviceContext.user}",url = "http://localhost:20011",fallback = UserFallBack.class)
+@FeignClient(name = "${sys.serviceName.user}",path = "${sys.serviceContext.user}",fallback = UserFallBack.class)
 public interface UserFeignClient {
 	
 	@RequestMapping(value = "/getLatestUsers",method = RequestMethod.POST)

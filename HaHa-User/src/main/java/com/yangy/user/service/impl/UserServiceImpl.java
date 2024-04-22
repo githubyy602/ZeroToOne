@@ -68,13 +68,12 @@ public class UserServiceImpl extends ServiceImpl<UserMapper,User> implements Use
 		LoginLog loginLog = new LoginLog();
 		try {
 			User loginUser = baseMapper.selectUserByLoginInfo(new User(loginInfoReqDto.getLoginName()));
+			assembleLog(Objects.nonNull(loginUser) && Objects.nonNull(loginUser.getId()) && loginUser.getId()> 0 ? loginUser.getId() : 0,loginLog);
 			if(Objects.nonNull(loginUser)){
 				if(!StringUtils.equals(loginUser.getLoginPassword(),loginInfoReqDto.getPassword())){
 					return ResultBean.returnResult(ResponseCodeEnum.USER_PASSWORD_ERROR);
 				}
-				
-				assembleLog(loginUser.getId(),loginLog);
-				
+
 				//todo 目前假设这里有账户+验证码的登录形式，需要通过feign获取验证码
 				ResultBean resultBean = sendFeignClient.sendSMS();
 				log.info("获取到的验证码是：{}",resultBean.getData());

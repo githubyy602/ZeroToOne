@@ -227,7 +227,7 @@
                                 style="vertical-align: inherit;" id="userTitleLeft"></font></font></p>
                     </div>
                     <div class="user__btns">
-                        <a href="add-project.html" class="user__btn user__btn--blue"><span><font
+                        <a href="javascript:void(0)" id="toArticleEdit" class="user__btn user__btn--blue"><span><font
                                 style="vertical-align: inherit;"><font
                                 style="vertical-align: inherit;">发布文章</font></font></span></a>
                         <a href="add-job.html" class="user__btn user__btn--orange"><span><font
@@ -248,7 +248,7 @@
                                     style="vertical-align: inherit;">88</font></font></span>
                         </li>
                     </ul>
-                    <a href="" id="toUserDetail" class="sidebox__more"><font style="vertical-align: inherit;"><font
+                    <a href="javascript:void(0)" id="toUserDetail" class="sidebox__more"><font style="vertical-align: inherit;"><font
                             style="vertical-align: inherit;">查看个人资料</font></font></a>
                 </div>
                 <!-- end user -->
@@ -637,7 +637,7 @@
                             style="vertical-align: inherit;"></font></a></span>
 
                     <nav class="footer__nav">
-                        <a href="edit.html"><font style="vertical-align: inherit;"><font
+                        <a href="articleEdit.html"><font style="vertical-align: inherit;"><font
                                 style="vertical-align: inherit;">联系人</font></font></a>
                         <a href="userDetail.html"><font style="vertical-align: inherit;"><font
                                 style="vertical-align: inherit;">常见问题解答</font></font></a>
@@ -678,7 +678,15 @@
         
         $('#toUserDetail').click(function () {
             if(verifyUser() == true){
+                console.log("userDetail.html");
                 window.location.href= 'userDetail.html';
+            }
+        });
+
+        $('#toArticleEdit').click(function () {
+            if(verifyUser() == true){
+                console.log("articleEdit.html");
+                window.location.href= 'articleEdit.html';
             }
         });
         

@@ -148,34 +148,33 @@ function verifyUser() {
             success: function (data) {
                 
                 if(data.code == 1000){
+                    
                     access = true;
                     setAccountInfo();
-                    
+
                 }else {
-                   access = false; 
+                   access = false;
                 }
-                
+
             },
             error: function (data) {
                 console.log("请求错误："+data.statusText);
-                return true;
+                return false;
             }
 
             });
-            
+
         }else{
             access = false;
         }
-        
+
     }else {
         access = false;
     }
     
     if(access == false){
         //未登录
-        layer.msg('请登录',{
-            time:2000
-        },function(){
+        layer.msg('请登录后操作',{time : 2000},function(){
             localStorage.removeItem('userId');
             localStorage.removeItem('accessToken');
             localStorage.removeItem('userInfo');
@@ -444,7 +443,8 @@ function userDetailUpload() {
             // 处理后端返回的响应
             var code = response.code;
             if(code == response_status_success){
-                 $('#userLeftImage').attr('src', base_url_file+Base64.decode(response.data[0].path));
+                 // $('#userLeftImage').attr('src', base_url_file+Base64.decode(response.data[0].path));
+                $('#userLeftImage').get(0).src = base_url_file+Base64.decode(response.data[0].path)
                  $('#fileInput').val(response.data[0].id);
             }else {
                 $('#uploadInput').val('');
@@ -485,7 +485,11 @@ function userDetailUpdate() {
        param['sex'] = sex;
        param['userId'] = userId;
        
-       if(null == loginName && null == email && null == userName && null == phone && null == imgId ){
+       if( (null == loginName || loginName == '' )
+           && (null == email ||  email == '')
+           && (null == userName || userName == '')
+           && (null == phone ||  phone == '')
+           && (null == imgId || imgId == 0 ) ){
            layer.msg('请填写要更新的用户信息',{
                         time:2000
                     });
