@@ -28,7 +28,7 @@ public class ArticleController {
 	private ArticleService articleService;
 	
 	@PostMapping("/getArticleList")
-	public ResultBean<PageInfo<ArticleVo>> getArticleList(PageQuery query){
+	public ResultBean<PageInfo<ArticleVo>> getArticleList(@RequestBody PageQuery query){
 		return ResultBean.success(articleService.queryArticleListByPage(query));
 	}
 	

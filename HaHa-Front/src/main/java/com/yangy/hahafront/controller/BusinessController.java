@@ -22,7 +22,7 @@ public class BusinessController {
 	@Autowired
 	private BusinessFeignClient businessFeignClient;
 	
-	@RequestMapping(value = {"/edit","/edit.html","/edit.html?id={articleId}"})
+	@RequestMapping(value = {"/articleEdit.html","/articleEdit.html?id={articleId}"})
 	public String goEditPage(@RequestParam(value = "id",required = false) Integer articleId, Model model){
 		if(Objects.nonNull(articleId) && articleId >0){
 			ResultBean<ArticleVo> resultBean = businessFeignClient.getArticleDetail(articleId);
@@ -31,6 +31,6 @@ public class BusinessController {
 			}
 		}
 		
-		return "articleEdit";
+		return "/articleEdit";
 	}
 }

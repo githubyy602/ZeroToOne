@@ -9,6 +9,7 @@ import com.yangy.business.service.ArticleService;
 import com.yangy.common.bean.PageQuery;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.Date;
 import java.util.List;
@@ -25,8 +26,7 @@ public class ArticleServiceImpl implements ArticleService {
 	private ArticlesMapper articlesMapper;
 
 	@Override
-	public PageInfo<ArticleVo> queryArticleListByPage(PageQuery query) {
-
+	public PageInfo<ArticleVo> queryArticleListByPage(@RequestBody PageQuery query) {
 		PageHelper.startPage(query.getPageIndex(),query.getPageSize());
 		List<ArticleVo> articlesList = articlesMapper.selectAllArticles();
 		PageInfo<ArticleVo> articlesPageInfo = new PageInfo<>(articlesList);

@@ -5,25 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5a82bc85-19e5-4a1a-9070-52429c963c2e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Business/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-Business/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Common/src/main/java/com/yangy/common/feign/UserFeignClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-Common/src/main/java/com/yangy/common/feign/UserFeignClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Common/src/main/resources/bootstrap-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-Common/src/main/resources/bootstrap-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaHa-Business/src/main/java/com/yangy/business/controller/ArticleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-Business/src/main/java/com/yangy/business/controller/ArticleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaHa-Business/src/main/java/com/yangy/business/service/impl/ArticleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-Business/src/main/java/com/yangy/business/service/impl/ArticleServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaHa-Common/src/main/java/com/yangy/common/bean/PageQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-Common/src/main/java/com/yangy/common/bean/PageQuery.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HaHa-Common/table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-Common/table.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-File/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-File/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-File/src/main/java/com/yangy/file/service/impl/QnyFileServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-File/src/main/java/com/yangy/file/service/impl/QnyFileServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Front/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-Front/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HaHa-Front/src/main/java/com/yangy/hahafront/controller/BusinessController.java" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-Front/src/main/java/com/yangy/hahafront/controller/BusinessController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/articleEdit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/articleDetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/articleDetail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/js/api/business-api.js" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/js/api/business-api.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/js/api/user-api.js" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/js/api/user-api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Send/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-Send/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-User/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-User/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-User/src/main/java/com/yangy/user/HaHaUserApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-User/src/main/java/com/yangy/user/HaHaUserApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-User/src/main/java/com/yangy/user/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-User/src/main/java/com/yangy/user/service/impl/UserServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -1177,7 +1168,8 @@
       <workItem from="1707099762393" duration="1782000" />
       <workItem from="1710493485070" duration="5651000" />
       <workItem from="1713496190746" duration="15091000" />
-      <workItem from="1713757077099" duration="8542000" />
+      <workItem from="1713757077099" duration="30900000" />
+      <workItem from="1714361754569" duration="28206000" />
     </task>
     <servers />
   </component>

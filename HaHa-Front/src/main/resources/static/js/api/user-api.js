@@ -485,11 +485,11 @@ function userDetailUpdate() {
        param['sex'] = sex;
        param['userId'] = userId;
        
-       if( (null == loginName || loginName == '' )
-           && (null == email ||  email == '')
-           && (null == userName || userName == '')
-           && (null == phone ||  phone == '')
-           && (null == imgId || imgId == 0 ) ){
+       if( (null == loginName || loginName == "" )
+           && (null == email ||  email == "")
+           && (null == name || name == "")
+           && (null == phone ||  phone == "")
+           && (null == imgId || imgId == 0 || imgId == "" ) ){
            layer.msg('请填写要更新的用户信息',{
                         time:2000
                     });

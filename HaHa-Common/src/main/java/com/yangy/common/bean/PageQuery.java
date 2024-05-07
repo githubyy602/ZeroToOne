@@ -14,6 +14,6 @@ public class PageQuery {
 	private int pageIndex = 0;
 	
 	//分页内容条数
-	private int pageSize = 20;
+	private int pageSize = 5;
 	
 }
