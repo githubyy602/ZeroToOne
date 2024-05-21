@@ -1,71 +1,30 @@
-//查询文章
-function queryArticles(pageIndex,pageSize) {
-    var count = 20;
-    $(function() {
-        var param = new Map(); 
-        // param.set("pageIndex","0");
-        // param.set("pageSize","20");
-        param['pageIndex'] = pageIndex;
-        param['pageSize'] = pageSize;
-        var sign = getBackendSignature(param);
-        param['sign'] = sign;
-        
-        $.ajax({
-            url: base_url_business+"/article/getArticleList",
-            method: "POST",
-            data: JSON.stringify(param),
-			async: false,
-            timeout : 5000,
-    		dataType: "json",
-    		contentType: "application/json;charset=UTF-8",
-			beforeSend: function(XHR) {
-				XHR.setRequestHeader("Access-Control-Allow-Origin","*");
-				// XHR.setRequestHeader("userId", encodeURIComponent(userInfo.userId));
-			},
-            success: function (data) {
-                if(data.code == 1000){
-                    if(null != data.data && '' != data.data){
-                        //分页
-                        showList(data.data.list);
-                        count = data.data.list.length;
-                    }else{
-                        $('#articleList').append('暂未内容！');
-                    }
-                    
-                }else{
-                     $('#articleList').append('暂未内容！');
-				}
-            },
-            error: function (data) {
-                console.log("请求错误："+data.statusText);
-            }
-
-        });
-        
-    });
-    
-    return count;
-}
-
-//下拉加载更多
+//文章列表下拉加载更多
 let isLoading = false;
-let currentPage = 0;
+let currentPage = 2;
+let finalPage = false;
 function showMore(){
 
     // 滚动事件监听
     $(window).scroll(function() {
-        if ($(window).scrollTop() + $(window).height() >= $(document).height() - 50) {
-            loadMore(currentPage,isLoading);
+        if ($(window).scrollTop() + $(window).height() >= $(document).height() - 30) {
+            if(!isLoading){
+                isLoading = true;
+                loadMore();
+            }
+        }else{
+            isLoading = false;
         }
     });
 
 }
 
 // 加载更多内容
-function loadMore(currentPage,isLoading) {
-    if (isLoading) return;
-    isLoading = true;
-    currentPage++;
+function loadMore() {
+
+    if(finalPage){
+        layer.msg("没有更多内容啦",{time:2000});
+        return;
+    }
 
     var param = new Map();
     param['pageIndex'] = currentPage;
@@ -87,13 +46,21 @@ function loadMore(currentPage,isLoading) {
                     createPostElement(item);
                 });
 
+                if(data.data.hasNextPage == false){
+                    finalPage = true;
+                    $('#getMoreBtn').hide();
+                }else{
+                    currentPage++;
+                }
+
                 isLoading = false;
             }else {
                 layer.msg("加载失败："+data.message,{time:2000});
             }
         },
         error: function(error) {
-            console.error('Error loading more content:', error);
+            // console.error('Error loading more content:', error);
+            layer.msg("加载失败："+error,{time:2000});
             isLoading = false;
         }
     });
@@ -151,27 +118,9 @@ function createPostElement(item) {
     );
 
     newArea.append(postHead,postTitle,postDescription,postStats);
-    // console.log("newArea:\n"+newArea.html());
-    $('#contentListArea').append(newArea);
+    $('#getMoreBtn').before(newArea);
 }
 
-//
-// function showList(data) {
-//     // 清空列表容器
-//     $('#articleList').empty();
-//
-//     // 遍历数据，生成列表项并插入到列表容器中
-//     for (var i = 0; i < data.length; i++) {
-//       var link = document.createElement("a");
-//       link.href = req_domain+front_service_port+'/web/detail/'+data[i].id;
-//       link.textContent = data[i].title;
-//       link.style.color = 'white';
-//
-//       var listItem = document.createElement("li");
-//       listItem.appendChild(link);
-//       $('#articleList').append(listItem);
-//     }
-// }
 
 //创建文章
 function createArticle(title,content,coverId) {

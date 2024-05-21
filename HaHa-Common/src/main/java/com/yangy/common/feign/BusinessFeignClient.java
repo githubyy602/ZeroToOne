@@ -3,12 +3,15 @@ package com.yangy.common.feign;
 import com.github.pagehelper.PageInfo;
 import com.yangy.common.bean.PageQuery;
 import com.yangy.common.bean.ResultBean;
+import com.yangy.common.bean.feign.ArticlePopularDataVo;
 import com.yangy.common.bean.feign.ArticleVo;
 import com.yangy.common.hystrix.BusinessFallBack;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+
+import java.util.List;
 
 /**
  * @Author: Yangy
@@ -23,6 +26,8 @@ public interface BusinessFeignClient {
 	ResultBean<PageInfo<ArticleVo>> getArticleList(PageQuery query);
 	
 	@RequestMapping(value = "/article/getArticleDetail",method = RequestMethod.POST)
-	ResultBean<ArticleVo> getArticleDetail(@RequestParam("id") Integer id);
-	
+	ResultBean<ArticleVo> getArticleDetail(@RequestParam("id") Integer id,@RequestParam("userId") Integer userId);
+
+	@RequestMapping(value = "/article/getPopularArticles",method = RequestMethod.POST)
+	ResultBean<List<ArticlePopularDataVo>> getPopularArticles();
 }

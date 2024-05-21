@@ -74,7 +74,9 @@ function setAccountInfo() {
             $(".user").show();
             $('#userName').html(user.userName);
             $('#userNameLeft').html(user.userName);
-            
+            $('#articleNum').html(user.anum);
+            $('#loginNum').html(user.lnum);
+
             var icon = user.imgUrl;
             var title = user.userTitle;
             if(null != icon && '' != icon && undefined != icon){

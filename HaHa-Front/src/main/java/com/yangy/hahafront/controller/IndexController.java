@@ -3,6 +3,7 @@ package com.yangy.hahafront.controller;
 import com.github.pagehelper.PageInfo;
 import com.yangy.common.bean.PageQuery;
 import com.yangy.common.bean.ResultBean;
+import com.yangy.common.bean.feign.ArticlePopularDataVo;
 import com.yangy.common.bean.feign.ArticleVo;
 import com.yangy.common.constant.UrlConstant;
 import com.yangy.common.feign.BusinessFeignClient;
@@ -11,9 +12,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
-import java.util.Objects;
+import java.util.List;
 
 /**
  * @Author: Yangy
@@ -41,6 +41,12 @@ public class IndexController {
 			PageInfo<ArticleVo> articleVoPageInfo = articleResult.getData();
 			model.addAttribute("articleList",articleVoPageInfo.getList()); 
 		}
+
+		ResultBean<List<ArticlePopularDataVo>> popularList = businessFeignClient.getPopularArticles();
+		if(ResultBean.successResp(popularList)){
+			model.addAttribute("popularList",popularList.getData());
+		}
+
 		return "/index";
 	}
 	
@@ -49,15 +55,4 @@ public class IndexController {
 		return "/signin";
 	}
 	
-	@RequestMapping(value = "/toArticlePage")
-	public String articleDetail(@RequestParam(value = "id",required = false) Integer id,Model model){
-		if(Objects.nonNull(id) && id > 0){
-			ResultBean<ArticleVo> resultBean = businessFeignClient.getArticleDetail(id);
-			model.addAttribute("article",resultBean.getData());
-			return "/articleDetail";
-		}else {
-			return "redirect:/index";
-		}
-	}
-
 }

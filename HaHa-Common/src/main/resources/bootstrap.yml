@@ -32,7 +32,7 @@ sys:
 
 token:
   except:
-    url: /login/online,/getSign,/user/createUser,/user/getLatestUsers,/article/getArticleList,/article/createArticle,/article/updateArticle
+    url: /login/online,/login/out,/getSign,/user/createUser,/user/getLatestUsers,/article/getArticleList,/article/createArticle,/article/updateArticle
 
 sign:
   except:

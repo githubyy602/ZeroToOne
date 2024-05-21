@@ -42,6 +42,15 @@ CREATE TABLE `tb_articles` (
    PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COMMENT='文章内容表';
 
+CREATE TABLE `tb_article_interact_data` (
+    `id` int NOT NULL AUTO_INCREMENT,
+    `article_id` int NOT NULL COMMENT '文章id',
+    `user_id` int DEFAULT '0' COMMENT '用户id',
+    `type` int NOT NULL COMMENT '互动类型：1=查看，2=喜欢收藏，3=分享，4=不喜欢',
+    `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+    PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COMMENT='文章互动数据记录';
+
 CREATE TABLE `tb_login_log` (
     `id` int NOT NULL AUTO_INCREMENT,
     `user_id` int NOT NULL COMMENT '登录用户id',

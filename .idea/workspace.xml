@@ -5,16 +5,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5a82bc85-19e5-4a1a-9070-52429c963c2e" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/mybatisx/templates.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HaHa-Business/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HaHa-Business/src/main/java/com/yangy/business/bean/PO/ArticleInteractData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HaHa-Business/src/main/java/com/yangy/business/bean/VO/ArticlePopularDataVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HaHa-Business/src/main/java/com/yangy/business/constant/ArticleInteractEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HaHa-Business/src/main/java/com/yangy/business/mapper/ArticleInteractDataMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HaHa-Business/src/main/java/com/yangy/business/service/ArticleInteractDataService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HaHa-Business/src/main/java/com/yangy/business/service/impl/ArticleInteractDataServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HaHa-Business/src/main/resources/mapper/ArticleInteractDataMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HaHa-Common/src/main/java/com/yangy/common/bean/feign/ArticlePopularDataVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HaHa-Business/src/main/java/com/yangy/business/controller/ArticleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-Business/src/main/java/com/yangy/business/controller/ArticleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaHa-Business/src/main/java/com/yangy/business/service/ArticleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-Business/src/main/java/com/yangy/business/service/ArticleService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HaHa-Business/src/main/java/com/yangy/business/service/impl/ArticleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-Business/src/main/java/com/yangy/business/service/impl/ArticleServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaHa-Common/src/main/java/com/yangy/common/bean/PageQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-Common/src/main/java/com/yangy/common/bean/PageQuery.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaHa-Business/src/main/resources/mapper/ArticlesMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-Business/src/main/resources/mapper/ArticlesMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaHa-Common/src/main/java/com/yangy/common/feign/BusinessFeignClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-Common/src/main/java/com/yangy/common/feign/BusinessFeignClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaHa-Common/src/main/java/com/yangy/common/hystrix/BusinessFallBack.java" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-Common/src/main/java/com/yangy/common/hystrix/BusinessFallBack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaHa-Common/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-Common/src/main/resources/bootstrap.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HaHa-Common/table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-Common/table.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HaHa-Front/src/main/java/com/yangy/hahafront/controller/BusinessController.java" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-Front/src/main/java/com/yangy/hahafront/controller/BusinessController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaHa-Front/src/main/java/com/yangy/hahafront/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-Front/src/main/java/com/yangy/hahafront/controller/IndexController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/articleDetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/articleDetail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/js/api/business-api.js" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/js/api/business-api.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/js/api/user-api.js" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-Front/src/main/resources/static/js/api/user-api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaHa-User/src/main/java/com/yangy/user/bean/DTO/UserInfoDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-User/src/main/java/com/yangy/user/bean/DTO/UserInfoDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaHa-User/src/main/java/com/yangy/user/bean/PO/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-User/src/main/java/com/yangy/user/bean/PO/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaHa-User/src/main/java/com/yangy/user/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-User/src/main/java/com/yangy/user/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaHa-User/src/main/java/com/yangy/user/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-User/src/main/java/com/yangy/user/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaHa-User/src/main/resources/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/HaHa-User/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -366,11 +388,11 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
         <option value="Kotlin File" />
         <option value="Python Script" />
         <option value="AnnotationType" />
         <option value="Interface" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -895,6 +917,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;Maven.HaHa-Common [clean].executor&quot;: &quot;Run&quot;,
     &quot;Maven.HaHa-Common [install].executor&quot;: &quot;Run&quot;,
     &quot;Maven.HaHa-Front [clean].executor&quot;: &quot;Run&quot;,
@@ -942,19 +965,19 @@
       <recent name="D:\Java\ZeroToOne\code\HaHaShow\HaHa-Front\src\main\resources\static\editor\images" />
       <recent name="D:\Java\ZeroToOne\code\HaHaShow\HaHa-Front\src\main\resources\static\editor" />
     </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.yangy.common.bean.feign" />
-      <recent name="com.yangy.hahafront.config" />
-      <recent name="com.yangy.common.wrapper" />
-      <recent name="com.yangy.send.constants" />
-      <recent name="com.yangy.send.strategy" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Java\ZeroToOne\code\HaHaShow\HaHa-File\src\main\resources\static\images" />
       <recent name="D:\Java\ZeroToOne\code\HaHaShow\HaHa-Front\src\main\resources\static\js\css" />
       <recent name="D:\Java\ZeroToOne\code\HaHaShow\HaHa-Front\src\main\resources\static\icon" />
       <recent name="D:\Java\ZeroToOne\code\HaHaShow\HaHa-Web\src\main\resources" />
       <recent name="D:\Java\ZeroToOne\code\HaHaShow\HaHa-Web\src\main\resources\templates" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.yangy.common.bean.feign" />
+      <recent name="com.yangy.hahafront.config" />
+      <recent name="com.yangy.common.wrapper" />
+      <recent name="com.yangy.send.constants" />
+      <recent name="com.yangy.send.strategy" />
     </key>
   </component>
   <component name="RestServicesNavigator">
@@ -976,7 +999,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.HahaFrontApplication">
+  <component name="RunManager" selected="Spring Boot.HahaBusinessApplication">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
@@ -1169,7 +1192,10 @@
       <workItem from="1710493485070" duration="5651000" />
       <workItem from="1713496190746" duration="15091000" />
       <workItem from="1713757077099" duration="30900000" />
-      <workItem from="1714361754569" duration="28206000" />
+      <workItem from="1714361754569" duration="35386000" />
+      <workItem from="1715583031413" duration="15107000" />
+      <workItem from="1715825997277" duration="14279000" />
+      <workItem from="1716274542869" duration="8469000" />
     </task>
     <servers />
   </component>
@@ -1302,6 +1328,9 @@
     <option featureType="dependencySupport" implementationName="executable:docker" />
     <option featureType="dependencySupport" implementationName="java:org.thymeleaf:thymeleaf" />
     <option featureType="dependencySupport" implementationName="java:org.springframework.boot:spring-boot" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

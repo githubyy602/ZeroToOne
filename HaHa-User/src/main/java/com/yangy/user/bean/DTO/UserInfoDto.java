@@ -38,4 +38,10 @@ public class UserInfoDto {
     private String userTitle;
     //头像文件id
     private Integer imgId;
+
+    //用户发布的文章数
+    private String anum;
+
+    //用户登录数
+    private String lnum;
 }

@@ -179,5 +179,12 @@
     left join tb_file tf on tu.img_id = tf.id 
     group by tu.id
   </select>  
-    
+
+  <select id="selectUserOnlineData" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    SELECT tu.id ,tu.user_name ,ta.anum,tll.lnum from tb_user tu
+    left join (select creator,COUNT(*) as anum from tb_articles where status = 2 group by creator) ta on tu .id = ta.creator
+    left join (select user_id,COUNT(*) as lnum from tb_login_log where login_result = 1  group by user_id) tll on tu.id = tll .user_id
+    where tu.id = #{0} limit 1
+  </select>
+
 </mapper>

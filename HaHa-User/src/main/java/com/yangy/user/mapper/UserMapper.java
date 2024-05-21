@@ -23,4 +23,6 @@ public interface UserMapper extends BaseMapper<User> {
     User selectById(Integer id);
     
     List<User> selectLatestUserList();
+
+    User selectUserOnlineData(Integer userId);
 }

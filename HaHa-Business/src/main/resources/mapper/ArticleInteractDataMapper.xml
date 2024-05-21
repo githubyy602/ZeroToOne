@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yangy.business.mapper.ArticleInteractDataMapper">
+
+    <resultMap id="BaseResultMap" type="com.yangy.business.bean.PO.ArticleInteractData">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="articleId" column="article_id" jdbcType="INTEGER"/>
+            <result property="userId" column="user_id" jdbcType="INTEGER"/>
+            <result property="type" column="type" jdbcType="INTEGER"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,article_id,user_id,
+        type,create_time
+    </sql>
+
+    <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.yangy.business.bean.PO.Articles" useGeneratedKeys="true">
+        insert into tb_article_interact_data
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="articleId != null and articleId > 0">
+                article_id,
+            </if>
+            <if test="userId != null">
+                user_id,
+            </if>
+            <if test="type != null">
+                `type`,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="articleId != null and articleId > 0">
+                #{articleId},
+            </if>
+            <if test="userId != null">
+                #{userId},
+            </if>
+            <if test="type != null">
+                #{type},
+            </if>
+        </trim>
+    </insert>
+
+    <select id="selectArticleData" parameterType="java.lang.Integer" resultType="com.yangy.business.bean.VO.ArticlePopularDataVo">
+        SELECT ta.*,a.num,tu.user_name as creatorName from (
+           SELECT article_id,`type`,COUNT(*) as num from tb_article_interact_data taid group by article_id ,`type`)
+           a left join tb_articles ta on a.article_id = ta.id
+           left join tb_user tu on ta.creator = tu.id
+        where a.`type` = #{0}
+        order by a.num desc
+        limit 5
+    </select>
+
+</mapper>

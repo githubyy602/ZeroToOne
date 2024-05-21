@@ -45,6 +45,13 @@ public class UserController {
 		
 		UserInfoDto userInfoDto = ConvertUtil.convert(user,new UserInfoDto());
 		userInfoDto.setUserId(user.getId());
+
+		User userRefData = userMapper.selectUserOnlineData(reqBaseBean.getUserId());
+		if(Objects.nonNull(userRefData)){
+			userInfoDto.setAnum(userRefData.getAnum());
+			userInfoDto.setLnum(userRefData.getLnum());
+		}
+
 		return ResultBean.success(userInfoDto);
 	}
 	

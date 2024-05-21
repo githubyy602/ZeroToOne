@@ -3,10 +3,13 @@ package com.yangy.common.hystrix;
 import com.github.pagehelper.PageInfo;
 import com.yangy.common.bean.PageQuery;
 import com.yangy.common.bean.ResultBean;
+import com.yangy.common.bean.feign.ArticlePopularDataVo;
 import com.yangy.common.bean.feign.ArticleVo;
 import com.yangy.common.enums.ResponseCodeEnum;
 import com.yangy.common.feign.BusinessFeignClient;
 import org.springframework.stereotype.Component;
+
+import java.util.List;
 
 /**
  * @Author: Yangy
@@ -17,12 +20,17 @@ import org.springframework.stereotype.Component;
 public class BusinessFallBack implements BusinessFeignClient {
 
 	@Override
-	public ResultBean<ArticleVo> getArticleDetail(Integer id) {
+	public ResultBean<ArticleVo> getArticleDetail(Integer id,Integer userId) {
 		return ResultBean.returnResult(ResponseCodeEnum.FEIGN_ERROR);
 	}
 
 	@Override
 	public ResultBean<PageInfo<ArticleVo>> getArticleList(PageQuery query) {
+		return ResultBean.returnResult(ResponseCodeEnum.FEIGN_ERROR);
+	}
+
+	@Override
+	public ResultBean<List<ArticlePopularDataVo>> getPopularArticles() {
 		return ResultBean.returnResult(ResponseCodeEnum.FEIGN_ERROR);
 	}
 }

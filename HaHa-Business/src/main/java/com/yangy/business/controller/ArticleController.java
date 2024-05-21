@@ -3,7 +3,10 @@ package com.yangy.business.controller;
 import cn.hutool.core.util.ObjectUtil;
 import com.github.pagehelper.PageInfo;
 import com.yangy.business.bean.PO.Articles;
+import com.yangy.business.bean.VO.ArticlePopularDataVo;
 import com.yangy.business.bean.VO.ArticleVo;
+import com.yangy.business.constant.ArticleInteractEnum;
+import com.yangy.business.service.ArticleInteractDataService;
 import com.yangy.business.service.ArticleService;
 import com.yangy.common.bean.PageQuery;
 import com.yangy.common.bean.ResultBean;
@@ -14,6 +17,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 /**
  * @Author: Yangy
@@ -26,15 +31,19 @@ public class ArticleController {
 	
 	@Autowired
 	private ArticleService articleService;
-	
+
+	@Autowired
+	private ArticleInteractDataService articleInteractDataService;
+
 	@PostMapping("/getArticleList")
 	public ResultBean<PageInfo<ArticleVo>> getArticleList(@RequestBody PageQuery query){
 		return ResultBean.success(articleService.queryArticleListByPage(query));
 	}
 	
 	@PostMapping("/getArticleDetail")
-	public ResultBean<ArticleVo> getArticleDetail(@RequestParam("id") Integer id){
-		return ResultBean.success(articleService.queryOne(id));
+	public ResultBean<ArticleVo> getArticleDetail(@RequestParam("id") Integer id,
+												  @RequestParam(value = "userId",required = false) Integer userId){
+		return ResultBean.success(articleService.queryOne(id,userId));
 	}
 	
 	@PostMapping("/createArticle")
@@ -49,6 +58,10 @@ public class ArticleController {
 		}else {
 			return ResultBean.returnResult(ResponseCodeEnum.PARAM_ERROR);
 		}
-		
+	}
+
+	@PostMapping("/getPopularArticles")
+	public ResultBean<List<ArticlePopularDataVo>> getPopularArticles(){
+		return ResultBean.success(articleInteractDataService.queryArticleDataList(ArticleInteractEnum.VIEW));
 	}
 }

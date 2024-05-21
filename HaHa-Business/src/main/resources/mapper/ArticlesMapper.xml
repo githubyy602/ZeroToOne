@@ -34,6 +34,7 @@
       #{createTime,jdbcType=TIMESTAMP}, #{status,jdbcType=INTEGER}, #{view,jdbcType=INTEGER}, 
       #{publishTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP})
   </insert>
+
   <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.yangy.business.bean.PO.Articles" useGeneratedKeys="true">
     insert into tb_articles
     <trim prefix="(" suffix=")" suffixOverrides=",">
@@ -95,6 +96,7 @@
       </if>
     </trim>
   </insert>
+
   <update id="updateByPrimaryKeySelective" parameterType="com.yangy.business.bean.PO.Articles">
     update tb_articles
     <set>
@@ -160,5 +162,5 @@
       left join tb_file tf on tf.id = tu.img_id 
       where t.id = #{id} limit 1
   </select>
-    
+
 </mapper>

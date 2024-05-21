@@ -238,14 +238,14 @@
                         <li>
                             <p><font style="vertical-align: inherit;"><font
                                     style="vertical-align: inherit;">发布作品数量</font></font></p>
-                            <span><font style="vertical-align: inherit;"><font
-                                    style="vertical-align: inherit;">26</font></font></span>
+                            <span><font style="vertical-align: inherit;"><font id="articleNum"
+                                    style="vertical-align: inherit;">0</font></font></span>
                         </li>
                         <li>
                             <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">活跃天数</font></font>
                             </p>
                             <span><font style="vertical-align: inherit;"><font
-                                    style="vertical-align: inherit;">88</font></font></span>
+                                    style="vertical-align: inherit;" id="loginNum">0</font></font></span>
                         </li>
                     </ul>
                     <a href="javascript:void(0)" id="toUserDetail" class="sidebox__more"><font style="vertical-align: inherit;"><font
@@ -300,7 +300,7 @@
                 <!-- end sidebox -->
             </div>
 
-            <div class="col-12 col-md-7 col-lg-8 col-xl-6" id="contentListArea">
+            <div class="col-12 col-md-7 col-lg-8 col-xl-6" id="contentListArea" style="margin-bottom: 100px;">
                 <!-- post -->
                 <div class="post" th:if="${articleList != null and articleList.size() > 0} " th:each="article : ${articleList}">
                     <div class="post__head">
@@ -410,31 +410,32 @@
                 <!-- end post -->
 
                 <!-- view more -->
+                <div id="getMoreBtn">
+                    <button class="main__btn" style="z-index: -1;" type="button" th:if="${articleList != null and articleList.size() > 0}"><span><font style="vertical-align: inherit;"><font
+                            style="vertical-align: inherit;">下拉看更多</font></font></span></button>
+                </div>
 
                 <div class="post" th:if="${articleList == null or articleList.size() == 0}" style="align-items: center;height: 500px;padding-top: 40%;">
                     暂无新的内容(*^_^*)
                 </div>
             </div>
 
-<!--            <div class="col-12">-->
-<!--                <button class="main__btn" type="button" th:if="${articleList != null and articleList.size() > 0}"><span><font style="vertical-align: inherit;"><font-->
-<!--                        style="vertical-align: inherit;">下拉看更多</font></font></span></button>-->
-<!--            </div>-->
+
 
             <div class="col-12 col-md-5 col-lg-4 col-xl-3">
                 <!-- sidebox -->
                 <div class="sidebox sidebox--desk">
                     <h4 class="sidebox__title"><font style="vertical-align: inherit;"><font
                             style="vertical-align: inherit;">热门文章</font></font></h4>
-                    <div class="sidebox__content">
+                    <div class="sidebox__content" th:if="${popularList != null and popularList.size() > 0} " th:each="popularData : ${popularList}">
                         <div class="sidebox__job">
                             <div class="sidebox__job-title">
                                 <a href="#"><font style="vertical-align: inherit;"><font
-                                        style="vertical-align: inherit;">xxxxxxx</font></font></a>
-                                <span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">xxx</font></font></span>
+                                        style="vertical-align: inherit;" th:text="${popularData.title}"></font></font></a>
+                                <span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;" th:text="*{#dates.format(popularData.createTime, 'yyyy/MM/dd HH:mm:ss')}"></font></font></span>
                             </div>
                             <p class="sidebox__job-description"><font style="vertical-align: inherit;"><font
-                                    style="vertical-align: inherit;">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                                    style="vertical-align: inherit;" th:text="${popularData.creatorName}">
                             </font></font></p>
                         </div>
 
@@ -696,7 +697,14 @@
         
         $(".post__title,.post__description").click(function () {
             var id = $(this).attr("value");
-            window.location.href= 'toArticlePage?id='+id;
+            var storeInfo = localStorage.getItem('userInfo');
+            var user = JSON.parse(storeInfo);
+
+            if(null != user && undefined != user){
+                window.location.href= 'toArticlePage?id='+id+'&userId='+user.userId;
+            }else{
+                window.location.href= 'toArticlePage?id='+id;
+            }
         });
 
         //下拉加载更多

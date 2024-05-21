@@ -46,10 +46,19 @@ public class User implements Serializable {
     private Date createTime;
 
     private Date updateTime;
-    //非表字段，仅赋值使用
-	
+
+    //非表字段，以下仅赋值使用
+    //头像url
 	@TableField(exist = false)
     private String imgUrl;
+
+    //用户发布的文章数
+    @TableField(exist = false)
+    private String anum;
+
+    //用户登录数
+    @TableField(exist = false)
+    private String lnum;
 
 	public User(Integer id) {
 		this.id = id;
